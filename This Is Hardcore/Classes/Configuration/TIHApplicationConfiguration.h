@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "PersonaTypes.h"
-
 /* Application Version */
 extern NSString *const VersionNumber;
 

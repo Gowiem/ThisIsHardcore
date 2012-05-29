@@ -1,0 +1,3 @@
+[submodule "submodules/ARiOSUtilities"]
+	path = submodules/ARiOSUtilities
+	url = git@github.com:appRenaissance/ARiOSUtilities.git

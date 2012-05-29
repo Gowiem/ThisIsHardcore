@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "PersonaTypes.h"
-
 /* Application Version */
 NSString *const VersionNumber = @"1.0";
 
@@ -15,7 +13,6 @@ NSString *const VersionNumber = @"1.0";
 NSString *const PERSONA_ID = @"vernon-davis";
 
 NSString *const PERSONA_TITLE = @"Vernon Davis";
-const NSInteger PERSONA_TYPE = PersonaTypeFootball;
 
 /* General Settings */
 const NSInteger NUM_OF_ITEMS_PER_API_REQUEST = 20;
