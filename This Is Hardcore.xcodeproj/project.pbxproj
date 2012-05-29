@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
+		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
+		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
+		7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744841281575512C009D96D6 /* InfoPlist.strings */; };
+		7448412C1575512C009D96D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448412B1575512C009D96D6 /* main.m */; };
+		744841301575512C009D96D6 /* TIHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448412F1575512C009D96D6 /* TIHAppDelegate.m */; };
+		744841331575512C009D96D6 /* TIHFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841321575512C009D96D6 /* TIHFirstViewController.m */; };
+		744841351575512C009D96D6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 744841341575512C009D96D6 /* first.png */; };
+		744841371575512C009D96D6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744841361575512C009D96D6 /* first@2x.png */; };
+		7448413A1575512C009D96D6 /* TIHSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841391575512C009D96D6 /* TIHSecondViewController.m */; };
+		7448413C1575512C009D96D6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 7448413B1575512C009D96D6 /* second.png */; };
+		7448413E1575512C009D96D6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7448413D1575512C009D96D6 /* second@2x.png */; };
+		744841411575512C009D96D6 /* TIHFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7448413F1575512C009D96D6 /* TIHFirstViewController.xib */; };
+		744841441575512C009D96D6 /* TIHSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744841421575512C009D96D6 /* TIHSecondViewController.xib */; };
+		74484156157552D7009D96D6 /* TIHApplicationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 74484155157552D7009D96D6 /* TIHApplicationConfiguration.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		744841231575512C009D96D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		744841271575512C009D96D6 /* This Is Hardcore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "This Is Hardcore-Info.plist"; sourceTree = "<group>"; };
+		744841291575512C009D96D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7448412B1575512C009D96D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7448412D1575512C009D96D6 /* This Is Hardcore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "This Is Hardcore-Prefix.pch"; sourceTree = "<group>"; };
+		7448412E1575512C009D96D6 /* TIHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHAppDelegate.h; sourceTree = "<group>"; };
+		7448412F1575512C009D96D6 /* TIHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHAppDelegate.m; sourceTree = "<group>"; };
+		744841311575512C009D96D6 /* TIHFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHFirstViewController.h; sourceTree = "<group>"; };
+		744841321575512C009D96D6 /* TIHFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHFirstViewController.m; sourceTree = "<group>"; };
+		744841341575512C009D96D6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		744841361575512C009D96D6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		744841381575512C009D96D6 /* TIHSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHSecondViewController.h; sourceTree = "<group>"; };
+		744841391575512C009D96D6 /* TIHSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHSecondViewController.m; sourceTree = "<group>"; };
+		7448413B1575512C009D96D6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		7448413D1575512C009D96D6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		744841401575512C009D96D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TIHFirstViewController.xib; sourceTree = "<group>"; };
+		744841431575512C009D96D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TIHSecondViewController.xib; sourceTree = "<group>"; };
+		74484154157552D7009D96D6 /* TIHApplicationConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHApplicationConfiguration.h; path = Classes/Configuration/TIHApplicationConfiguration.h; sourceTree = "<group>"; };
+		74484155157552D7009D96D6 /* TIHApplicationConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHApplicationConfiguration.m; path = Classes/Configuration/TIHApplicationConfiguration.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		744841181575512C009D96D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744841201575512C009D96D6 /* UIKit.framework in Frameworks */,
+				744841221575512C009D96D6 /* Foundation.framework in Frameworks */,
+				744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		744841101575512B009D96D6 = {
+			isa = PBXGroup;
+			children = (
+				744841251575512C009D96D6 /* This Is Hardcore */,
+				7448411E1575512C009D96D6 /* Frameworks */,
+				7448411C1575512C009D96D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7448411C1575512C009D96D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7448411B1575512C009D96D6 /* This Is Hardcore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7448411E1575512C009D96D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7448411F1575512C009D96D6 /* UIKit.framework */,
+				744841211575512C009D96D6 /* Foundation.framework */,
+				744841231575512C009D96D6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		744841251575512C009D96D6 /* This Is Hardcore */ = {
+			isa = PBXGroup;
+			children = (
+				7448414E157551FB009D96D6 /* Classes */,
+				7448412E1575512C009D96D6 /* TIHAppDelegate.h */,
+				7448412F1575512C009D96D6 /* TIHAppDelegate.m */,
+				744841311575512C009D96D6 /* TIHFirstViewController.h */,
+				744841321575512C009D96D6 /* TIHFirstViewController.m */,
+				744841341575512C009D96D6 /* first.png */,
+				744841361575512C009D96D6 /* first@2x.png */,
+				744841381575512C009D96D6 /* TIHSecondViewController.h */,
+				744841391575512C009D96D6 /* TIHSecondViewController.m */,
+				7448413B1575512C009D96D6 /* second.png */,
+				7448413D1575512C009D96D6 /* second@2x.png */,
+				7448413F1575512C009D96D6 /* TIHFirstViewController.xib */,
+				744841421575512C009D96D6 /* TIHSecondViewController.xib */,
+				744841261575512C009D96D6 /* Supporting Files */,
+			);
+			path = "This Is Hardcore";
+			sourceTree = "<group>";
+		};
+		744841261575512C009D96D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				744841271575512C009D96D6 /* This Is Hardcore-Info.plist */,
+				744841281575512C009D96D6 /* InfoPlist.strings */,
+				7448412B1575512C009D96D6 /* main.m */,
+				7448412D1575512C009D96D6 /* This Is Hardcore-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7448414E157551FB009D96D6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7448415015755201009D96D6 /* Configuration */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7448415015755201009D96D6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74484154157552D7009D96D6 /* TIHApplicationConfiguration.h */,
+				74484155157552D7009D96D6 /* TIHApplicationConfiguration.m */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7448411A1575512C009D96D6 /* This Is Hardcore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744841471575512C009D96D6 /* Build configuration list for PBXNativeTarget "This Is Hardcore" */;
+			buildPhases = (
+				744841171575512C009D96D6 /* Sources */,
+				744841181575512C009D96D6 /* Frameworks */,
+				744841191575512C009D96D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "This Is Hardcore";
+			productName = "This Is Hardcore";
+			productReference = 7448411B1575512C009D96D6 /* This Is Hardcore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		744841121575512B009D96D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TIH;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = appRenaissance;
+			};
+			buildConfigurationList = 744841151575512B009D96D6 /* Build configuration list for PBXProject "This Is Hardcore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 744841101575512B009D96D6;
+			productRefGroup = 7448411C1575512C009D96D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7448411A1575512C009D96D6 /* This Is Hardcore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		744841191575512C009D96D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */,
+				744841351575512C009D96D6 /* first.png in Resources */,
+				744841371575512C009D96D6 /* first@2x.png in Resources */,
+				7448413C1575512C009D96D6 /* second.png in Resources */,
+				7448413E1575512C009D96D6 /* second@2x.png in Resources */,
+				744841411575512C009D96D6 /* TIHFirstViewController.xib in Resources */,
+				744841441575512C009D96D6 /* TIHSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		744841171575512C009D96D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7448412C1575512C009D96D6 /* main.m in Sources */,
+				744841301575512C009D96D6 /* TIHAppDelegate.m in Sources */,
+				744841331575512C009D96D6 /* TIHFirstViewController.m in Sources */,
+				7448413A1575512C009D96D6 /* TIHSecondViewController.m in Sources */,
+				74484156157552D7009D96D6 /* TIHApplicationConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		744841281575512C009D96D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744841291575512C009D96D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7448413F1575512C009D96D6 /* TIHFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744841401575512C009D96D6 /* en */,
+			);
+			name = TIHFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		744841421575512C009D96D6 /* TIHSecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744841431575512C009D96D6 /* en */,
+			);
+			name = TIHSecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		744841451575512C009D96D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		744841461575512C009D96D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		744841481575512C009D96D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
+				INFOPLIST_FILE = "This Is Hardcore/This Is Hardcore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		744841491575512C009D96D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
+				INFOPLIST_FILE = "This Is Hardcore/This Is Hardcore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		744841151575512B009D96D6 /* Build configuration list for PBXProject "This Is Hardcore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744841451575512C009D96D6 /* Debug */,
+				744841461575512C009D96D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744841471575512C009D96D6 /* Build configuration list for PBXNativeTarget "This Is Hardcore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744841481575512C009D96D6 /* Debug */,
+				744841491575512C009D96D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 744841121575512B009D96D6 /* Project object */;
+}
