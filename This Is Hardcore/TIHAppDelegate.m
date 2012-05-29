@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+   
     UIViewController *viewController1 = [[TIHFirstViewController alloc] initWithNibName:@"TIHFirstViewController" bundle:nil];
     UIViewController *viewController2 = [[TIHSecondViewController alloc] initWithNibName:@"TIHSecondViewController" bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];

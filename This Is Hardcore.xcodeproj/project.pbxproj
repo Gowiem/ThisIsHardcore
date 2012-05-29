@@ -72,6 +72,9 @@
 		7448428515755E98009D96D6 /* ARCredentialKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448428315755E98009D96D6 /* ARCredentialKeys.m */; };
 		7448428915755EFF009D96D6 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448428815755EFF009D96D6 /* CoreAudio.framework */; };
 		7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448428C15755F9E009D96D6 /* AudioToolbox.framework */; };
+		7448429315756469009D96D6 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429215756469009D96D6 /* BaseTableViewController.m */; };
+		7448429915756491009D96D6 /* NINetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429815756491009D96D6 /* NINetworkTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74E56DDE15757521009DC00D /* TIHNewsTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +211,14 @@
 		7448428415755E98009D96D6 /* ARiOSUtilitiesConstants-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARiOSUtilitiesConstants-Prefix.pch"; sourceTree = "<group>"; };
 		7448428815755EFF009D96D6 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		7448428C15755F9E009D96D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7448429115756469009D96D6 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Classes/ViewControllers/BaseTableViewController.h; sourceTree = "<group>"; };
+		7448429215756469009D96D6 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Classes/ViewControllers/BaseTableViewController.m; sourceTree = "<group>"; };
+		7448429515756491009D96D6 /* NimbusNetworkControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NimbusNetworkControllers.h; path = ../nimbus/src/networkcontrollers/src/NimbusNetworkControllers.h; sourceTree = "<group>"; };
+		7448429615756491009D96D6 /* NimbusNetworkControllers+Namespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NimbusNetworkControllers+Namespace.h"; path = "../nimbus/src/networkcontrollers/src/NimbusNetworkControllers+Namespace.h"; sourceTree = "<group>"; };
+		7448429715756491009D96D6 /* NINetworkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NINetworkTableViewController.h; path = ../nimbus/src/networkcontrollers/src/NINetworkTableViewController.h; sourceTree = "<group>"; };
+		7448429815756491009D96D6 /* NINetworkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NINetworkTableViewController.m; path = ../nimbus/src/networkcontrollers/src/NINetworkTableViewController.m; sourceTree = "<group>"; };
+		74E56DDC15757521009DC00D /* TIHNewsTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsTableViewViewController.h; path = Classes/ViewControllers/TIHNewsTableViewViewController.h; sourceTree = "<group>"; };
+		74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsTableViewViewController.m; path = Classes/ViewControllers/TIHNewsTableViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				7448414E157551FB009D96D6 /* Classes */,
+				7448433215756681009D96D6 /* Styles */,
 				7448412E1575512C009D96D6 /* TIHAppDelegate.h */,
 				7448412F1575512C009D96D6 /* TIHAppDelegate.m */,
 				744841311575512C009D96D6 /* TIHFirstViewController.h */,
@@ -293,6 +305,7 @@
 			children = (
 				7448415015755201009D96D6 /* Configuration */,
 				74484227157558F7009D96D6 /* Models */,
+				7448428E15756085009D96D6 /* ViewControllers */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -311,6 +324,7 @@
 			children = (
 				7448415D15755556009D96D6 /* core */,
 				7448420E15755825009D96D6 /* models */,
+				744842941575647A009D96D6 /* networkcontrollers */,
 			);
 			name = nimbus;
 			path = ..;
@@ -514,6 +528,35 @@
 			path = submodules/ARiOSUtilities/ARiOSUtilitiesConstants;
 			sourceTree = "<group>";
 		};
+		7448428E15756085009D96D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7448429115756469009D96D6 /* BaseTableViewController.h */,
+				7448429215756469009D96D6 /* BaseTableViewController.m */,
+				74E56DDC15757521009DC00D /* TIHNewsTableViewViewController.h */,
+				74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		744842941575647A009D96D6 /* networkcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				7448429515756491009D96D6 /* NimbusNetworkControllers.h */,
+				7448429615756491009D96D6 /* NimbusNetworkControllers+Namespace.h */,
+				7448429715756491009D96D6 /* NINetworkTableViewController.h */,
+				7448429815756491009D96D6 /* NINetworkTableViewController.m */,
+			);
+			name = networkcontrollers;
+			sourceTree = "<group>";
+		};
+		7448433215756681009D96D6 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -636,6 +679,9 @@
 				7448427F15755DB9009D96D6 /* UIView+Positioning.m in Sources */,
 				7448428015755DB9009D96D6 /* UIView+ResignResponder.m in Sources */,
 				7448428515755E98009D96D6 /* ARCredentialKeys.m in Sources */,
+				7448429315756469009D96D6 /* BaseTableViewController.m in Sources */,
+				7448429915756491009D96D6 /* NINetworkTableViewController.m in Sources */,
+				74E56DDE15757521009DC00D /* TIHNewsTableViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

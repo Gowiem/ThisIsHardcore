@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TIHAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface TIHAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {}
 
 @property (strong, nonatomic) UIWindow *window;
 
