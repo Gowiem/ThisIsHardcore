@@ -32,9 +32,10 @@ extern NSString *const TWITTER_CONSUMER_SECRET;
 
 /* UNIFEED API configuration */
 #define UNIFEED_API_PROTOCOL @"http"
-#define UNIFEED_API_HOST @"allfanz-unifeed.heroku.com"
+#define UNIFEED_API_HOST @"unifeed.heroku.com"
 #define UNIFEED_API_PORT @"80"
 #define UNIFEED_API_ROOT @"api"
 
 #define UNIFEED_USER_API_PREFIX [NSString stringWithFormat:@"%@://%@:%@", UNIFEED_API_PROTOCOL, UNIFEED_API_HOST, UNIFEED_API_PORT ]
 #define UNIFEED_API_PREFIX [NSString stringWithFormat:@"%@://%@:%@/%@", UNIFEED_API_PROTOCOL, UNIFEED_API_HOST, UNIFEED_API_PORT, UNIFEED_API_ROOT ]
+#define UNIFEED_API_URL [NSString stringWithFormat:@"%@/%@", UNIFEED_API_PREFIX, PERSONA_ID ]

@@ -6,11 +6,13 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
+#import "TIHApplicationConfiguration.h"
 #import "TIHNewsTableViewViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "TIHNewsDataModel.h"
+#import "TIHNewsCell.h"
 
 @interface TIHNewsTableViewViewController ()
-
 @end
 
 @implementation TIHNewsTableViewViewController
@@ -21,6 +23,7 @@
     if (self) {
         self.title = NSLocalizedString(@"News", @"News");
         self.tabBarItem.image = [UIImage imageNamed:@"News"];
+        _newsItems = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -29,34 +32,39 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:@"http://unifeed.heroku.com/api/vernon-davis/events.json?auth_token=unifeed-debug"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/posts.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"Name: %@ %@", [JSON valueForKeyPath:@"total_rows"], [JSON valueForKeyPath:@"offset"]);
-    } failure:nil];
+        for( id row in [JSON valueForKey:@"rows"]){
+            [_newsItems addObject: [[TIHNewsDataModel alloc] initWithProperties:row]];
+        }
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"Fail!");
+    }];
     
     [operation start];
 }
-//
-//- (id)initWithStyle:(UITableViewStyle)style {
-//    if ((self = [super initWithStyle:UITableViewStyleGrouped])) {
-//        self.title = NSLocalizedString(@"List Model", @"Controller Title: List Model");
-//        
-//        // Each of the cell objects below is mapped to the NITextCell class.
-//        NSArray* tableContents =
-//        [NSArray arrayWithObjects:
-//         [NITitleCellObject cellWithTitle:@"Row 1"],
-//         [NITitleCellObject cellWithTitle:@"Row 2"],
-//         [NISubtitleCellObject cellWithTitle:@"Row 3" subtitle:@"Subtitle"],
-//         nil];
-//        
-//        // We use NICellFactory to create the cell views.
-//        _model = [[NITableViewModel alloc] initWithListArray:tableContents
-//                                                    delegate:(id)[NICellFactory class]];
-//    }
-//    return self;
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return  _newsItems.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView 
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //create a cell
+    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:nil options:nil]; 
+    TIHNewsCell *cell = [nibObjects objectAtIndex:0];
+
+    [cell configureWithObject:[_newsItems objectAtIndex:indexPath.row]];
+
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [self tableView:tableView cellForRowAtIndexPath:indexPath].frame.size.height;
+}
 
 - (void)viewDidUnload
 {

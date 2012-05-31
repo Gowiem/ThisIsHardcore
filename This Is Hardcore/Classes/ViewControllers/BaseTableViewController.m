@@ -15,13 +15,6 @@
 {
     [super viewWillAppear:animated];
     
-    UIView *bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 2 )];
-    //bar.backgroundColor = TTSTYLEVAR(drinksSectionHeaderFontColor);
-    [self.view addSubview:bar];
-    
-    //self.tableView.backgroundColor = TTSTYLEVAR(absoluteBlack);
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
     [self updateNavBarDisplay];
 }
 

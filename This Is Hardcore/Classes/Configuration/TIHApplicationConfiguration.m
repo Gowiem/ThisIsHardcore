@@ -10,9 +10,9 @@
 NSString *const VersionNumber = @"1.0";
 
 /* Persona */
-NSString *const PERSONA_ID = @"vernon-davis";
+NSString *const PERSONA_ID = @"tihcfest";
 
-NSString *const PERSONA_TITLE = @"Vernon Davis";
+NSString *const PERSONA_TITLE = @"This is Hardcore";
 
 /* General Settings */
 const NSInteger NUM_OF_ITEMS_PER_API_REQUEST = 20;
