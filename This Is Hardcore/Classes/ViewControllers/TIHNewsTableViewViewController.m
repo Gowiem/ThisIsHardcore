@@ -7,6 +7,7 @@
 //
 
 #import "TIHNewsTableViewViewController.h"
+#import "AFJSONRequestOperation.h"
 
 @interface TIHNewsTableViewViewController ()
 
@@ -14,11 +15,12 @@
 
 @implementation TIHNewsTableViewViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"News", @"News");
+        self.tabBarItem.image = [UIImage imageNamed:@"News"];
     }
     return self;
 }
@@ -27,6 +29,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSURL *url = [NSURL URLWithString:@"http://unifeed.heroku.com/api/vernon-davis/events.json?auth_token=unifeed-debug"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"Name: %@ %@", [JSON valueForKeyPath:@"total_rows"], [JSON valueForKeyPath:@"offset"]);
+    } failure:nil];
+    
+    [operation start];
 }
 //
 //- (id)initWithStyle:(UITableViewStyle)style {
@@ -50,6 +60,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

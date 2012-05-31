@@ -8,6 +8,7 @@
 
 #import "BaseTableViewController.h"
 
-@interface TIHNewsTableViewViewController : BaseTableViewController
-
+@interface TIHNewsTableViewViewController : BaseTableViewController {
+    NSMutableData *responseData;
+}
 @end

@@ -11,6 +11,7 @@
 #import "TIHFirstViewController.h"
 
 #import "TIHSecondViewController.h"
+#import "TIHNewsTableViewViewController.h"
 
 @implementation TIHAppDelegate
 
@@ -21,7 +22,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
    
-    UIViewController *viewController1 = [[TIHFirstViewController alloc] initWithNibName:@"TIHFirstViewController" bundle:nil];
+    TIHNewsTableViewViewController *viewController1 = [[TIHNewsTableViewViewController alloc] init];
     UIViewController *viewController2 = [[TIHSecondViewController alloc] initWithNibName:@"TIHSecondViewController" bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
