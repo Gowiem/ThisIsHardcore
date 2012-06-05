@@ -16,6 +16,9 @@
     [super viewWillAppear:animated];
     
     [self updateNavBarDisplay];
+    
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];          
+    self.navigationItem.rightBarButtonItem = anotherButton;    
 }
 
 -(void) updateNavBarDisplay {
@@ -35,4 +38,8 @@
     label.text = @"";
 }
 
+- (void)handleTicket:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://m.ticketmaster.com/ticket/search.do?articles=tmus&query=this+is+hardcore&submit=SEARCH"]];
+}
 @end
