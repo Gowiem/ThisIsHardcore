@@ -17,7 +17,7 @@
 
 @implementation TIHNewsTableViewViewController
 
-@synthesize myTable = _myTable;
+@synthesize myTable = _myTable, fanFeedButton, officialButton;
 
 - (id)init
 {
@@ -57,12 +57,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //create a cell
-    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:nil options:nil]; 
-    TIHNewsCell *cell = [nibObjects objectAtIndex:0];
-
+    static NSString *CellIdentifier = @"NewsCell";
+    
+    TIHNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[TIHNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
     [cell configureWithObject:[_newsItems objectAtIndex:indexPath.row]];
-
+    
     return cell;
 }
 
@@ -82,6 +86,23 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-@end
-
 //TODO: pull down data from json http://stackoverflow.com/questions/2968642/populate-uitableview-from-json
+
+- (IBAction) doOfficialButtonAction:(id)sender
+{
+    NSLog(@"%@ clicked", sender);
+    UIButton *button = (UIButton *)sender;
+    [button setBackgroundImage: [UIImage imageNamed:@"TIHCofficialBluetab.png"] forState:UIControlStateNormal];
+    
+    [self.fanFeedButton setBackgroundImage:[UIImage imageNamed:@"FanFeedG1tab.png"] forState:UIControlStateNormal];
+}
+- (IBAction) doFanFeedButtonAction: (id)sender
+{
+    NSLog(@"%@ clicked", sender);    
+    UIButton *button = (UIButton *)sender;
+    [button setBackgroundImage: [UIImage imageNamed:@"FanFeedBluetab.png"] forState:UIControlStateNormal];
+    
+    [self.officialButton setBackgroundImage:[UIImage imageNamed:@"TIHCofficialG1tab.png"] forState:UIControlStateNormal];
+
+}
+@end

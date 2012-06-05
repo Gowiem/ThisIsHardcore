@@ -11,24 +11,20 @@
 
 @implementation BaseTableViewController
 
-@synthesize myTable = _myTable;
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
     [self updateNavBarDisplay];
-    
-    self.tableView = _myTable;
 }
 
 -(void) updateNavBarDisplay {
     NSString *backgroundImageName = @"";
     if([[[self navigationController] viewControllers] count] == 1) {
-        backgroundImageName = @"titleBar.png";
+        backgroundImageName = @"TIHC_Header.png";
     }
     else {
-        backgroundImageName = @"";
+        backgroundImageName = @"TIHC_HeaderCenter.png";
     }
     
     UIImage *image = [UIImage imageNamed:backgroundImageName];

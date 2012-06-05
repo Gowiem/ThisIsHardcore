@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseTableViewController : NINetworkTableViewController 
+@interface BaseTableViewController : UIViewController <UITableViewDelegate> 
 
 //- (NSString *)navBarTitle;
 - (void)updateNavBarDisplay;
-
-@property (strong, nonatomic) IBOutlet UITableView *myTable;
 
 @end

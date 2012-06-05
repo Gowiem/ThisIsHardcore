@@ -74,13 +74,11 @@
 		7448429315756469009D96D6 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429215756469009D96D6 /* BaseTableViewController.m */; };
 		7448429915756491009D96D6 /* NINetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429815756491009D96D6 /* NINetworkTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74E56DDE15757521009DC00D /* TIHNewsTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */; };
-		C81CBADD1577F98600584F64 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81CBADC1577F98600584F64 /* NewsCell.xib */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
 		C81CBB4A1578154200584F64 /* fbicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB481578154200584F64 /* fbicon@2x.png */; };
 		C81CBB4B1578154200584F64 /* twittericon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB491578154200584F64 /* twittericon@2x.png */; };
-		C81CBB4D1578173700584F64 /* NewsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB4C1578173700584F64 /* NewsTableView.xib */; };
 		C81CBB501578187D00584F64 /* TIHC_Header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB4E1578187D00584F64 /* TIHC_Header@2x.png */; };
 		C81CBB511578187D00584F64 /* TIHC_HeaderCenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB4F1578187D00584F64 /* TIHC_HeaderCenter@2x.png */; };
 		C81CBB571578192700584F64 /* bluetabheadercap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB521578192700584F64 /* bluetabheadercap@2x.png */; };
@@ -94,6 +92,8 @@
 		C84BDB82157E956D00E6D7AC /* HCBell.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB7E157E956D00E6D7AC /* HCBell.png */; };
 		C84BDB83157E956D00E6D7AC /* MoreArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB7F157E956D00E6D7AC /* MoreArrow.png */; };
 		C84BDB84157E956D00E6D7AC /* PhotoPit.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB80157E956D00E6D7AC /* PhotoPit.png */; };
+		C84BDB87157EAB3A00E6D7AC /* TIHC_Header.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */; };
+		C84BDB88157EAB3A00E6D7AC /* TIHC_HeaderCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */; };
 		C85A3D96157E8C0200EF699C /* bluetabheadercap.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */; };
 		C85A3D97157E8C0200EF699C /* FanFeedBluetab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */; };
 		C85A3D98157E8C0200EF699C /* FanFeedG1tab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8D157E8C0200EF699C /* FanFeedG1tab.png */; };
@@ -249,14 +249,12 @@
 		74E56DDC15757521009DC00D /* TIHNewsTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsTableViewViewController.h; path = Classes/ViewControllers/TIHNewsTableViewViewController.h; sourceTree = "<group>"; };
 		74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsTableViewViewController.m; path = Classes/ViewControllers/TIHNewsTableViewViewController.m; sourceTree = "<group>"; };
 		A4901ABF80AC4F53A6348638 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		C81CBADC1577F98600584F64 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsCell.xib; path = Cells/NewsCell.xib; sourceTree = "<group>"; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
 		C81CBB44157806DE00584F64 /* grey-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey-arrow.png"; path = "Resources/Images/grey-arrow.png"; sourceTree = "<group>"; };
 		C81CBB45157806DE00584F64 /* grey-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey-arrow@2x.png"; path = "Resources/Images/grey-arrow@2x.png"; sourceTree = "<group>"; };
 		C81CBB481578154200584F64 /* fbicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fbicon@2x.png"; sourceTree = "<group>"; };
 		C81CBB491578154200584F64 /* twittericon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twittericon@2x.png"; sourceTree = "<group>"; };
-		C81CBB4C1578173700584F64 /* NewsTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsTableView.xib; path = Resources/NewsTableView.xib; sourceTree = "<group>"; };
 		C81CBB4E1578187D00584F64 /* TIHC_Header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_Header@2x.png"; path = "Resources/Images/TIHC_Header@2x.png"; sourceTree = "<group>"; };
 		C81CBB4F1578187D00584F64 /* TIHC_HeaderCenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_HeaderCenter@2x.png"; path = "Resources/Images/TIHC_HeaderCenter@2x.png"; sourceTree = "<group>"; };
 		C81CBB521578192700584F64 /* bluetabheadercap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetabheadercap@2x.png"; path = "Resources/Images/bluetabheadercap@2x.png"; sourceTree = "<group>"; };
@@ -270,6 +268,8 @@
 		C84BDB7E157E956D00E6D7AC /* HCBell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCBell.png; sourceTree = "<group>"; };
 		C84BDB7F157E956D00E6D7AC /* MoreArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreArrow.png; sourceTree = "<group>"; };
 		C84BDB80157E956D00E6D7AC /* PhotoPit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoPit.png; sourceTree = "<group>"; };
+		C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_Header.png; path = Resources/Images/TIHC_Header.png; sourceTree = "<group>"; };
+		C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_HeaderCenter.png; path = Resources/Images/TIHC_HeaderCenter.png; sourceTree = "<group>"; };
 		C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetabheadercap.png; path = Resources/Images/bluetabheadercap.png; sourceTree = "<group>"; };
 		C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FanFeedBluetab.png; path = Resources/Images/FanFeedBluetab.png; sourceTree = "<group>"; };
 		C85A3D8D157E8C0200EF699C /* FanFeedG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FanFeedG1tab.png; path = Resources/Images/FanFeedG1tab.png; sourceTree = "<group>"; };
@@ -453,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				744842091575573D009D96D6 /* Images */,
-				C81CBB4C1578173700584F64 /* NewsTableView.xib */,
 				C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */,
 			);
 			name = Resources;
@@ -462,6 +461,8 @@
 		744842091575573D009D96D6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */,
+				C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */,
 				C85A3D8E157E8C0200EF699C /* Icons */,
 				C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */,
 				C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */,
@@ -643,7 +644,6 @@
 		C81CBADA1577F95000584F64 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C81CBADC1577F98600584F64 /* NewsCell.xib */,
 				C81CBADE1577FCE100584F64 /* TIHNewsCell.h */,
 				C81CBADF1577FCE100584F64 /* TIHNewsCell.m */,
 			);
@@ -727,12 +727,10 @@
 				7448413E1575512C009D96D6 /* second@2x.png in Resources */,
 				744841411575512C009D96D6 /* TIHFirstViewController.xib in Resources */,
 				744841441575512C009D96D6 /* TIHSecondViewController.xib in Resources */,
-				C81CBADD1577F98600584F64 /* NewsCell.xib in Resources */,
 				C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */,
 				C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */,
 				C81CBB4A1578154200584F64 /* fbicon@2x.png in Resources */,
 				C81CBB4B1578154200584F64 /* twittericon@2x.png in Resources */,
-				C81CBB4D1578173700584F64 /* NewsTableView.xib in Resources */,
 				C81CBB501578187D00584F64 /* TIHC_Header@2x.png in Resources */,
 				C81CBB511578187D00584F64 /* TIHC_HeaderCenter@2x.png in Resources */,
 				C81CBB571578192700584F64 /* bluetabheadercap@2x.png in Resources */,
@@ -757,6 +755,8 @@
 				C84BDB82157E956D00E6D7AC /* HCBell.png in Resources */,
 				C84BDB83157E956D00E6D7AC /* MoreArrow.png in Resources */,
 				C84BDB84157E956D00E6D7AC /* PhotoPit.png in Resources */,
+				C84BDB87157EAB3A00E6D7AC /* TIHC_Header.png in Resources */,
+				C84BDB88157EAB3A00E6D7AC /* TIHC_HeaderCenter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
