@@ -21,6 +21,7 @@
 }
 
 - (void)configureWithObject:(TIHNewsDataModel *)object {
+    
     NSString *bodyText = [[object body] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     self.bodyLabel.text = bodyText;
     
@@ -29,10 +30,10 @@
     [self.bodyLabel sizeToFit];
     
     if([object provider] == @"facebook") {
-        [self.imageView setImage:[UIImage imageNamed:@"fbicon@2x.png"]] ;
+        [self.imageView setImage:[UIImage imageNamed:@"fbicon.png"]] ;
     }
     else {
-        [self.imageView setImage:[UIImage imageNamed:@"twittericon@2x.png"]] ;
+        [self.imageView setImage:[UIImage imageNamed:@"twittericon.png"]] ;
     }
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

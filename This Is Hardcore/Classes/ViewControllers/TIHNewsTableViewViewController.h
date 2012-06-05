@@ -8,7 +8,10 @@
 
 #import "BaseTableViewController.h"
 
-@interface TIHNewsTableViewViewController : BaseTableViewController {
+@interface TIHNewsTableViewViewController : UIViewController <UITableViewDelegate> {
     NSMutableArray *_newsItems;
+    UITableView *_myTable;
 }
+@property (strong, nonatomic) IBOutlet UITableView *myTable;
+
 @end

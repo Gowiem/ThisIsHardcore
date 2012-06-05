@@ -17,19 +17,22 @@
 
 @implementation TIHNewsTableViewViewController
 
+@synthesize myTable = _myTable;
+
 - (id)init
 {
     self = [super init];
     if (self) {
-        self.title = NSLocalizedString(@"News", @"News");
-        self.tabBarItem.image = [UIImage imageNamed:@"News"];
-        _newsItems = [[NSMutableArray alloc] init];
+//        self.title = NSLocalizedString(@"News", @"News");
+//        self.tabBarItem.image = [UIImage imageNamed:@"News"];
+
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    _newsItems = [[NSMutableArray alloc] init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/posts.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
@@ -37,9 +40,10 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for( id row in [JSON valueForKey:@"rows"]){
+            NSLog(@"%@", row);
             [_newsItems addObject: [[TIHNewsDataModel alloc] initWithProperties:row]];
         }
-        [self.tableView reloadData];
+        [self.myTable reloadData];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
@@ -48,7 +52,7 @@
     [operation start];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return  _newsItems.count;
+    return  [_newsItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 

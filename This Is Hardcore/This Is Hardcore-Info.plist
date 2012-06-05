@@ -32,5 +32,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIMainStoryboardFile~iphone</key>
+	<string>ThisIsHardcore</string>
 </dict>
 </plist>

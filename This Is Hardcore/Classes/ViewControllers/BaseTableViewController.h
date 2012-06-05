@@ -13,4 +13,6 @@
 //- (NSString *)navBarTitle;
 - (void)updateNavBarDisplay;
 
+@property (strong, nonatomic) IBOutlet UITableView *myTable;
+
 @end

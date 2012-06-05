@@ -11,11 +11,15 @@
 
 @implementation BaseTableViewController
 
+@synthesize myTable = _myTable;
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
     [self updateNavBarDisplay];
+    
+    self.tableView = _myTable;
 }
 
 -(void) updateNavBarDisplay {

@@ -20,14 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-   
-    TIHNewsTableViewViewController *viewController1 = [[TIHNewsTableViewViewController alloc] init];
-    UIViewController *viewController2 = [[TIHSecondViewController alloc] initWithNibName:@"TIHSecondViewController" bundle:nil];
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//   
+//    TIHNewsTableViewViewController *viewController1 = [[TIHNewsTableViewViewController alloc] init];
+//    UIViewController *viewController2 = [[TIHSecondViewController alloc] initWithNibName:@"TIHSecondViewController" bundle:nil];
+//    self.tabBarController = [[UITabBarController alloc] init];
+//    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+//    self.window.rootViewController = self.tabBarController;
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
