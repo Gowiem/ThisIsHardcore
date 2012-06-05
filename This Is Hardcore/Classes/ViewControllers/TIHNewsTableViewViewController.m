@@ -11,6 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "TIHNewsDataModel.h"
 #import "TIHNewsCell.h"
+#import "TIHWebViewController.h"
 
 @interface TIHNewsTableViewViewController ()
 @end
@@ -18,17 +19,6 @@
 @implementation TIHNewsTableViewViewController
 
 @synthesize myTable = _myTable, fanFeedButton, officialButton;
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-//        self.title = NSLocalizedString(@"News", @"News");
-//        self.tabBarItem.image = [UIImage imageNamed:@"News"];
-
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -40,7 +30,6 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for( id row in [JSON valueForKey:@"rows"]){
-            NSLog(@"%@", row);
             [_newsItems addObject: [[TIHNewsDataModel alloc] initWithProperties:row]];
         }
         [self.myTable reloadData];
@@ -101,8 +90,12 @@
     NSLog(@"%@ clicked", sender);    
     UIButton *button = (UIButton *)sender;
     [button setBackgroundImage: [UIImage imageNamed:@"FanFeedBluetab.png"] forState:UIControlStateNormal];
-    
     [self.officialButton setBackgroundImage:[UIImage imageNamed:@"TIHCofficialG1tab.png"] forState:UIControlStateNormal];
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TIHWebViewController* wvc = (TIHWebViewController*)segue.destinationViewController;
+    TIHNewsCell* cell = (TIHNewsCell*)sender;
+    wvc.urlAddress = [cell newsUrl];
 }
 @end

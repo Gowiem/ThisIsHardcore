@@ -94,6 +94,7 @@
 		C84BDB84157E956D00E6D7AC /* PhotoPit.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB80157E956D00E6D7AC /* PhotoPit.png */; };
 		C84BDB87157EAB3A00E6D7AC /* TIHC_Header.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */; };
 		C84BDB88157EAB3A00E6D7AC /* TIHC_HeaderCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */; };
+		C84BDBD3157EB07C00E6D7AC /* TIHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */; };
 		C85A3D96157E8C0200EF699C /* bluetabheadercap.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */; };
 		C85A3D97157E8C0200EF699C /* FanFeedBluetab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */; };
 		C85A3D98157E8C0200EF699C /* FanFeedG1tab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D8D157E8C0200EF699C /* FanFeedG1tab.png */; };
@@ -270,6 +271,8 @@
 		C84BDB80157E956D00E6D7AC /* PhotoPit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoPit.png; sourceTree = "<group>"; };
 		C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_Header.png; path = Resources/Images/TIHC_Header.png; sourceTree = "<group>"; };
 		C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_HeaderCenter.png; path = Resources/Images/TIHC_HeaderCenter.png; sourceTree = "<group>"; };
+		C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHWebViewController.h; path = Classes/ViewControllers/TIHWebViewController.h; sourceTree = "<group>"; };
+		C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHWebViewController.m; path = Classes/ViewControllers/TIHWebViewController.m; sourceTree = "<group>"; };
 		C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetabheadercap.png; path = Resources/Images/bluetabheadercap.png; sourceTree = "<group>"; };
 		C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FanFeedBluetab.png; path = Resources/Images/FanFeedBluetab.png; sourceTree = "<group>"; };
 		C85A3D8D157E8C0200EF699C /* FanFeedG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FanFeedG1tab.png; path = Resources/Images/FanFeedG1tab.png; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 				7448429215756469009D96D6 /* BaseTableViewController.m */,
 				74E56DDC15757521009DC00D /* TIHNewsTableViewViewController.h */,
 				74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */,
+				C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */,
+				C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -841,6 +846,7 @@
 				7448429915756491009D96D6 /* NINetworkTableViewController.m in Sources */,
 				74E56DDE15757521009DC00D /* TIHNewsTableViewViewController.m in Sources */,
 				C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */,
+				C84BDBD3157EB07C00E6D7AC /* TIHWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 
 @interface TIHNewsCell : UITableViewCell {
 }
+@property (nonatomic, retain) NSString *newsUrl;
 
 @property (nonatomic, retain) IBOutlet UIImageView *newsImage;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;

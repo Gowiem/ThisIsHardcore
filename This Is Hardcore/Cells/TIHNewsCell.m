@@ -11,8 +11,7 @@
 
 @implementation TIHNewsCell
 
-@synthesize newsImage, bodyLabel, dateLabel;
-
+@synthesize newsImage, bodyLabel, dateLabel, newsUrl;
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -52,6 +51,7 @@
         height = 80;
     }
     self.frame = CGRectMake(0,0,320,height);
+    self.newsUrl = [object newsUrl];
 }
 
 @end
