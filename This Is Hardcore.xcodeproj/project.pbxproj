@@ -14,12 +14,6 @@
 		7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744841281575512C009D96D6 /* InfoPlist.strings */; };
 		7448412C1575512C009D96D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448412B1575512C009D96D6 /* main.m */; };
 		744841301575512C009D96D6 /* TIHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448412F1575512C009D96D6 /* TIHAppDelegate.m */; };
-		744841331575512C009D96D6 /* TIHFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841321575512C009D96D6 /* TIHFirstViewController.m */; };
-		7448413A1575512C009D96D6 /* TIHSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841391575512C009D96D6 /* TIHSecondViewController.m */; };
-		7448413C1575512C009D96D6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 7448413B1575512C009D96D6 /* second.png */; };
-		7448413E1575512C009D96D6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7448413D1575512C009D96D6 /* second@2x.png */; };
-		744841411575512C009D96D6 /* TIHFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7448413F1575512C009D96D6 /* TIHFirstViewController.xib */; };
-		744841441575512C009D96D6 /* TIHSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744841421575512C009D96D6 /* TIHSecondViewController.xib */; };
 		74484156157552D7009D96D6 /* TIHApplicationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 74484155157552D7009D96D6 /* TIHApplicationConfiguration.m */; };
 		744841F41575561B009D96D6 /* NICommonMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841C81575561B009D96D6 /* NICommonMetrics.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		744841F51575561B009D96D6 /* NIDataStructures.m in Sources */ = {isa = PBXBuildFile; fileRef = 744841CA1575561B009D96D6 /* NIDataStructures.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -106,6 +100,20 @@
 		C85A3D9E157E8C0200EF699C /* TIHCofficialBluetab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D94157E8C0200EF699C /* TIHCofficialBluetab.png */; };
 		C85A3D9F157E8C0200EF699C /* TIHCofficialG1tab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D95157E8C0200EF699C /* TIHCofficialG1tab.png */; };
 		C85A3DA2157E8C6700EF699C /* ThisIsHardcore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */; };
+		C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB715890D2E009BD187 /* tinyclock.png */; };
+		C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB815890D2E009BD187 /* tinyclock@2x.png */; };
+		C87CBCBD158911FF009BD187 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCBC158911FF009BD187 /* View.xib */; };
+		C87CBCC015891402009BD187 /* TIHTabBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */; };
+		C87CBCC3158915AE009BD187 /* TIHPhotoPitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC2158915AE009BD187 /* TIHPhotoPitCell.m */; };
+		C87CBCC9158919C2009BD187 /* TIHPhotoPitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */; };
+		C87CBCD7158922C6009BD187 /* NINetworkImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCD0158922C6009BD187 /* NINetworkImageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C87CBCD8158922C6009BD187 /* NINetworkImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCD2158922C6009BD187 /* NINetworkImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C87CBCDB15892322009BD187 /* NimbusNetworkImage+Namespace.h in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCCD158922C6009BD187 /* NimbusNetworkImage+Namespace.h */; };
+		C87CBCDC15892322009BD187 /* NimbusNetworkImage.h in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCCE158922C6009BD187 /* NimbusNetworkImage.h */; };
+		C87CBCDD15892322009BD187 /* NINetworkImageRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCCF158922C6009BD187 /* NINetworkImageRequest.h */; };
+		C87CBCDE15892322009BD187 /* NINetworkImageView.h in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCD1158922C6009BD187 /* NINetworkImageView.h */; };
+		C87CBCE415892FAA009BD187 /* TIHPhotoPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */; };
+		C87CBCE7158935F3009BD187 /* NSDate+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCE6158935F3009BD187 /* NSDate+Formatting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,14 +128,6 @@
 		7448412D1575512C009D96D6 /* This Is Hardcore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "This Is Hardcore-Prefix.pch"; sourceTree = "<group>"; };
 		7448412E1575512C009D96D6 /* TIHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHAppDelegate.h; sourceTree = "<group>"; };
 		7448412F1575512C009D96D6 /* TIHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHAppDelegate.m; sourceTree = "<group>"; };
-		744841311575512C009D96D6 /* TIHFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHFirstViewController.h; sourceTree = "<group>"; };
-		744841321575512C009D96D6 /* TIHFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHFirstViewController.m; sourceTree = "<group>"; };
-		744841381575512C009D96D6 /* TIHSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIHSecondViewController.h; sourceTree = "<group>"; };
-		744841391575512C009D96D6 /* TIHSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIHSecondViewController.m; sourceTree = "<group>"; };
-		7448413B1575512C009D96D6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		7448413D1575512C009D96D6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		744841401575512C009D96D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TIHFirstViewController.xib; sourceTree = "<group>"; };
-		744841431575512C009D96D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TIHSecondViewController.xib; sourceTree = "<group>"; };
 		74484154157552D7009D96D6 /* TIHApplicationConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHApplicationConfiguration.h; path = Classes/Configuration/TIHApplicationConfiguration.h; sourceTree = "<group>"; };
 		74484155157552D7009D96D6 /* TIHApplicationConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHApplicationConfiguration.m; path = Classes/Configuration/TIHApplicationConfiguration.m; sourceTree = "<group>"; };
 		744841C61575561B009D96D6 /* NIBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NIBlocks.h; path = ../nimbus/src/core/src/NIBlocks.h; sourceTree = "<group>"; };
@@ -284,6 +284,25 @@
 		C85A3D94157E8C0200EF699C /* TIHCofficialBluetab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialBluetab.png; path = Resources/Images/TIHCofficialBluetab.png; sourceTree = "<group>"; };
 		C85A3D95157E8C0200EF699C /* TIHCofficialG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialG1tab.png; path = Resources/Images/TIHCofficialG1tab.png; sourceTree = "<group>"; };
 		C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ThisIsHardcore.storyboard; path = Resources/ThisIsHardcore.storyboard; sourceTree = "<group>"; };
+		C87CBCB715890D2E009BD187 /* tinyclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tinyclock.png; path = Resources/Images/tinyclock.png; sourceTree = "<group>"; };
+		C87CBCB815890D2E009BD187 /* tinyclock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tinyclock@2x.png"; path = "Resources/Images/tinyclock@2x.png"; sourceTree = "<group>"; };
+		C87CBCBC158911FF009BD187 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = Resources/View.xib; sourceTree = "<group>"; };
+		C87CBCBE15891402009BD187 /* TIHTabBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHTabBarTableViewController.h; path = Classes/ViewControllers/TIHTabBarTableViewController.h; sourceTree = "<group>"; };
+		C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHTabBarTableViewController.m; path = Classes/ViewControllers/TIHTabBarTableViewController.m; sourceTree = "<group>"; };
+		C87CBCC1158915AE009BD187 /* TIHPhotoPitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitCell.h; path = Cells/TIHPhotoPitCell.h; sourceTree = "<group>"; };
+		C87CBCC2158915AE009BD187 /* TIHPhotoPitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPhotoPitCell.m; path = Cells/TIHPhotoPitCell.m; sourceTree = "<group>"; };
+		C87CBCC7158919C2009BD187 /* TIHPhotoPitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitDataModel.h; path = Cells/TIHPhotoPitDataModel.h; sourceTree = "<group>"; };
+		C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPhotoPitDataModel.m; path = Cells/TIHPhotoPitDataModel.m; sourceTree = "<group>"; };
+		C87CBCCD158922C6009BD187 /* NimbusNetworkImage+Namespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NimbusNetworkImage+Namespace.h"; path = "src/NimbusNetworkImage+Namespace.h"; sourceTree = "<group>"; };
+		C87CBCCE158922C6009BD187 /* NimbusNetworkImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NimbusNetworkImage.h; path = src/NimbusNetworkImage.h; sourceTree = "<group>"; };
+		C87CBCCF158922C6009BD187 /* NINetworkImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NINetworkImageRequest.h; path = src/NINetworkImageRequest.h; sourceTree = "<group>"; };
+		C87CBCD0158922C6009BD187 /* NINetworkImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NINetworkImageRequest.m; path = src/NINetworkImageRequest.m; sourceTree = "<group>"; };
+		C87CBCD1158922C6009BD187 /* NINetworkImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NINetworkImageView.h; path = src/NINetworkImageView.h; sourceTree = "<group>"; };
+		C87CBCD2158922C6009BD187 /* NINetworkImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NINetworkImageView.m; path = src/NINetworkImageView.m; sourceTree = "<group>"; };
+		C87CBCE215892FA8009BD187 /* TIHPhotoPitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitViewController.h; path = Classes/ViewControllers/TIHPhotoPitViewController.h; sourceTree = "<group>"; };
+		C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPhotoPitViewController.m; path = Classes/ViewControllers/TIHPhotoPitViewController.m; sourceTree = "<group>"; };
+		C87CBCE5158935B0009BD187 /* NSDate+Formatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatting.h"; sourceTree = "<group>"; };
+		C87CBCE6158935F3009BD187 /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,14 +362,6 @@
 				7448433215756681009D96D6 /* Styles */,
 				7448412E1575512C009D96D6 /* TIHAppDelegate.h */,
 				7448412F1575512C009D96D6 /* TIHAppDelegate.m */,
-				744841311575512C009D96D6 /* TIHFirstViewController.h */,
-				744841321575512C009D96D6 /* TIHFirstViewController.m */,
-				744841381575512C009D96D6 /* TIHSecondViewController.h */,
-				744841391575512C009D96D6 /* TIHSecondViewController.m */,
-				7448413B1575512C009D96D6 /* second.png */,
-				7448413D1575512C009D96D6 /* second@2x.png */,
-				7448413F1575512C009D96D6 /* TIHFirstViewController.xib */,
-				744841421575512C009D96D6 /* TIHSecondViewController.xib */,
 				744841261575512C009D96D6 /* Supporting Files */,
 				7448415B15755545009D96D6 /* nimbus */,
 			);
@@ -391,6 +402,7 @@
 		7448415B15755545009D96D6 /* nimbus */ = {
 			isa = PBXGroup;
 			children = (
+				C87CBCCA158922C6009BD187 /* networkimage */,
 				7448415D15755556009D96D6 /* core */,
 				7448420E15755825009D96D6 /* models */,
 				744842941575647A009D96D6 /* networkcontrollers */,
@@ -456,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				744842091575573D009D96D6 /* Images */,
+				C87CBCBC158911FF009BD187 /* View.xib */,
 				C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */,
 			);
 			name = Resources;
@@ -464,6 +477,8 @@
 		744842091575573D009D96D6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C87CBCB715890D2E009BD187 /* tinyclock.png */,
+				C87CBCB815890D2E009BD187 /* tinyclock@2x.png */,
 				C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */,
 				C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */,
 				C85A3D8E157E8C0200EF699C /* Icons */,
@@ -518,6 +533,8 @@
 				7448422915755937009D96D6 /* TIHBaseDataModel.m */,
 				7448422B15755BFF009D96D6 /* TIHNewsDataModel.h */,
 				7448422C15755BFF009D96D6 /* TIHNewsDataModel.m */,
+				C87CBCC7158919C2009BD187 /* TIHPhotoPitDataModel.h */,
+				C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -599,6 +616,8 @@
 				7448426C15755DB9009D96D6 /* UIView+Positioning.m */,
 				7448426D15755DB9009D96D6 /* UIView+ResignResponder.h */,
 				7448426E15755DB9009D96D6 /* UIView+ResignResponder.m */,
+				C87CBCE5158935B0009BD187 /* NSDate+Formatting.h */,
+				C87CBCE6158935F3009BD187 /* NSDate+Formatting.m */,
 			);
 			name = ARUIKitAdditions;
 			path = submodules/ARiOSUtilities/ARUIKitAdditions;
@@ -618,12 +637,16 @@
 		7448428E15756085009D96D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C87CBCE215892FA8009BD187 /* TIHPhotoPitViewController.h */,
+				C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */,
 				7448429115756469009D96D6 /* BaseTableViewController.h */,
 				7448429215756469009D96D6 /* BaseTableViewController.m */,
 				74E56DDC15757521009DC00D /* TIHNewsTableViewViewController.h */,
 				74E56DDD15757521009DC00D /* TIHNewsTableViewViewController.m */,
 				C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */,
 				C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */,
+				C87CBCBE15891402009BD187 /* TIHTabBarTableViewController.h */,
+				C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -651,6 +674,8 @@
 			children = (
 				C81CBADE1577FCE100584F64 /* TIHNewsCell.h */,
 				C81CBADF1577FCE100584F64 /* TIHNewsCell.m */,
+				C87CBCC1158915AE009BD187 /* TIHPhotoPitCell.h */,
+				C87CBCC2158915AE009BD187 /* TIHPhotoPitCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -672,6 +697,19 @@
 			);
 			name = Icons;
 			path = Resources/Images/Icons;
+			sourceTree = "<group>";
+		};
+		C87CBCCA158922C6009BD187 /* networkimage */ = {
+			isa = PBXGroup;
+			children = (
+				C87CBCCD158922C6009BD187 /* NimbusNetworkImage+Namespace.h */,
+				C87CBCCE158922C6009BD187 /* NimbusNetworkImage.h */,
+				C87CBCCF158922C6009BD187 /* NINetworkImageRequest.h */,
+				C87CBCD0158922C6009BD187 /* NINetworkImageRequest.m */,
+				C87CBCD1158922C6009BD187 /* NINetworkImageView.h */,
+				C87CBCD2158922C6009BD187 /* NINetworkImageView.m */,
+			);
+			path = networkimage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -728,10 +766,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */,
-				7448413C1575512C009D96D6 /* second.png in Resources */,
-				7448413E1575512C009D96D6 /* second@2x.png in Resources */,
-				744841411575512C009D96D6 /* TIHFirstViewController.xib in Resources */,
-				744841441575512C009D96D6 /* TIHSecondViewController.xib in Resources */,
 				C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */,
 				C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */,
 				C81CBB4A1578154200584F64 /* fbicon@2x.png in Resources */,
@@ -762,6 +796,9 @@
 				C84BDB84157E956D00E6D7AC /* PhotoPit.png in Resources */,
 				C84BDB87157EAB3A00E6D7AC /* TIHC_Header.png in Resources */,
 				C84BDB88157EAB3A00E6D7AC /* TIHC_HeaderCenter.png in Resources */,
+				C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */,
+				C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */,
+				C87CBCBD158911FF009BD187 /* View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,10 +826,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87CBCDB15892322009BD187 /* NimbusNetworkImage+Namespace.h in Sources */,
+				C87CBCDC15892322009BD187 /* NimbusNetworkImage.h in Sources */,
+				C87CBCDD15892322009BD187 /* NINetworkImageRequest.h in Sources */,
+				C87CBCDE15892322009BD187 /* NINetworkImageView.h in Sources */,
 				7448412C1575512C009D96D6 /* main.m in Sources */,
 				744841301575512C009D96D6 /* TIHAppDelegate.m in Sources */,
-				744841331575512C009D96D6 /* TIHFirstViewController.m in Sources */,
-				7448413A1575512C009D96D6 /* TIHSecondViewController.m in Sources */,
 				74484156157552D7009D96D6 /* TIHApplicationConfiguration.m in Sources */,
 				744841F41575561B009D96D6 /* NICommonMetrics.m in Sources */,
 				744841F51575561B009D96D6 /* NIDataStructures.m in Sources */,
@@ -847,6 +886,13 @@
 				74E56DDE15757521009DC00D /* TIHNewsTableViewViewController.m in Sources */,
 				C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */,
 				C84BDBD3157EB07C00E6D7AC /* TIHWebViewController.m in Sources */,
+				C87CBCC015891402009BD187 /* TIHTabBarTableViewController.m in Sources */,
+				C87CBCC3158915AE009BD187 /* TIHPhotoPitCell.m in Sources */,
+				C87CBCC9158919C2009BD187 /* TIHPhotoPitDataModel.m in Sources */,
+				C87CBCD7158922C6009BD187 /* NINetworkImageRequest.m in Sources */,
+				C87CBCD8158922C6009BD187 /* NINetworkImageView.m in Sources */,
+				C87CBCE415892FAA009BD187 /* TIHPhotoPitViewController.m in Sources */,
+				C87CBCE7158935F3009BD187 /* NSDate+Formatting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,22 +905,6 @@
 				744841291575512C009D96D6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7448413F1575512C009D96D6 /* TIHFirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				744841401575512C009D96D6 /* en */,
-			);
-			name = TIHFirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		744841421575512C009D96D6 /* TIHSecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				744841431575512C009D96D6 /* en */,
-			);
-			name = TIHSecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

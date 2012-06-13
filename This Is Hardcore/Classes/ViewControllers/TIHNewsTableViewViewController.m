@@ -18,8 +18,6 @@
 
 @implementation TIHNewsTableViewViewController
 
-@synthesize myTable = _myTable, fanFeedButton, officialButton;
-
 - (void)viewDidLoad
 {
     _newsItems = [[NSMutableArray alloc] init];
@@ -32,7 +30,7 @@
         for( id row in [JSON valueForKey:@"rows"]){
             [_newsItems addObject: [[TIHNewsDataModel alloc] initWithProperties:row]];
         }
-        [self.myTable reloadData];
+        [[super myTable] reloadData];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
@@ -75,27 +73,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-//TODO: pull down data from json http://stackoverflow.com/questions/2968642/populate-uitableview-from-json
-
-- (IBAction) doOfficialButtonAction:(id)sender
-{
-    NSLog(@"%@ clicked", sender);
-    UIButton *button = (UIButton *)sender;
-    [button setBackgroundImage: [UIImage imageNamed:@"TIHCofficialBluetab.png"] forState:UIControlStateNormal];
-    
-    [self.fanFeedButton setBackgroundImage:[UIImage imageNamed:@"FanFeedG1tab.png"] forState:UIControlStateNormal];
-}
-- (IBAction) doFanFeedButtonAction: (id)sender
-{
-    NSLog(@"%@ clicked", sender);    
-    UIButton *button = (UIButton *)sender;
-    [button setBackgroundImage: [UIImage imageNamed:@"FanFeedBluetab.png"] forState:UIControlStateNormal];
-    [self.officialButton setBackgroundImage:[UIImage imageNamed:@"TIHCofficialG1tab.png"] forState:UIControlStateNormal];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TIHWebViewController* wvc = (TIHWebViewController*)segue.destinationViewController;
     TIHNewsCell* cell = (TIHNewsCell*)sender;
     wvc.urlAddress = [cell newsUrl];
 }
+
 @end

@@ -8,11 +8,6 @@
 
 #import "TIHAppDelegate.h"
 
-#import "TIHFirstViewController.h"
-
-#import "TIHSecondViewController.h"
-#import "TIHNewsTableViewViewController.h"
-
 @implementation TIHAppDelegate
 
 @synthesize window = _window;
