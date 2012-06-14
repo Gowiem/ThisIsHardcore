@@ -420,40 +420,48 @@
             </objects>
             <point key="canvasLocation" x="1144" y="1088"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="HLz-NK-CFO">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muu-jC-xoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="LTt-iW-ahq" sceneMemberID="viewController">
+                <viewController id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzY-95-K9k">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="cQP-bo-6Ky">
-                                <rect key="frame" x="20" y="20" width="50" height="37"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Code Orange Kids" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gmL-V8-HkW">
-                                <rect key="frame" x="20" y="65" width="280" height="21"/>
+                            <view contentMode="scaleToFill" id="Kec-t8-x6q">
+                                <rect key="frame" x="20" y="5" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="@Union Transfer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QMo-bW-1GY">
-                                <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="6p0-Oc-b2X">
+                                <rect key="frame" x="0.0" y="65" width="320" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set time: 1:20 - 1:35 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="h1L-Cg-nr1">
-                                <rect key="frame" x="20" y="102" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Code Orange Kids" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gmL-V8-HkW">
+                                        <rect key="frame" x="20" y="0.0" width="280" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="@Union Transfer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QMo-bW-1GY">
+                                        <rect key="frame" x="20" y="21" width="280" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set time: 1:20 - 1:35 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="h1L-Cg-nr1">
+                                        <rect key="frame" x="20" y="42" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="oWd-FW-mbV">
                                 <rect key="frame" x="-6" y="169" width="320" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -545,6 +553,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SLw-4K-64c"/>
+                    <connections>
+                        <outlet property="artistDescriptionLabel" destination="Beb-5q-RZL" id="6G8-ul-K2b"/>
+                        <outlet property="artistImageView" destination="Kec-t8-x6q" id="EyH-GX-puB"/>
+                        <outlet property="artistNameLabel" destination="gmL-V8-HkW" id="TJs-WE-EoL"/>
+                        <outlet property="bookmarkButton" destination="nbd-m8-bCi" id="Wt6-f0-PwY"/>
+                        <outlet property="emailButton" destination="vYC-JB-UlT" id="gr2-cL-0LY"/>
+                        <outlet property="facebookButton" destination="upk-6a-ktv" id="Iy5-nV-UFw"/>
+                        <outlet property="setTimeLabel" destination="h1L-Cg-nr1" id="Nf1-fz-KJK"/>
+                        <outlet property="shareButton" destination="AmI-i8-bX2" id="2pT-fX-JNS"/>
+                        <outlet property="twitterButton" destination="8jr-by-TUu" id="kwX-VF-0Yq"/>
+                        <outlet property="venueLabel" destination="QMo-bW-1GY" id="Z6M-xY-mpk"/>
+                        <outlet property="websiteButton" destination="OmS-Hx-odp" id="YFd-Tl-cFM"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1628" y="1093"/>
@@ -909,6 +930,28 @@
     <classes>
         <class className="BaseTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
+        </class>
+        <class className="TIHEventDetailViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doBookmarkButtonAction:"/>
+                <relationship kind="action" name="doEmailButtonAction:"/>
+                <relationship kind="action" name="doFacebookButtonAction:"/>
+                <relationship kind="action" name="doShareButtonAction:"/>
+                <relationship kind="action" name="doTwitterButtonAction:"/>
+                <relationship kind="action" name="doWebsiteButtonAction:"/>
+                <relationship kind="outlet" name="artistDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="artistImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bookmarkButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="facebookButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="venueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="websiteButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="TIHNewsCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsCell.h"/>
