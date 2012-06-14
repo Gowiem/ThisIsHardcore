@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0367787233E6483DB73F0B7D /* libPods.a */; };
+		742E88F2158A263400BBCF84 /* bookmarkitemHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E88F0158A263400BBCF84 /* bookmarkitemHeader.png */; };
+		742E88F3158A263400BBCF84 /* bookmarkitemHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E88F1158A263400BBCF84 /* bookmarkitemHeader@2x.png */; };
+		742E88F6158A2C0D00BBCF84 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E88F4158A2C0D00BBCF84 /* bookmark.png */; };
+		742E88F7158A2C0D00BBCF84 /* bookmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E88F5158A2C0D00BBCF84 /* bookmark@2x.png */; };
 		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
 		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
 		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
@@ -118,6 +122,10 @@
 
 /* Begin PBXFileReference section */
 		0367787233E6483DB73F0B7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		742E88F0158A263400BBCF84 /* bookmarkitemHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmarkitemHeader.png; path = Resources/Images/bookmarkitemHeader.png; sourceTree = "<group>"; };
+		742E88F1158A263400BBCF84 /* bookmarkitemHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmarkitemHeader@2x.png"; path = "Resources/Images/bookmarkitemHeader@2x.png"; sourceTree = "<group>"; };
+		742E88F4158A2C0D00BBCF84 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmark.png; path = Resources/Images/bookmark.png; sourceTree = "<group>"; };
+		742E88F5158A2C0D00BBCF84 /* bookmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmark@2x.png"; path = "Resources/Images/bookmark@2x.png"; sourceTree = "<group>"; };
 		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -477,17 +485,21 @@
 		744842091575573D009D96D6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				742E88F4158A2C0D00BBCF84 /* bookmark.png */,
+				742E88F5158A2C0D00BBCF84 /* bookmark@2x.png */,
+				742E88F0158A263400BBCF84 /* bookmarkitemHeader.png */,
+				742E88F1158A263400BBCF84 /* bookmarkitemHeader@2x.png */,
 				C87CBCB715890D2E009BD187 /* tinyclock.png */,
 				C87CBCB815890D2E009BD187 /* tinyclock@2x.png */,
 				C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */,
 				C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */,
 				C85A3D8E157E8C0200EF699C /* Icons */,
 				C85A3D8B157E8C0200EF699C /* bluetabheadercap.png */,
+				C81CBB521578192700584F64 /* bluetabheadercap@2x.png */,
 				C85A3D8C157E8C0200EF699C /* FanFeedBluetab.png */,
 				C85A3D8D157E8C0200EF699C /* FanFeedG1tab.png */,
 				C85A3D94157E8C0200EF699C /* TIHCofficialBluetab.png */,
 				C85A3D95157E8C0200EF699C /* TIHCofficialG1tab.png */,
-				C81CBB521578192700584F64 /* bluetabheadercap@2x.png */,
 				C81CBB531578192700584F64 /* FanFeedBluetab@2x.png */,
 				C81CBB541578192700584F64 /* FanFeedG1tab@2x.png */,
 				C81CBB551578192700584F64 /* TIHCofficialBluetab@2x.png */,
@@ -799,6 +811,10 @@
 				C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */,
 				C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */,
 				C87CBCBD158911FF009BD187 /* View.xib in Resources */,
+				742E88F2158A263400BBCF84 /* bookmarkitemHeader.png in Resources */,
+				742E88F3158A263400BBCF84 /* bookmarkitemHeader@2x.png in Resources */,
+				742E88F6158A2C0D00BBCF84 /* bookmark.png in Resources */,
+				742E88F7158A2C0D00BBCF84 /* bookmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
