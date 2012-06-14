@@ -11,7 +11,7 @@
 
 @implementation TIHPhotoPitCell
 
-@synthesize photoImage, dateLabel, tags;
+@synthesize photoImageView, dateLabel, tags;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -22,23 +22,13 @@
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (void)configureWithObject:(TIHPhotoPitDataModel *)object {
     self.dateLabel.text = [object createdAgo];
 
-    CGRect imageRect = CGRectMake(5, 5, self.imageView.frame.size.width - 5, self.imageView.frame.size.height - 5);
+    CGRect imageRect = CGRectMake(self.photoImageView.frame.origin.x, self.photoImageView.frame.origin.y, self.photoImageView.frame.size.width, self.photoImageView.frame.size.height);
     NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithFrame:imageRect];
-    networkImageView.contentMode = UIViewContentModeScaleAspectFit;
-    networkImageView.clipsToBounds = YES;
     [networkImageView setPathToNetworkImage:[object imageUrl]];
-    [self.imageView addSubview: networkImageView];
-    
+    [[self photoImageView] addSubview:networkImageView];    
     self.tags.text = [object tagDisplay];
 }
 

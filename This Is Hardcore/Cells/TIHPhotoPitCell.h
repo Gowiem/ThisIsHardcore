@@ -11,7 +11,7 @@
 
 @interface TIHPhotoPitCell : UITableViewCell
 
-@property (nonatomic, retain) IBOutlet UIImageView *photoImage;
+@property (nonatomic, retain) IBOutlet UIView *photoImageView;
 //@property (nonatomic, retain) IBOutlet UIImageView *dateIcon;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *tags;
