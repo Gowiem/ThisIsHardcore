@@ -1,5 +1,5 @@
 //
-//  TIHNewsTableViewViewController.h
+//  TIHNewsTableViewController.h
 //  This Is Hardcore
 //
 //  Created by Kevin Clough on 5/29/12.
@@ -8,7 +8,7 @@
 
 #import "TIHTabBarTableViewController.h"
 
-@interface TIHNewsTableViewViewController : TIHTabBarTableViewController {
+@interface TIHNewsTableViewController : TIHTabBarTableViewController {
     NSMutableArray *_newsItems;
 }
 

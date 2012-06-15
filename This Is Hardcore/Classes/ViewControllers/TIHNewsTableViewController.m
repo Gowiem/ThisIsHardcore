@@ -1,5 +1,5 @@
 //
-//  TIHNewsTableViewViewController.m
+//  TIHNewsTableViewController.m
 //  This Is Hardcore
 //
 //  Created by Kevin Clough on 5/29/12.
@@ -7,16 +7,16 @@
 //
 
 #import "TIHApplicationConfiguration.h"
-#import "TIHNewsTableViewViewController.h"
+#import "TIHNewsTableViewController.h"
 #import "AFJSONRequestOperation.h"
 #import "TIHNewsDataModel.h"
 #import "TIHNewsCell.h"
 #import "TIHWebViewController.h"
 
-@interface TIHNewsTableViewViewController ()
+@interface TIHNewsTableViewController ()
 @end
 
-@implementation TIHNewsTableViewViewController
+@implementation TIHNewsTableViewController
 
 - (void)viewDidLoad
 {
