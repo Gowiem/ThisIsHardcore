@@ -60,42 +60,49 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="Byj-5A-2aG">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="k52-ri-ICY" customClass="TIHEventCell">
                                                 <rect key="frame" x="0.0" y="36" width="320" height="62"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1kW-r4-Kic">
-                                                            <rect key="frame" x="6" y="6" width="50" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="3nL-xh-n8t">
-                                                            <rect key="frame" x="11" y="6" width="11" height="29"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="gZP-gj-XJk">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="Y37-ZZ-yol">
                                                             <rect key="frame" x="189" y="27" width="9" height="9"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Kau-Iz-vGn">
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QbQ-Im-jLk">
                                                             <rect key="frame" x="206" y="20" width="93" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aIC-So-kPo">
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgO-lZ-mXh">
                                                             <rect key="frame" x="60" y="21" width="129" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" id="P3V-se-6Wf">
+                                                            <rect key="frame" x="6" y="6" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="qf0-8J-mdn">
+                                                            <rect key="frame" x="11" y="6" width="11" height="29"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <connections>
+                                                    <outlet property="artistIconView" destination="P3V-se-6Wf" id="QcY-fA-9SI"/>
+                                                    <outlet property="artistNameLabel" destination="BgO-lZ-mXh" id="eFu-SV-RRB"/>
+                                                    <outlet property="bookmarkImage" destination="qf0-8J-mdn" id="XVr-CB-02R"/>
+                                                    <outlet property="setTimeLabel" destination="QbQ-Im-jLk" id="RQV-dx-eQB"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -360,21 +367,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="Su6-GI-DQ6">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="Su6-GI-DQ6" customClass="TIHEventCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="cz7-l6-CTp">
-                                                    <rect key="frame" x="6" y="6" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="kPX-fR-FIA">
-                                                    <rect key="frame" x="11" y="6" width="11" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="ldP-bg-bsd">
                                                     <rect key="frame" x="189" y="27" width="9" height="9"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -393,9 +392,24 @@
                                                     <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" id="ZOJ-37-IXS">
+                                                    <rect key="frame" x="6" y="6" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="kPX-fR-FIA">
+                                                    <rect key="frame" x="11" y="6" width="11" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="artistIconView" destination="ZOJ-37-IXS" id="qr0-cI-S4E"/>
+                                            <outlet property="artistNameLabel" destination="zgn-sI-XHE" id="RR9-Na-Uaq"/>
+                                            <outlet property="bookmarkImage" destination="kPX-fR-FIA" id="Awj-iU-Ezk"/>
+                                            <outlet property="setTimeLabel" destination="aVt-zK-NyM" id="iop-IB-ttp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -898,6 +912,49 @@
                         <segue destination="pgz-oE-b2z" kind="relationship" relationship="rootViewController" id="7dG-YN-SL7"/>
                     </connections>
                 </navigationController>
+                <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="2yp-HO-Lp4" customClass="TIHEventCell">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="4dr-Ps-zNH">
+                                <rect key="frame" x="189" y="27" width="9" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="clw-if-r2a">
+                                <rect key="frame" x="206" y="20" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="K5q-d8-lh7">
+                                <rect key="frame" x="60" y="21" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="13c-mB-s9O">
+                                <rect key="frame" x="6" y="6" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="wZL-1B-GZt">
+                                <rect key="frame" x="11" y="6" width="11" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistNameLabel" destination="K5q-d8-lh7" id="MGh-nR-4QR"/>
+                        <outlet property="bookmarkImage" destination="wZL-1B-GZt" id="m4W-Uq-gbi"/>
+                        <outlet property="setTimeLabel" destination="clw-if-r2a" id="XQ5-P5-YpH"/>
+                    </connections>
+                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="618" y="1700"/>
         </scene>
@@ -931,6 +988,15 @@
         <class className="BaseTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
         </class>
+        <class className="TIHEventCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="artistIconView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bookmarkImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="TIHEventDetailViewController" superclassName="BaseTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
             <relationships>
@@ -960,9 +1026,6 @@
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
             </relationships>
-        </class>
-        <class className="TIHNewsTableViewViewController" superclassName="TIHTabBarTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewViewController.h"/>
         </class>
         <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
