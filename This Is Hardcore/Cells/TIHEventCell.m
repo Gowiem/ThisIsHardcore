@@ -10,7 +10,7 @@
 
 @implementation TIHEventCell
 
-@synthesize artistIcon, artistNameLabel, bookmarkImage, setTimeLabel;
+@synthesize artistIconView, artistNameLabel, bookmarkImage, setTimeLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
