@@ -69,6 +69,7 @@
 		742E897E158B758000BBCF84 /* TIHEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E897D158B758000BBCF84 /* TIHEventCell.m */; };
 		742E8981158B787300BBCF84 /* TIHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */; };
 		742E8987158BBF3F00BBCF84 /* NSDate+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */; };
+		742E898A158BC06C00BBCF84 /* TIHEventDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */; };
 		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
 		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
 		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
@@ -243,6 +244,8 @@
 		742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsTableViewController.m; path = Classes/ViewControllers/TIHNewsTableViewController.m; sourceTree = "<group>"; };
 		742E8985158BBF3F00BBCF84 /* NSDate+Formatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatting.h"; sourceTree = "<group>"; };
 		742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
+		742E8988158BC06C00BBCF84 /* TIHEventDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventDataModel.h; path = Classes/Models/TIHEventDataModel.h; sourceTree = "<group>"; };
+		742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHEventDataModel.m; path = Classes/Models/TIHEventDataModel.m; sourceTree = "<group>"; };
 		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -736,6 +739,8 @@
 				7448422C15755BFF009D96D6 /* TIHNewsDataModel.m */,
 				C87CBCC7158919C2009BD187 /* TIHPhotoPitDataModel.h */,
 				C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */,
+				742E8988158BC06C00BBCF84 /* TIHEventDataModel.h */,
+				742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1159,6 +1164,7 @@
 				742E897E158B758000BBCF84 /* TIHEventCell.m in Sources */,
 				742E8981158B787300BBCF84 /* TIHNewsTableViewController.m in Sources */,
 				742E8987158BBF3F00BBCF84 /* NSDate+Formatting.m in Sources */,
+				742E898A158BC06C00BBCF84 /* TIHEventDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
