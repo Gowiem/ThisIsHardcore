@@ -10,4 +10,15 @@
 
 @interface TIHEventDataModel : TIHBaseDataModel
 
+- (int) eventId;
+- (NSString *) artistName;
+- (NSString *) artistDescription;
+- (NSString *) artistWebsite;
+- (NSString *) artistFBUrl;
+- (NSString *) artistTwitterUrl;
+- (NSString *) imageUrl;
+- (NSString *) iconUrl;
+- (NSDate *) startTime;
+- (NSDate *) endTime;
+
 @end

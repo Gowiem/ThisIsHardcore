@@ -10,4 +10,49 @@
 
 @implementation TIHBookmarkManager
 
+
+- (id)init
+{
+    if((self = [super init]))
+    { 
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *data = [defaults objectForKey:@"bookmarks"];
+        bookmarks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if(bookmarks == nil)
+            bookmarks = [[NSMutableSet alloc] init];
+    }
+    return self;
+}
+
+- (NSSet *) getBookmarks
+{
+    return bookmarks;
+}
+
+- (void) resetBookmarks
+{
+    [bookmarks removeAllObjects];
+    [self saveToDefaults];
+}
+
+- (void) addBookmarkByEventId: (NSNumber *) eventId
+{
+    [bookmarks addObject:eventId];
+    [self saveToDefaults];
+}
+
+- (void) removeBookmarkByEventId: (NSNumber *) eventId
+{
+    [bookmarks removeObject:eventId];
+    [self saveToDefaults];
+}
+
+-(void) saveToDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:bookmarks];
+    [defaults setObject:data forKey:@"bookmarks"];
+    [defaults synchronize];    
+}
+
 @end

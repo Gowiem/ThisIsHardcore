@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TIHBookmarkManager : NSObject
+@interface TIHBookmarkManager : NSObject {
+
+@private
+NSMutableSet *bookmarks;
+
+}
+
+- (void) resetBookmarks;
+- (NSSet *) getBookmarks;
+- (void) addBookmarkByEventId: (NSNumber *) eventId;
+- (void) removeBookmarkByEventId: (NSNumber *) eventId;
 
 @end
