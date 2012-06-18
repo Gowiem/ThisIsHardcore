@@ -168,7 +168,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="1LZ-xY-HL5"/>
+                                            <action selector="doOfficialButtonAction:" destination="pgz-oE-b2z" eventType="touchDown" id="ChF-wQ-fLl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ulW-pT-ZyW">
@@ -184,7 +184,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="doFanFeedButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="YB1-U7-LBn"/>
+                                            <action selector="doFanFeedButtonAction:" destination="pgz-oE-b2z" eventType="touchDown" id="SoU-td-od3"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bluetabheadercap.png" id="A8y-fo-LiJ">
@@ -215,12 +215,12 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" id="tn9-cL-Agk">
-                                                            <rect key="frame" x="8" y="38" width="305" height="305"/>
+                                                            <rect key="frame" x="7" y="30.5" width="306" height="306"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                         </view>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FAa-0c-ua5">
-                                                            <rect key="frame" x="8" y="342" width="305" height="21"/>
+                                                            <rect key="frame" x="8" y="335" width="305" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -279,7 +279,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="dd5-OA-07d"/>
                                     <action selector="doThursButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="CTE-yJ-tcX"/>
                                 </connections>
                             </button>
@@ -297,7 +296,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doFriButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="L1v-pB-lP3"/>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="biP-yE-lAn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TPQ-2e-ABV">
@@ -313,7 +311,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="e0K-gs-zvv"/>
                                     <action selector="doSatButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="tcU-8k-HSK"/>
                                 </connections>
                             </button>
@@ -330,7 +327,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="dQ4-IB-AhA"/>
                                     <action selector="doSunButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="Irf-da-swA"/>
                                 </connections>
                             </button>
@@ -348,26 +344,18 @@
                                 </state>
                                 <connections>
                                     <action selector="doAfterButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="Phh-60-D4K"/>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="8RD-fa-l5Q"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bluetabheadercap.png" id="HBO-Lb-Dg3">
                                 <rect key="frame" x="0.0" y="25" width="320" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="August 30, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tCD-NU-F2V">
-                                <rect key="frame" x="7" y="22" width="309" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uzZ-TK-dCZ">
                                 <rect key="frame" x="0.0" y="46" width="320" height="321"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="Su6-GI-DQ6" customClass="TIHEventCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="62" id="Su6-GI-DQ6" customClass="TIHEventCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -412,11 +400,22 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7ue-m1-koG" id="wem-aY-Y32"/>
+                                    <outlet property="delegate" destination="7ue-m1-koG" id="CH7-hI-m5t"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="TIHC_Tabheader.png" id="QNZ-Yj-Mbi">
                                 <rect key="frame" x="0.0" y="27" width="320" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="August 30, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tCD-NU-F2V">
+                                <rect key="frame" x="7" y="22" width="309" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -605,9 +604,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="iZk-Lh-tjg"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WDE-9q-gBO">
                                 <rect key="frame" x="161" y="2" width="156" height="23"/>
@@ -621,9 +617,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="doFanFeedButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="aMs-WG-hdN"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bluetabheadercap.png" id="zcg-gL-FOR">
                                 <rect key="frame" x="0.0" y="25" width="320" height="2"/>
@@ -984,102 +977,6 @@
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
     </resources>
-    <classes>
-        <class className="BaseTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
-        </class>
-        <class className="TIHEventCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="artistIconView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bookmarkImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHEventDetailViewController" superclassName="BaseTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doBookmarkButtonAction:"/>
-                <relationship kind="action" name="doEmailButtonAction:"/>
-                <relationship kind="action" name="doFacebookButtonAction:"/>
-                <relationship kind="action" name="doShareButtonAction:"/>
-                <relationship kind="action" name="doTwitterButtonAction:"/>
-                <relationship kind="action" name="doWebsiteButtonAction:"/>
-                <relationship kind="outlet" name="artistDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="artistImageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bookmarkButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="facebookButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="venueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="websiteButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TIHNewsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bodyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewController.h"/>
-        </class>
-        <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="photoImageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHPhotoPitViewController" superclassName="TIHTabBarTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitViewController.h"/>
-        </class>
-        <class className="TIHScheduleViewController" superclassName="BaseTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doAfterButtonAction:"/>
-                <relationship kind="action" name="doFriButtonAction:"/>
-                <relationship kind="action" name="doSatButtonAction:"/>
-                <relationship kind="action" name="doSunButtonAction:"/>
-                <relationship kind="action" name="doThursButtonAction:"/>
-                <relationship kind="outlet" name="afterButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="friButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="satButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sunButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="thursButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TIHTabBarTableViewController" superclassName="BaseTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHTabBarTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doFanFeedButtonAction:"/>
-                <relationship kind="action" name="doOfficialButtonAction:"/>
-                <relationship kind="outlet" name="fanFeedButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="officialButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TIHWebViewController" superclassName="BaseTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doBackButtonAction:"/>
-                <relationship kind="action" name="doForwardButtonAction:"/>
-                <relationship kind="action" name="doStopSlashRefreshButtonAction:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="forwardButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="stopSlashRefreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
