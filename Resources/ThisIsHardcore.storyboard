@@ -3,7 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -558,7 +558,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Beb-5q-RZL">
                                 <rect key="frame" x="20" y="131" width="268" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius accumsan porta. Mauris auctor arcu eu nisl tempus consequat eu ut velit. Phasellus ac eros augue. Donec mattis, justo sed venenatis tempor, ante neque imperdiet libero, quis mollis velit est sagittis nisl. Duis id purus eros. Nullam sapien lacus, ornare vel posuere et, hendrerit et turpis. Proin enim massa, iaculis vitae rutrum eu, aliquam consectetur ligula. Nunc non velit non nisi faucibus pellentesque. Curabitur in orci at quam venenatis hendrerit quis nec lacus. Praesent mattis erat a urna adipiscing congue a eu enim. Donec sit amet vehicula eros. Aenean velit nibh, semper sit amet ultrices nec, convallis non nunc. Vestibulum lacinia, nisl id viverra egestas, nisl nibh euismod arcu, vitae condimentum ipsum nunc eu urna. Fusce libero lorem, ornare at rutrum ut, eleifend vel libero.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius accumsan porta. Mauris auctor arcu eu nisl tempus consequat eu ut velit. Phasellus ac eros augue. Donec mattis, justo sed venenatis tempor, ante neque imperdiet libero, quis mollis velit est sagittis nisl. Duis id purus eros. Nullam sapien lacus, ornare vel posuere et, hendrerit et turpis. Proin enim massa, iaculis vitae rutrum eu, aliquam consectetur ligula. Nunc non velit non nisi faucibus pellentesque. Curabitur in orci at quam venenatis hendrerit quis nec lacus. Praesent mattis erat a urna adipiscing congue a eu enim. Donec sit amet vehicula eros. Aenean velit nibh, semper sit amet ultrices nec, convallis non nunc. Vestibulum lacinia, nisl id viverra egestas, nisl nibh euismod arcu, vitae condimentum ipsum nunc eu urna. Fusce libero lorem, ornare at rutrum ut, eleifend vel libero.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -584,11 +584,11 @@
             </objects>
             <point key="canvasLocation" x="1628" y="1093"/>
         </scene>
-        <!--News Table View View Controller - News-->
+        <!--News Table View Controller - News-->
         <scene sceneID="vTI-oc-3g6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbq-cp-nAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="News" wantsFullScreenLayout="YES" id="EJr-u7-cF9" customClass="TIHNewsTableViewViewController" sceneMemberID="viewController">
+                <viewController title="News" wantsFullScreenLayout="YES" id="EJr-u7-cF9" customClass="TIHNewsTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hsw-0O-ybI">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1026,6 +1026,9 @@
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewController.h"/>
         </class>
         <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
