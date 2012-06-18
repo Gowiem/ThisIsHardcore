@@ -7,9 +7,11 @@
 //
 
 #import "BaseTableViewController.h"
+#import "TIHEventDataModel.h"
 
-@interface TIHEventDetailViewController : BaseTableViewController
+@interface TIHEventDetailViewController : BaseTableViewController<UIActionSheetDelegate>
 
+@property (nonatomic, retain) TIHEventDataModel *dataModel;
 @property (strong, nonatomic) IBOutlet UIView *artistImageView;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *venueLabel;

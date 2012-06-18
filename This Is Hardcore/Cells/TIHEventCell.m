@@ -12,7 +12,7 @@
 
 @implementation TIHEventCell
 
-@synthesize artistIconView, artistNameLabel, bookmarkImage, setTimeLabel;
+@synthesize artistIconView, artistNameLabel, bookmarkImage, setTimeLabel, dataModel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -31,7 +31,7 @@
 }
 
 - (void)configureWithObject:(TIHEventDataModel *)object {
-    
+    self.dataModel = object;
     NSString *artistText = [[object artistName] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     self.artistNameLabel.text = artistText;
     

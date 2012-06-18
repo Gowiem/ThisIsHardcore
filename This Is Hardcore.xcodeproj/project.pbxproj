@@ -161,6 +161,7 @@
 		C85A3D9E157E8C0200EF699C /* TIHCofficialBluetab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D94157E8C0200EF699C /* TIHCofficialBluetab.png */; };
 		C85A3D9F157E8C0200EF699C /* TIHCofficialG1tab.png in Resources */ = {isa = PBXBuildFile; fileRef = C85A3D95157E8C0200EF699C /* TIHCofficialG1tab.png */; };
 		C85A3DA2157E8C6700EF699C /* ThisIsHardcore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */; };
+		C860C932158FCD840012886A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C860C931158FCD840012886A /* Twitter.framework */; };
 		C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB715890D2E009BD187 /* tinyclock.png */; };
 		C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB815890D2E009BD187 /* tinyclock@2x.png */; };
 		C87CBCBD158911FF009BD187 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCBC158911FF009BD187 /* View.xib */; };
@@ -413,6 +414,7 @@
 		C85A3D94157E8C0200EF699C /* TIHCofficialBluetab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialBluetab.png; path = Resources/Images/TIHCofficialBluetab.png; sourceTree = "<group>"; };
 		C85A3D95157E8C0200EF699C /* TIHCofficialG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialG1tab.png; path = Resources/Images/TIHCofficialG1tab.png; sourceTree = "<group>"; };
 		C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ThisIsHardcore.storyboard; path = Resources/ThisIsHardcore.storyboard; sourceTree = "<group>"; };
+		C860C931158FCD840012886A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C87CBCB715890D2E009BD187 /* tinyclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tinyclock.png; path = Resources/Images/tinyclock.png; sourceTree = "<group>"; };
 		C87CBCB815890D2E009BD187 /* tinyclock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tinyclock@2x.png"; path = "Resources/Images/tinyclock@2x.png"; sourceTree = "<group>"; };
 		C87CBCBC158911FF009BD187 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = Resources/View.xib; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C860C932158FCD840012886A /* Twitter.framework in Frameworks */,
 				7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */,
 				7448428915755EFF009D96D6 /* CoreAudio.framework in Frameworks */,
 				744841201575512C009D96D6 /* UIKit.framework in Frameworks */,
@@ -531,6 +534,7 @@
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
+				C860C931158FCD840012886A /* Twitter.framework */,
 				7448428C15755F9E009D96D6 /* AudioToolbox.framework */,
 				7448428815755EFF009D96D6 /* CoreAudio.framework */,
 				744841251575512C009D96D6 /* This Is Hardcore */,

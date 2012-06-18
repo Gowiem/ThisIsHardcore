@@ -10,5 +10,6 @@
 
 @interface TIHPhotoPitViewController : TIHTabBarTableViewController {
     NSMutableArray *_photoPitItems;
+    NSString *tag;
 }
 @end

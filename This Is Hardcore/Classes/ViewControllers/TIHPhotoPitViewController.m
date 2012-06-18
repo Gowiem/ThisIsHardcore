@@ -20,14 +20,22 @@
 - (void)viewDidLoad
 {
     _photoPitItems = [[NSMutableArray alloc] init];
-    [super viewDidLoad];
+    tag = @"instagram-official";
     
-	// Do any additional setup after loading the view.
-    NSString *endPointUrl = [[NSString stringWithFormat:@"%@/posts.json?key=\"instagram\"&auth_token=unifeed-debug", UNIFEED_API_URL] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [super viewDidLoad];    
+    [self loadData];
+}
+
+- (void)loadData
+{
+    NSString *endPointUrl = [[NSString stringWithFormat:@"%@/posts.json?key=\"%@\"&auth_token=unifeed-debug", UNIFEED_API_URL, tag] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"Fetching URL %@", endPointUrl);
     NSURL *url = [NSURL URLWithString:endPointUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *
+          request, NSHTTPURLResponse *response, id JSON) {
+        [_photoPitItems removeAllObjects];
         for( id row in [JSON valueForKey:@"rows"]){
             [_photoPitItems addObject: [[TIHPhotoPitDataModel alloc] initWithProperties:row]];
         }
@@ -70,5 +78,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction) doOfficialButtonAction:(id)sender
+{
+    NSLog(@"Do Official Button Tapped");
+    [super doOfficialButtonAction:sender];
+    tag = @"instagram-official";
+    [self loadData];
+}
+- (IBAction) doFanFeedButtonAction: (id)sender
+{
+    NSLog(@"Do Fan Feed Button Tapped");
+    [super doFanFeedButtonAction:sender];
+    tag = @"instagram-tag";
+    [self loadData];
+}
 
 @end

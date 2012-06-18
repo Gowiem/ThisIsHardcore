@@ -11,6 +11,7 @@
 
 @interface TIHEventCell : UITableViewCell
 
+@property (nonatomic, retain) TIHEventDataModel *dataModel;
 @property (nonatomic, retain) IBOutlet UIView *artistIconView;
 @property (nonatomic, retain) IBOutlet UILabel *artistNameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *setTimeLabel;

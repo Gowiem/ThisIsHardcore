@@ -19,18 +19,8 @@
 
 @implementation TIHScheduleViewController
 
-@synthesize myTable = _myTable, thursButton, friButton, satButton, sunButton, afterButton;
+@synthesize myTable = _myTable, thursButton, friButton, satButton, sunButton, afterButton, dayDateLabel;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        [self loadData];
-        _selectedDay = 0;
-    }
-    return self;
-}
 
 -(void) loadData
 {
@@ -58,12 +48,8 @@
 {
     [super viewDidLoad];
     [self loadData];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    _selectedDay = 0;
+    [self setDayDateLabelText];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -165,7 +151,7 @@
     {
         [self.dayDateLabel setHidden:NO];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"EEEE MMMM d, YYYY"];        
+        [dateFormat setDateFormat:@"MMMM d, YYYY"];        
         self.dayDateLabel.text =  [dateFormat stringFromDate:[self getSelectedDate]];
     }
     else {
@@ -193,5 +179,20 @@
 
         [buttonToUpdate setBackgroundImage:newImage forState:UIControlStateNormal];
     }        
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *events = [self getScheduleItemsBySelectedDay];
+    TIHEventDataModel *modelData = [events objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"segueToEventDetail" sender:modelData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)model {
+    if ([segue.identifier isEqualToString:@"segueToEventDetail"])
+    {
+        id edvc = segue.destinationViewController;
+        [edvc setDataModel:model];
+    }
 }
 @end
