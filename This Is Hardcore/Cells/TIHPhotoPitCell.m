@@ -18,6 +18,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        NSArray* subViews = [[self photoImageView] subviews];
+        for( UIView *aView in subViews ) {
+            [aView removeFromSuperview];
+        }
     }
     return self;
 }
