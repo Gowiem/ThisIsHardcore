@@ -10,7 +10,7 @@
 
 @interface TIHEventDataModel : TIHBaseDataModel
 
-- (int) eventId;
+- (NSNumber *) eventId;
 - (NSString *) artistName;
 - (NSString *) artistDescription;
 - (NSString *) artistWebsite;
@@ -20,5 +20,7 @@
 - (NSString *) iconUrl;
 - (NSDate *) startTime;
 - (NSDate *) endTime;
+
+- (NSComparisonResult)compare:(TIHBaseDataModel *)otherObject ;
 
 @end

@@ -8,9 +8,15 @@
 
 #import "BaseTableViewController.h"
 
-@interface TIHScheduleViewController : BaseTableViewController
+@interface TIHScheduleViewController : BaseTableViewController{
+    UITableView *_myTable;
+    NSMutableArray *_scheduleItems;
+    int _selectedDay;
+}
+
 
 @property (strong, nonatomic) IBOutlet UITableView *myTable;
+@property (strong, nonatomic) IBOutlet UILabel *dayDateLabel;
 
 @property (strong, nonatomic) IBOutlet UIButton *thursButton;
 @property (strong, nonatomic) IBOutlet UIButton *friButton;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TIHEventDataModel.h"
 
 @interface TIHEventCell : UITableViewCell
 
@@ -14,5 +15,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *artistNameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *setTimeLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *bookmarkImage;
+
+- (void)configureWithObject:(TIHEventDataModel *)object;
 
 @end

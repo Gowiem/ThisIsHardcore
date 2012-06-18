@@ -11,6 +11,11 @@
 
 @implementation TIHEventDataModel
 
+- (NSNumber *) eventId
+{
+    return [_properties smartObjectForKey:@"id"];
+}
+
 - (NSString *)artistName
 {
     return [_properties smartObjectForKey:@"artist_name"];
@@ -51,6 +56,19 @@
     return date;
 }
 
+- (NSString *)iconUrl
+{
+    return [_properties smartObjectForKey:@"icon_url"];
+}
+
+- (NSString *)image_url
+{
+    return [_properties smartObjectForKey:@"image_url"];
+}
+
+- (NSComparisonResult)compare:(TIHEventDataModel *)otherObject {
+    return [self.startTime compare:otherObject.startTime];
+}
 
 @end
 
