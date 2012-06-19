@@ -12,6 +12,7 @@
 
 - (NSNumber *) eventId;
 - (NSString *) artistName;
+- (NSString *) venueName;
 - (NSString *) artistDescription;
 - (NSString *) artistWebsite;
 - (NSString *) artistFBUrl;
@@ -20,6 +21,7 @@
 - (NSString *) iconUrl;
 - (NSDate *) startTime;
 - (NSDate *) endTime;
+- (NSString *) setTimeDisplay;
 
 - (NSComparisonResult)compare:(TIHBaseDataModel *)otherObject ;
 

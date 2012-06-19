@@ -12,12 +12,14 @@
 @interface TIHEventDetailViewController : BaseTableViewController<UIActionSheetDelegate>
 
 @property (nonatomic, retain) TIHEventDataModel *dataModel;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *artistImageView;
+@property (strong, nonatomic) IBOutlet UIView *textLabelsView;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *venueLabel;
 @property (strong, nonatomic) IBOutlet UILabel *setTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *artistDescriptionLabel;
-
+@property (strong, nonatomic) IBOutlet UIView *actionButtonsView;
 @property (strong, nonatomic) IBOutlet UIButton *websiteButton;
 @property (strong, nonatomic) IBOutlet UIButton *facebookButton;
 @property (strong, nonatomic) IBOutlet UIButton *twitterButton;

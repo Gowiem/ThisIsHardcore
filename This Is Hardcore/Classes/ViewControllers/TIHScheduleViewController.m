@@ -29,6 +29,8 @@
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/cms/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    NSLog(@"Requesting url : %@", url);
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for( id row in JSON){
@@ -96,6 +98,11 @@
     
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 62;
+}
+
 
 - (NSDate*) getSelectedDate
 {

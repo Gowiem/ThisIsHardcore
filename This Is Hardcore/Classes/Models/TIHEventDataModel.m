@@ -41,6 +41,11 @@
     return [_properties smartObjectForKey:@"twitter_url"];
 }
 
+- (NSString *)venueName
+{
+    return [_properties smartObjectForKey:@"venue"];
+}
+
 
 - (NSDate *)startTime
 {
@@ -56,12 +61,25 @@
     return date;
 }
 
+- (NSString *) setTimeDisplay
+{
+    NSDateFormatter *startDateFormat = [[NSDateFormatter alloc] init];
+    [startDateFormat setDateFormat:@"h:mm"];
+    NSDateFormatter *endDateFormat = [[NSDateFormatter alloc] init];
+    [endDateFormat setDateFormat:@"h:mm a"];
+    
+    NSString *startDateString = [startDateFormat stringFromDate:[self startTime]];
+    NSString *endDateString = [endDateFormat stringFromDate:[self endTime]];
+    
+    return [NSString stringWithFormat:@"%@ - %@", startDateString, endDateString];
+}
+
 - (NSString *)iconUrl
 {
     return [_properties smartObjectForKey:@"icon_url"];
 }
 
-- (NSString *)image_url
+- (NSString *)imageUrl
 {
     return [_properties smartObjectForKey:@"image_url"];
 }

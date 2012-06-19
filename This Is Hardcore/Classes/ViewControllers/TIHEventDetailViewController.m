@@ -7,6 +7,7 @@
 //
 
 #import "TIHEventDetailViewController.h"
+#import "NINetworkImageView.h"
 #import <Twitter/Twitter.h>
 
 @interface TIHEventDetailViewController ()
@@ -15,7 +16,7 @@
 
 @implementation TIHEventDetailViewController
 
-@synthesize artistDescriptionLabel, artistImageView, artistNameLabel, venueLabel,bookmarkButton, shareButton, setTimeLabel, facebookButton, websiteButton,twitterButton, emailButton, dataModel;
+@synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel,bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, emailButton, dataModel, scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +30,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.artistNameLabel.text = [dataModel artistName];
+    NSString *artistName  = [dataModel artistName];
+    NSString *venueName = [dataModel venueName];
+    NSString *setTime = [dataModel setTimeDisplay];
+    NSString *artistDescription = [dataModel artistDescription];
+    
+    self.artistNameLabel.text = artistName;
+    self.venueLabel.text = [NSString stringWithFormat:@"@%@", venueName];
+    self.setTimeLabel.text = setTime;
+    self.artistDescriptionLabel.numberOfLines = 0;
+    self.artistDescriptionLabel.text = artistDescription;
+    [self.artistDescriptionLabel sizeToFit];
+    
+    UIImage *image = [UIImage imageNamed:@"TIHC_BandLoad.png"];
+    NINetworkImageView* imageView = [[NINetworkImageView alloc] initWithImage:image];
+    CGRect imageRect = CGRectMake(9, 5, 302, 201);
+    self.artistImageView.frame = imageRect;
+    imageView.frame = imageRect;
+    [imageView setPathToNetworkImage:[dataModel imageUrl] forDisplaySize:CGSizeMake(302, 201) contentMode:UIViewContentModeScaleAspectFit];
+    [[self artistImageView] addSubview:imageView];   
 	
+    double textLabelsViewOriginY = self.artistImageView.frame.size.height + self.artistImageView.frame.origin.y + 5;
+    CGSize artistNameSize = [artistName sizeWithFont:self.artistNameLabel.font  constrainedToSize:self.artistNameLabel.frame.size lineBreakMode: UILineBreakModeTailTruncation];
+    CGSize venueNameSize = [venueName sizeWithFont:self.venueLabel.font  constrainedToSize:self.venueLabel.frame.size lineBreakMode: UILineBreakModeTailTruncation];
+    CGSize setTimeSize = [setTime sizeWithFont:self.setTimeLabel.font  constrainedToSize:self.setTimeLabel.frame.size lineBreakMode: UILineBreakModeTailTruncation];
+    CGSize descriptionSize = [artistDescription sizeWithFont:self.artistDescriptionLabel.font constrainedToSize:self.artistDescriptionLabel.frame.size lineBreakMode:UILineBreakModeWordWrap];
+    double textLabelsViewHeight = artistNameSize.height + venueNameSize.height + setTimeSize.height + descriptionSize.height + 10;    
+
+    [[self textLabelsView] setFrame:CGRectMake(textLabelsView.frame.origin.x, textLabelsViewOriginY, textLabelsView.frame.size.width, textLabelsViewHeight)];
+    [[self actionButtonsView] setFrame:CGRectMake(9, self.textLabelsView.frame.origin.y + self.textLabelsView.frame.size.height + 5, 302, self.actionButtonsView.frame.size.height)];
+    
+    double viewHeight = self.actionButtonsView.frame.size.height + self.actionButtonsView.frame.origin.y + 20;
+    [[self scrollView] setContentSize:CGSizeMake(320, viewHeight)];
 }
 
 - (void)viewDidUnload
@@ -46,6 +77,7 @@
 
 - (IBAction) doShareButtonAction:(id)sender
 {
+    NSLog(@"doShareButtonAction");
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
@@ -102,5 +134,26 @@
         // Dismiss the controller
         [self dismissModalViewControllerAnimated:YES];
     };
+}
+
+- (IBAction) doWebsiteButtonAction:(id)sender
+{
+    
+}
+- (IBAction) doFacebookButtonAction:(id)sender
+{
+    
+}
+- (IBAction) doTwitterButtonAction:(id)sender
+{
+    
+}
+- (IBAction) doEmailButtonAction:(id)sender
+{
+    
+}
+- (IBAction) doBookmarkButtonAction:(id)sender
+{
+    
 }
 @end

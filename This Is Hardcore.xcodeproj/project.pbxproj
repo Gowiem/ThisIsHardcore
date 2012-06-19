@@ -129,6 +129,12 @@
 		7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448428C15755F9E009D96D6 /* AudioToolbox.framework */; };
 		7448429315756469009D96D6 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429215756469009D96D6 /* BaseTableViewController.m */; };
 		7448429915756491009D96D6 /* NINetworkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429815756491009D96D6 /* NINetworkTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7455F7811590C10B007FDD18 /* TIHC_BandLoad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F77B1590C10B007FDD18 /* TIHC_BandLoad.png */; };
+		7455F7821590C10B007FDD18 /* TIHC_BandLoad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F77C1590C10B007FDD18 /* TIHC_BandLoad@2x.png */; };
+		7455F7831590C10B007FDD18 /* TIHC_PhotoPitLoad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F77D1590C10B007FDD18 /* TIHC_PhotoPitLoad.png */; };
+		7455F7841590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F77E1590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png */; };
+		7455F7851590C10B007FDD18 /* TIHC_thumbnailload.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F77F1590C10B007FDD18 /* TIHC_thumbnailload.png */; };
+		7455F7861590C10B007FDD18 /* TIHC_thumbnailload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455F7801590C10B007FDD18 /* TIHC_thumbnailload@2x.png */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
@@ -379,6 +385,12 @@
 		7448429615756491009D96D6 /* NimbusNetworkControllers+Namespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NimbusNetworkControllers+Namespace.h"; path = "../nimbus/src/networkcontrollers/src/NimbusNetworkControllers+Namespace.h"; sourceTree = "<group>"; };
 		7448429715756491009D96D6 /* NINetworkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NINetworkTableViewController.h; path = ../nimbus/src/networkcontrollers/src/NINetworkTableViewController.h; sourceTree = "<group>"; };
 		7448429815756491009D96D6 /* NINetworkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NINetworkTableViewController.m; path = ../nimbus/src/networkcontrollers/src/NINetworkTableViewController.m; sourceTree = "<group>"; };
+		7455F77B1590C10B007FDD18 /* TIHC_BandLoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_BandLoad.png; path = Resources/Images/Loading/TIHC_BandLoad.png; sourceTree = "<group>"; };
+		7455F77C1590C10B007FDD18 /* TIHC_BandLoad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_BandLoad@2x.png"; path = "Resources/Images/Loading/TIHC_BandLoad@2x.png"; sourceTree = "<group>"; };
+		7455F77D1590C10B007FDD18 /* TIHC_PhotoPitLoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_PhotoPitLoad.png; path = Resources/Images/Loading/TIHC_PhotoPitLoad.png; sourceTree = "<group>"; };
+		7455F77E1590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_PhotoPitLoad@2x.png"; path = "Resources/Images/Loading/TIHC_PhotoPitLoad@2x.png"; sourceTree = "<group>"; };
+		7455F77F1590C10B007FDD18 /* TIHC_thumbnailload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_thumbnailload.png; path = Resources/Images/Loading/TIHC_thumbnailload.png; sourceTree = "<group>"; };
+		7455F7801590C10B007FDD18 /* TIHC_thumbnailload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_thumbnailload@2x.png"; path = "Resources/Images/Loading/TIHC_thumbnailload@2x.png"; sourceTree = "<group>"; };
 		A4901ABF80AC4F53A6348638 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
@@ -691,9 +703,10 @@
 		744842091575573D009D96D6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				742E8962158A90BD00BBCF84 /* General */,
 				742E88F8158A8A4400BBCF84 /* Buttons */,
+				742E8962158A90BD00BBCF84 /* General */,
 				C85A3D8E157E8C0200EF699C /* Icons */,
+				7455F7791590C096007FDD18 /* Loading */,
 				742E8929158A8D8F00BBCF84 /* ScheduleTabs */,
 				742E88F4158A2C0D00BBCF84 /* bookmark.png */,
 				742E88F5158A2C0D00BBCF84 /* bookmark@2x.png */,
@@ -862,12 +875,12 @@
 		7448428E15756085009D96D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7448429115756469009D96D6 /* BaseTableViewController.h */,
+				7448429215756469009D96D6 /* BaseTableViewController.m */,
 				742E897F158B787300BBCF84 /* TIHNewsTableViewController.h */,
 				742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */,
 				C87CBCE215892FA8009BD187 /* TIHPhotoPitViewController.h */,
 				C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */,
-				7448429115756469009D96D6 /* BaseTableViewController.h */,
-				7448429215756469009D96D6 /* BaseTableViewController.m */,
 				C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */,
 				C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */,
 				C87CBCBE15891402009BD187 /* TIHTabBarTableViewController.h */,
@@ -896,6 +909,19 @@
 			children = (
 			);
 			name = Styles;
+			sourceTree = "<group>";
+		};
+		7455F7791590C096007FDD18 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				7455F77B1590C10B007FDD18 /* TIHC_BandLoad.png */,
+				7455F77C1590C10B007FDD18 /* TIHC_BandLoad@2x.png */,
+				7455F77D1590C10B007FDD18 /* TIHC_PhotoPitLoad.png */,
+				7455F77E1590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png */,
+				7455F77F1590C10B007FDD18 /* TIHC_thumbnailload.png */,
+				7455F7801590C10B007FDD18 /* TIHC_thumbnailload@2x.png */,
+			);
+			name = Loading;
 			sourceTree = "<group>";
 		};
 		C81CBADA1577F95000584F64 /* Cells */ = {
@@ -1086,6 +1112,12 @@
 				742E8970158A925400BBCF84 /* default@2x.png in Resources */,
 				742E8971158A925400BBCF84 /* icon.png in Resources */,
 				742E8972158A925400BBCF84 /* icon@2x.png in Resources */,
+				7455F7811590C10B007FDD18 /* TIHC_BandLoad.png in Resources */,
+				7455F7821590C10B007FDD18 /* TIHC_BandLoad@2x.png in Resources */,
+				7455F7831590C10B007FDD18 /* TIHC_PhotoPitLoad.png in Resources */,
+				7455F7841590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png in Resources */,
+				7455F7851590C10B007FDD18 /* TIHC_thumbnailload.png in Resources */,
+				7455F7861590C10B007FDD18 /* TIHC_thumbnailload@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

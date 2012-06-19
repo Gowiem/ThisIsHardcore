@@ -35,20 +35,12 @@
     NSString *artistText = [[object artistName] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     self.artistNameLabel.text = artistText;
     
-    NSDateFormatter *startDateFormat = [[NSDateFormatter alloc] init];
-    [startDateFormat setDateFormat:@"h:mm"];
-    NSDateFormatter *endDateFormat = [[NSDateFormatter alloc] init];
-    [endDateFormat setDateFormat:@"h:mm a"];
-    
-    NSString *startDateString = [startDateFormat stringFromDate:[object startTime]];
-    NSString *endDateString = [endDateFormat stringFromDate:[object endTime]];
+    self.setTimeLabel.text = [object setTimeDisplay];
 
-    self.setTimeLabel.text = [NSString stringWithFormat:@"%@ - %@", startDateString, endDateString];
-
-    CGRect imageRect = CGRectMake(self.artistIconView.frame.origin.x, self.artistIconView.frame.origin.y, self.artistIconView.frame.size.width, self.artistIconView.frame.size.height);
-    NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithFrame:imageRect];
-    [networkImageView setPathToNetworkImage:[object iconUrl]];
-    [[self artistIconView] addSubview:networkImageView];    
+    UIImage *image = [UIImage imageNamed:@"TIHC_thumbnailload.png"];
+    NINetworkImageView* imageView = [[NINetworkImageView alloc] initWithImage:image];
+    [imageView setPathToNetworkImage:[object iconUrl] forDisplaySize:self.artistIconView.frame.size contentMode:UIViewContentModeScaleAspectFit];
+    [[self artistIconView] addSubview:imageView];   
     
     NSSet *bookmarks = [[[TIHBookmarkManager alloc] init] getBookmarks];
     if(![bookmarks containsObject:[object eventId]])
