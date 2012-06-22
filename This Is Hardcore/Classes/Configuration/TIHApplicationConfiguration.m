@@ -19,8 +19,8 @@ const NSInteger NUM_OF_ITEMS_PER_API_REQUEST = 20;
 const NSInteger CACHE_INVALIDATION_AGE = 60*60*24;
 
 /* Facebook API configuration */
-NSString *const FB_API_KEY = @"8c92836fdd869c52848a00505448127d";
-NSString *const FB_SECRET = @"24856020573d7c52db6ed434dfa44893";
+NSString *const FB_API_KEY = @"255710954537587";
+NSString *const FB_SECRET = @"024631f4d4ac48fff8b0ba5e8b6d6b4b";
 
 /* Twitter API configuration */
 NSString *const TWITTER_CONSUMER_KEY = @"Fj1xw1bqdqzrMyqrrKc8CA";

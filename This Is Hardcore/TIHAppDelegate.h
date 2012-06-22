@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
-@interface TIHAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {}
+@interface TIHAppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate> 
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
+
 
 @end

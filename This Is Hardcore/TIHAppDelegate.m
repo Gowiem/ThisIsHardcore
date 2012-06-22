@@ -8,6 +8,7 @@
 
 #import "TIHAppDelegate.h"
 #import "TIHBookmarkManager.h"
+#import "ARFacebook.h"
 
 @implementation TIHAppDelegate
 
@@ -17,6 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    ARFacebook *facebook = [ARFacebook sharedARFacebook];
+    return [facebook handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
