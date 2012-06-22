@@ -8,6 +8,7 @@
 
 #import "TIHEventDataModel.h"
 #import "NSDictionary+NoNulls.h"
+#import "TIHBookmarkManager.h"
 
 @implementation TIHEventDataModel
 
@@ -86,6 +87,12 @@
 
 - (NSComparisonResult)compare:(TIHEventDataModel *)otherObject {
     return [self.startTime compare:otherObject.startTime];
+}
+
+- (bool)isEventBookmarked
+{
+    NSSet *bookmarks = [[[TIHBookmarkManager alloc] init] getBookmarks];
+    return [bookmarks containsObject:[self eventId]];
 }
 
 @end

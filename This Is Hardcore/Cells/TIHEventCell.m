@@ -7,7 +7,6 @@
 //
 
 #import "TIHEventCell.h"
-#import "TIHBookmarkManager.h"
 #import "NINetworkImageView.h"
 
 @implementation TIHEventCell
@@ -42,15 +41,8 @@
     [imageView setPathToNetworkImage:[object iconUrl] forDisplaySize:self.artistIconView.frame.size contentMode:UIViewContentModeScaleAspectFit];
     [[self artistIconView] addSubview:imageView];   
     
-    NSSet *bookmarks = [[[TIHBookmarkManager alloc] init] getBookmarks];
-    if(![bookmarks containsObject:[object eventId]])
-    {
-        [[self bookmarkImage] setHidden:NO];
-    }
-    else
-    {
-        [[ self bookmarkImage] setHidden:YES];
-    }
+    NSLog(@"Event is Bookmarked? %s", [object isEventBookmarked] ? "YES" : "NO");
+    [[self bookmarkImage] setHidden:![object isEventBookmarked]];
 }
 
 @end
