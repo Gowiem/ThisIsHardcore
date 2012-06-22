@@ -7,6 +7,7 @@
 //
 
 #import "TIHEventDetailViewController.h"
+#import "TIHBookmarkManager.h"
 #import "NINetworkImageView.h"
 #import <Twitter/Twitter.h>
 
@@ -30,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Loading Event %i", [[dataModel eventId] intValue]);
     NSString *artistName  = [dataModel artistName];
     NSString *venueName = [dataModel venueName];
     NSString *setTime = [dataModel setTimeDisplay];
@@ -62,6 +64,27 @@
     
     double viewHeight = self.actionButtonsView.frame.size.height + self.actionButtonsView.frame.origin.y + 20;
     [[self scrollView] setContentSize:CGSizeMake(320, viewHeight)];
+
+    [self.websiteButton setEnabled:[[dataModel artistWebsite] length] == 0];
+    [self.facebookButton setEnabled:[[dataModel artistFBUrl] length] == 0];
+    [self.twitterButton setEnabled:[[dataModel artistTwitterUrl] length] == 0];
+    
+    [self updateBookmarkDisplay];
+}
+
+- (void) updateBookmarkDisplay
+{
+    UIImage *bookmarkImage;
+    if([dataModel isEventBookmarked])
+    {
+        NSLog(@"Event is bookmarked");
+        bookmarkImage = [UIImage imageNamed:@"bookmarkbuttonremove.png"];
+    }
+    else {
+                NSLog(@"Event is not bookmarked");
+        bookmarkImage = [UIImage imageNamed:@"bookmarkbutton.png"];
+    }
+    [self.bookmarkButton setImage:bookmarkImage forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
@@ -92,7 +115,8 @@
     {
         case 0:
         {
-           //TODO Implement Facebook Share
+            NSLog(@"Share VIA FB!");
+            [self shareWithFacebook];
             break;
         }
         case 1:
@@ -109,9 +133,8 @@
     TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
     
     // Optional: set an image, url and initial text
-    [twitter addImage:[UIImage imageNamed:@"iOSDevTips.png"]];
-    [twitter addURL:[NSURL URLWithString:[NSString stringWithString:@"http://MobileDeveloperTips.com/"]]];
-    [twitter setInitialText:@"Tweet from iOS 5 app using the Twitter framework."];
+    [twitter addURL:[NSURL URLWithString:[dataModel imageUrl]]];
+    [twitter setInitialText: [NSString stringWithFormat:@"%@ , %@, %@ #TIHCFest ", [dataModel artistName], [dataModel setTimeDisplay], [dataModel venueName]] ];
     
     // Show the controller
     [self presentModalViewController:twitter animated:YES];
@@ -119,13 +142,13 @@
     // Called when the tweet dialog has been closed
     twitter.completionHandler = ^(TWTweetComposeViewControllerResult result) 
     {
-        NSString *title = @"Tweet Status";
+        NSString *title = @"Share";
         NSString *msg; 
         
         if (result == TWTweetComposeViewControllerResultCancelled)
-            msg = @"Tweet compostion was canceled.";
+            msg = @"Tweet was canceled.";
         else if (result == TWTweetComposeViewControllerResultDone)
-            msg = @"Tweet composition completed.";
+            msg = @"Tweeted!";
         
         // Show alert to see how things went...
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
@@ -138,22 +161,82 @@
 
 - (IBAction) doWebsiteButtonAction:(id)sender
 {
-    
+    [self openUrlFromString:[dataModel artistWebsite]];
 }
 - (IBAction) doFacebookButtonAction:(id)sender
 {
-    
+    [self openUrlFromString:[dataModel artistFBUrl]];
 }
 - (IBAction) doTwitterButtonAction:(id)sender
 {
-    
+    [self openUrlFromString:[dataModel artistTwitterUrl]];    
 }
 - (IBAction) doEmailButtonAction:(id)sender
 {
-    
+    MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
+    mailController.mailComposeDelegate = self;
+    [mailController setSubject:[NSString stringWithFormat:@"This Is Hardcore! %@ %@ %@", [dataModel artistName], [dataModel setTimeDisplay], [dataModel venueName]]];
+    [self presentModalViewController:mailController animated:YES];
+}
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissModalViewControllerAnimated:YES];
 }
 - (IBAction) doBookmarkButtonAction:(id)sender
 {
+    TIHBookmarkManager *b = [[TIHBookmarkManager alloc] init];
+    if([dataModel isEventBookmarked])
+    {
+        [b removeBookmarkByEventId:[dataModel eventId]];
+    }
+    else {
+        [b addBookmarkByEventId:[dataModel eventId]];
+    }
+    [self updateBookmarkDisplay];
+}
+
+-(void) openUrlFromString: (NSString *)s
+{
+    NSURL *url = [ [ NSURL alloc ] initWithString: s ];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+- (void)didAuthorizeFacebook:(Facebook *)facebook
+{
+    [self shareWithFacebook];
+}
+
+- (void)shareWithFacebook
+{
+    NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+    ARFacebook *facebook = [ARFacebook sharedARFacebook];
     
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+       && [defaults objectForKey:@"FBExpirationDateKey"]) {
+       facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+       facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+
+    if(![facebook isSessionValid])
+    {
+        [facebook authorize:[NSArray arrayWithObjects:@"publish_stream", nil]];
+    }
+    NSLog(@"Posting to Facebook...");
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
+    [params setObject:message forKey:@"message"];
+    [params setObject:[dataModel imageUrl] forKey:@"picture"];
+    [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
+}
+
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error
+{
+    NSLog(@"Error sharing to FB.");
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result
+{
+    NSLog(@"Facebook share complete");
 }
 @end

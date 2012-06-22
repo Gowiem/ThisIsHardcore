@@ -8,8 +8,10 @@
 
 #import "BaseTableViewController.h"
 #import "TIHEventDataModel.h"
+#import "ARFacebook.h"
+#import <MessageUI/MessageUI.h>
 
-@interface TIHEventDetailViewController : BaseTableViewController<UIActionSheetDelegate>
+@interface TIHEventDetailViewController : BaseTableViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate, FacebookAuthorizedDelegate, FBRequestDelegate> 
 
 @property (nonatomic, retain) TIHEventDataModel *dataModel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
