@@ -10,7 +10,10 @@
 
 #ifdef __OBJC__
     #import <QuartzCore/QuartzCore.h>
-    #import "NimbusCore.h"
+    #import "NimbusCore.h"    
     #import "NimbusModels.h"
+    #import "NimbusNetworkImage.h"
     #import "NimbusNetworkControllers.h"
+    #import "NimbusWebController.h"
+    #import "AFNetworking.h"
 #endif
