@@ -26,6 +26,14 @@
     return self;
 }
 
+-(void)clearSubViews
+{
+    NSArray* subViews = [[self photoImageView] subviews];
+    for( UIView *aView in subViews ) {
+        [aView removeFromSuperview];
+    }
+}
+    
 - (void)configureWithObject:(TIHPhotoPitDataModel *)object {
     self.dateLabel.text = [object createdAgo];
 

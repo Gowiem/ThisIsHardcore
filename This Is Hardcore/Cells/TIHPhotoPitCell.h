@@ -18,5 +18,6 @@
 
 // Configures the subviews of the cell with the given object.
 - (void)configureWithObject:(TIHPhotoPitDataModel *)object;
+- (void)clearSubViews;
 
 @end
