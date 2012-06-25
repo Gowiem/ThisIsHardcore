@@ -120,24 +120,60 @@
             </objects>
             <point key="canvasLocation" x="1149" y="477"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="Ptl-jO-MUI">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJb-aW-J8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="5dm-nX-PXK" sceneMemberID="viewController">
+                <viewController id="5dm-nX-PXK" customClass="TIHMoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhe-Mq-aMm">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AWv-al-8tt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="AWv-al-8tt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHMoreCell" rowHeight="55" id="tfP-hx-aAY" customClass="TIHMoreCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="RVO-Wm-vtB">
+                                                    <rect key="frame" x="5" y="4" width="45" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nCs-KS-b84">
+                                                    <rect key="frame" x="58" y="13" width="222" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="moreImage" destination="RVO-Wm-vtB" id="Lsr-yP-vYj"/>
+                                            <outlet property="moreLabel" destination="nCs-KS-b84" id="55e-Ew-rlV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5dm-nX-PXK" id="em9-19-BjW"/>
+                                    <outlet property="delegate" destination="5dm-nX-PXK" id="4wQ-1F-MdN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dWo-G4-8tB"/>
+                    <connections>
+                        <outlet property="myTable" destination="AWv-al-8tt" id="UHi-6P-hea"/>
+                        <segue destination="blI-dw-3rH" kind="push" identifier="MoreDetailWebView" id="Y1n-qj-59O"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1144" y="2307"/>
@@ -667,7 +703,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="5dG-yp-FgE">
                                                     <rect key="frame" x="12" y="2" width="38" height="38"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="this is a hardcore date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UrK-ln-4r0">
                                                     <rect key="frame" x="58" y="2" width="222" height="20"/>
@@ -884,39 +920,6 @@
                         <segue destination="5dm-nX-PXK" kind="relationship" relationship="rootViewController" id="Q9h-Ry-CKh"/>
                     </connections>
                 </navigationController>
-                <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="364" id="fsD-QE-aoY" customClass="TIHNewsCell">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="363"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="bjy-ij-4jj">
-                                <rect key="frame" x="173" y="15" width="134" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="jLB-ha-pdY">
-                                <rect key="frame" x="156" y="21" width="9" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="h5a-xv-WZR">
-                                <rect key="frame" x="8" y="38" width="305" height="305"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="m1I-TH-f8s">
-                                <rect key="frame" x="8" y="342" width="305" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="618" y="2307"/>
         </scene>
@@ -1010,6 +1013,119 @@
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
     </resources>
+    <classes>
+        <class className="BaseTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
+        </class>
+        <class className="TIHEventCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="artistIconView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bookmarkImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TIHEventDetailViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doBookmarkButtonAction:"/>
+                <relationship kind="action" name="doEmailButtonAction:"/>
+                <relationship kind="action" name="doFacebookButtonAction:"/>
+                <relationship kind="action" name="doShareButtonAction:"/>
+                <relationship kind="action" name="doTwitterButtonAction:"/>
+                <relationship kind="action" name="doWebsiteButtonAction:"/>
+                <relationship kind="outlet" name="actionButtonsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="artistDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="artistImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bookmarkButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="facebookButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabelsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="venueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="websiteButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TIHMoreCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHMoreCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="moreImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="moreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TIHMoreViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHMoreViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="TIHNewsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bodyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewController.h"/>
+        </class>
+        <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="photoImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TIHPhotoPitViewController" superclassName="TIHTabBarTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitViewController.h"/>
+        </class>
+        <class className="TIHScheduleViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doAfterButtonAction:"/>
+                <relationship kind="action" name="doFriButtonAction:"/>
+                <relationship kind="action" name="doSatButtonAction:"/>
+                <relationship kind="action" name="doSunButtonAction:"/>
+                <relationship kind="action" name="doThursButtonAction:"/>
+                <relationship kind="outlet" name="afterButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dayDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="friButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="satButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sunButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="thursButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TIHTabBarTableViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHTabBarTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doFanFeedButtonAction:"/>
+                <relationship kind="action" name="doOfficialButtonAction:"/>
+                <relationship kind="outlet" name="fanFeedButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="officialButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TIHWebViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doBackButtonAction:"/>
+                <relationship kind="action" name="doForwardButtonAction:"/>
+                <relationship kind="action" name="doStopSlashRefreshButtonAction:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="forwardButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stopSlashRefreshButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1017,5 +1133,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="WYD-46-Fqw"/>
+        <segue reference="Y1n-qj-59O"/>
     </inferredMetricsTieBreakers>
 </document>
