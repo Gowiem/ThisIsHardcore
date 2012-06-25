@@ -8,19 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
+#import "NimbusWebController.h"
 
-@interface TIHWebViewController : BaseTableViewController
-
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-
-@property (strong, nonatomic) IBOutlet UIButton *backButton;
-@property (strong, nonatomic) IBOutlet UIButton *forwardButton;
-@property (strong, nonatomic) IBOutlet UIButton *stopSlashRefreshButton;
-
-- (IBAction) doBackButtonAction:(id)sender;
-- (IBAction) doForwardButtonAction:(id)sender;
-- (IBAction) doStopSlashRefreshButtonAction:(id)sender;
+@interface TIHWebViewController : NIWebController
 
 @property (strong, nonatomic) NSString *urlAddress;
+
+- (void)updateNavBarDisplay;
 
 @end

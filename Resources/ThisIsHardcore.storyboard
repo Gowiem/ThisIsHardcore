@@ -759,67 +759,9 @@
                     <view key="view" contentMode="scaleToFill" id="O1c-HQ-5Td">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FHd-2P-BB5">
-                                <rect key="frame" x="173" y="0.0" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Forward">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doForwardButtonAction:" destination="blI-dw-3rH" eventType="touchDown" id="88z-rQ-Y2z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zBw-dp-xHN">
-                                <rect key="frame" x="13" y="0.0" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doBackButtonAction:" destination="blI-dw-3rH" eventType="touchDown" id="jrJ-sV-hly"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tl2-2h-bXn">
-                                <rect key="frame" x="93" y="0.0" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doStopSlashRefreshButtonAction:" destination="blI-dw-3rH" eventType="touchDown" id="1WU-KO-1vJ"/>
-                                </connections>
-                            </button>
-                            <webView contentMode="scaleToFill" id="c6a-ri-pgV">
-                                <rect key="frame" x="0.0" y="36" width="320" height="331"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qI9-Nl-mzm"/>
-                    <connections>
-                        <outlet property="backButton" destination="zBw-dp-xHN" id="dzS-zh-D0x"/>
-                        <outlet property="forwardButton" destination="FHd-2P-BB5" id="g8t-T1-52g"/>
-                        <outlet property="stopSlashRefreshButton" destination="Tl2-2h-bXn" id="eOq-wu-8aH"/>
-                        <outlet property="webView" destination="c6a-ri-pgV" id="xBD-gK-Pq7"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1619" y="-88"/>
@@ -1017,6 +959,9 @@
         <class className="BaseTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
         </class>
+        <class className="NIWebController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NIWebController.h"/>
+        </class>
         <class className="TIHEventCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
             <relationships>
@@ -1113,17 +1058,8 @@
                 <relationship kind="outlet" name="officialButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="TIHWebViewController" superclassName="BaseTableViewController">
+        <class className="TIHWebViewController" superclassName="NIWebController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doBackButtonAction:"/>
-                <relationship kind="action" name="doForwardButtonAction:"/>
-                <relationship kind="action" name="doStopSlashRefreshButtonAction:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="forwardButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="stopSlashRefreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1132,7 +1068,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="MTt-hb-LGa"/>
         <segue reference="WYD-46-Fqw"/>
-        <segue reference="Y1n-qj-59O"/>
     </inferredMetricsTieBreakers>
 </document>

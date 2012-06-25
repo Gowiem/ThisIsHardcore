@@ -14,61 +14,45 @@
 
 @implementation TIHWebViewController
 
-@synthesize backButton, forwardButton, stopSlashRefreshButton, webView, urlAddress;
-
-//TODO Find out why this is never called
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    NSLog(@"TIHUIWebViewController Init");
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        NSLog(@"Loading URL: %@", self.urlAddress);
-        NSURL *url = [NSURL URLWithString:self.urlAddress];
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [self.webView loadRequest:requestObj];
-    }
-    return self;
-}
+@synthesize urlAddress;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (IBAction) doBackButtonAction:(id)sender
-{
-    NSLog(@"Back button Action");
-}
-- (IBAction) doForwardButtonAction:(id)sender
-{
-    NSLog(@"Forward button Action");
-}
-
-//TODO change this functionality from loading the url to performing/stop slash refresh
-- (IBAction) doStopSlashRefreshButtonAction:(id)sender
-{
-    NSLog(@"Stop Slash Refresh button Action");
     NSLog(@"Loading URL: %@", self.urlAddress);
-    NSURL *url = [NSURL URLWithString:self.urlAddress];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    
-    //Load the request in the UIWebView.
-    [self.webView loadRequest:requestObj];
+    NSURL *url = [NSURL URLWithString:self.urlAddress];  
+    [super openURL:url];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self updateNavBarDisplay];
+    
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];          
+    self.navigationItem.rightBarButtonItem = anotherButton;    
+}
 
+-(void) updateNavBarDisplay {
+    NSString *backgroundImageName = @"";
+    if([[[self navigationController] viewControllers] count] == 1) {
+        backgroundImageName = @"TIHC_Header.png";
+    }
+    else {
+        backgroundImageName = @"TIHC_HeaderCenter.png";
+    }
+    
+    UIImage *image = [UIImage imageNamed:backgroundImageName];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+    UILabel *label = [[UILabel alloc] init];
+    self.navigationItem.titleView = label;
+    label.text = @"";
+}
+
+- (void)handleTicket:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://m.ticketmaster.com/ticket/search.do?articles=tmus&query=this+is+hardcore&submit=SEARCH"]];
+}
 @end
