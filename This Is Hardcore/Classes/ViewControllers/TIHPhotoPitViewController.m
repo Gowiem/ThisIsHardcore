@@ -60,7 +60,7 @@
     if (cell == nil) {
         cell = [[TIHPhotoPitCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
+    [cell clearSubViews];
     [cell configureWithObject:[_photoPitItems objectAtIndex:indexPath.row]];
     
     return cell;
