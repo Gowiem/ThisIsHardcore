@@ -7,8 +7,6 @@
  */
 
 #import "ARFacebook.h"
-#import "SynthesizeSingleton.h"
-//#import "Three20/Three20+Additions.h"
 #import "TIHApplicationConfiguration.h"
 
 @implementation ARFacebook
