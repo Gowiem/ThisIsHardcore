@@ -782,7 +782,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J15-gJ-sP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="2sm-xs-8RV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bookmarks" image="Bookmark.png" id="dOm-32-dUa"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarkIcon.png" id="dOm-32-dUa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="w90-0L-rPk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -899,7 +899,6 @@
     </scenes>
     <resources>
         <image name="AfterTabG4.png" width="62" height="23"/>
-        <image name="Bookmark.png" width="10" height="26"/>
         <image name="FanFeedG1tab.png" width="156" height="23"/>
         <image name="FriTabG1.png" width="62" height="23"/>
         <image name="HCBell.png" width="29" height="30"/>
@@ -918,19 +917,20 @@
         <image name="artisttwitterinactive.png" width="94" height="93"/>
         <image name="bluetabheadercap.png" width="320" height="2"/>
         <image name="bookmark.png" width="11" height="29"/>
+        <image name="bookmarkIcon.png" width="10" height="26"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
         <image name="email.png" width="93" height="92"/>
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
     </resources>
     <classes>
-        <class className="BaseTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseTableViewController.h"/>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
         </class>
         <class className="NIWebController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NIWebController.h"/>
         </class>
-        <class className="TIHBaseScheduleViewController" superclassName="BaseTableViewController">
+        <class className="TIHBaseScheduleViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBaseScheduleViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
@@ -948,7 +948,7 @@
                 <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="TIHEventDetailViewController" superclassName="BaseTableViewController">
+        <class className="TIHEventDetailViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doBookmarkButtonAction:"/>
@@ -980,7 +980,7 @@
                 <relationship kind="outlet" name="moreLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="TIHMoreViewController" superclassName="BaseTableViewController">
+        <class className="TIHMoreViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHMoreViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
@@ -1024,7 +1024,7 @@
                 <relationship kind="outlet" name="thursButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="TIHTabBarTableViewController" superclassName="BaseTableViewController">
+        <class className="TIHTabBarTableViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHTabBarTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doFanFeedButtonAction:"/>
