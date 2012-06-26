@@ -75,7 +75,6 @@
     }
     
     [cell configureWithObject:[_items objectAtIndex:indexPath.row]];
-    NSLog(@"Rendering cell for row %i. Name : %@", indexPath.row, [[_items objectAtIndex:indexPath.row] name]);
     return cell;
 }
 

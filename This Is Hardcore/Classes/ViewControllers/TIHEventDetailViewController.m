@@ -77,11 +77,9 @@
     UIImage *bookmarkImage;
     if([dataModel isEventBookmarked])
     {
-        NSLog(@"Event is bookmarked");
         bookmarkImage = [UIImage imageNamed:@"bookmarkbuttonremove.png"];
     }
     else {
-                NSLog(@"Event is not bookmarked");
         bookmarkImage = [UIImage imageNamed:@"bookmarkbutton.png"];
     }
     [self.bookmarkButton setImage:bookmarkImage forState:UIControlStateNormal];

@@ -41,7 +41,6 @@
     [imageView setPathToNetworkImage:[object iconUrl] forDisplaySize:self.artistIconView.frame.size contentMode:UIViewContentModeScaleAspectFit];
     [[self artistIconView] addSubview:imageView];   
     
-    NSLog(@"Event is Bookmarked? %s", [object isEventBookmarked] ? "YES" : "NO");
     [[self bookmarkImage] setHidden:![object isEventBookmarked]];
 }
 
