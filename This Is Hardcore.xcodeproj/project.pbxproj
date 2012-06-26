@@ -77,6 +77,7 @@
 		7433AFDA1599F7E8003D1622 /* TIHBaseScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */; };
 		7433B02A159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */; };
 		7433B02E159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */; };
+		74441772159A538C00946B97 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74441771159A538C00946B97 /* BaseViewController.m */; };
 		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
 		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
 		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
@@ -107,7 +108,6 @@
 		7448428515755E98009D96D6 /* ARCredentialKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448428315755E98009D96D6 /* ARCredentialKeys.m */; };
 		7448428915755EFF009D96D6 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448428815755EFF009D96D6 /* CoreAudio.framework */; };
 		7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448428C15755F9E009D96D6 /* AudioToolbox.framework */; };
-		7448429315756469009D96D6 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448429215756469009D96D6 /* BaseTableViewController.m */; };
 		7453FD9A1594EBBC0036FC88 /* TIHMoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7453FD991594EBBC0036FC88 /* TIHMoreDataModel.m */; };
 		7453FD9D1594EDF70036FC88 /* TIHMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7453FD9C1594EDF70036FC88 /* TIHMoreCell.m */; };
 		7453FDA01594F03B0036FC88 /* TIHMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7453FD9F1594F03A0036FC88 /* TIHMoreViewController.m */; };
@@ -272,6 +272,8 @@
 		7433B028159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHBookmarkScheduleHeaderView.h; path = Classes/Views/TIHBookmarkScheduleHeaderView.h; sourceTree = "<group>"; };
 		7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHBookmarkScheduleHeaderView.m; path = Classes/Views/TIHBookmarkScheduleHeaderView.m; sourceTree = "<group>"; };
 		7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TIHBookmarkScheduleHeaderView.xib; path = Resources/TIHBookmarkScheduleHeaderView.xib; sourceTree = "<group>"; };
+		74441770159A538C00946B97 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Classes/ViewControllers/BaseViewController.h; sourceTree = "<group>"; };
+		74441771159A538C00946B97 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Classes/ViewControllers/BaseViewController.m; sourceTree = "<group>"; };
 		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -332,8 +334,6 @@
 		7448428415755E98009D96D6 /* ARiOSUtilitiesConstants-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARiOSUtilitiesConstants-Prefix.pch"; sourceTree = "<group>"; };
 		7448428815755EFF009D96D6 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		7448428C15755F9E009D96D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		7448429115756469009D96D6 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = Classes/ViewControllers/BaseTableViewController.h; sourceTree = "<group>"; };
-		7448429215756469009D96D6 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = Classes/ViewControllers/BaseTableViewController.m; sourceTree = "<group>"; };
 		7453FD981594EBBC0036FC88 /* TIHMoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHMoreDataModel.h; path = Classes/Models/TIHMoreDataModel.h; sourceTree = "<group>"; };
 		7453FD991594EBBC0036FC88 /* TIHMoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHMoreDataModel.m; path = Classes/Models/TIHMoreDataModel.m; sourceTree = "<group>"; };
 		7453FD9B1594EDF70036FC88 /* TIHMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHMoreCell.h; path = Cells/TIHMoreCell.h; sourceTree = "<group>"; };
@@ -796,8 +796,10 @@
 		7448428E15756085009D96D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7448429115756469009D96D6 /* BaseTableViewController.h */,
-				7448429215756469009D96D6 /* BaseTableViewController.m */,
+				74441770159A538C00946B97 /* BaseViewController.h */,
+				74441771159A538C00946B97 /* BaseViewController.m */,
+				7433AFD81599F7E7003D1622 /* TIHBaseScheduleViewController.h */,
+				7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */,
 				7433AFD51599F709003D1622 /* TIHBookmarkViewController.h */,
 				7433AFD61599F709003D1622 /* TIHBookmarkViewController.m */,
 				742E8979158AA42F00BBCF84 /* TIHEventDetailViewController.h */,
@@ -814,8 +816,6 @@
 				C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */,
 				C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */,
 				C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */,
-				7433AFD81599F7E7003D1622 /* TIHBaseScheduleViewController.h */,
-				7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1111,7 +1111,6 @@
 				7448427F15755DB9009D96D6 /* UIView+Positioning.m in Sources */,
 				7448428015755DB9009D96D6 /* UIView+ResignResponder.m in Sources */,
 				7448428515755E98009D96D6 /* ARCredentialKeys.m in Sources */,
-				7448429315756469009D96D6 /* BaseTableViewController.m in Sources */,
 				C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */,
 				C84BDBD3157EB07C00E6D7AC /* TIHWebViewController.m in Sources */,
 				C87CBCC015891402009BD187 /* TIHTabBarTableViewController.m in Sources */,
@@ -1135,6 +1134,7 @@
 				7433AFD71599F709003D1622 /* TIHBookmarkViewController.m in Sources */,
 				7433AFDA1599F7E8003D1622 /* TIHBaseScheduleViewController.m in Sources */,
 				7433B02A159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m in Sources */,
+				74441772159A538C00946B97 /* BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

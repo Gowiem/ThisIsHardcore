@@ -22,34 +22,25 @@
 - (void)configureWithObject:(TIHNewsDataModel *)object {
     
     NSString *bodyText = [[object body] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+    CGRect bodyLabelFrame = self.bodyLabel.frame;
+    bodyLabelFrame.size.width = 222;
+    self.bodyLabel.frame = bodyLabelFrame;
     self.bodyLabel.text = bodyText;
-    
+    self.bodyLabel.lineBreakMode = UILineBreakModeWordWrap;
     self.bodyLabel.numberOfLines = 0;
-//    self.bodyLabel.frame = CGRectMake(83,30,200,39);
-    [self.bodyLabel sizeToFit];
+    [self.bodyLabel sizeToFit];  
     
-    if([object provider] == @"facebook") {
-        [self.imageView setImage:[UIImage imageNamed:@"fbicon.png"]] ;
-    }
-    else {
-        [self.imageView setImage:[UIImage imageNamed:@"twittericon.png"]] ;
-    }
+    NSString* imageName = [object provider] == @"facebook" ? @"fbicon.png" : @"twittericon.png";
+    [self.newsImage setImage:[UIImage imageNamed:imageName]];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"h:mm a - EEEE MMMM d, YYYY"];
     NSString *dateString = [dateFormat stringFromDate:[object createdAt]];
     self.dateLabel.text = dateString ;
-    // self.imageView.image = [object myGreatImageToDisplay];
-    //NSLog(@" %@ %@ %@", self.frame, self.bodyLabel.frame);
     
-    CGSize dateSize = [dateString sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:self.dateLabel.frame.size lineBreakMode:UILineBreakModeClip];
-    CGSize bodySize = [bodyText sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:self.bodyLabel.frame.size lineBreakMode: UILineBreakModeWordWrap];
+    CGFloat height = MAX( self.bodyLabel.frame.size.height + self.dateLabel.frame.size.height + 20, 80);
     
-    CGFloat height =  dateSize.height + bodySize.height + 20;
-    if(height < 80)
-    {
-        height = 80;
-    }
     self.frame = CGRectMake(0,0,320,height);
     self.newsUrl = [object newsUrl];
 }
