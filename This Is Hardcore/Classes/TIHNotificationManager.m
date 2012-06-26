@@ -28,7 +28,7 @@
     localNotif.soundName = UILocalNotificationDefaultSoundName;
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObject:message forKey:
-                                [NSNumber numberWithInt:[event eventId]]];
+                                [event eventId]];
     localNotif.userInfo = infoDict;
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];

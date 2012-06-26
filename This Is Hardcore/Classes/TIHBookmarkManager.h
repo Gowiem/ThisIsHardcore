@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface TIHBookmarkManager : NSObject {
-
-@private
-NSMutableSet *bookmarks;
-
+    @private
+    NSMutableSet *bookmarks;
 }
 
 - (void) resetBookmarks;

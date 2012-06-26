@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 
-@interface TIHAppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate> 
+@interface TIHAppDelegate : UIResponder <UIApplicationDelegate> 
 
 @property (strong, nonatomic) UIWindow *window;
 
