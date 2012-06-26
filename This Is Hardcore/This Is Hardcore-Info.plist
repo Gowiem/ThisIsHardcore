@@ -35,6 +35,8 @@
 	<true/>
 	<key>UIMainStoryboardFile~iphone</key>
 	<string>ThisIsHardcore</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>ThisIsHardcore</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
