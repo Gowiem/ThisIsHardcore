@@ -7,6 +7,7 @@
 //
 
 #import "TIHWebViewController.h"
+#import "UIColor+HexString.h"
 
 @interface TIHWebViewController ()
 
@@ -27,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [self setToolbarTintColor:[UIColor colorWithHexString: @"0a74b5"]];
     [self updateNavBarDisplay];
     
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];          

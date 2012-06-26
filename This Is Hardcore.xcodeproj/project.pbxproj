@@ -72,6 +72,7 @@
 		742E8981158B787300BBCF84 /* TIHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */; };
 		742E8987158BBF3F00BBCF84 /* NSDate+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */; };
 		742E898A158BC06C00BBCF84 /* TIHEventDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */; };
+		7433AFD41599F595003D1622 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433AFD31599F595003D1622 /* UIColor+HexString.m */; };
 		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
 		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
 		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
@@ -258,6 +259,8 @@
 		742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
 		742E8988158BC06C00BBCF84 /* TIHEventDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventDataModel.h; path = Classes/Models/TIHEventDataModel.h; sourceTree = "<group>"; };
 		742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHEventDataModel.m; path = Classes/Models/TIHEventDataModel.m; sourceTree = "<group>"; };
+		7433AFD21599F595003D1622 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		7433AFD31599F595003D1622 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -750,6 +753,8 @@
 				7448426C15755DB9009D96D6 /* UIView+Positioning.m */,
 				7448426D15755DB9009D96D6 /* UIView+ResignResponder.h */,
 				7448426E15755DB9009D96D6 /* UIView+ResignResponder.m */,
+				7433AFD21599F595003D1622 /* UIColor+HexString.h */,
+				7433AFD31599F595003D1622 /* UIColor+HexString.m */,
 			);
 			name = ARUIKitAdditions;
 			path = submodules/ARiOSUtilities/ARUIKitAdditions;
@@ -1099,6 +1104,7 @@
 				7453FD9A1594EBBC0036FC88 /* TIHMoreDataModel.m in Sources */,
 				7453FD9D1594EDF70036FC88 /* TIHMoreCell.m in Sources */,
 				7453FDA01594F03B0036FC88 /* TIHMoreViewController.m in Sources */,
+				7433AFD41599F595003D1622 /* UIColor+HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
