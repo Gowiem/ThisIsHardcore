@@ -6,115 +6,77 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bookmark View Controller-->
         <scene sceneID="rLc-b7-OQ2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogp-vH-mkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="5Tj-WR-tKS" sceneMemberID="viewController">
+                <viewController id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ait-Rl-V1s">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="hxu-ij-ycV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="62" sectionHeaderHeight="14" sectionFooterHeight="14" id="y6J-vb-p3Q">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="y6J-vb-p3Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <view key="tableHeaderView" contentMode="scaleToFill" id="sCL-bo-A7A">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="14"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="62" id="k52-ri-ICY" customClass="TIHEventCell">
+                                        <rect key="frame" x="0.0" y="14" width="320" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmarkitemHeader.png" id="qmI-pa-rGJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="Y37-ZZ-yol">
+                                                    <rect key="frame" x="189" y="27" width="9" height="9"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thursday, August 23, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pqw-iC-kiX">
-                                                    <rect key="frame" x="14" y="0.0" width="295" height="13"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QbQ-Im-jLk">
+                                                    <rect key="frame" x="206" y="20" width="93" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="mXB-XO-6ex">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="14"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgO-lZ-mXh">
+                                                    <rect key="frame" x="60" y="21" width="129" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmarkitemHeader.png" id="GJj-yb-Nr9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thursday, August 23, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ero-ap-WnL">
-                                                            <rect key="frame" x="14" y="0.0" width="295" height="13"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="P3V-se-6Wf">
+                                                    <rect key="frame" x="6" y="6" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="qf0-8J-mdn">
+                                                    <rect key="frame" x="11" y="6" width="11" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="k52-ri-ICY" customClass="TIHEventCell">
-                                                <rect key="frame" x="0.0" y="36" width="320" height="62"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="Y37-ZZ-yol">
-                                                            <rect key="frame" x="189" y="27" width="9" height="9"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QbQ-Im-jLk">
-                                                            <rect key="frame" x="206" y="20" width="93" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </label>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgO-lZ-mXh">
-                                                            <rect key="frame" x="60" y="21" width="129" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                            <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" id="P3V-se-6Wf">
-                                                            <rect key="frame" x="6" y="6" width="50" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                        </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="qf0-8J-mdn">
-                                                            <rect key="frame" x="11" y="6" width="11" height="29"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <connections>
-                                                    <outlet property="artistIconView" destination="P3V-se-6Wf" id="QcY-fA-9SI"/>
-                                                    <outlet property="artistNameLabel" destination="BgO-lZ-mXh" id="eFu-SV-RRB"/>
-                                                    <outlet property="bookmarkImage" destination="qf0-8J-mdn" id="XVr-CB-02R"/>
-                                                    <outlet property="setTimeLabel" destination="QbQ-Im-jLk" id="RQV-dx-eQB"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                                        <connections>
+                                            <outlet property="artistIconView" destination="P3V-se-6Wf" id="QcY-fA-9SI"/>
+                                            <outlet property="artistNameLabel" destination="BgO-lZ-mXh" id="eFu-SV-RRB"/>
+                                            <outlet property="bookmarkImage" destination="qf0-8J-mdn" id="XVr-CB-02R"/>
+                                            <outlet property="setTimeLabel" destination="QbQ-Im-jLk" id="RQV-dx-eQB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Tj-WR-tKS" id="Egz-th-GHa"/>
+                                    <outlet property="delegate" destination="5Tj-WR-tKS" id="83L-KX-lfN"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="od6-QP-wLk"/>
                     <connections>
-                        <segue destination="LTt-iW-ahq" kind="push" id="sTI-9i-Uf2"/>
+                        <outlet property="myTable" destination="y6J-vb-p3Q" id="W2c-3O-Xig"/>
+                        <segue destination="LTt-iW-ahq" kind="push" identifier="segueToEventDetail" id="sTI-9i-Uf2"/>
                     </connections>
                 </viewController>
             </objects>
@@ -648,7 +610,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1628" y="1093"/>
+            <point key="canvasLocation" x="1789" y="778"/>
         </scene>
         <!--News Table View Controller - News-->
         <scene sceneID="vTI-oc-3g6">
@@ -950,7 +912,6 @@
         <image name="bluetabheadercap.png" width="320" height="2"/>
         <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
-        <image name="bookmarkitemHeader.png" width="320" height="14"/>
         <image name="email.png" width="93" height="92"/>
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
@@ -961,6 +922,25 @@
         </class>
         <class className="NIWebController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NIWebController.h"/>
+        </class>
+        <class className="TIHBaseScheduleViewController" superclassName="BaseTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBaseScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="TIHBookmarkScheduleHeaderView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBookmarkScheduleHeaderView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="sectionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TIHBookmarkViewController" superclassName="TIHBaseScheduleViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBookmarkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="sectionHeaderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sectionHeaderView" candidateClass="TIHBookmarkScheduleHeaderView"/>
+            </relationships>
         </class>
         <class className="TIHEventCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
@@ -1031,7 +1011,7 @@
         <class className="TIHPhotoPitViewController" superclassName="TIHTabBarTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitViewController.h"/>
         </class>
-        <class className="TIHScheduleViewController" superclassName="BaseTableViewController">
+        <class className="TIHScheduleViewController" superclassName="TIHBaseScheduleViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHScheduleViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doAfterButtonAction:"/>
@@ -1042,7 +1022,6 @@
                 <relationship kind="outlet" name="afterButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="dayDateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="friButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="satButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="sunButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="thursButton" candidateClass="UIButton"/>
@@ -1069,6 +1048,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="MTt-hb-LGa"/>
-        <segue reference="WYD-46-Fqw"/>
+        <segue reference="sTI-9i-Uf2"/>
     </inferredMetricsTieBreakers>
 </document>

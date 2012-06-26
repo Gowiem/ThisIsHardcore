@@ -22,6 +22,7 @@
 - (NSDate *) startTime;
 - (NSDate *) endTime;
 - (NSString *) setTimeDisplay;
+- (NSString *) startDateDisplay;
 - (bool) isEventBookmarked;
 
 - (NSComparisonResult)compare:(TIHBaseDataModel *)otherObject ;

@@ -89,6 +89,13 @@
     return [self.startTime compare:otherObject.startTime];
 }
 
+- (NSString *) startDateDisplay 
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMMM d, YYYY"];        
+    return [dateFormat stringFromDate:[self startTime]];
+}
+
 - (bool)isEventBookmarked
 {
     NSSet *bookmarks = [[[TIHBookmarkManager alloc] init] getBookmarks];

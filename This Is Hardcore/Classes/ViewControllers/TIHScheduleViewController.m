@@ -7,56 +7,21 @@
 //
 
 #import "TIHScheduleViewController.h"
-#import "TIHApplicationConfiguration.h"
+
 #import "TIHEventDataModel.h"
 #import "TIHEventCell.h"
 #import "NSDate+Comparison.h"
-#import "AFJSONRequestOperation.h"
-
-@interface TIHScheduleViewController ()
-
-@end
 
 @implementation TIHScheduleViewController
 
-@synthesize myTable = _myTable, thursButton, friButton, satButton, sunButton, afterButton, dayDateLabel;
-
-
--(void) loadData
-{
-    _scheduleItems = [[NSMutableArray alloc] init];
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/cms/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-
-    NSLog(@"Requesting url : %@", url);
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        for( id row in JSON){
-            [_scheduleItems addObject: [[TIHEventDataModel alloc] initWithProperties:row]];
-        }
-        [_myTable reloadData];
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"Fail!");
-    }];
-    
-    [operation start];
-
-}
+@synthesize thursButton, friButton, satButton, sunButton, afterButton, dayDateLabel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadData];
+    [super loadData];
     _selectedDay = 0;
     [self setDayDateLabelText];
-}
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [_myTable reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -78,7 +43,7 @@
     
     if(_selectedDay >= 0 && _selectedDay < 4)
     {
-        for (TIHEventDataModel *e in _scheduleItems) {
+        for (TIHEventDataModel *e in super.scheduleItems) {
             if([NSDate date: e.startTime isBetweenDate:eventStartDate andDate: eventEndDate])
             {
                 [results addObject:e];
@@ -200,11 +165,4 @@
     [self performSegueWithIdentifier:@"segueToEventDetail" sender:modelData];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)model {
-    if ([segue.identifier isEqualToString:@"segueToEventDetail"])
-    {
-        id edvc = segue.destinationViewController;
-        [edvc setDataModel:model];
-    }
-}
 @end

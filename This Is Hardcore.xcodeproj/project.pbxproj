@@ -73,6 +73,10 @@
 		742E8987158BBF3F00BBCF84 /* NSDate+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */; };
 		742E898A158BC06C00BBCF84 /* TIHEventDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */; };
 		7433AFD41599F595003D1622 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433AFD31599F595003D1622 /* UIColor+HexString.m */; };
+		7433AFD71599F709003D1622 /* TIHBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433AFD61599F709003D1622 /* TIHBookmarkViewController.m */; };
+		7433AFDA1599F7E8003D1622 /* TIHBaseScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */; };
+		7433B02A159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */; };
+		7433B02E159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */; };
 		744841201575512C009D96D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448411F1575512C009D96D6 /* UIKit.framework */; };
 		744841221575512C009D96D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841211575512C009D96D6 /* Foundation.framework */; };
 		744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744841231575512C009D96D6 /* CoreGraphics.framework */; };
@@ -261,6 +265,13 @@
 		742E8989158BC06C00BBCF84 /* TIHEventDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHEventDataModel.m; path = Classes/Models/TIHEventDataModel.m; sourceTree = "<group>"; };
 		7433AFD21599F595003D1622 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		7433AFD31599F595003D1622 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		7433AFD51599F709003D1622 /* TIHBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHBookmarkViewController.h; path = Classes/ViewControllers/TIHBookmarkViewController.h; sourceTree = "<group>"; };
+		7433AFD61599F709003D1622 /* TIHBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHBookmarkViewController.m; path = Classes/ViewControllers/TIHBookmarkViewController.m; sourceTree = "<group>"; };
+		7433AFD81599F7E7003D1622 /* TIHBaseScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHBaseScheduleViewController.h; path = Classes/ViewControllers/TIHBaseScheduleViewController.h; sourceTree = "<group>"; };
+		7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHBaseScheduleViewController.m; path = Classes/ViewControllers/TIHBaseScheduleViewController.m; sourceTree = "<group>"; };
+		7433B028159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHBookmarkScheduleHeaderView.h; path = Classes/Views/TIHBookmarkScheduleHeaderView.h; sourceTree = "<group>"; };
+		7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHBookmarkScheduleHeaderView.m; path = Classes/Views/TIHBookmarkScheduleHeaderView.m; sourceTree = "<group>"; };
+		7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TIHBookmarkScheduleHeaderView.xib; path = Resources/TIHBookmarkScheduleHeaderView.xib; sourceTree = "<group>"; };
 		7448411B1575512C009D96D6 /* This Is Hardcore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This Is Hardcore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7448411F1575512C009D96D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		744841211575512C009D96D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -523,6 +534,15 @@
 			name = General;
 			sourceTree = "<group>";
 		};
+		7433B027159A1593003D1622 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7433B028159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.h */,
+				7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +607,7 @@
 				C81CBADA1577F95000584F64 /* Cells */,
 				7448415015755201009D96D6 /* Configuration */,
 				74484227157558F7009D96D6 /* Models */,
+				7433B027159A1593003D1622 /* Views */,
 				7448428E15756085009D96D6 /* ViewControllers */,
 				C8CC7BF7158F8BF100905E98 /* TIHBookmarkManager.h */,
 				C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */,
@@ -610,6 +631,7 @@
 		7448420815755730009D96D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */,
 				744842091575573D009D96D6 /* Images */,
 				C87CBCBC158911FF009BD187 /* View.xib */,
 				C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */,
@@ -776,6 +798,8 @@
 			children = (
 				7448429115756469009D96D6 /* BaseTableViewController.h */,
 				7448429215756469009D96D6 /* BaseTableViewController.m */,
+				7433AFD51599F709003D1622 /* TIHBookmarkViewController.h */,
+				7433AFD61599F709003D1622 /* TIHBookmarkViewController.m */,
 				742E8979158AA42F00BBCF84 /* TIHEventDetailViewController.h */,
 				742E897A158AA42F00BBCF84 /* TIHEventDetailViewController.m */,
 				7453FD9E1594F03A0036FC88 /* TIHMoreViewController.h */,
@@ -790,6 +814,8 @@
 				C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */,
 				C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */,
 				C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */,
+				7433AFD81599F7E7003D1622 /* TIHBaseScheduleViewController.h */,
+				7433AFD91599F7E8003D1622 /* TIHBaseScheduleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1033,6 +1059,7 @@
 				7453FDCA1598FA9B0036FC88 /* TIHC_Stuff@2x.png in Resources */,
 				7453FDCB1598FA9B0036FC88 /* TIHC_twit.png in Resources */,
 				7453FDCC1598FA9B0036FC88 /* TIHC_twit@2x.png in Resources */,
+				7433B02E159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,6 +1132,9 @@
 				7453FD9D1594EDF70036FC88 /* TIHMoreCell.m in Sources */,
 				7453FDA01594F03B0036FC88 /* TIHMoreViewController.m in Sources */,
 				7433AFD41599F595003D1622 /* UIColor+HexString.m in Sources */,
+				7433AFD71599F709003D1622 /* TIHBookmarkViewController.m in Sources */,
+				7433AFDA1599F7E8003D1622 /* TIHBaseScheduleViewController.m in Sources */,
+				7433B02A159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
