@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 
-@interface TIHMoreViewController : BaseTableViewController {
+@interface TIHMoreViewController : BaseViewController {
     NSMutableArray *_items;
     UITableView *_myTable;
 }

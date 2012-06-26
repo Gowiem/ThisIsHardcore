@@ -18,11 +18,10 @@
 
 @implementation TIHBaseScheduleViewController
 
-@synthesize myTable, scheduleItems, bookmarkedScheduleItems;
+@synthesize myTable, scheduleItems, bookmarkedScheduleItems, pullToRefreshView;
 
 -(void) loadData
 {
-    scheduleItems = [[NSMutableArray alloc] init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/cms/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
@@ -31,6 +30,7 @@
     NSLog(@"Requesting url : %@", url);
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        scheduleItems = [[NSMutableArray alloc] init];
         for( id row in JSON){
             [scheduleItems addObject: [[TIHEventDataModel alloc] initWithProperties:row]];
         }
@@ -44,7 +44,6 @@
                 [bookmarkedScheduleItems addObject:m];
             }
         }
-
         [myTable reloadData];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -52,6 +51,22 @@
     }];
     
     [operation start];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    self.pullToRefreshView = nil;
+}
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self.pullToRefreshView startLoading];
+    [self loadData];
+    [self.pullToRefreshView finishLoading];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -65,12 +80,6 @@
         id edvc = segue.destinationViewController;
         [edvc setDataModel:model];
     }
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [myTable reloadData];
 }
 
 @end

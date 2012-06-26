@@ -7,9 +7,13 @@
 //
 
 #import "TIHTabBarTableViewController.h"
+#import "SSPullToRefresh.h"
 
 @interface TIHNewsTableViewController : TIHTabBarTableViewController {
     NSMutableArray *_newsItems;
+    NSString *tag;
 }
+
+@property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
 
 @end

@@ -18,6 +18,12 @@
     [super loadData];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [super loadData];
+}
+
 -(NSArray*) getBookmarkedDates {
     NSMutableArray *dates = [[NSMutableArray alloc] init];
     for(TIHEventDataModel *m  in [super bookmarkedScheduleItems])

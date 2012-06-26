@@ -10,9 +10,17 @@
 
 @implementation TIHTabBarTableViewController
 
-@synthesize myTable = _myTable, fanFeedButton, officialButton;
+@synthesize myTable = _myTable, fanFeedButton, officialButton, pullToRefreshView;
 
-//TODO: pull down data from json http://stackoverflow.com/questions/2968642/populate-uitableview-from-json
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    self.pullToRefreshView = nil;
+}
 
 - (IBAction) doOfficialButtonAction:(id)sender
 {

@@ -1,5 +1,5 @@
 //
-//  BaseTableViewController.h
+//  BaseViewController.h
 //  This Is Hardcore
 //
 //  Created by Kevin Clough on 5/29/12.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseTableViewController : UIViewController <UITableViewDelegate> 
+@interface BaseViewController : UIViewController <UITableViewDelegate> 
 
-//- (NSString *)navBarTitle;
 - (void)updateNavBarDisplay;
 
 @end

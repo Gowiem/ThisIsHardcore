@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 #import "NimbusWebController.h"
 
 @interface TIHWebViewController : NIWebController

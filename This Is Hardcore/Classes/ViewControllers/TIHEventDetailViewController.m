@@ -8,6 +8,7 @@
 
 #import "TIHEventDetailViewController.h"
 #import "TIHBookmarkManager.h"
+#import "TIHWebViewController.h"
 #import "NINetworkImageView.h"
 #import <Twitter/Twitter.h>
 
@@ -65,9 +66,9 @@
     double viewHeight = self.actionButtonsView.frame.size.height + self.actionButtonsView.frame.origin.y + 20;
     [[self scrollView] setContentSize:CGSizeMake(320, viewHeight)];
 
-    [self.websiteButton setEnabled:[[dataModel artistWebsite] length] == 0];
-    [self.facebookButton setEnabled:[[dataModel artistFBUrl] length] == 0];
-    [self.twitterButton setEnabled:[[dataModel artistTwitterUrl] length] == 0];
+    [self.websiteButton setEnabled:[[dataModel artistWebsite] length] != 0];
+    [self.facebookButton setEnabled:[[dataModel artistFBUrl] length] != 0];
+    [self.twitterButton setEnabled:[[dataModel artistTwitterUrl] length] != 0];
     
     [self updateBookmarkDisplay];
 }
@@ -159,15 +160,15 @@
 
 - (IBAction) doWebsiteButtonAction:(id)sender
 {
-    [self openUrlFromString:[dataModel artistWebsite]];
+    [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistWebsite]];
 }
 - (IBAction) doFacebookButtonAction:(id)sender
 {
-    [self openUrlFromString:[dataModel artistFBUrl]];
+    [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistFBUrl]];
 }
 - (IBAction) doTwitterButtonAction:(id)sender
 {
-    [self openUrlFromString:[dataModel artistTwitterUrl]];    
+    [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistTwitterUrl]];
 }
 - (IBAction) doEmailButtonAction:(id)sender
 {
@@ -236,5 +237,10 @@
 - (void)request:(FBRequest *)request didLoad:(id)result
 {
     NSLog(@"Facebook share complete");
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TIHWebViewController* wvc = (TIHWebViewController*)segue.destinationViewController;
+    wvc.urlAddress = (NSString*)sender;
 }
 @end

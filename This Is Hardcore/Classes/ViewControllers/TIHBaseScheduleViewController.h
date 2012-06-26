@@ -6,14 +6,18 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
+#import "SSPullToRefresh.h"
 
-@interface TIHBaseScheduleViewController : BaseTableViewController 
+@interface TIHBaseScheduleViewController : BaseViewController <SSPullToRefreshViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *myTable;
 @property (strong, nonatomic) NSMutableArray *scheduleItems;
 @property (strong, nonatomic) NSMutableArray *bookmarkedScheduleItems;
 
+@property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
+
 -(void) loadData;
+
 
 @end

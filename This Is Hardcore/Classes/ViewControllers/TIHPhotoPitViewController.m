@@ -29,7 +29,6 @@
 - (void)loadData
 {
     NSString *endPointUrl = [[NSString stringWithFormat:@"%@/posts.json?key=\"%@\"&auth_token=unifeed-debug", UNIFEED_API_URL, tag] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"Fetching URL %@", endPointUrl);
     NSURL *url = [NSURL URLWithString:endPointUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -47,6 +46,13 @@
     
     [operation start];
 }
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self.pullToRefreshView startLoading];
+    [self loadData];
+    [self.pullToRefreshView finishLoading];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return  [_photoPitItems count];
 }

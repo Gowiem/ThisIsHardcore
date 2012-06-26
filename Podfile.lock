@@ -58,8 +58,10 @@ PODS:
   - Nimbus/WebController (0.9.3):
     - Nimbus/Core
   - Reachability (3.0.0)
+  - SSPullToRefresh (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking
   - JSONKit
   - Nimbus
+  - SSPullToRefresh

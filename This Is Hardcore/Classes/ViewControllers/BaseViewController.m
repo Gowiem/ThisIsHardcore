@@ -1,15 +1,15 @@
 //
-//  BaseTableViewController.m
+//  BaseViewController.m
 //  This Is Hardcore
 //
 //  Created by Kevin Clough on 5/29/12.
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 #import "TIHAppDelegate.h"
 
-@implementation BaseTableViewController
+@implementation BaseViewController
 
 - (void)viewWillAppear:(BOOL)animated
 {

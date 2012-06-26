@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 #import "TIHBaseScheduleViewController.h"
 #import "TIHBookmarkScheduleHeaderView.h"
 

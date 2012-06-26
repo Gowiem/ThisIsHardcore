@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
+#import "SSPullToRefresh.h"
 
-@interface TIHTabBarTableViewController : BaseTableViewController {
+@interface TIHTabBarTableViewController : BaseViewController<SSPullToRefreshViewDelegate> {
     UITableView *_myTable;
 }
 
@@ -17,6 +18,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *officialButton;
 @property (strong, nonatomic) IBOutlet UIButton *fanFeedButton;
+
+@property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
 
 - (IBAction) doOfficialButtonAction:(id)sender;
 - (IBAction) doFanFeedButtonAction:(id)sender;

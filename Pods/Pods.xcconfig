@@ -1,4 +1,4 @@
 PODS_ROOT = ${SRCROOT}/Pods
 ALWAYS_SEARCH_USER_PATHS = YES
 OTHER_LDFLAGS = -ObjC -lxml2.2.7.3 -lz.1 -framework CFNetwork -framework CoreGraphics -framework CoreText -framework MobileCoreServices -framework SystemConfiguration
-HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2 "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/ASIHTTPRequest" "${PODS_ROOT}/Headers/JSONKit" "${PODS_ROOT}/Headers/Nimbus" "${PODS_ROOT}/Headers/Reachability"
+HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2 "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/ASIHTTPRequest" "${PODS_ROOT}/Headers/JSONKit" "${PODS_ROOT}/Headers/Nimbus" "${PODS_ROOT}/Headers/Reachability" "${PODS_ROOT}/Headers/SSPullToRefresh"

@@ -18,11 +18,18 @@
 
 @implementation TIHNewsTableViewController
 
+@synthesize pullToRefreshView;
+
 - (void)viewDidLoad
 {
     _newsItems = [[NSMutableArray alloc] init];
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self loadData];
+}
+
+-(void)loadData
+{
+    //TODO : Add Tag logic to FB Request
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/posts.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -38,6 +45,13 @@
     
     [operation start];
 }
+
+- (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self.pullToRefreshView startLoading];
+    [self loadData];
+    [self.pullToRefreshView finishLoading];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return  [_newsItems count];
 }
@@ -61,11 +75,17 @@
     return [self tableView:tableView cellForRowAtIndexPath:indexPath].frame.size.height;
 }
 
-- (void)viewDidUnload
+- (IBAction) doOfficialButtonAction:(id)sender
 {
-
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [super doOfficialButtonAction:sender];
+    tag = @"instagram-official";
+    [self loadData];
+}
+- (IBAction) doFanFeedButtonAction: (id)sender
+{
+    [super doFanFeedButtonAction:sender];
+    tag = @"instagram-tag";
+    [self loadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
