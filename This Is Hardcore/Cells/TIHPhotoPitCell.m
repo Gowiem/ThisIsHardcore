@@ -36,10 +36,10 @@
     
 - (void)configureWithObject:(TIHPhotoPitDataModel *)object {
     self.dateLabel.text = [object createdAgo];
-
-    CGRect imageRect = CGRectMake(self.photoImageView.frame.origin.x, self.photoImageView.frame.origin.y, self.photoImageView.frame.size.width, self.photoImageView.frame.size.height);
-    NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithFrame:imageRect];
-    [networkImageView setPathToNetworkImage:[object imageUrl]];
+    NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_PhotoPitLoad.png"]];
+    
+    [networkImageView setCenter: CGPointMake(CGRectGetMidX(self.photoImageView.bounds), CGRectGetMidY(self.photoImageView.bounds))];
+    [networkImageView setPathToNetworkImage: [object imageUrl] forDisplaySize: self.photoImageView.frame.size];
     [[self photoImageView] addSubview:networkImageView];    
     self.tags.text = [object tagDisplay];
 }
