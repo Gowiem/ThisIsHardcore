@@ -10,6 +10,7 @@
 #import "TIHApplicationConfiguration.h"
 #import "TIHPhotoPitViewController.h"
 #import "TIHPhotoPitCell.h"
+#import "UIViewController+MBProgressHUD.h"
 
 @interface TIHPhotoPitViewController ()
 
@@ -20,7 +21,7 @@
 - (void)viewDidLoad
 {
     _photoPitItems = [[NSMutableArray alloc] init];
-    tag = @"instagram-official";
+    tag = @"official";
     
     [super viewDidLoad];    
     [self loadData];
@@ -28,9 +29,12 @@
 
 - (void)loadData
 {
-    NSString *endPointUrl = [[NSString stringWithFormat:@"%@/posts.json?key=\"%@\"&auth_token=unifeed-debug", UNIFEED_API_URL, tag] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self showHUDWithMessage:@"Loading"];
+    NSString *endPointUrl = [NSString stringWithFormat:@"%@/instagram/%@.json?auth_token=unifeed-debug", UNIFEED_API_URL, tag];
     NSURL *url = [NSURL URLWithString:endPointUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSLog(@"Requesting url : %@", url);
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *
           request, NSHTTPURLResponse *response, id JSON) {
@@ -39,9 +43,10 @@
             [_photoPitItems addObject: [[TIHPhotoPitDataModel alloc] initWithProperties:row]];
         }
         [[super myTable] reloadData];
-        
+        [self hideHUD];        
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
+        [self hideHUD];
     }];
     
     [operation start];
@@ -86,16 +91,14 @@
 
 - (IBAction) doOfficialButtonAction:(id)sender
 {
-    NSLog(@"Do Official Button Tapped");
     [super doOfficialButtonAction:sender];
-    tag = @"instagram-official";
+    tag = @"official";
     [self loadData];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
-    NSLog(@"Do Fan Feed Button Tapped");
     [super doFanFeedButtonAction:sender];
-    tag = @"instagram-tag";
+    tag = @"tagged";
     [self loadData];
 }
 

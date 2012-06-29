@@ -11,6 +11,7 @@
 #import "TIHEventDataModel.h"
 #import "TIHEventDetailViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "UIViewController+MBProgressHUD.h"
 
 @interface TIHBaseScheduleViewController ()
 
@@ -23,8 +24,9 @@
 -(void) loadData
 {
     [super viewDidLoad];
+    [self showHUDWithMessage:@"Loading"];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/cms/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     NSLog(@"Requesting url : %@", url);
@@ -45,9 +47,10 @@
             }
         }
         [myTable reloadData];
-        
+        [self hideHUD];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
+        [self hideHUD];
     }];
     
     [operation start];

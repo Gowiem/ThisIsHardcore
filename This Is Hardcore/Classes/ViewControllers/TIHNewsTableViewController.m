@@ -12,6 +12,7 @@
 #import "TIHNewsDataModel.h"
 #import "TIHNewsCell.h"
 #import "TIHWebViewController.h"
+#import "UIViewController+MBProgressHUD.h"
 
 @interface TIHNewsTableViewController ()
 @end
@@ -24,23 +25,27 @@
 {
     _newsItems = [[NSMutableArray alloc] init];
     [super viewDidLoad];
+    tag = @"official";
     [self loadData];
 }
 
 -(void)loadData
 {
-    //TODO : Add Tag logic to FB Request
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/posts.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
+    [self showHUDWithMessage:@"Loading"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/news_feed/%@.json?auth_token=unifeed-debug", UNIFEED_API_URL, tag]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSLog(@"Requesting url : %@", url);
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         for( id row in [JSON valueForKey:@"rows"]){
             [_newsItems addObject: [[TIHNewsDataModel alloc] initWithProperties:row]];
         }
         [[super myTable] reloadData];
-        
+        [self hideHUD];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
+        [self hideHUD];
     }];
     
     [operation start];
@@ -78,13 +83,13 @@
 - (IBAction) doOfficialButtonAction:(id)sender
 {
     [super doOfficialButtonAction:sender];
-    tag = @"instagram-official";
+    tag = @"official";
     [self loadData];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
     [super doFanFeedButtonAction:sender];
-    tag = @"instagram-tag";
+    tag = @"fanfeed";
     [self loadData];
 }
 

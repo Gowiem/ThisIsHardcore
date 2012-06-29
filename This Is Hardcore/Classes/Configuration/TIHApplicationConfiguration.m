@@ -10,7 +10,7 @@
 NSString *const VersionNumber = @"1.0";
 
 /* Persona */
-NSString *const PERSONA_ID = @"tihcfest";
+NSString *const PERSONA_ID = @"this_is_hardcore";
 
 NSString *const PERSONA_TITLE = @"This is Hardcore";
 
