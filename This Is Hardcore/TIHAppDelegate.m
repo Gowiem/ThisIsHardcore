@@ -22,9 +22,20 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
+// Pre iOS 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
     return [facebook handleOpenURL:url];
+    return [facebook handleOpenURL:url]; 
 }
+
+// For iOS 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    ARFacebook *facebook = [ARFacebook sharedARFacebook];
+    return [facebook handleOpenURL:url]; 
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

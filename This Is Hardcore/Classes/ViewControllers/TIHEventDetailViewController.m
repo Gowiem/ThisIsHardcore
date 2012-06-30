@@ -10,6 +10,8 @@
 #import "TIHBookmarkManager.h"
 #import "TIHWebViewController.h"
 #import "NINetworkImageView.h"
+#import "UIViewController+MBProgressHUD.h"
+#import "UIAlertView+ShowMessage.h"
 #import <Twitter/Twitter.h>
 
 @interface TIHEventDetailViewController ()
@@ -114,7 +116,7 @@
     {
         case 0:
         {
-            NSLog(@"Share VIA FB!");
+            [self showHUDWithMessage:@"Sharing via facebook..."];
             [self shareWithFacebook];
             break;
         }
@@ -199,17 +201,11 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-- (void)didAuthorizeFacebook:(Facebook *)facebook
-{
-    [self shareWithFacebook];
-}
-
 - (void)shareWithFacebook
 {
-    NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
-    
-    
+//    [fce authorizeWithFBAppAuth:NO safariAuth:YES].
+    facebook.authDelegate = self;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"FBAccessTokenKey"] 
        && [defaults objectForKey:@"FBExpirationDateKey"]) {
@@ -219,24 +215,38 @@
 
     if(![facebook isSessionValid])
     {
-        [facebook authorize:[NSArray arrayWithObjects:@"publish_stream", nil]];
+        [facebook authorizeWithStandardPermissions];
+        return;
     }
-    NSLog(@"Posting to Facebook...");
-    
+
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
+    NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
     [params setObject:message forKey:@"message"];
     [params setObject:[dataModel imageUrl] forKey:@"picture"];
     [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
 }
 
+- (void)didAuthorizeFacebook:(Facebook *)facebook
+{
+    [self shareWithFacebook];
+}
+
+- (void)fbSessionInvalidated
+{
+    [self hideHUD];
+    [UIAlertView showAlertWithMessage:@"There was a problem sharing your selection with Facebook."];
+}
+
+
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error
 {
-    NSLog(@"Error sharing to FB.");
+    [self hideHUD];
+    [UIAlertView showAlertWithMessage:@"There was a problem sharing your selection with Facebook."];
 }
 
 - (void)request:(FBRequest *)request didLoad:(id)result
 {
-    NSLog(@"Facebook share complete");
+    [self hideHUDWithCompletionMessage:@"Shared!"];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

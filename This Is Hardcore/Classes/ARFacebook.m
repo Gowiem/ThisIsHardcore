@@ -8,6 +8,7 @@
 
 #import "ARFacebook.h"
 #import "TIHApplicationConfiguration.h"
+#import "Facebook_SSOExtension.h"
 
 @implementation ARFacebook
 
@@ -30,7 +31,7 @@
 
 - (void)authorizeWithStandardPermissions
 {
-    [self authorize:[NSArray arrayWithObjects:@"email", @"publish_stream", @"read_stream", @"offline_access", nil]];
+    [self authorize:[NSArray arrayWithObjects:@"email", @"publish_stream", @"read_stream", @"offline_access", nil] useSSO:NO];
 }
 
 - (void)fbDidLogin
@@ -44,7 +45,12 @@
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled
-{}
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"FBAccessTokenKey"];
+    [defaults removeObjectForKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
 
 - (void)fbDidLogout
 {

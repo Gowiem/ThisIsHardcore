@@ -140,6 +140,7 @@
 		745C5957159BB81400917069 /* TIHCofficialG1tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 745C594D159BB81400917069 /* TIHCofficialG1tab.png */; };
 		745C5958159BB81400917069 /* TIHCofficialG1tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 745C594E159BB81400917069 /* TIHCofficialG1tab@2x.png */; };
 		7477E912159119F500F3F2A8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7477E911159119F400F3F2A8 /* MessageUI.framework */; };
+		748ADBC4159F664900A6746F /* Facebook_SSOExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */; };
 		74C8623415936A9F003630A8 /* ARFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C8623315936A9F003630A8 /* ARFacebook.m */; };
 		74DF204A159CDEF700AB1B90 /* SatTabG3.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DF2048159CDEF700AB1B90 /* SatTabG3.png */; };
 		74DF204B159CDEF700AB1B90 /* SatTabG3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DF2049159CDEF700AB1B90 /* SatTabG3@2x.png */; };
@@ -170,7 +171,6 @@
 		C860C932158FCD840012886A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C860C931158FCD840012886A /* Twitter.framework */; };
 		C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB715890D2E009BD187 /* tinyclock.png */; };
 		C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCB815890D2E009BD187 /* tinyclock@2x.png */; };
-		C87CBCBD158911FF009BD187 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87CBCBC158911FF009BD187 /* View.xib */; };
 		C87CBCC015891402009BD187 /* TIHTabBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */; };
 		C87CBCC3158915AE009BD187 /* TIHPhotoPitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC2158915AE009BD187 /* TIHPhotoPitCell.m */; };
 		C87CBCC9158919C2009BD187 /* TIHPhotoPitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */; };
@@ -371,6 +371,8 @@
 		745C594D159BB81400917069 /* TIHCofficialG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialG1tab.png; path = Resources/Images/Tabs/TIHCofficialG1tab.png; sourceTree = "<group>"; };
 		745C594E159BB81400917069 /* TIHCofficialG1tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHCofficialG1tab@2x.png"; path = "Resources/Images/Tabs/TIHCofficialG1tab@2x.png"; sourceTree = "<group>"; };
 		7477E911159119F400F3F2A8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		748ADBC1159F65F300A6746F /* Facebook_SSOExtension.h */ = {isa = PBXFileReference; name = Facebook_SSOExtension.h; path = Classes/Facebook_SSOExtension.h; sourceTree = "<group>"; };
+		748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook_SSOExtension.m; path = Classes/Facebook_SSOExtension.m; sourceTree = "<group>"; };
 		74C8623215936A9F003630A8 /* ARFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARFacebook.h; path = Classes/ARFacebook.h; sourceTree = "<group>"; };
 		74C8623315936A9F003630A8 /* ARFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARFacebook.m; path = Classes/ARFacebook.m; sourceTree = "<group>"; };
 		74DF2048159CDEF700AB1B90 /* SatTabG3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SatTabG3.png; path = Resources/Images/ScheduleTabs/SatTabG3.png; sourceTree = "<group>"; };
@@ -407,7 +409,6 @@
 		C860C931158FCD840012886A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C87CBCB715890D2E009BD187 /* tinyclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tinyclock.png; path = Resources/Images/tinyclock.png; sourceTree = "<group>"; };
 		C87CBCB815890D2E009BD187 /* tinyclock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tinyclock@2x.png"; path = "Resources/Images/tinyclock@2x.png"; sourceTree = "<group>"; };
-		C87CBCBC158911FF009BD187 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = Resources/View.xib; sourceTree = "<group>"; };
 		C87CBCBE15891402009BD187 /* TIHTabBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHTabBarTableViewController.h; path = Classes/ViewControllers/TIHTabBarTableViewController.h; sourceTree = "<group>"; };
 		C87CBCBF15891402009BD187 /* TIHTabBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHTabBarTableViewController.m; path = Classes/ViewControllers/TIHTabBarTableViewController.m; sourceTree = "<group>"; };
 		C87CBCC1158915AE009BD187 /* TIHPhotoPitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitCell.h; path = Cells/TIHPhotoPitCell.h; sourceTree = "<group>"; };
@@ -621,6 +622,8 @@
 				C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */,
 				74C8623215936A9F003630A8 /* ARFacebook.h */,
 				74C8623315936A9F003630A8 /* ARFacebook.m */,
+				748ADBC1159F65F300A6746F /* Facebook_SSOExtension.h */,
+				748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -639,7 +642,6 @@
 			children = (
 				7433B02D159A18C2003D1622 /* TIHBookmarkScheduleHeaderView.xib */,
 				744842091575573D009D96D6 /* Images */,
-				C87CBCBC158911FF009BD187 /* View.xib */,
 				C85A3DA1157E8C6700EF699C /* ThisIsHardcore.storyboard */,
 			);
 			name = Resources;
@@ -1007,7 +1009,6 @@
 				C84BDB88157EAB3A00E6D7AC /* TIHC_HeaderCenter.png in Resources */,
 				C87CBCB915890D2E009BD187 /* tinyclock.png in Resources */,
 				C87CBCBA15890D2E009BD187 /* tinyclock@2x.png in Resources */,
-				C87CBCBD158911FF009BD187 /* View.xib in Resources */,
 				742E88F2158A263400BBCF84 /* bookmarkitemHeader.png in Resources */,
 				742E88F3158A263400BBCF84 /* bookmarkitemHeader@2x.png in Resources */,
 				742E88F6158A2C0D00BBCF84 /* bookmark.png in Resources */,
@@ -1173,6 +1174,7 @@
 				74441772159A538C00946B97 /* BaseViewController.m in Sources */,
 				74DF2082159DECC700AB1B90 /* MBProgressHUD.m in Sources */,
 				74DF2090159DEDC100AB1B90 /* UIViewController+MBProgressHUD.m in Sources */,
+				748ADBC4159F664900A6746F /* Facebook_SSOExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
