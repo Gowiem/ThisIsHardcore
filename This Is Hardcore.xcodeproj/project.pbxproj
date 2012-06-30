@@ -371,7 +371,7 @@
 		745C594D159BB81400917069 /* TIHCofficialG1tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHCofficialG1tab.png; path = Resources/Images/Tabs/TIHCofficialG1tab.png; sourceTree = "<group>"; };
 		745C594E159BB81400917069 /* TIHCofficialG1tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHCofficialG1tab@2x.png"; path = "Resources/Images/Tabs/TIHCofficialG1tab@2x.png"; sourceTree = "<group>"; };
 		7477E911159119F400F3F2A8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		748ADBC1159F65F300A6746F /* Facebook_SSOExtension.h */ = {isa = PBXFileReference; name = Facebook_SSOExtension.h; path = Classes/Facebook_SSOExtension.h; sourceTree = "<group>"; };
+		748ADBC1159F65F300A6746F /* Facebook_SSOExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Facebook_SSOExtension.h; path = Classes/Facebook_SSOExtension.h; sourceTree = "<group>"; };
 		748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook_SSOExtension.m; path = Classes/Facebook_SSOExtension.m; sourceTree = "<group>"; };
 		74C8623215936A9F003630A8 /* ARFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARFacebook.h; path = Classes/ARFacebook.h; sourceTree = "<group>"; };
 		74C8623315936A9F003630A8 /* ARFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARFacebook.m; path = Classes/ARFacebook.m; sourceTree = "<group>"; };

@@ -7,6 +7,7 @@
 //
 
 #import "TIHWebViewController.h"
+#import "UIViewController+MBProgressHUD.h"
 #import "UIColor+HexString.h"
 
 @interface TIHWebViewController ()
@@ -20,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self showHUDWithMessage:@"Loading..."];
     NSLog(@"Loading URL: %@", self.urlAddress);
     NSURL *url = [NSURL URLWithString:self.urlAddress];  
     [super openURL:url];
@@ -55,5 +57,16 @@
 - (void)handleTicket:(id)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://m.ticketmaster.com/ticket/search.do?articles=tmus&query=this+is+hardcore&submit=SEARCH"]];
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [super webViewDidFinishLoad:webView];
+    [self hideHUD];
+}
+
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Error loading webview : %@", error);
+    [self hideHUD];
 }
 @end
