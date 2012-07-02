@@ -268,11 +268,11 @@
     if(show)
     {
         [[self flairView] setHidden:NO];
-        [[super myTable] setFrame:CGRectMake(0, 50, 320, 317)];
+        [[super myTable] setFrame:CGRectMake(0, 59, 320, 308)];
     }
     else {
         [[self flairView] setHidden:YES];
-        [[super myTable] setFrame:CGRectMake(0, 26, 320, 341)];
+        [[super myTable] setFrame:CGRectMake(0, 38, 320, 329)];
     }
 }
 
