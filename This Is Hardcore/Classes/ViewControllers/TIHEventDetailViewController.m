@@ -91,15 +91,23 @@
 
 - (void) updateReminderDisplay
 {
-    UIImage *reminderImage;
-    if([dataModel isEventReminderSet])
+    if([[dataModel startTime] compare:[NSDate date]] == NSOrderedDescending)
     {
-        reminderImage = [UIImage imageNamed:@"unsetreminder.png"];
+        UIImage *reminderImage;
+        if([dataModel isEventReminderSet])
+        {
+            reminderImage = [UIImage imageNamed:@"unsetreminder.png"];
+        }
+        else {
+            reminderImage = [UIImage imageNamed:@"setreminder.png"];
+        }
+        [self.reminderButton setImage:reminderImage forState:UIControlStateNormal];
     }
     else {
-        reminderImage = [UIImage imageNamed:@"setreminder.png"];
+        //This is done in the storyboard , wasnt working not sure why - KBC
+        [self.reminderButton setImage:[UIImage imageNamed:@"setreminderinactive.png"] forState:UIControlStateDisabled];
+        [self.reminderButton setEnabled:NO];
     }
-    [self.reminderButton setImage:reminderImage forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload

@@ -244,7 +244,7 @@
     [self setFlairDisplay:YES];
     [self resetButtonsSource:sender];
     [self setDayDateLabelText];
-    [self loadData];
+    [[super myTable] reloadData];
 }
 - (IBAction) doFriButtonAction:(id)sender
 {
@@ -252,7 +252,7 @@
     [self setFlairDisplay:YES];
     [self resetButtonsSource:sender];
     [self setDayDateLabelText];
-    [self loadData];
+    [[super myTable] reloadData];
 }
 - (IBAction) doSatButtonAction:(id)sender
 {
@@ -260,7 +260,7 @@
     [self setFlairDisplay:YES];
     [self resetButtonsSource:sender];
     [self setDayDateLabelText];
-    [self loadData];
+    [[super myTable] reloadData];
 }
 - (IBAction) doSunButtonAction:(id)sender
 {
@@ -268,7 +268,7 @@
     [self setFlairDisplay:YES];
     [self resetButtonsSource:sender];    
     [self setDayDateLabelText];
-    [self loadData];
+    [[super myTable] reloadData];
 }
 - (IBAction) doAfterButtonAction:(id)sender
 {
@@ -276,7 +276,7 @@
     [self setFlairDisplay:NO];
     [self resetButtonsSource:sender];
     [self setDayDateLabelText];
-    [self loadData];
+    [[super myTable] reloadData];
 }
 
 -(void) setFlairDisplay:(BOOL)show
