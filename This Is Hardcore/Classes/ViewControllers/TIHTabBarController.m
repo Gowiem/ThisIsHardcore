@@ -19,11 +19,67 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"TIHTabBarController Loaded");
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"schedule_off.png"] highlightImage:[UIImage imageNamed: @"schedule_on.png"]];
+    [self addLeftButtonWithImage:[UIImage imageNamed:@"news_off.png"] highlightImage:[UIImage imageNamed:@"news_on.png"]];
     [self addLeftCenterButtonWithImage:[UIImage imageNamed:@"bookmarks_off.png"] highlightImage:[UIImage imageNamed: @"bookmarks_on.png"]];
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"schedule_off.png"] highlightImage:[UIImage imageNamed: @"schedule_on.png"]];
     [self addRightCenterButtonWithImage:[UIImage imageNamed:@"photopit_off.png"] highlightImage:[UIImage imageNamed: @"photopit_on.png"]];
+    [self addRightButtonWithImage:[UIImage imageNamed:@"more_off.png"] highlightImage:[UIImage imageNamed:@"more_on.png"]];
 }
+
+- (void)addLeftButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
+{
+    [leftButton removeFromSuperview];
+    leftButtonImage = buttonImage;
+    leftButtonHighlightedImage = highlightImage;
+    leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftButton.adjustsImageWhenHighlighted = NO;
+    leftButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    leftButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+    [leftButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [leftButton setBackgroundImage:highlightImage forState:UIControlStateSelected];
+    
+    [leftButton addTarget:self action:@selector(setLeftButtonHighlighted:) forControlEvents:UIControlEventTouchDown];
+    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
+    if(heightDifference < 0)
+    {
+        leftButton.center = CGPointMake(self.tabBar.center.x - (buttonImage.size.width * 2), self.tabBar.center.y);
+    }
+    else
+    {
+        leftButton.center = CGPointMake(self.tabBar.center.x - (buttonImage.size.width * 2), self.tabBar.center.y - heightDifference/2.0);;
+    }
+    
+    [self.view addSubview:leftButton];
+}
+
+
+/* Create a custom UIButton and add it to the left-center of our tab bar */
+- (void)addLeftCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
+{
+    [leftCenterButton removeFromSuperview];
+    leftCenterButtonImage = buttonImage;
+    leftCenterButtonHighlightedImage = highlightImage;
+    leftCenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftCenterButton.adjustsImageWhenHighlighted = NO;
+    leftCenterButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    leftCenterButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+    [leftCenterButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [leftCenterButton setBackgroundImage:highlightImage forState:UIControlStateSelected];
+    
+    [leftCenterButton addTarget:self action:@selector(setLeftCenterButtonHighlighted:) forControlEvents:UIControlEventTouchDown];
+    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
+    if(heightDifference < 0)
+    {
+        leftCenterButton.center = CGPointMake(self.tabBar.center.x - buttonImage.size.width, self.tabBar.center.y);
+    }
+    else
+    {
+        leftCenterButton.center = CGPointMake(self.tabBar.center.x - buttonImage.size.width, self.tabBar.center.y - heightDifference/2.0);;
+    }
+    
+    [self.view addSubview:leftCenterButton];
+}
+
 /* Create a custom UIButton and add it to the center of our tab bar */
 - (void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
 {
@@ -53,33 +109,6 @@
     [self.view addSubview:centerButton];
 }
 
-/* Create a custom UIButton and add it to the left-center of our tab bar */
-- (void)addLeftCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
-{
-    [leftCenterButton removeFromSuperview];
-    leftCenterButtonImage = buttonImage;
-    leftCenterButtonHighlightedImage = highlightImage;
-    leftCenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftCenterButton.adjustsImageWhenHighlighted = NO;
-    leftCenterButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
-    leftCenterButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-    [leftCenterButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [leftCenterButton setBackgroundImage:highlightImage forState:UIControlStateSelected];
-    
-    [leftCenterButton addTarget:self action:@selector(setLeftCenterButtonHighlighted:) forControlEvents:UIControlEventTouchDown];
-    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
-    if(heightDifference < 0)
-    {
-        leftCenterButton.center = CGPointMake(self.tabBar.center.x - buttonImage.size.width, self.tabBar.center.y);
-    }
-    else
-    {
-        leftCenterButton.center = CGPointMake(self.tabBar.center.x - buttonImage.size.width, self.tabBar.center.y - heightDifference/2.0);;
-    }
-    
-    [self.view addSubview:leftCenterButton];
-}
-
 - (void)addRightCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
 {
     [rightCenterButton removeFromSuperview];
@@ -106,39 +135,79 @@
     [self.view addSubview:rightCenterButton];
 }
 
-
-- (void)setCenterButtonHighlighted:(id)sender
+- (void)addRightButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
 {
+    [rightButton removeFromSuperview];
+    rightButtonImage = buttonImage;
+    rightButtonHighlightedImage = highlightImage;
+    rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.adjustsImageWhenHighlighted = NO;
+    rightButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    rightButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+    [rightButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [rightButton setBackgroundImage:highlightImage forState:UIControlStateSelected];
+    
+    [rightButton addTarget:self action:@selector(setRightButtonHighlighted:) forControlEvents:UIControlEventTouchDown];
+    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
+    if(heightDifference < 0)
+    {
+        rightButton.center = CGPointMake(self.tabBar.center.x + (buttonImage.size.width * 2), self.tabBar.center.y);
+    }
+    else
+    {
+        rightButton.center = CGPointMake(self.tabBar.center.x + (buttonImage.size.width * 2), self.tabBar.center.y - heightDifference/2.0);;
+    }
+    
+    [self.view addSubview:rightButton];
+}
+
+- (void)setLeftButtonHighlighted:(id)sender
+{
+    [self resetButtons];
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
-    [leftCenterButton setSelected:NO];
-    [rightCenterButton setSelected:NO];
-    self.selectedIndex = 2;
+    self.selectedIndex = 0;
 }
 
 - (void)setLeftCenterButtonHighlighted:(id)sender
 {
+    [self resetButtons];
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
-    [centerButton setSelected:NO];
-    [rightCenterButton setSelected:NO];
     self.selectedIndex = 1;
+}
+
+- (void)setCenterButtonHighlighted:(id)sender
+{
+    [self resetButtons];
+    UIButton *button = (UIButton *)sender;
+    [button setSelected:YES];
+    self.selectedIndex = 2;
 }
 
 - (void)setRightCenterButtonHighlighted:(id)sender
 {
+    [self resetButtons];
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
-    [leftCenterButton setSelected:NO];
-    [centerButton setSelected:NO];
     self.selectedIndex = 3;
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+- (void)setRightButtonHighlighted:(id)sender
 {
+    [self resetButtons];
+    UIButton *button = (UIButton *)sender;
+    [button setSelected:YES];
+    self.selectedIndex = 4;
+}
+
+- (void)resetButtons
+{
+    [leftButton setSelected:NO];
     [leftCenterButton setSelected:NO];
     [centerButton setSelected:NO];
     [rightCenterButton setSelected:NO];
+    [rightButton setSelected:NO];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
