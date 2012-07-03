@@ -19,8 +19,9 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureWithObject:(TIHNewsDataModel *)object {
+- (void)configureWithBaseObject:(TIHBaseDataModel *)base {
     
+    TIHNewsDataModel *object = [[TIHNewsDataModel alloc] initWithProperties:base.properties];
     NSString *bodyText = [[object body] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
     CGRect bodyLabelFrame = self.bodyLabel.frame;

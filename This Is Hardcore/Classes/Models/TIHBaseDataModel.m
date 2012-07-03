@@ -10,6 +10,8 @@
 
 @implementation TIHBaseDataModel
 
+@synthesize properties = _properties;
+
 - (id)initWithProperties:(NSDictionary *)properties
 {
     if((self = [super init]))

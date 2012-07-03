@@ -10,9 +10,10 @@
 
 @interface TIHBaseDataModel : NSObject {
 
-@protected
-NSDictionary *_properties;
+    NSDictionary *_properties;
 }
+
+@property (strong, nonatomic) NSDictionary *properties;
 
 - (id)initWithProperties:(NSDictionary *)properties;
 

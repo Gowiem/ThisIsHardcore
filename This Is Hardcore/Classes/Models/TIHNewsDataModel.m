@@ -42,4 +42,5 @@
 {
     return (![[self newsUrl] isBlank]);
 }
+
 @end

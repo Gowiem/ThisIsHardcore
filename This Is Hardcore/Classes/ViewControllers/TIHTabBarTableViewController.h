@@ -12,6 +12,14 @@
 
 @interface TIHTabBarTableViewController : BaseViewController<SSPullToRefreshViewDelegate> {
     UITableView *_myTable;
+
+    NSMutableDictionary *_itemDictionary;
+    NSMutableDictionary *_itemTotalCountDictionary;
+    NSString *tag;
+    NSInteger _page;
+    NSInteger _count;
+    
+    NSString *unifeedEntity;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *myTable;
@@ -23,4 +31,7 @@
 
 - (IBAction) doOfficialButtonAction:(id)sender;
 - (IBAction) doFanFeedButtonAction:(id)sender;
+
+-(void)loadData;
+
 @end

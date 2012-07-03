@@ -17,7 +17,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *bodyLabel;
 
-// Configures the subviews of the cell with the given object.
-- (void)configureWithObject:(TIHNewsDataModel *)object;
+- (void)configureWithBaseObject:(TIHBaseDataModel *)base ;
 
 @end

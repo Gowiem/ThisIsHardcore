@@ -8,8 +8,5 @@
 
 #import "TIHTabBarTableViewController.h"
 
-@interface TIHPhotoPitViewController : TIHTabBarTableViewController {
-    NSMutableArray *_photoPitItems;
-    NSString *tag;
-}
+@interface TIHPhotoPitViewController : TIHTabBarTableViewController 
 @end

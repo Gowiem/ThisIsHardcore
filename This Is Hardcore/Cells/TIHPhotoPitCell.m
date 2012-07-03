@@ -7,6 +7,7 @@
 //
 
 #import "TIHPhotoPitCell.h"
+#import "TIHBaseDataModel.h"
 #import "NINetworkImageView.h"
 
 @implementation TIHPhotoPitCell
@@ -34,7 +35,8 @@
     }
 }
     
-- (void)configureWithObject:(TIHPhotoPitDataModel *)object {
+- (void)configureWithBaseObject:(TIHBaseDataModel *)base {
+    TIHPhotoPitDataModel *object = [[TIHPhotoPitDataModel alloc] initWithProperties:base.properties];
     self.dateLabel.text = [object createdAgo];
     NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_PhotoPitLoad.png"]];
     
