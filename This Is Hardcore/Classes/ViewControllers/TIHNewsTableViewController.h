@@ -10,8 +10,12 @@
 #import "SSPullToRefresh.h"
 
 @interface TIHNewsTableViewController : TIHTabBarTableViewController {
-    NSMutableArray *_newsItems;
+    NSMutableDictionary *_newsDictionary;
+    NSMutableDictionary *_newsTotalCountDictionary;
+//    NSMutableArray *_newsItems;
     NSString *tag;
+    NSInteger _page;
+    NSInteger _count;
 }
 
 @property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
