@@ -9,6 +9,7 @@
 #import "TIHAppDelegate.h"
 #import "TIHBookmarkManager.h"
 #import "ARFacebook.h"
+#import "TIHLocalNotificationManager.h"
 
 @implementation TIHAppDelegate
 
@@ -17,11 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Handle launching from a notification
+    UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        NSLog(@"Recieved Notification %@",localNotif);
+        UIAlertView *dialog=[[UIAlertView alloc] initWithTitle:[localNotif alertAction] message:[localNotif alertBody] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+        [dialog show];
+
+    }
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
+- (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {
+    // Handle the notificaton when the app is running
+    NSLog(@"Recieved Notification %@",notif);
+    UIAlertView *dialog=[[UIAlertView alloc] initWithTitle:[notif alertAction] message:[notif alertBody] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+    [dialog show];
+}
+
 // Pre iOS 4.2 support
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     ARFacebook *facebook = [ARFacebook sharedARFacebook];

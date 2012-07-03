@@ -8,6 +8,7 @@
 
 #import "TIHEventDetailViewController.h"
 #import "TIHBookmarkManager.h"
+#import "TIHNotificationManager.h"
 #import "TIHWebViewController.h"
 #import "NINetworkImageView.h"
 #import "UIViewController+MBProgressHUD.h"
@@ -185,12 +186,15 @@
 - (IBAction) doBookmarkButtonAction:(id)sender
 {
     TIHBookmarkManager *b = [[TIHBookmarkManager alloc] init];
+    TIHNotificationManager *nm = [[TIHNotificationManager alloc] init];
     if([dataModel isEventBookmarked])
     {
         [b removeBookmarkByEventId:[dataModel eventId]];
+        //TODO remove scheduled reminder
     }
     else {
         [b addBookmarkByEventId:[dataModel eventId]];
+        [nm scheduleNotificationWithEvent:dataModel];
     }
     [self updateBookmarkDisplay];
 }
