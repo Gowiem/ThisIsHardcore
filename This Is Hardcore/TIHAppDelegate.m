@@ -7,15 +7,14 @@
 //
 
 #import "TIHAppDelegate.h"
-#import "TIHBookmarkManager.h"
 #import "ARFacebook.h"
-#import "TIHLocalNotificationManager.h"
 #import "SDURLCache.h"
+#import "TIHScheduleViewController.h"
 
 @implementation TIHAppDelegate
 
 @synthesize window = _window;
-@synthesize tabBarController = _tabBarController;
+//@synthesize tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,7 +24,6 @@
         NSLog(@"Recieved Notification %@",localNotif);
         UIAlertView *dialog=[[UIAlertView alloc] initWithTitle:[localNotif alertAction] message:[localNotif alertBody] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
         [dialog show];
-
     }
     
     SDURLCache *urlCache = [[SDURLCache alloc] initWithMemoryCapacity:1024*1024   // 1MB mem cache
@@ -43,6 +41,17 @@
     [dialog show];
 }
 
+- (NSDate*)getFestivalStartDatePlus:(int)daysLater
+{
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    [comps setHour:0];
+    [comps setDay: 9 + daysLater];
+    [comps setMonth:8];
+    [comps setYear:2012];
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                             initWithCalendarIdentifier:NSGregorianCalendar];
+    return [gregorian dateFromComponents:comps];
+}
 
 // Pre iOS 4.2 support
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {

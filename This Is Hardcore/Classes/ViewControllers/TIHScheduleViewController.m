@@ -24,6 +24,22 @@
     [self setDayDateLabelText];
 }
 
+-(void)setSelectedDate: (NSDate*)date
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *festivalStartDate = [self getFestivalStartDate] ;
+    
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&festivalStartDate
+                 interval:NULL forDate:festivalStartDate];
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&date
+                 interval:NULL forDate:date];
+    
+    NSDateComponents *difference = [calendar components:NSDayCalendarUnit fromDate:date toDate:festivalStartDate options:0];
+
+    _selectedDay = MIN( [difference day], 4);
+    NSLog(@"Selected Day : %i", _selectedDay);
+}
+
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

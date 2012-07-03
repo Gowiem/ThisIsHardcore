@@ -28,4 +28,6 @@
 - (IBAction) doSunButtonAction:(id)sender;
 - (IBAction) doAfterButtonAction:(id)sender;
 
+-(void)setSelectedDate: (NSDate*)date;
+
 @end
