@@ -10,7 +10,7 @@
 
 @implementation TIHNotificationManager
 
-- (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event {
++ (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event {
     NSDate *itemDate = [event startTime];
     NSString *message = [event artistName];
     
@@ -26,25 +26,36 @@
     localNotif.alertAction = NSLocalizedString(@"Event Reminder", nil);
     
     localNotif.soundName = UILocalNotificationDefaultSoundName;
-    
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%i", [event eventId]] forKey: @"ID"];
+    NSMutableDictionary *infoDict = [[ NSMutableDictionary alloc] init];
+    [infoDict setValue:[event startTime] forKey:@"EventDate"];
+    [infoDict setValue:[NSString stringWithFormat:@"%i", [event eventId]] forKey:@"ID"];
     localNotif.userInfo = infoDict;
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
 }
 
-
-- (void)cancelScheduledNotificationWithEventId:(NSNumber *)eventId
++ (void)cancelNotificationByEventId: (NSNumber*) eventId
 {
-    UILocalNotification *notificationToCancel=nil;
+    UILocalNotification *notificationToCancel = [TIHNotificationManager findNotificationByEventId:eventId];
+    if(notificationToCancel != nil)
+        [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
+}
+
++(BOOL)isEventReminderSet: (NSNumber*) eventId
+{
+    return [self findNotificationByEventId:eventId] != nil;
+}
+
++(UILocalNotification*)findNotificationByEventId: (NSNumber*)eventId
+{
+    NSString *eventIdStr = [NSString stringWithFormat:@"%i", eventId];
+    UILocalNotification *notifcation=nil;
     for(UILocalNotification *aNotif in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
-        if([[aNotif.userInfo objectForKey:@"ID"] isEqualToString:[NSString stringWithFormat:@"%i", eventId]]) 
-        {
-            notificationToCancel=aNotif;
+        if([[aNotif.userInfo objectForKey:@"ID"] isEqualToString:eventIdStr]) {
+            notifcation = aNotif;
             break;
         }
     }
-    [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
+    return notifcation;
 }
-
 @end

@@ -259,7 +259,7 @@
         <scene sceneID="cNv-Cb-apj">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-i1-3sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TIHScheduleViewController" id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3O-Ng-3pl">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -549,7 +549,7 @@
                                                 <rect key="frame" x="0.0" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="email.png">
+                                                <state key="normal" title="Reminder">
                                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -557,7 +557,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="doEmailButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="u1Q-T0-Wt8"/>
+                                                    <action selector="doRemindButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="rl3-7S-dPD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
@@ -605,8 +605,8 @@
                         <outlet property="artistImageView" destination="Kec-t8-x6q" id="EyH-GX-puB"/>
                         <outlet property="artistNameLabel" destination="gmL-V8-HkW" id="TJs-WE-EoL"/>
                         <outlet property="bookmarkButton" destination="nbd-m8-bCi" id="Wt6-f0-PwY"/>
-                        <outlet property="emailButton" destination="vYC-JB-UlT" id="gr2-cL-0LY"/>
                         <outlet property="facebookButton" destination="upk-6a-ktv" id="Iy5-nV-UFw"/>
+                        <outlet property="reminderButton" destination="vYC-JB-UlT" id="ENT-jc-hsh"/>
                         <outlet property="scrollView" destination="NkT-yS-66t" id="0Au-BF-sWa"/>
                         <outlet property="setTimeLabel" destination="h1L-Cg-nr1" id="Nf1-fz-KJK"/>
                         <outlet property="shareButton" destination="AmI-i8-bX2" id="2pT-fX-JNS"/>
@@ -746,7 +746,7 @@
         <scene sceneID="WO4-dm-dva">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWv-Ao-SzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="vu3-Wa-axJ" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="vu3-Wa-axJ" customClass="TIHTabBarController" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Z2r-HP-n9k">
@@ -926,7 +926,6 @@
         <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmarkIcon.png" width="10" height="26"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
-        <image name="email.png" width="93" height="92"/>
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
     </resources>
@@ -937,6 +936,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="WYD-46-Fqw"/>
-        <segue reference="MTt-hb-LGa"/>
+        <segue reference="Pzp-e5-bIn"/>
     </inferredMetricsTieBreakers>
 </document>

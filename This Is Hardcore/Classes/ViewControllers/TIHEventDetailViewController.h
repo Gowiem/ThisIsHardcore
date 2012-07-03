@@ -25,14 +25,14 @@
 @property (strong, nonatomic) IBOutlet UIButton *websiteButton;
 @property (strong, nonatomic) IBOutlet UIButton *facebookButton;
 @property (strong, nonatomic) IBOutlet UIButton *twitterButton;
-@property (strong, nonatomic) IBOutlet UIButton *emailButton;
+@property (strong, nonatomic) IBOutlet UIButton *reminderButton;
 @property (strong, nonatomic) IBOutlet UIButton *bookmarkButton;
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 - (IBAction) doWebsiteButtonAction:(id)sender;
 - (IBAction) doFacebookButtonAction:(id)sender;
 - (IBAction) doTwitterButtonAction:(id)sender;
-- (IBAction) doEmailButtonAction:(id)sender;
+- (IBAction) doRemindButtonAction:(id)sender;
 - (IBAction) doBookmarkButtonAction:(id)sender;
 - (IBAction) doShareButtonAction:(id)sender;
 

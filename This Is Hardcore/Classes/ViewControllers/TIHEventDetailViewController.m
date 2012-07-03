@@ -21,7 +21,7 @@
 
 @implementation TIHEventDetailViewController
 
-@synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel,bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, emailButton, dataModel, scrollView;
+@synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel,bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, reminderButton, dataModel, scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Loading Event %i", [[dataModel eventId] intValue]);
     NSString *artistName  = [dataModel artistName];
     NSString *venueName = [dataModel venueName];
     NSString *setTime = [dataModel setTimeDisplay];
@@ -74,6 +73,7 @@
     [self.twitterButton setEnabled:[[dataModel artistTwitterUrl] length] != 0];
     
     [self updateBookmarkDisplay];
+    [self updateReminderDisplay];
 }
 
 - (void) updateBookmarkDisplay
@@ -89,6 +89,19 @@
     [self.bookmarkButton setImage:bookmarkImage forState:UIControlStateNormal];
 }
 
+- (void) updateReminderDisplay
+{
+    UIImage *reminderImage;
+    if([dataModel isEventReminderSet])
+    {
+        reminderImage = [UIImage imageNamed:@"unsetreminder.png"];
+    }
+    else {
+        reminderImage = [UIImage imageNamed:@"setreminder.png"];
+    }
+    [self.reminderButton setImage:reminderImage forState:UIControlStateNormal];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -102,12 +115,11 @@
 
 - (IBAction) doShareButtonAction:(id)sender
 {
-    NSLog(@"doShareButtonAction");
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Facebook", @"Twitter", nil];
+                                                    otherButtonTitles:@"Facebook", @"Twitter", @"Email", nil];
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
@@ -124,6 +136,11 @@
         case 1:
         {
             [self shareViaTweet];
+            break;
+        }
+        case 2:
+        {
+            [self shareViaEmail];
             break;
         }
     }
@@ -173,7 +190,7 @@
 {
     [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistTwitterUrl]];
 }
-- (IBAction) doEmailButtonAction:(id)sender
+-(void) shareViaEmail
 {
     MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
     mailController.mailComposeDelegate = self;
@@ -186,17 +203,27 @@
 - (IBAction) doBookmarkButtonAction:(id)sender
 {
     TIHBookmarkManager *b = [[TIHBookmarkManager alloc] init];
-    TIHNotificationManager *nm = [[TIHNotificationManager alloc] init];
     if([dataModel isEventBookmarked])
     {
         [b removeBookmarkByEventId:[dataModel eventId]];
-        //TODO remove scheduled reminder
     }
     else {
         [b addBookmarkByEventId:[dataModel eventId]];
-        [nm scheduleNotificationWithEvent:dataModel];
     }
     [self updateBookmarkDisplay];
+}
+
+- (IBAction) doRemindButtonAction:(id)sender
+{
+    if([dataModel isEventReminderSet])
+    {
+        [TIHNotificationManager cancelNotificationByEventId:[dataModel eventId]];
+    }
+    else {
+        [TIHNotificationManager scheduleNotificationWithEvent:dataModel];
+
+    }
+    [self updateReminderDisplay];
 }
 
 -(void) openUrlFromString: (NSString *)s
@@ -208,7 +235,6 @@
 - (void)shareWithFacebook
 {
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
-//    [fce authorizeWithFBAppAuth:NO safariAuth:YES].
     facebook.authDelegate = self;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"FBAccessTokenKey"] 

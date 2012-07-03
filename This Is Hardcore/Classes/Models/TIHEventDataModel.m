@@ -9,6 +9,7 @@
 #import "TIHEventDataModel.h"
 #import "NSDictionary+NoNulls.h"
 #import "TIHBookmarkManager.h"
+#import "TIHNotificationManager.h"
 
 @implementation TIHEventDataModel
 
@@ -102,6 +103,10 @@
     return [bookmarks containsObject:[self eventId]];
 }
 
+- (bool)isEventReminderSet
+{
+    return [TIHNotificationManager isEventReminderSet:[self eventId]];
+}
 @end
 
 /*

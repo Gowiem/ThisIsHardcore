@@ -11,7 +11,8 @@
 
 @interface TIHNotificationManager : NSObject
 
-- (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event;
-- (void)cancelScheduledNotificationWithEventId:(NSNumber *)eventId;
++ (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event;
++ (void)cancelNotificationByEventId: (NSNumber*) eventId;
++ (BOOL)isEventReminderSet: (NSNumber*) eventId;
 
 @end
