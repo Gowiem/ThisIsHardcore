@@ -10,6 +10,7 @@
 #import "TIHBookmarkManager.h"
 #import "ARFacebook.h"
 #import "TIHLocalNotificationManager.h"
+#import "SDURLCache.h"
 
 @implementation TIHAppDelegate
 
@@ -26,6 +27,12 @@
         [dialog show];
 
     }
+    
+    SDURLCache *urlCache = [[SDURLCache alloc] initWithMemoryCapacity:1024*1024   // 1MB mem cache
+                                                         diskCapacity:1024*1024*5 // 5MB disk cache
+                                                             diskPath:[SDURLCache defaultCachePath]];
+    [NSURLCache setSharedURLCache:urlCache];
+
     return YES;
 }
 
@@ -36,10 +43,10 @@
     [dialog show];
 }
 
+
 // Pre iOS 4.2 support
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
-    return [facebook handleOpenURL:url];
     return [facebook handleOpenURL:url]; 
 }
 
