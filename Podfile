@@ -1,6 +1,7 @@
 platform :ios
-dependency 'JSONKit'
-dependency 'AFNetworking'
-dependency 'Nimbus'
-dependency 'SSPullToRefresh'
-dependency 'SDURLCache'
+pod 'JSONKit'
+pod 'AFNetworking'
+pod 'Nimbus'
+pod 'SSPullToRefresh'
+pod 'SDURLCache'
+pod 'Facebook-iOS-SDK'
