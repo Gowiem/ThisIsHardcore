@@ -49,7 +49,7 @@
     
     UIImage *image = [UIImage imageNamed:@"TIHC_BandLoad.png"];
     NINetworkImageView* imageView = [[NINetworkImageView alloc] initWithImage:image];
-    CGRect imageRect = CGRectMake(9, 5, 302, 201);
+    CGRect imageRect = CGRectMake(4.5, 5, 302, 201);
     self.artistImageView.frame = imageRect;
     imageView.frame = imageRect;
     [imageView setPathToNetworkImage:[dataModel imageUrl] forDisplaySize:CGSizeMake(302, 201) contentMode:UIViewContentModeScaleAspectFit];
@@ -63,7 +63,7 @@
     double textLabelsViewHeight = artistNameSize.height + venueNameSize.height + setTimeSize.height + descriptionSize.height + 10;    
 
     [[self textLabelsView] setFrame:CGRectMake(textLabelsView.frame.origin.x, textLabelsViewOriginY, textLabelsView.frame.size.width, textLabelsViewHeight)];
-    [[self actionButtonsView] setFrame:CGRectMake(9, self.textLabelsView.frame.origin.y + self.textLabelsView.frame.size.height + 5, 302, self.actionButtonsView.frame.size.height)];
+    [[self actionButtonsView] setFrame:CGRectMake(9, self.textLabelsView.frame.origin.y + self.textLabelsView.frame.size.height + 10, 302, self.actionButtonsView.frame.size.height)];
     
     double viewHeight = self.actionButtonsView.frame.size.height + self.actionButtonsView.frame.origin.y + 20;
     [[self scrollView] setContentSize:CGSizeMake(320, viewHeight)];
