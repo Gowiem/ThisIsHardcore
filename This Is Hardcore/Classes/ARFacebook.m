@@ -50,6 +50,7 @@
     [defaults removeObjectForKey:@"FBAccessTokenKey"];
     [defaults removeObjectForKey:@"FBExpirationDateKey"];
     [defaults synchronize];
+    [authDelegate didNotAuthorizeFacebook:self];
 }
 
 - (void)fbDidLogout

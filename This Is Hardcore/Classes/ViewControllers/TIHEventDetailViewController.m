@@ -268,7 +268,11 @@
 {
     [self shareWithFacebook];
 }
-
+- (void)didNotAuthorizeFacebook:(Facebook *)facebook
+{
+    [self hideHUD];
+    [UIAlertView showAlertWithMessage:@"You must log in to Facebook and install the TIHC App to share."];
+}
 - (void)fbSessionInvalidated
 {
     [self hideHUD];

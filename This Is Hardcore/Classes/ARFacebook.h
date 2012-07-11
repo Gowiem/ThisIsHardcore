@@ -13,6 +13,7 @@
 
 @optional
 - (void)didDeauthorizeFacebook:(Facebook *)facebook;
+- (void)didNotAuthorizeFacebook:(Facebook *)facebook;
 @end
 
 @interface ARFacebook : Facebook <FBSessionDelegate>
