@@ -17,7 +17,8 @@
     { 
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSData *data = [defaults objectForKey:@"bookmarks"];
-        bookmarks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if (nil != data)
+            bookmarks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         if(bookmarks == nil)
             bookmarks = [[NSMutableSet alloc] init];
     }
