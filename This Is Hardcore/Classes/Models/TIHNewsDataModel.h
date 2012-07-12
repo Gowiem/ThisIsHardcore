@@ -15,6 +15,8 @@
 - (NSDate *)createdAt;
 - (NSString *)body;
 - (NSString *)newsUrl;
+- (NSString *)author;
+- (NSString *)profileImageURLString;
 - (BOOL)hasURL;
 
 @end

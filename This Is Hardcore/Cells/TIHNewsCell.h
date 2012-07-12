@@ -16,6 +16,8 @@
 @property (nonatomic, retain) IBOutlet UIImageView *newsImage;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *bodyLabel;
+@property (nonatomic, retain) IBOutlet UILabel *authorLabel;
+@property (nonatomic, retain) IBOutlet UIImageView *sourceIcon;
 
 - (void)configureWithBaseObject:(TIHBaseDataModel *)base ;
 

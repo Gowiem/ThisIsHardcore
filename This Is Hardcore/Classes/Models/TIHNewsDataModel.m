@@ -37,7 +37,14 @@
 {
     return [[_properties objectForKey:@"value"] objectForKey:@"url"];
 }
-
+- (NSString *)author
+{
+    return [[_properties objectForKey:@"value"] objectForKey:@"author"];
+}
+- (NSString *)profileImageURLString
+{
+    return [[_properties objectForKey:@"value"] objectForKey:@"profile_url"];
+}
 - (BOOL)hasURL
 {
     return (![[self newsUrl] isBlank]);

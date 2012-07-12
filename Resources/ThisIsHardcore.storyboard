@@ -678,31 +678,51 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" id="IPX-Y2-sfY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Jy3-B8-JRR">
+                                                            <rect key="frame" x="295" y="4" width="15" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.043123798938834688" green="0.24702678800560401" blue="0.43365709459459456" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="5dG-yp-FgE">
-                                                    <rect key="frame" x="12" y="6" width="38" height="38"/>
+                                                    <rect key="frame" x="10" y="30" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="this is a hardcore date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UrK-ln-4r0">
-                                                    <rect key="frame" x="58" y="2" width="222" height="20"/>
+                                                    <rect key="frame" x="10" y="3" width="250" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="this is a hardcore tweet" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumFontSize="10" adjustsFontSizeToFit="NO" id="Ace-uH-n8w">
-                                                    <rect key="frame" x="58" y="19" width="222" height="28"/>
+                                                    <rect key="frame" x="58" y="26" width="222" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hardcore_tweeter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="eiF-qt-1VV">
+                                                    <rect key="frame" x="58" y="39" width="242" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="authorLabel" destination="eiF-qt-1VV" id="WHg-sQ-cqT"/>
                                             <outlet property="bodyLabel" destination="Ace-uH-n8w" id="iyL-AM-zyK"/>
                                             <outlet property="dateLabel" destination="UrK-ln-4r0" id="rha-W4-Cmf"/>
                                             <outlet property="newsImage" destination="5dG-yp-FgE" id="l6D-XZ-eB7"/>
+                                            <outlet property="sourceIcon" destination="Jy3-B8-JRR" id="Pij-NJ-cCZ"/>
                                             <segue destination="blI-dw-3rH" kind="push" id="MTt-hb-LGa"/>
                                         </connections>
                                     </tableViewCell>
@@ -998,9 +1018,11 @@
         <class className="TIHNewsCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bodyLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sourceIcon" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
@@ -1057,7 +1079,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="MTt-hb-LGa"/>
         <segue reference="WYD-46-Fqw"/>
-        <segue reference="Pzp-e5-bIn"/>
     </inferredMetricsTieBreakers>
 </document>
