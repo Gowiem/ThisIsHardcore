@@ -44,10 +44,6 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-    if (interfaceOrientation==UIInterfaceOrientationPortrait ) {
-        return YES;
-    } else {
-        return NO;
-    }
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 @end
