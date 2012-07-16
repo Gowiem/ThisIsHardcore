@@ -71,11 +71,6 @@
     [self layoutSourceIconWithModel:object];
     [self layoutDateLabelWithModel:object];
 
-    if ([object.author isEqualToString:@"This Is Hardcore"])
-    {
-        NSLog(@"break here");
-    }
-
     self.newsUrl = [object newsUrl];
 
     float newCellHeight = self.authorLabel.frame.origin.y + authorLabel.frame.size.height + ELEMENT_PADDING;
