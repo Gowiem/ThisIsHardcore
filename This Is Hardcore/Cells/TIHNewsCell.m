@@ -14,7 +14,7 @@
 
 @implementation TIHNewsCell
 
-@synthesize newsImage, bodyLabel, dateLabel, authorLabel, newsUrl, sourceIcon;
+@synthesize newsImage, bodyLabel, dateLabel, authorLabel, newsUrl, sourceIcon, customDisclosureView;
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -61,6 +61,14 @@
     NSString *dateString = [dateFormat stringFromDate:[object createdAt]];
     self.dateLabel.text = dateString;
 }
+- (void) layoutCustomDisclosureView
+{
+    CGRect oldFrame = self.customDisclosureView.frame;
+    self.customDisclosureView.frame = CGRectMake(oldFrame.origin.x,
+                                                 (self.frame.size.height - 22.0)/2.0 + oldFrame.size.height/2.0,
+                                                 oldFrame.size.width,
+                                                 oldFrame.size.height);
+}
 - (void)configureWithBaseObject:(TIHBaseDataModel *)base {
   
   TIHNewsDataModel *object = [[TIHNewsDataModel alloc] initWithProperties:base.properties];
@@ -75,6 +83,7 @@
 
     float newCellHeight = self.authorLabel.frame.origin.y + authorLabel.frame.size.height + ELEMENT_PADDING;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, newCellHeight);
+    [self layoutCustomDisclosureView];
 }
 
 @end

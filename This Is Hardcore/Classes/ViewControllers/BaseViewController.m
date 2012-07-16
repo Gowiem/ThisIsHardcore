@@ -42,4 +42,12 @@
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://m.ticketmaster.com/ticket/search.do?articles=tmus&query=this+is+hardcore&submit=SEARCH"]];
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    if (interfaceOrientation==UIInterfaceOrientationPortrait ) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 @end

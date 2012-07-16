@@ -38,7 +38,11 @@
     
     NSArray *newsItems = [_itemDictionary objectForKey:tag];
     [cell configureWithBaseObject:[newsItems objectAtIndex:indexPath.row]];
-    if ([[cell newsUrl] isEqualToString:@""]) { cell.userInteractionEnabled = NO; cell.accessoryType = UITableViewCellAccessoryNone; }
+    if ([[cell newsUrl] isEqualToString:@""])
+    {
+        cell.userInteractionEnabled = NO;
+        [cell.customDisclosureView setHidden:YES];
+    }
     return cell;
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0367787233E6483DB73F0B7D /* libPods.a */; };
+		0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDE5215B49D7C0043CE55 /* Default.png */; };
+		0A3BDE5515B49D7C0043CE55 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDE5315B49D7C0043CE55 /* Default@2x.png */; };
 		7414A02715A3A3AA002D1CC7 /* bookmarks_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */; };
 		7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */; };
 		7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */; };
@@ -64,8 +66,6 @@
 		742E8926158A8C7800BBCF84 /* bookmarkbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8922158A8C7800BBCF84 /* bookmarkbutton@2x.png */; };
 		742E8927158A8C7800BBCF84 /* bookmarkbuttonremove.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8923158A8C7800BBCF84 /* bookmarkbuttonremove.png */; };
 		742E8928158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8924158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png */; };
-		742E896F158A925400BBCF84 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896B158A925400BBCF84 /* default.png */; };
-		742E8970158A925400BBCF84 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896C158A925400BBCF84 /* default@2x.png */; };
 		742E8971158A925400BBCF84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896D158A925400BBCF84 /* icon.png */; };
 		742E8972158A925400BBCF84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896E158A925400BBCF84 /* icon@2x.png */; };
 		742E8975158A989B00BBCF84 /* TIHScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8974158A989A00BBCF84 /* TIHScheduleViewController.m */; };
@@ -207,6 +207,8 @@
 
 /* Begin PBXFileReference section */
 		0367787233E6483DB73F0B7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3BDE5215B49D7C0043CE55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
+		0A3BDE5315B49D7C0043CE55 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 		7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_off.png; sourceTree = "<group>"; };
 		7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmarks_off@2x.png"; sourceTree = "<group>"; };
 		7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_on.png; sourceTree = "<group>"; };
@@ -263,8 +265,6 @@
 		742E8922158A8C7800BBCF84 /* bookmarkbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmarkbutton@2x.png"; path = "Resources/Images/Buttons/bookmarkbutton@2x.png"; sourceTree = "<group>"; };
 		742E8923158A8C7800BBCF84 /* bookmarkbuttonremove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmarkbuttonremove.png; path = Resources/Images/Buttons/bookmarkbuttonremove.png; sourceTree = "<group>"; };
 		742E8924158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmarkbuttonremove@2x.png"; path = "Resources/Images/Buttons/bookmarkbuttonremove@2x.png"; sourceTree = "<group>"; };
-		742E896B158A925400BBCF84 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = Resources/Images/General/default.png; sourceTree = "<group>"; };
-		742E896C158A925400BBCF84 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default@2x.png"; path = "Resources/Images/General/default@2x.png"; sourceTree = "<group>"; };
 		742E896D158A925400BBCF84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/Images/General/icon.png; sourceTree = "<group>"; };
 		742E896E158A925400BBCF84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/Images/General/icon@2x.png"; sourceTree = "<group>"; };
 		742E8973158A989A00BBCF84 /* TIHScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHScheduleViewController.h; path = Classes/ViewControllers/TIHScheduleViewController.h; sourceTree = "<group>"; };
@@ -553,8 +553,8 @@
 		742E8962158A90BD00BBCF84 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				742E896B158A925400BBCF84 /* default.png */,
-				742E896C158A925400BBCF84 /* default@2x.png */,
+				0A3BDE5215B49D7C0043CE55 /* Default.png */,
+				0A3BDE5315B49D7C0043CE55 /* Default@2x.png */,
 				742E896D158A925400BBCF84 /* icon.png */,
 				742E896E158A925400BBCF84 /* icon@2x.png */,
 			);
@@ -1083,8 +1083,6 @@
 				742E8926158A8C7800BBCF84 /* bookmarkbutton@2x.png in Resources */,
 				742E8927158A8C7800BBCF84 /* bookmarkbuttonremove.png in Resources */,
 				742E8928158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png in Resources */,
-				742E896F158A925400BBCF84 /* default.png in Resources */,
-				742E8970158A925400BBCF84 /* default@2x.png in Resources */,
 				742E8971158A925400BBCF84 /* icon.png in Resources */,
 				742E8972158A925400BBCF84 /* icon@2x.png in Resources */,
 				7455F7811590C10B007FDD18 /* TIHC_BandLoad.png in Resources */,
@@ -1172,6 +1170,8 @@
 				7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */,
 				7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */,
 				7414A02A15A3A3AA002D1CC7 /* bookmarks_on@2x.png in Resources */,
+				0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */,
+				0A3BDE5515B49D7C0043CE55 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,6 +1317,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4901ABF80AC4F53A6348638 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joel Murphy (J3LDAPBH2T)";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
@@ -1331,6 +1332,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FDA9A7BB-AD10-4F66-B238-D4A36640BEAB";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1340,6 +1342,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4901ABF80AC4F53A6348638 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joel Murphy";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
@@ -1354,6 +1357,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86DAEDB0-02F2-46BC-B991-699FF189FE67";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
