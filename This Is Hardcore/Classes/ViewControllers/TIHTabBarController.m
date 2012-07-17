@@ -24,6 +24,8 @@
     [self addCenterButtonWithImage:[UIImage imageNamed:@"schedule_off.png"] highlightImage:[UIImage imageNamed: @"schedule_on.png"]];
     [self addRightCenterButtonWithImage:[UIImage imageNamed:@"photopit_off.png"] highlightImage:[UIImage imageNamed: @"photopit_on.png"]];
     [self addRightButtonWithImage:[UIImage imageNamed:@"more_off.png"] highlightImage:[UIImage imageNamed:@"more_on.png"]];
+    self.selectedIndex = 0;
+    [self setLeftButtonHighlighted:leftButton];
 }
 
 - (void)addLeftButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage
