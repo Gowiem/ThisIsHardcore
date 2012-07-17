@@ -35,6 +35,7 @@
     if (cell == nil) {
         cell = [[TIHNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    [cell clearSubViews];
     
     NSArray *newsItems = [_itemDictionary objectForKey:tag];
     [cell configureWithBaseObject:[newsItems objectAtIndex:indexPath.row]];

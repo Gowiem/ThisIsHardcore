@@ -16,6 +16,23 @@
 
 @synthesize newsImage, bodyLabel, dateLabel, authorLabel, newsUrl, sourceIcon, customDisclosureView;
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+        [self clearSubViews];
+    }
+    return self;
+}
+
+-(void)clearSubViews
+{
+    NSArray* subViews = [[self newsImage] subviews];
+    for( UIView *aView in subViews ) {
+        [aView removeFromSuperview];
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -45,7 +62,8 @@
 }
 - (void) layoutNewsImageWithModel:(TIHNewsDataModel *)object
 {
-    NINetworkImageView* imageView = [[NINetworkImageView alloc] initWithFrame:CGRectMake(0, 0, NEWS_IMAGE_WIDTH, NEWS_IMAGE_WIDTH)];
+    NINetworkImageView *imageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_thumbnailload.png"]];
+    [imageView setFrame:CGRectMake(0, 0, NEWS_IMAGE_WIDTH, NEWS_IMAGE_WIDTH)];
     [imageView setPathToNetworkImage:[object profileImageURLString] forDisplaySize:CGSizeMake(NEWS_IMAGE_WIDTH, NEWS_IMAGE_WIDTH) contentMode:UIViewContentModeScaleAspectFit];
     [[self newsImage] addSubview:imageView];
 }

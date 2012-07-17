@@ -21,5 +21,6 @@
 @property (nonatomic, retain) IBOutlet UIView *customDisclosureView;
 
 - (void)configureWithBaseObject:(TIHBaseDataModel *)base ;
+- (void)clearSubViews;
 
 @end
