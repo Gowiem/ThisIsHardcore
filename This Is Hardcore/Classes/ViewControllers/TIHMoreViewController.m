@@ -33,7 +33,7 @@
     [super viewDidLoad];
     _items = [[NSMutableArray alloc] init];
     
-    NSArray *names = [NSArray arrayWithObjects:@"Store", @"Stuff to do in Philly", @"Accomodations", @"About THIC", @"THIC Facebook", @"THIC Twitter", nil];
+    NSArray *names = [NSArray arrayWithObjects:@"Store", @"Stuff to do in Philly", @"Accomodations", @"About TIHC", @"TIHC Facebook", @"TIHC Twitter", nil];
     NSArray *images = [NSArray arrayWithObjects:@"TIHC_Store.png", @"TIHC_Stuff.png", @"TIHC_Accom.png", @"TIHC_About.png", @"TIHC_FB.png", @"TIHC_twit.png", nil];
     NSArray *linkUrls = [NSArray arrayWithObjects:@"http://www.thisishardcorefest.com/", @"http://www.thisishardcorefest.com/stuff-to-do-in-philly/", @"http://www.thisishardcorefest.com/accomodations/",
                          @"http://www.thisishardcorefest.com/", @"https://www.facebook.com/thisishardcorefest", @"https://twitter.com/#!/TIHCfest", nil];
