@@ -21,6 +21,7 @@
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
     _itemDictionary = [[NSMutableDictionary alloc] init];
     _itemTotalCountDictionary = [[NSMutableDictionary alloc] init];
+    _scrollPositions = [[NSMutableDictionary alloc] init];
 }
 
 - (void)viewDidUnload {
@@ -34,12 +35,14 @@
     [button setBackgroundImage: [UIImage imageNamed:@"TIHCofficialBluetab.png"] forState:UIControlStateNormal];
     
     [self.fanFeedButton setBackgroundImage:[UIImage imageNamed:@"FanFeedG1tab.png"] forState:UIControlStateNormal];
+    [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
     UIButton *button = (UIButton *)sender;
     [button setBackgroundImage: [UIImage imageNamed:@"FanFeedBluetab.png"] forState:UIControlStateNormal];
     [self.officialButton setBackgroundImage:[UIImage imageNamed:@"TIHCofficialG1tab.png"] forState:UIControlStateNormal];
+    [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
 }
 
 -(void)loadData
@@ -82,6 +85,7 @@
         NSNumber *itemCount = [JSON objectForKey:@"total_rows"];
         [_itemTotalCountDictionary setValue:itemCount forKey:tag];
         [_myTable reloadData];
+        [self setScrollPosition];
         [self hideHUD];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
@@ -130,6 +134,18 @@
     [self.myTable deselectRowAtIndexPath:tableSelection animated:NO];
 
     [super viewWillAppear:animated];
+}
+
+-(void) setScrollPosition
+{
+    if([_scrollPositions objectForKey:tag])
+    {
+        NSNumber *scrollPosition = [_scrollPositions objectForKey:tag];
+        _myTable.contentOffset = CGPointMake(0, [scrollPosition floatValue]);
+    }
+    else {
+        _myTable.contentOffset = CGPointMake(0, 0);
+    }
 }
 
 @end

@@ -15,6 +15,7 @@
 
     NSMutableDictionary *_itemDictionary;
     NSMutableDictionary *_itemTotalCountDictionary;
+    NSMutableDictionary *_scrollPositions;
     NSString *tag;
     NSInteger _page;
     NSInteger _count;
