@@ -48,7 +48,10 @@
 }
 -(void)loadDataMore:(BOOL)more;
 {
-    [self showHUDWithMessage:@"Loading"];
+    if(!more)
+    {
+        [self showHUDWithMessage:@"Loading"];
+    }
     NSMutableArray *items = [[NSMutableArray alloc] initWithArray:[_itemDictionary objectForKey:tag]];
     NSMutableDictionary *requestParams = [[NSMutableDictionary alloc] init];
     if(more)
@@ -76,10 +79,10 @@
             [items addObject: [[TIHBaseDataModel alloc] initWithProperties:row]];
         }
         [_itemDictionary setValue:[[NSArray alloc] initWithArray:items] forKey:tag];
-        [_myTable reloadData];
-        [self hideHUD];
         NSNumber *itemCount = [JSON objectForKey:@"total_rows"];
         [_itemTotalCountDictionary setValue:itemCount forKey:tag];
+        [_myTable reloadData];
+        [self hideHUD];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
         [self hideHUD];
@@ -89,7 +92,14 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSArray *items = [_itemDictionary objectForKey:tag];
-    return  [items count];
+    int totalCount = [[_itemTotalCountDictionary valueForKey:tag] intValue];
+    if(totalCount > NUM_OF_ITEMS_PER_API_REQUEST)
+    {
+        return  [items count] + 1;
+    }
+    else {
+        return [items count];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

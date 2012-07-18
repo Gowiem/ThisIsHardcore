@@ -28,23 +28,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"NewsCell";
-    
-    TIHNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[TIHNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    [cell clearSubViews];
-    
     NSArray *newsItems = [_itemDictionary objectForKey:tag];
-    [cell configureWithBaseObject:[newsItems objectAtIndex:indexPath.row]];
-    if ([[cell newsUrl] isEqualToString:@""])
-    {
-        cell.userInteractionEnabled = NO;
-        [cell.customDisclosureView setHidden:YES];
+    static NSString *CellIdentifier = @"NewsCell";
+    static NSString *MoreCellIdentifier = @"LoadMoreNewsCell";
+    if(indexPath.row == [newsItems count]) {
+
+        TIHNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:MoreCellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[TIHNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MoreCellIdentifier];
+        }
+
+        return cell;
     }
-    return cell;
+    else {       
+        TIHNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[TIHNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        [cell clearSubViews];
+        
+        NSArray *newsItems = [_itemDictionary objectForKey:tag];
+        [cell configureWithBaseObject:[newsItems objectAtIndex:indexPath.row]];
+        if ([[cell newsUrl] isEqualToString:@""])
+        {
+            cell.userInteractionEnabled = NO;
+            [cell.customDisclosureView setHidden:YES];
+        }
+        return cell;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

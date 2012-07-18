@@ -26,19 +26,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"PhotoPitCell";
-    
-    TIHPhotoPitCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[TIHPhotoPitCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    [cell clearSubViews];
-    
     NSArray *photoPitItems = [_itemDictionary objectForKey:tag];
-    [cell configureWithBaseObject:[photoPitItems objectAtIndex:indexPath.row]];
-    
-    return cell;
+    static NSString *CellIdentifier = @"PhotoPitCell";
+    static NSString *MoreCellIdentifier = @"LoadMorePhotoPitCell";
+    if(indexPath.row == [photoPitItems count]) {
+        TIHPhotoPitCell *cell = [tableView dequeueReusableCellWithIdentifier:MoreCellIdentifier];
+        if (cell == nil) {
+            cell = [[TIHPhotoPitCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MoreCellIdentifier];
+        }
+
+        return cell;
+    }
+    else {              
+        TIHPhotoPitCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[TIHPhotoPitCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        [cell clearSubViews];
+        
+        [cell configureWithBaseObject:[photoPitItems objectAtIndex:indexPath.row]];
+        
+        return cell;
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *photoPitItems = [_itemDictionary objectForKey:tag];
+    if(indexPath.row == [photoPitItems count]) {
+        return 40; //Loading Cell
+    }
+    else {
+        return 364; //PhotoPit Cell
+    }
 }
 
 - (IBAction) doOfficialButtonAction:(id)sender
@@ -53,5 +73,4 @@
     tag = @"tagged";
     [self loadData];
 }
-
 @end
