@@ -66,8 +66,10 @@
 - (NSString *) setTimeDisplay
 {
     NSDateFormatter *startDateFormat = [[NSDateFormatter alloc] init];
+    [startDateFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     [startDateFormat setDateFormat:@"h:mm"];
     NSDateFormatter *endDateFormat = [[NSDateFormatter alloc] init];
+    [endDateFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     [endDateFormat setDateFormat:@"h:mm a"];
     
     NSString *startDateString = [startDateFormat stringFromDate:[self startTime]];
