@@ -108,8 +108,8 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *newsItems = [_itemDictionary objectForKey:tag];
-    if(indexPath.row == [newsItems count] - 1) //items is your data source
+    NSArray *items = [_itemDictionary objectForKey:tag];
+    if(indexPath.row == [items count] - 1) //items is your data source
     {
         int totalCount = [[_itemTotalCountDictionary valueForKey:tag] intValue];
         if(totalCount > _page * NUM_OF_ITEMS_PER_API_REQUEST)
