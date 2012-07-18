@@ -49,6 +49,14 @@
     [_myTable reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSIndexPath *tableSelection = [self.myTable indexPathForSelectedRow];
+    [self.myTable deselectRowAtIndexPath:tableSelection animated:NO];
+    
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
