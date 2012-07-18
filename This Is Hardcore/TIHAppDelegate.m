@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Handle launching from a notification
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotif) {
         NSLog(@"Recieved Notification %@",localNotif);
