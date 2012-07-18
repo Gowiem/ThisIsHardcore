@@ -10,6 +10,7 @@
 #import "TIHNewsTableViewController.h"
 #import "TIHNewsCell.h"
 #import "TIHWebViewController.h"
+#import "GoogleAnalytics.h"
 
 @interface TIHNewsTableViewController ()
 @end
@@ -25,6 +26,13 @@
     unifeedEntity = @"news_feed";
     [self loadData];
 }
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [GoogleAnalytics trackPageView:@"News"];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {

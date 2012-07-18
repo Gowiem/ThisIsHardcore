@@ -9,6 +9,7 @@
 #import "TIHBookmarkViewController.h"
 #import "TIHEventDataModel.h"
 #import "TIHEventCell.h"
+#import "GoogleAnalytics.h"
 
 @implementation TIHBookmarkViewController
 
@@ -22,6 +23,7 @@
 {
     [super viewWillAppear:animated];
     [super loadData];
+    [GoogleAnalytics trackPageView:@"Bookmarks"];
 }
 
 -(NSArray*) getBookmarkedDates {

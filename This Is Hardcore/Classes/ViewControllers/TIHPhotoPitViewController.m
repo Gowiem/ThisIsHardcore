@@ -9,6 +9,7 @@
 #import "AFJSONRequestOperation.h"
 #import "TIHPhotoPitViewController.h"
 #import "TIHPhotoPitCell.h"
+#import "GoogleAnalytics.h"
 
 @interface TIHPhotoPitViewController ()
 
@@ -23,6 +24,13 @@
     [super viewDidLoad];    
     [self loadData];
 }
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [GoogleAnalytics trackPageView:@"PhotoPit"];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {

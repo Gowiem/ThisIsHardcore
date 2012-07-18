@@ -25,3 +25,6 @@ NSString *const FB_SECRET = @"024631f4d4ac48fff8b0ba5e8b6d6b4b";
 /* Twitter API configuration */
 NSString *const TWITTER_CONSUMER_KEY = @"Fj1xw1bqdqzrMyqrrKc8CA";
 NSString *const TWITTER_CONSUMER_SECRET = @"mcs5QUINGObF9bH5HXxtRE54bfSUorKWzmX7FjRRYm4";
+
+// Google Analytics
+NSString *const GOOGLE_ANALYTICS_ACCOUNT_ID = @"UA-19127056-1";

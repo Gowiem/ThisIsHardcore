@@ -13,6 +13,7 @@
 #import "NINetworkImageView.h"
 #import "UIViewController+MBProgressHUD.h"
 #import "UIAlertView+ShowMessage.h"
+#import "GoogleAnalytics.h"
 #import <Twitter/Twitter.h>
 
 @interface TIHEventDetailViewController ()
@@ -31,6 +32,14 @@
     }
     return self;
 }
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [GoogleAnalytics trackPageView:@"EventDetail"];
+}
+
 
 - (void)viewDidLoad
 {

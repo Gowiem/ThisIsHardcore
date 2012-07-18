@@ -30,6 +30,9 @@ extern NSString *const FB_SECRET;
 extern NSString *const TWITTER_CONSUMER_KEY;
 extern NSString *const TWITTER_CONSUMER_SECRET;
 
+/* Google Analytics configuration */
+extern NSString *const GOOGLE_ANALYTICS_ACCOUNT_ID;
+
 /* UNIFEED API configuration */
 #if 1
     #define UNIFEED_API_PROTOCOL @"http"

@@ -10,6 +10,7 @@
 #import "TIHScheduleHeaderView.h"
 #import "TIHEventDataModel.h"
 #import "TIHEventCell.h"
+#import "GoogleAnalytics.h"
 #import "NSDate+Comparison.h"
 
 @implementation TIHScheduleViewController
@@ -22,6 +23,13 @@
     [super loadData];
     _selectedDay = 0;
     [self setDayDateLabelText];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[super myTable] reloadData];
+    [GoogleAnalytics trackPageView:@"Schedule"];
 }
 
 -(void)setSelectedDate: (NSDate*)date
@@ -38,12 +46,6 @@
 
     _selectedDay = MIN( [difference day], 4);
     NSLog(@"Selected Day : %i", _selectedDay);
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [[super myTable] reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
