@@ -7,14 +7,14 @@
 //
 
 #import "TIHScheduleViewController.h"
-#import "TIHBookmarkScheduleHeaderView.h"
+#import "TIHScheduleHeaderView.h"
 #import "TIHEventDataModel.h"
 #import "TIHEventCell.h"
 #import "NSDate+Comparison.h"
 
 @implementation TIHScheduleViewController
 
-@synthesize thursButton, friButton, satButton, sunButton, afterButton, dayDateLabel, flairView;
+@synthesize thursButton, friButton, satButton, sunButton, dayDateLabel, venueLabel, flairView;
 
 - (void)viewDidLoad
 {
@@ -52,16 +52,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(_selectedDay == 4)
+    NSString *venueName = [self getVenueNameForSection:section];
+    return [[self getEventsByVenue:venueName] count];
+}
+
+-(NSString*) getVenueNameForSection:(NSInteger) section
+{
+    if(section == 0)
     {
-        NSString *dateDisplayForSection = [[self getAfterFestivalDates] objectAtIndex:section];
-        NSArray *events = [self getAfterFestivalEventsByDateDisplay:dateDisplayForSection];
-        return [events count];
+        NSArray *festivalVenuesByDay = [self getMainVenueNames];
+        return [festivalVenuesByDay objectAtIndex: _selectedDay];
     }
-    else
-    {
-        return  [[self getScheduleItemsBySelectedDay] count];        
+    else {
+        return [[self getAfterPartyVenues] objectAtIndex:section - 1];
     }
+}
+
+- (NSArray *) getMainVenueNames
+{
+    return [NSArray arrayWithObjects:@"Union Transfer", @"Electric Factory", @"Electric Factory", @"Electric Factory" ,nil];
 }
 
 - (NSArray *) getScheduleItemsBySelectedDay
@@ -81,90 +90,134 @@
             }
         }
     }
-    else if (_selectedDay == 4)
-    {
-        NSDate *lastDayOfFestival = [self getFestivalStartDatePlus:4];
-        for (TIHEventDataModel *e in super.scheduleItems) {
-            NSComparisonResult r = [lastDayOfFestival compare: e.startTime];
-            if(r == NSOrderedAscending || r == NSOrderedSame)
-            {
-                [results addObject:e];
-            }
-        }
-    }
     return [results sortedArrayUsingSelector:@selector(compare:)];
 }
+//
+//-(NSArray*) getAfterFestivalDates {
+//    if(_selectedDay == 4)
+//    {
+//        NSMutableArray *dates = [[NSMutableArray alloc] init];
+//        for(TIHEventDataModel *m  in [self getScheduleItemsBySelectedDay])
+//        {
+//            NSString *eventStartDateDisplay = [m startDateDisplay];
+//            if(!([dates containsObject: eventStartDateDisplay]))
+//            {
+//                [dates addObject: eventStartDateDisplay];
+//            }
+//        }
+//        return dates;
+//    }
+//    else {
+//        return nil;
+//    }
+//}
+//
+//-(NSArray*)getAfterFestivalEventsByDateDisplay: (NSString*) dateDisplay {
+//    if(_selectedDay == 4)
+//    {
+//        NSMutableArray *result = [[NSMutableArray alloc] init];
+//        for(TIHEventDataModel *item  in [self getScheduleItemsBySelectedDay])
+//        {
+//            if([[item startDateDisplay] isEqualToString:dateDisplay])
+//            {
+//                [result addObject:item];
+//            }
+//        }
+//        return result;
+//    }
+//    else {
+//        return nil;
+//    }
+//}
 
--(NSArray*) getAfterFestivalDates {
-    if(_selectedDay == 4)
+-(NSArray*)getSelectedDateVenues {
+    NSMutableArray *venues = [[NSMutableArray alloc] init];
+    for(TIHEventDataModel *m in [self getScheduleItemsBySelectedDay])
     {
-        NSMutableArray *dates = [[NSMutableArray alloc] init];
-        for(TIHEventDataModel *m  in [self getScheduleItemsBySelectedDay])
+        NSString *venueName = [m venueName];
+        if(!([venues containsObject:venueName]))
         {
-            NSString *eventStartDateDisplay = [m startDateDisplay];
-            if(!([dates containsObject: eventStartDateDisplay]))
-            {
-                [dates addObject: eventStartDateDisplay];
-            }
+            [venues addObject:venueName];
         }
-        return dates;
     }
-    else {
-        return nil;
-    }
+    return venues;
 }
 
--(NSArray*)getAfterFestivalEventsByDateDisplay: (NSString*) dateDisplay {
-    if(_selectedDay == 4)
+-(NSArray*)getAfterPartyVenues {
+    NSArray *venues = [self getSelectedDateVenues];
+    NSArray *festivalVenues = [NSArray arrayWithObjects:@"Union Transfer", @"Electric Factory" , nil];
+    NSMutableArray *afterPartyVenues = [[NSMutableArray alloc] init];
+    for(NSString *venue in venues)
     {
-        NSMutableArray *result = [[NSMutableArray alloc] init];
-        for(TIHEventDataModel *item  in [self getScheduleItemsBySelectedDay])
+        if(!([festivalVenues containsObject:venue]))
         {
-            if([[item startDateDisplay] isEqualToString:dateDisplay])
-            {
-                [result addObject:item];
-            }
+            [afterPartyVenues addObject:venue];
         }
-        return result;
     }
-    else {
-        return nil;
+    NSArray *sortedAfterPartyVenues = [afterPartyVenues sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return sortedAfterPartyVenues;
+}
+
+-(NSArray*)getEventsByVenue: (NSString*) venueName
+{
+    NSArray *events = [self getScheduleItemsBySelectedDay];
+    NSMutableArray *venueEvents = [[NSMutableArray alloc] init];
+    for(TIHEventDataModel *m in events)
+    {
+        NSString *venue = [m venueName];
+        if([venue isEqualToString:venueName]) 
+        {
+            [venueEvents addObject:m];
+        }
     }
+    return venueEvents;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if(_selectedDay == 4)
-    {
-        NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
-        return [afterFestivalEventDates count];
-    }
-    else {
-        return 1;
-    }
+    NSLog(@"Number of sections in table view: %i", [[self getSelectedDateVenues] count]);
+    return [[self getSelectedDateVenues] count];
+//    if(_selectedDay == 4)
+//    {
+//        NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
+//        return [afterFestivalEventDates count];
+//    }
+//    else {
+//        return 1;
+//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (_selectedDay == 4)
-        return 14;
-    return 0;
+    if (section == 0)
+        return 0;
+    return 14;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
-    if([afterFestivalEventDates count] != 0  && _selectedDay == 4)
-    {
-        NSString *dateDisplayForSection = [afterFestivalEventDates objectAtIndex: section];
-        TIHBookmarkScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHBookmarkScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
-        view.sectionLabel.text = dateDisplayForSection;
+    if(section == 0)
+        return nil;
+    else {
+        NSArray *afterPartyVenues = [self getAfterPartyVenues];
+        NSString *afterPartyVenueForSection = [afterPartyVenues objectAtIndex:section - 1];
+    
+        TIHScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
+        view.venueLabel.text = afterPartyVenueForSection;
         return view;
     }
-    else {
-        UIView *blankView = [[UIView alloc] init];
-        [blankView setHidden:YES];
-        return blankView;
-    }
+//    NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
+//    if([afterFestivalEventDates count] != 0  && _selectedDay == 4)
+//    {
+//        NSString *dateDisplayForSection = [afterFestivalEventDates objectAtIndex: section];
+//        TIHBookmarkScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHBookmarkScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
+//        view.sectionLabel.text = dateDisplayForSection;
+//        return view;
+//    }
+//    else {
+//        UIView *blankView = [[UIView alloc] init];
+//        [blankView setHidden:YES];
+//        return blankView;
+//    }
 }
 
 - (NSString*)formatTypeToString:(NSComparisonResult)formatType {
@@ -195,22 +248,11 @@
     if (cell == nil) {
         cell = [[TIHEventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    if(_selectedDay != 4)
-    {
-        NSArray *events = [self getScheduleItemsBySelectedDay];
-        [cell configureWithObject:[events objectAtIndex:indexPath.row]];
-    }
-    else {
-        NSString *dateDisplayForSection = [[self getAfterFestivalDates] objectAtIndex:indexPath.section];
-        NSArray *events = [self getAfterFestivalEventsByDateDisplay:dateDisplayForSection];
-        NSLog(@"Date Display : %@", dateDisplayForSection);
-        NSLog(@"Event count : %i", [events count]);
-        NSLog(@"Index Path Section : %i", indexPath.section);
-        NSLog(@"Index Path Row: %i", indexPath.row);
-        [cell configureWithObject:[events objectAtIndex:indexPath.row]];
-    }
-    
+
+    NSString *venueName = [self getVenueNameForSection:indexPath.section];
+    NSArray *events = [self getEventsByVenue:venueName];
+
+    [cell configureWithObject:[events objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -241,55 +283,37 @@
 - (IBAction) doThursButtonAction:(id)sender
 {
     _selectedDay = 0;
-    [self setFlairDisplay:YES];
-    [self resetButtonsSource:sender];
-    [self setDayDateLabelText];
-    [[super myTable] reloadData];
+    [self updateDisplayForSelectedDayForSender:sender];
 }
 - (IBAction) doFriButtonAction:(id)sender
 {
     _selectedDay = 1;
-    [self setFlairDisplay:YES];
-    [self resetButtonsSource:sender];
-    [self setDayDateLabelText];
-    [[super myTable] reloadData];
+    [self updateDisplayForSelectedDayForSender:sender];
 }
 - (IBAction) doSatButtonAction:(id)sender
 {
     _selectedDay = 2;
-    [self setFlairDisplay:YES];
-    [self resetButtonsSource:sender];
-    [self setDayDateLabelText];
-    [[super myTable] reloadData];
+    [self updateDisplayForSelectedDayForSender:sender];
 }
 - (IBAction) doSunButtonAction:(id)sender
 {
     _selectedDay = 3;
-    [self setFlairDisplay:YES];
-    [self resetButtonsSource:sender];    
-    [self setDayDateLabelText];
-    [[super myTable] reloadData];
-}
-- (IBAction) doAfterButtonAction:(id)sender
-{
-    _selectedDay = 4;
-    [self setFlairDisplay:NO];
-    [self resetButtonsSource:sender];
-    [self setDayDateLabelText];
-    [[super myTable] reloadData];
+    [self updateDisplayForSelectedDayForSender:sender];
 }
 
--(void) setFlairDisplay:(BOOL)show
+-(void) updateDisplayForSelectedDayForSender:(id)sender
 {
-    if(show)
-    {
-        [[self flairView] setHidden:NO];
-        [[super myTable] setFrame:CGRectMake(0, 59, 320, 308)];
-    }
-    else {
-        [[self flairView] setHidden:YES];
-        [[super myTable] setFrame:CGRectMake(0, 38, 320, 329)];
-    }
+    NSLog(@"Content Offset %f", [super myTable].contentOffset.y);
+    [super myTable].contentOffset = CGPointMake(0, -18);
+    [self setDayDateLabelText];
+    [self updateVenueNameLabel];
+    [self resetButtonsSource:sender];
+    [[super myTable] reloadData];    
+}
+
+-(void) updateVenueNameLabel
+{
+    self.venueLabel.text = [[self getMainVenueNames] objectAtIndex:_selectedDay];
 }
 
 -(void) setDayDateLabelText
@@ -308,9 +332,9 @@
 
 -(void) resetButtonsSource:(id)source
 {
-    NSArray *scheduleTabButtons = [[NSArray alloc] initWithObjects:self.thursButton, self.friButton, self.satButton, self.sunButton, self.afterButton, nil];
-    NSArray *disabledTabButtonImages = [[NSArray alloc] initWithObjects: @"ThursTabG1.png", @"FriTabG2.png", @"SatTabG3.png", @"SunTabG4.png", @"AfterTabG4.png", nil];
-    NSArray *enabledTabButtonImages = [[NSArray alloc] initWithObjects: @"ThursTabBlue.png", @"FriTabBlue.png", @"SatTabBlue.png", @"SunTabBlue.png", @"AfterTabBlue.png", nil];
+    NSArray *scheduleTabButtons = [[NSArray alloc] initWithObjects:self.thursButton, self.friButton, self.satButton, self.sunButton, nil];
+    NSArray *disabledTabButtonImages = [[NSArray alloc] initWithObjects: @"ThursTabG1.png", @"FriTabG2.png", @"SatTabG3.png", @"SunTabG4.png", nil];
+    NSArray *enabledTabButtonImages = [[NSArray alloc] initWithObjects: @"ThursTabBlue.png", @"FriTabBlue.png", @"SatTabBlue.png", @"SunTabBlue.png", nil];
     
     for(int x =0; x < [scheduleTabButtons count]; x++)
     {
