@@ -31,7 +31,7 @@
         [self showHUDWithMessage:@"Loading"];
     }
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/events.json", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     NSLog(@"Requesting url : %@", url);
