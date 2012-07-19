@@ -8,6 +8,7 @@
 
 #import "TIHEventDetailViewController.h"
 #import "TIHBookmarkManager.h"
+#import "TIHDirectionManager.h"
 #import "TIHNotificationManager.h"
 #import "TIHWebViewController.h"
 #import "NINetworkImageView.h"
@@ -22,7 +23,7 @@
 
 @implementation TIHEventDetailViewController
 
-@synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel,bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, reminderButton, dataModel, scrollView;
+@synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel, directionsButton, bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, reminderButton, dataModel, scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +53,11 @@
     
     self.artistNameLabel.text = artistName;
     self.venueLabel.text = [NSString stringWithFormat:@"@%@", venueName];
+    NSString *venueDirectionsUrl = [TIHDirectionManager getDirectionsUrlForVenue:venueName];
+    if([venueDirectionsUrl length] == 0)
+    {
+        [directionsButton setHidden:YES];
+    }
     self.setTimeLabel.text = setTime;
     self.artistDescriptionLabel.numberOfLines = 0;
     self.artistDescriptionLabel.text = artistDescription;
@@ -315,4 +321,11 @@
     TIHWebViewController* wvc = (TIHWebViewController*)segue.destinationViewController;
     wvc.urlAddress = (NSString*)sender;
 }
+
+- (IBAction) doDirectionsButtonAction:(id)sender
+{
+    NSString *venueDirectionsUrl = [TIHDirectionManager getDirectionsUrlForVenue:[dataModel venueName]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: venueDirectionsUrl]];
+}
+
 @end

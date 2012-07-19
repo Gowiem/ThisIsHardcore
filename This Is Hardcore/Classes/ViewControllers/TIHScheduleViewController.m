@@ -142,7 +142,8 @@
         NSString *venueName = [m venueName];
         if(!([venues containsObject:venueName]))
         {
-            [venues addObject:venueName];
+            if([venueName length] != 0)
+                [venues addObject:venueName];
         }
     }
     return venues;

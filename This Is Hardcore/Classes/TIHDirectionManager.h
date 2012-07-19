@@ -10,4 +10,6 @@
 
 @interface TIHDirectionManager : NSObject
 
++ (NSString*) getDirectionsUrlForVenue: (NSString*) venueName;
+
 @end

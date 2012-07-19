@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIView *textLabelsView;
 @property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *venueLabel;
+@property (strong, nonatomic) IBOutlet UIButton *directionsButton;
 @property (strong, nonatomic) IBOutlet UILabel *setTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *artistDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UIView *actionButtonsView;
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *bookmarkButton;
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
+- (IBAction) doDirectionsButtonAction:(id)sender;
 - (IBAction) doWebsiteButtonAction:(id)sender;
 - (IBAction) doFacebookButtonAction:(id)sender;
 - (IBAction) doTwitterButtonAction:(id)sender;
