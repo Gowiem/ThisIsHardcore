@@ -93,8 +93,6 @@
         }
     }
     
-    NSLog(@"Number of getScheduleItemsBySelectedDay = %i",[results count]);
-    
     return [results sortedArrayUsingSelector:@selector(compare:)];
 }
 //
