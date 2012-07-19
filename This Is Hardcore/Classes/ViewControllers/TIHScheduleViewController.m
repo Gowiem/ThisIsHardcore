@@ -92,6 +92,9 @@
             }
         }
     }
+    
+    NSLog(@"Number of getScheduleItemsBySelectedDay = %i",[results count]);
+    
     return [results sortedArrayUsingSelector:@selector(compare:)];
 }
 //
@@ -357,7 +360,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *events = [self getScheduleItemsBySelectedDay];
+    NSArray *venues = [self getSelectedDateVenues];
+    NSArray *events;
+    
+    // Do we have more than 1 venue
+    if ([venues count] > 1)
+    {
+        // Complex case of more than 1 section
+        events = [self getEventsByVenue:[venues objectAtIndex:indexPath.section]];
+    }
+    else 
+    {
+        // Simple case of only 1 section
+        events = [self getScheduleItemsBySelectedDay];
+    }
+   
     TIHEventDataModel *modelData = [events objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"segueToEventDetail" sender:modelData];
 }
