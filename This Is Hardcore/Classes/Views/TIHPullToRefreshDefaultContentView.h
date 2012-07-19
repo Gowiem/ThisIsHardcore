@@ -9,5 +9,9 @@
 #import "SSPullToRefreshDefaultContentView.h"
 
 @interface TIHPullToRefreshDefaultContentView : SSPullToRefreshDefaultContentView
+{
+    UIImageView *_pullImageViewSolid;
+    UIImageView *_pullImageViewCracked;
+}
 
 @end

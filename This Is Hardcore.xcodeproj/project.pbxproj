@@ -175,6 +175,8 @@
 		74FC4ED715B89103009006BC /* TIHDirectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FC4ED615B89103009006BC /* TIHDirectionManager.m */; };
 		74FC4F2615B8A68E009006BC /* getdirections.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4F2415B8A68E009006BC /* getdirections.png */; };
 		74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4F2515B8A68E009006BC /* getdirections@2x.png */; };
+		A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0A15B8B7120098384B /* HCBellSolid.png */; };
+		A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
@@ -434,6 +436,8 @@
 		74FC4F2415B8A68E009006BC /* getdirections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getdirections.png; path = Resources/Images/Buttons/getdirections.png; sourceTree = "<group>"; };
 		74FC4F2515B8A68E009006BC /* getdirections@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "getdirections@2x.png"; path = "Resources/Images/Buttons/getdirections@2x.png"; sourceTree = "<group>"; };
 		A4901ABF80AC4F53A6348638 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		A4BC7E0A15B8B7120098384B /* HCBellSolid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCBellSolid.png; sourceTree = "<group>"; };
+		A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCBellSolid@2x.png"; sourceTree = "<group>"; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
 		C81CBB44157806DE00584F64 /* grey-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey-arrow.png"; path = "Resources/Images/grey-arrow.png"; sourceTree = "<group>"; };
@@ -998,6 +1002,8 @@
 		C85A3D8E157E8C0200EF699C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				A4BC7E0A15B8B7120098384B /* HCBellSolid.png */,
+				A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */,
 				C84BDB7D157E956D00E6D7AC /* bookmarkIcon.png */,
 				C85A3D8F157E8C0200EF699C /* bookmarkIcon@2x.png */,
 				C84BDB7E157E956D00E6D7AC /* HCBell.png */,
@@ -1225,6 +1231,8 @@
 				74FC4ED315B88EFA009006BC /* TIHC_aboutApp@2x.png in Resources */,
 				74FC4F2615B8A68E009006BC /* getdirections.png in Resources */,
 				74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */,
+				A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */,
+				A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
