@@ -10,6 +10,7 @@
 #import "ARFacebook.h"
 #import "SDURLCache.h"
 #import "TIHScheduleViewController.h"
+#import "GoogleAnalytics.h"
 
 @implementation TIHAppDelegate
 
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Start analytics
+    [GoogleAnalytics startTracker];
+    
     // Handle launching from a notification
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
@@ -93,6 +97,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    // Stop analytics
+    [GoogleAnalytics stopTracker];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "TIHWebViewController.h"
 #import "UIViewController+MBProgressHUD.h"
 #import "UIColor+HexString.h"
+#import "GoogleAnalytics.h"
 
 @interface TIHWebViewController ()
 
@@ -23,7 +24,8 @@
     [super viewDidLoad];
     [self showHUDWithMessage:@"Loading..."];
     NSLog(@"Loading URL: %@", self.urlAddress);
-    NSURL *url = [NSURL URLWithString:self.urlAddress];  
+    NSURL *url = [NSURL URLWithString:self.urlAddress]; 
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Loaded: %@",self.urlAddress]];
     [super openURL:url];
 }
 

@@ -24,14 +24,14 @@
     [super viewDidLoad];
     tag = @"official";
     unifeedEntity = @"news_feed";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [GoogleAnalytics trackPageView:@"News"];
-}
+    }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -76,12 +76,14 @@
 {
     [super doOfficialButtonAction:sender];
     tag = @"official";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
     [super doFanFeedButtonAction:sender];
     tag = @"fanfeed";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
 }
 

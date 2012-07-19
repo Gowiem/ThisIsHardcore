@@ -21,6 +21,7 @@
 {
     tag = @"official";
     unifeedEntity = @"instagram";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [super viewDidLoad];    
     [self loadData];
 }
@@ -73,12 +74,14 @@
 {
     [super doOfficialButtonAction:sender];
     tag = @"official";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
     [super doFanFeedButtonAction:sender];
     tag = @"tagged";
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
 }
 @end
