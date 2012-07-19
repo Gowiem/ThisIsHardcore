@@ -89,7 +89,10 @@
         NSNumber *itemCount = [JSON objectForKey:@"total_rows"];
         [_itemTotalCountDictionary setValue:itemCount forKey:tag];
         [_myTable reloadData];
-        [self setScrollPosition];
+        if(!more)
+        {
+            [self setScrollPosition];
+        }
         [self hideHUD];
         [_dataLoadedForTag setValue:[NSNumber numberWithBool:YES] forKey:tag];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
