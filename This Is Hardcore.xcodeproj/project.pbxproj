@@ -145,6 +145,7 @@
 		7474825B15B733F500352AFD /* TIHScheduleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474825A15B733F500352AFD /* TIHScheduleHeaderView.m */; };
 		7477E912159119F500F3F2A8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7477E911159119F400F3F2A8 /* MessageUI.framework */; };
 		748ADBC4159F664900A6746F /* Facebook_SSOExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */; };
+		74AA95C315B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AA95C215B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m */; };
 		74C8623415936A9F003630A8 /* ARFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C8623315936A9F003630A8 /* ARFacebook.m */; };
 		74DF2082159DECC700AB1B90 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DF206E159DECC700AB1B90 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74DF2090159DEDC100AB1B90 /* UIViewController+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DF208E159DEDC100AB1B90 /* UIViewController+MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -391,6 +392,8 @@
 		7477E911159119F400F3F2A8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		748ADBC1159F65F300A6746F /* Facebook_SSOExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Facebook_SSOExtension.h; path = Classes/Facebook_SSOExtension.h; sourceTree = "<group>"; };
 		748ADBC3159F664900A6746F /* Facebook_SSOExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook_SSOExtension.m; path = Classes/Facebook_SSOExtension.m; sourceTree = "<group>"; };
+		74AA95C115B84D2500D4553C /* TIHPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPullToRefreshDefaultContentView.h; path = Classes/Views/TIHPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
+		74AA95C215B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPullToRefreshDefaultContentView.m; path = Classes/Views/TIHPullToRefreshDefaultContentView.m; sourceTree = "<group>"; };
 		74C8623215936A9F003630A8 /* ARFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARFacebook.h; path = Classes/ARFacebook.h; sourceTree = "<group>"; };
 		74C8623315936A9F003630A8 /* ARFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARFacebook.m; path = Classes/ARFacebook.m; sourceTree = "<group>"; };
 		74DF206D159DECC700AB1B90 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 		7433B027159A1593003D1622 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74AA95C115B84D2500D4553C /* TIHPullToRefreshDefaultContentView.h */,
+				74AA95C215B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m */,
 				7433B028159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.h */,
 				7433B029159A15CB003D1622 /* TIHBookmarkScheduleHeaderView.m */,
 				7474825915B733F500352AFD /* TIHScheduleHeaderView.h */,
@@ -1281,6 +1286,7 @@
 				7474825B15B733F500352AFD /* TIHScheduleHeaderView.m in Sources */,
 				C8C82A7F15B756CF00983140 /* ARGoogleAnalytics.m in Sources */,
 				C8C82A8615B75A3000983140 /* GoogleAnalytics.m in Sources */,
+				74AA95C315B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

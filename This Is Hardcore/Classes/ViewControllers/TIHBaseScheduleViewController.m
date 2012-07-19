@@ -10,6 +10,7 @@
 #import "TIHApplicationConfiguration.h"
 #import "TIHEventDataModel.h"
 #import "TIHEventDetailViewController.h"
+#import "TIHPullToRefreshDefaultContentView.h"
 #import "AFJSONRequestOperation.h"
 #import "UIViewController+MBProgressHUD.h"
 
@@ -51,6 +52,7 @@
             }
         }
         [myTable reloadData];
+        [self.pullToRefreshView.contentView setLastUpdatedAt:[NSDate date] withPullToRefreshView:self.pullToRefreshView];
         [self hideHUD];
         _firstDataLoad = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -65,6 +67,7 @@
     [super viewDidLoad];
     _firstDataLoad = YES;
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
+    self.pullToRefreshView.contentView = [[TIHPullToRefreshDefaultContentView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)viewDidUnload {

@@ -9,6 +9,7 @@
 #import "TIHTabBarTableViewController.h"
 #import "TIHApplicationConfiguration.h"
 #import "TIHBaseDataModel.h"
+#import "TIHPullToRefreshDefaultContentView.h"
 #import "NSString+AppRenaissance.h"
 #import "UIViewController+MBProgressHUD.h"
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
+    self.pullToRefreshView.contentView = [[TIHPullToRefreshDefaultContentView alloc] initWithFrame:CGRectZero];
     _itemDictionary = [[NSMutableDictionary alloc] init];
     _itemTotalCountDictionary = [[NSMutableDictionary alloc] init];
     _scrollPositions = [[NSMutableDictionary alloc] init];
@@ -89,6 +91,7 @@
         NSNumber *itemCount = [JSON objectForKey:@"total_rows"];
         [_itemTotalCountDictionary setValue:itemCount forKey:tag];
         [_myTable reloadData];
+        [self.pullToRefreshView.contentView setLastUpdatedAt:[NSDate date] withPullToRefreshView:self.pullToRefreshView];
         if(!more)
         {
             [self setScrollPosition];
