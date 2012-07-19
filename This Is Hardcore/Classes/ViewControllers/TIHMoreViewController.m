@@ -41,10 +41,10 @@
     [super viewDidLoad];
     _items = [[NSMutableArray alloc] init];
     
-    NSArray *names = [NSArray arrayWithObjects:@"Store", @"Stuff to do in Philly", @"Accomodations", @"About TIHC", @"TIHC Facebook", @"TIHC Twitter", @"About appRenaissance", nil];
-    NSArray *images = [NSArray arrayWithObjects:@"TIHC_Store.png", @"TIHC_Stuff.png", @"TIHC_Accom.png", @"TIHC_About.png", @"TIHC_FB.png", @"TIHC_twit.png", @"TIHC_aboutApp.png", nil];
-    NSArray *linkUrls = [NSArray arrayWithObjects:@"http://www.thisishardcorefest.com/", @"http://www.thisishardcorefest.com/stuff-to-do-in-philly/", @"http://www.thisishardcorefest.com/accomodations/",
-                         @"http://www.thisishardcorefest.com/", @"https://www.facebook.com/thisishardcorefest", @"https://twitter.com/#!/TIHCfest",
+    NSArray *names = [NSArray arrayWithObjects: @"Stuff to do in Philly", @"Accomodations", @"TIHC Facebook", @"TIHC Twitter",@"About TIHC", @"About appRenaissance",  nil];
+    NSArray *images = [NSArray arrayWithObjects:@"TIHC_Stuff.png", @"TIHC_Accom.png", @"TIHC_FB.png", @"TIHC_twit.png", @"TIHC_About.png", @"TIHC_aboutApp.png", nil];
+    NSArray *linkUrls = [NSArray arrayWithObjects:@"http://www.thisishardcorefest.com/stuff-to-do-in-philly/", @"http://www.thisishardcorefest.com/accomodations/", @"https://www.facebook.com/thisishardcorefest", @"https://twitter.com/#!/TIHCfest",
+                         @"http://www.thisishardcorefest.com/",
                          @"http://assets.apprenaissance.com/mobile-about/", nil];
     
     for(int x = 0; x < [names count]; x++)
