@@ -12,7 +12,7 @@
 
 @interface TIHTabBarTableViewController : BaseViewController<SSPullToRefreshViewDelegate> {
     
-    BOOL _firstDataLoad;
+    NSMutableDictionary *_dataLoadedForTag;
     
     UITableView *_myTable;
 

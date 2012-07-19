@@ -22,7 +22,7 @@
     _itemDictionary = [[NSMutableDictionary alloc] init];
     _itemTotalCountDictionary = [[NSMutableDictionary alloc] init];
     _scrollPositions = [[NSMutableDictionary alloc] init];
-    _firstDataLoad = YES;
+    _dataLoadedForTag = [[NSMutableDictionary alloc] init];
 }
 
 - (void)viewDidUnload {
@@ -53,7 +53,7 @@
 -(void)loadDataMore:(BOOL)more;
 {
     //if(!more)
-    if (_firstDataLoad) 
+    if (![[_dataLoadedForTag objectForKey:tag] boolValue]) 
     {
         [self showHUDWithMessage:@"Loading"];
     }
@@ -91,11 +91,10 @@
         [_myTable reloadData];
         [self setScrollPosition];
         [self hideHUD];
-        _firstDataLoad = NO;
+        [_dataLoadedForTag setValue:[NSNumber numberWithBool:YES] forKey:tag];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
         [self hideHUD];
-        _firstDataLoad = NO;
     }];
     
     [operation start];
