@@ -11,6 +11,9 @@
 #import "SSPullToRefresh.h"
 
 @interface TIHTabBarTableViewController : BaseViewController<SSPullToRefreshViewDelegate> {
+    
+    BOOL _firstDataLoad;
+    
     UITableView *_myTable;
 
     NSMutableDictionary *_itemDictionary;

@@ -22,6 +22,7 @@
     _itemDictionary = [[NSMutableDictionary alloc] init];
     _itemTotalCountDictionary = [[NSMutableDictionary alloc] init];
     _scrollPositions = [[NSMutableDictionary alloc] init];
+    _firstDataLoad = YES;
 }
 
 - (void)viewDidUnload {
@@ -51,7 +52,8 @@
 }
 -(void)loadDataMore:(BOOL)more;
 {
-    if(!more)
+    //if(!more)
+    if (_firstDataLoad) 
     {
         [self showHUDWithMessage:@"Loading"];
     }
@@ -67,6 +69,8 @@
         _page = 1;        
         items = [[NSMutableArray alloc] init];
     }
+    
+// WHAT IS @"unifeed-debug" for? Seems like a hack.
     
     [requestParams setObject:@"unifeed-debug" forKey:@"auth-token"];
     [requestParams setObject:[NSString stringWithFormat:@"%d", NUM_OF_ITEMS_PER_API_REQUEST] forKey:@"size"];
@@ -87,9 +91,11 @@
         [_myTable reloadData];
         [self setScrollPosition];
         [self hideHUD];
+        _firstDataLoad = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
         [self hideHUD];
+        _firstDataLoad = NO;
     }];
     
     [operation start];
