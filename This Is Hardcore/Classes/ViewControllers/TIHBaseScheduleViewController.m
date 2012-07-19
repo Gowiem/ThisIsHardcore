@@ -24,7 +24,11 @@
 -(void) loadData
 {
     [super viewDidLoad];
-    [self showHUDWithMessage:@"Loading"];
+    
+    if (_firstDataLoad)
+    {
+        [self showHUDWithMessage:@"Loading"];
+    }
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/events.json?auth_token=unifeed-debug", UNIFEED_API_URL]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -48,6 +52,7 @@
         }
         [myTable reloadData];
         [self hideHUD];
+        _firstDataLoad = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Fail!");
         [self hideHUD];
@@ -58,6 +63,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _firstDataLoad = YES;
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.myTable delegate:self];
 }
 

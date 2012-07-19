@@ -10,7 +10,9 @@
 #import "SSPullToRefresh.h"
 
 @interface TIHBaseScheduleViewController : BaseViewController <SSPullToRefreshViewDelegate>
-
+{
+    BOOL _firstDataLoad;
+}
 @property (strong, nonatomic) IBOutlet UITableView *myTable;
 @property (strong, nonatomic) NSMutableArray *scheduleItems;
 @property (strong, nonatomic) NSMutableArray *bookmarkedScheduleItems;
