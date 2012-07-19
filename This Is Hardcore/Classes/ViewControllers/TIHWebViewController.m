@@ -71,4 +71,18 @@
     NSLog(@"Error loading webview : %@", error);
     [self hideHUD];
 }
+
+- (BOOL)webView:(UIWebView *)wv shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    // Determine if we want the system to handle it.
+    NSURL *url = request.URL;
+    NSLog(@"url : %@", [url absoluteString]);
+    if (![url.scheme isEqual:@"http"] && ![url.scheme isEqual:@"https"]) {
+        if ([[UIApplication sharedApplication]canOpenURL:url]) {
+            [[UIApplication sharedApplication]openURL:url];
+            return NO;
+        }
+    }
+    return YES;
+}
 @end

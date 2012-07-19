@@ -170,6 +170,8 @@
 		74ED039115A39C3D007A3C70 /* news_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74ED038915A39C3D007A3C70 /* news_on@2x.png */; };
 		74ED039415A39EB9007A3C70 /* setreminderinactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 74ED039215A39EB9007A3C70 /* setreminderinactive.png */; };
 		74ED039515A39EB9007A3C70 /* setreminderinactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74ED039315A39EB9007A3C70 /* setreminderinactive@2x.png */; };
+		74FC4ED215B88EFA009006BC /* TIHC_aboutApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4ED015B88EFA009006BC /* TIHC_aboutApp.png */; };
+		74FC4ED315B88EFA009006BC /* TIHC_aboutApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4ED115B88EFA009006BC /* TIHC_aboutApp@2x.png */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
@@ -422,6 +424,8 @@
 		74ED038915A39C3D007A3C70 /* news_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news_on@2x.png"; sourceTree = "<group>"; };
 		74ED039215A39EB9007A3C70 /* setreminderinactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setreminderinactive.png; path = Resources/Images/Buttons/setreminderinactive.png; sourceTree = "<group>"; };
 		74ED039315A39EB9007A3C70 /* setreminderinactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setreminderinactive@2x.png"; path = "Resources/Images/Buttons/setreminderinactive@2x.png"; sourceTree = "<group>"; };
+		74FC4ED015B88EFA009006BC /* TIHC_aboutApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_aboutApp.png; path = Resources/Images/More/TIHC_aboutApp.png; sourceTree = "<group>"; };
+		74FC4ED115B88EFA009006BC /* TIHC_aboutApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_aboutApp@2x.png"; path = "Resources/Images/More/TIHC_aboutApp@2x.png"; sourceTree = "<group>"; };
 		A4901ABF80AC4F53A6348638 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
@@ -867,6 +871,8 @@
 		7453FDAF1598FA820036FC88 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				74FC4ED015B88EFA009006BC /* TIHC_aboutApp.png */,
+				74FC4ED115B88EFA009006BC /* TIHC_aboutApp@2x.png */,
 				7453FDB11598FA9B0036FC88 /* TIHC_About.png */,
 				7453FDB21598FA9B0036FC88 /* TIHC_About@2x.png */,
 				7453FDB31598FA9B0036FC88 /* TIHC_Accom.png */,
@@ -1204,6 +1210,8 @@
 				7474825515B7314100352AFD /* schedule_on.png in Resources */,
 				7474825615B7314100352AFD /* schedule_on@2x.png in Resources */,
 				7474825815B7335100352AFD /* TIHScheduleHeaderView.xib in Resources */,
+				74FC4ED215B88EFA009006BC /* TIHC_aboutApp.png in Resources */,
+				74FC4ED315B88EFA009006BC /* TIHC_aboutApp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
