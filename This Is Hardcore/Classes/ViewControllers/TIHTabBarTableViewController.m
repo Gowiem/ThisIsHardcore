@@ -105,7 +105,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSArray *items = [_itemDictionary objectForKey:tag];
     int totalCount = [[_itemTotalCountDictionary valueForKey:tag] intValue];
-    if(totalCount > NUM_OF_ITEMS_PER_API_REQUEST)
+    if(totalCount > NUM_OF_ITEMS_PER_API_REQUEST * _page)
     {
         return  [items count] + 1;
     }
