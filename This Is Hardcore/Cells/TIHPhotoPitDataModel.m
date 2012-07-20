@@ -43,4 +43,12 @@
     return [self.tags componentsJoinedByString:@","];
 }
 
+
+- (NSString *)body
+{
+    return [[_properties objectForKey:@"value"] objectForKey:@"body"];
+}
+
+
+
 @end

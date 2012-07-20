@@ -40,7 +40,7 @@
     [networkImageView setCenter: CGPointMake(CGRectGetMidX(self.photoImageView.bounds), CGRectGetMidY(self.photoImageView.bounds))];
     [networkImageView setPathToNetworkImage: [object imageUrl] forDisplaySize: self.photoImageView.frame.size];
     [[self photoImageView] addSubview:networkImageView];    
-    self.tags.text = [object tagDisplay];
+    self.tags.text = [object body];
 }
 
 @end

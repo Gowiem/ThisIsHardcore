@@ -66,7 +66,7 @@
         return 40; //Loading Cell
     }
     else {
-        return 364; //PhotoPit Cell
+        return 385; //PhotoPit Cell
     }
 }
 

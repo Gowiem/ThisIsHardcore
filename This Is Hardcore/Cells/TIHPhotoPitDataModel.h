@@ -16,5 +16,6 @@
 - (NSString *)imageUrl;
 - (NSArray *)tags;
 - (NSString *)tagDisplay;
+- (NSString *)body;
 
 @end
