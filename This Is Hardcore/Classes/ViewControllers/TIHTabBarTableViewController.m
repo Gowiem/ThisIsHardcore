@@ -72,9 +72,6 @@
         items = [[NSMutableArray alloc] init];
     }
     
-// WHAT IS @"unifeed-debug" for? Seems like a hack.
-    
-    [requestParams setObject:@"unifeed-debug" forKey:@"auth-token"];
     [requestParams setObject:[NSString stringWithFormat:@"%d", NUM_OF_ITEMS_PER_API_REQUEST] forKey:@"size"];
     [requestParams setObject:[NSString stringWithFormat:@"%d", _page] forKey:@"page"];
     NSString *urlQuery = [NSString queryStringWithBase:nil parameters:requestParams prefixed:YES];
