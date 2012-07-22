@@ -9,10 +9,11 @@
 #import "TIHPhotoPitCell.h"
 #import "TIHBaseDataModel.h"
 #import "NINetworkImageView.h"
+#import "UILabel+VerticalAlign.h"
 
 @implementation TIHPhotoPitCell
 
-@synthesize photoImageView, dateLabel, tags;
+@synthesize photoImageView, authorImageView, authorNameLabel, dateLabel, tags;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -35,12 +36,21 @@
 - (void)configureWithBaseObject:(TIHBaseDataModel *)base {
     TIHPhotoPitDataModel *object = [[TIHPhotoPitDataModel alloc] initWithProperties:base.properties];
     self.dateLabel.text = [object createdAgo];
-    NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_PhotoPitLoad.png"]];
+    self.authorNameLabel.text = [object authorName];
     
+    NINetworkImageView *networkImageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_PhotoPitLoad.png"]];
     [networkImageView setCenter: CGPointMake(CGRectGetMidX(self.photoImageView.bounds), CGRectGetMidY(self.photoImageView.bounds))];
     [networkImageView setPathToNetworkImage: [object imageUrl] forDisplaySize: self.photoImageView.frame.size];
-    [[self photoImageView] addSubview:networkImageView];    
+    [[self photoImageView] addSubview:networkImageView];
+       
+    NINetworkImageView *authorNetworkImageView = [[NINetworkImageView alloc] initWithImage:[UIImage imageNamed:@"TIHC_thumbnailload.png"]];
+    [authorNetworkImageView setFrame:CGRectMake(0, 0, 40, 40)];
+
+    [authorNetworkImageView setPathToNetworkImage: [object authorImageUrl] forDisplaySize: CGSizeMake(40, 40)];
+    [[self authorImageView] addSubview:authorNetworkImageView];
+
     self.tags.text = [object body];
+    [self.tags alignTop];
 }
 
 @end

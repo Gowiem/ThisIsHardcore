@@ -17,5 +17,7 @@
 - (NSArray *)tags;
 - (NSString *)tagDisplay;
 - (NSString *)body;
+- (NSString *)authorName;
+- (NSString *)authorImageUrl;
 
 @end

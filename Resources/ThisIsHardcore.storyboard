@@ -242,10 +242,22 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                         </view>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FAa-0c-ua5">
-                                                            <rect key="frame" x="15" y="335" width="292" height="42"/>
+                                                        <view contentMode="center" id="NOm-Qv-aZ2">
+                                                            <rect key="frame" x="14" y="338" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontSizeToFit="NO" id="FAa-0c-ua5">
+                                                            <rect key="frame" x="60" y="351" width="247" height="27"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="authorNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="B4q-nI-g7B">
+                                                            <rect key="frame" x="60" y="335" width="247" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
@@ -253,6 +265,8 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <connections>
+                                                    <outlet property="authorImageView" destination="NOm-Qv-aZ2" id="Kbs-4r-HHH"/>
+                                                    <outlet property="authorNameLabel" destination="B4q-nI-g7B" id="rsd-e2-yr1"/>
                                                     <outlet property="dateLabel" destination="J6T-s0-icC" id="H5s-gx-xcb"/>
                                                     <outlet property="photoImageView" destination="tn9-cL-Agk" id="bTy-l6-0cw"/>
                                                     <outlet property="tags" destination="FAa-0c-ua5" id="fxd-4e-XVg"/>
@@ -1120,6 +1134,8 @@
         <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="authorImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="photoImageView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
@@ -1167,7 +1183,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Y1n-qj-59O"/>
         <segue reference="WYD-46-Fqw"/>
-        <segue reference="Pzp-e5-bIn"/>
     </inferredMetricsTieBreakers>
 </document>

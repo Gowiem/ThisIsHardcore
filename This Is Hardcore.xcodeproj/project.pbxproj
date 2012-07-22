@@ -175,6 +175,7 @@
 		74FC4ED715B89103009006BC /* TIHDirectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FC4ED615B89103009006BC /* TIHDirectionManager.m */; };
 		74FC4F2615B8A68E009006BC /* getdirections.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4F2415B8A68E009006BC /* getdirections.png */; };
 		74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC4F2515B8A68E009006BC /* getdirections@2x.png */; };
+		A4ADFB8015BB7DA90031D374 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */; };
 		A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0A15B8B7120098384B /* HCBellSolid.png */; };
 		A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
@@ -436,6 +437,8 @@
 		74FC4F2415B8A68E009006BC /* getdirections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getdirections.png; path = Resources/Images/Buttons/getdirections.png; sourceTree = "<group>"; };
 		74FC4F2515B8A68E009006BC /* getdirections@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "getdirections@2x.png"; path = "Resources/Images/Buttons/getdirections@2x.png"; sourceTree = "<group>"; };
 		A4901ABF80AC4F53A6348638 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		A4ADFB7E15BB7DA90031D374 /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
+		A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 		A4BC7E0A15B8B7120098384B /* HCBellSolid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCBellSolid.png; sourceTree = "<group>"; };
 		A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCBellSolid@2x.png"; sourceTree = "<group>"; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
@@ -658,6 +661,7 @@
 		7448414E157551FB009D96D6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A4ADFB7D15BB7D9C0031D374 /* Categories */,
 				C8C82A8015B757C400983140 /* GoogleAnalytics */,
 				C81CBADA1577F95000584F64 /* Cells */,
 				7448415015755201009D96D6 /* Configuration */,
@@ -982,6 +986,16 @@
 			);
 			name = CustomTabs;
 			path = Resources/Images/CustomTabs;
+			sourceTree = "<group>";
+		};
+		A4ADFB7D15BB7D9C0031D374 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADFB7E15BB7DA90031D374 /* UILabel+VerticalAlign.h */,
+				A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */,
+			);
+			name = Categories;
+			path = Classes/Categories;
 			sourceTree = "<group>";
 		};
 		C81CBADA1577F95000584F64 /* Cells */ = {
@@ -1317,6 +1331,7 @@
 				C8C82A8615B75A3000983140 /* GoogleAnalytics.m in Sources */,
 				74AA95C315B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m in Sources */,
 				74FC4ED715B89103009006BC /* TIHDirectionManager.m in Sources */,
+				A4ADFB8015BB7DA90031D374 /* UILabel+VerticalAlign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
