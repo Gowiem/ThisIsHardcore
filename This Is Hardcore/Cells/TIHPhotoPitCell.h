@@ -12,9 +12,11 @@
 @interface TIHPhotoPitCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UIView *photoImageView;
+@property (nonatomic, retain) IBOutlet UIView *authorImageView;
 //@property (nonatomic, retain) IBOutlet UIImageView *dateIcon;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *tags;
+@property (nonatomic, retain) IBOutlet UILabel *authorNameLabel;
 
 // Configures the subviews of the cell with the given object.
 - (void)configureWithBaseObject:(TIHBaseDataModel *)base ;

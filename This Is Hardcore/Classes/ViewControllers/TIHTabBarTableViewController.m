@@ -39,6 +39,7 @@
     
     [self.fanFeedButton setBackgroundImage:[UIImage imageNamed:@"FanFeedG1tab.png"] forState:UIControlStateNormal];
     [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
+    [_dataLoadedForTag setValue:[NSNumber numberWithBool:NO] forKey:tag];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
@@ -46,6 +47,7 @@
     [button setBackgroundImage: [UIImage imageNamed:@"FanFeedBluetab.png"] forState:UIControlStateNormal];
     [self.officialButton setBackgroundImage:[UIImage imageNamed:@"TIHCofficialG1tab.png"] forState:UIControlStateNormal];
     [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
+    [_dataLoadedForTag setValue:[NSNumber numberWithBool:NO] forKey:tag];
 }
 
 -(void)loadData

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E2620" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -242,10 +242,22 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                         </view>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FAa-0c-ua5">
-                                                            <rect key="frame" x="15" y="335" width="292" height="42"/>
+                                                        <view contentMode="center" id="NOm-Qv-aZ2">
+                                                            <rect key="frame" x="14" y="338" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontSizeToFit="NO" id="FAa-0c-ua5">
+                                                            <rect key="frame" x="60" y="351" width="247" height="27"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="authorNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="B4q-nI-g7B">
+                                                            <rect key="frame" x="60" y="335" width="247" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
@@ -253,6 +265,8 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <connections>
+                                                    <outlet property="authorImageView" destination="NOm-Qv-aZ2" id="Kbs-4r-HHH"/>
+                                                    <outlet property="authorNameLabel" destination="B4q-nI-g7B" id="rsd-e2-yr1"/>
                                                     <outlet property="dateLabel" destination="J6T-s0-icC" id="H5s-gx-xcb"/>
                                                     <outlet property="photoImageView" destination="tn9-cL-Agk" id="bTy-l6-0cw"/>
                                                     <outlet property="tags" destination="FAa-0c-ua5" id="fxd-4e-XVg"/>
@@ -501,21 +515,21 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Code Orange Kids" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gmL-V8-HkW">
-                                                <rect key="frame" x="0.0" y="0.0" width="302" height="19"/>
+                                                <rect key="frame" x="0.0" y="4" width="302" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="@Electric Factory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QMo-bW-1GY">
-                                                <rect key="frame" x="0.0" y="14" width="162" height="19"/>
+                                                <rect key="frame" x="0.0" y="18" width="162" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mmE-5t-au2">
-                                                <rect key="frame" x="170" y="6" width="130" height="36"/>
+                                                <rect key="frame" x="170" y="10" width="130" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="getdirections.png">
@@ -530,17 +544,17 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set time: 1:20 - 1:35 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="h1L-Cg-nr1">
-                                                <rect key="frame" x="0.0" y="29" width="302" height="20"/>
+                                                <rect key="frame" x="0.0" y="33" width="302" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Beb-5q-RZL">
-                                                <rect key="frame" x="0.0" y="47" width="302" height="44"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="Beb-5q-RZL">
+                                                <rect key="frame" x="0.0" y="57" width="302" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius accumsan porta. Mauris auctor arcu eu nisl tempus consequat eu ut velit. Phasellus ac eros augue. Donec mattis, justo sed venenatis tempor, ante neque imperdiet libero, quis mollis velit est sagittis nisl. Duis id purus eros. Nullam sapien lacus, ornare vel posuere et, hendrerit et turpis. Proin enim massa, iaculis vitae rutrum eu, aliquam consectetur ligula. Nunc non velit non nisi faucibus pellentesque. Curabitur in orci at quam venenatis hendrerit quis nec lacus. Praesent mattis erat a urna adipiscing congue a eu enim. Donec sit amet vehicula eros. Aenean velit nibh, semper sit amet ultrices nec, convallis non nunc. Vestibulum lacinia, nisl id viverra egestas, nisl nibh euismod arcu, vitae condimentum ipsum nunc eu urna. Fusce libero lorem, ornare at rutrum ut, eleifend vel libero.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1120,6 +1134,8 @@
         <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="authorImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="photoImageView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
@@ -1167,7 +1183,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Y1n-qj-59O"/>
         <segue reference="WYD-46-Fqw"/>
-        <segue reference="Pzp-e5-bIn"/>
     </inferredMetricsTieBreakers>
 </document>

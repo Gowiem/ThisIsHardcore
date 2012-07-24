@@ -49,6 +49,15 @@
     return [[_properties objectForKey:@"value"] objectForKey:@"body"];
 }
 
+- (NSString *)authorName
+{
+    return [[_properties objectForKey:@"value"] objectForKey:@"author"];
+}
+
+- (NSString *)authorImageUrl
+{
+    return [[_properties objectForKey:@"value"] objectForKey:@"profile_url"];
+}
 
 
 @end
