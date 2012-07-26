@@ -10,7 +10,7 @@
 
 @implementation TIHScheduleHeaderView
 
-@synthesize venueLabel;
+@synthesize venueLabel, titleLabel;
 
 - (id)initWithFrame:(CGRect)frame andTitle:(NSString*)title
 {

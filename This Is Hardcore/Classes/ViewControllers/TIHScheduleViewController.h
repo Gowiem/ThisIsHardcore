@@ -21,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *satButton;
 @property (strong, nonatomic) IBOutlet UIButton *sunButton;
 
-@property (strong, nonatomic) IBOutlet UIView *flairView;
+
 
 - (IBAction) doThursButtonAction:(id)sender;
 - (IBAction) doFriButtonAction:(id)sender;
