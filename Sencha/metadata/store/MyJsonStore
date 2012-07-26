@@ -1,0 +1,121 @@
+{
+    "id": "ExtBox1-ext-gen3950",
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Event",
+        "storeId": "MyJsonStore",
+        "designer|userClassName": "MyJsonStore"
+    },
+    "customConfigs": [],
+    "designerId": "59fb3408-ccc9-4619-b300-9831678fcb1c",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen3957",
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://unifeed.heroku.com/api-v2/this_is_hardcore/events.json?auth_token=unifeed-debug",
+                "designer|userClassName": "MyAjaxProxy"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen3964",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen3079",
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen3224",
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "var dayDisplay = '';",
+                            "switch(record.get('start_datetime').getDate())",
+                            "{",
+                            "    case 9:",
+                            "        dayDisplay = 'Day 1';",
+                            "        break;",
+                            "    case 10:",
+                            "        dayDisplay = 'Day 2';",
+                            "        break;",
+                            "    case 11:",
+                            "        dayDisplay = 'Day 3';",
+                            "        break;   ",
+                            "    case 12:",
+                            "        dayDisplay = 'Day 4';",
+                            "        break;",
+                            "}",
+                            "return dayDisplay + ' : ' + record.get('venue') + ' (' + record.get('start_date_display') + ')';"
+                        ],
+                        "designer|userClassName": "groupFn"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-basic-function",
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen6101",
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "start_datetime",
+                "designer|userClassName": "MySorter"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

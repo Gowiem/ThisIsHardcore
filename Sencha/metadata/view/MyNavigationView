@@ -1,0 +1,39 @@
+{
+    "id": "ExtBox1-ext-gen2647",
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "id": "NavigationView",
+        "designer|userClassName": "MyNavigationView",
+        "designer|userAlias": "MyNavigationView"
+    },
+    "customConfigs": [],
+    "designerId": "78de7e70-559c-40ea-97b1-cc7e6df3c6b4",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4825",
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemTpl": "<div><img class=\"icon\" src=\"{icon_url}\"></img> {artist_name}<span class=\"setTime\">{start_time_display} - {end_time_display}</span></div>\n",
+                "store": "MyJsonStore",
+                "grouped": true,
+                "designer|userClassName": "MyList1",
+                "title": "Schedule"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
