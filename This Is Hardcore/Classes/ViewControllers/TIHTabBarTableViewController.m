@@ -49,6 +49,7 @@
     
     [_dataLoadedForTag setValue:[NSNumber numberWithBool:NO] forKey:tag];
 }
+
 - (IBAction) doFanFeedButtonAction: (id)sender
 {
     UIButton *button = (UIButton *)sender;
@@ -61,7 +62,9 @@
 -(void)loadData
 {
     [self loadDataMore:NO];
+    [_scrollPositions setValue:[NSNumber numberWithFloat:0.0f] forKey:tag];
 }
+
 -(void)loadDataMore:(BOOL)more;
 {
     //if(!more)
