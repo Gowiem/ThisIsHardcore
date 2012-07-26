@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1179</string>
+			<string key="NS.object.0">1181</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUIImageView</string>
@@ -40,7 +40,7 @@
 						<reference key="NSNextResponder" ref="943098734"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrameSize">{320, 14}</string>
+						<string key="NSFrameSize">{320, 22}</string>
 						<reference key="NSSuperview" ref="943098734"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="889940457"/>
@@ -48,16 +48,17 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">bookmarkitemHeader.png</string>
+							<string key="NSResourceName">TIHC_Tabheader.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="889940457">
 						<reference key="NSNextResponder" ref="943098734"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{11, 0}, {295, 13}}</string>
+						<string key="NSFrame">{{11, 1}, {295, 20}}</string>
 						<reference key="NSSuperview" ref="943098734"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -83,7 +84,7 @@
 					</object>
 				</array>
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
-				<string key="NSFrameSize">{320, 14}</string>
+				<string key="NSFrameSize">{320, 22}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="198491615"/>
@@ -201,9 +202,9 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">bookmarkitemHeader.png</string>
-			<string key="NS.object.0">{320, 14}</string>
+			<string key="NS.key.0">TIHC_Tabheader.png</string>
+			<string key="NS.object.0">{320, 17}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">1179</string>
+		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>
 </archive>

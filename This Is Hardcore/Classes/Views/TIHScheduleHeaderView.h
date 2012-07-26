@@ -11,5 +11,5 @@
 @interface TIHScheduleHeaderView : UIView
 
 @property (strong, nonatomic) IBOutlet UILabel *venueLabel;
-
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @end

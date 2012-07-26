@@ -43,7 +43,7 @@
     
     NSArray *names = [NSArray arrayWithObjects: @"Stuff to do in Philly", @"Accomodations", @"TIHC Facebook", @"TIHC Twitter",@"About TIHC", @"About appRenaissance",  nil];
     NSArray *images = [NSArray arrayWithObjects:@"TIHC_Stuff.png", @"TIHC_Accom.png", @"TIHC_FB.png", @"TIHC_twit.png", @"TIHC_About.png", @"TIHC_aboutApp.png", nil];
-    NSArray *linkUrls = [NSArray arrayWithObjects:@"http://www.thisishardcorefest.com/stuff-to-do-in-philly/", @"http://www.thisishardcorefest.com/accomodations/", @"https://www.facebook.com/thisishardcorefest", @"https://twitter.com/#!/TIHCfest",
+    NSArray *linkUrls = [NSArray arrayWithObjects:@"http://assets.apprenaissance.com/tihc/stuff_to_do_in_philly.html", @"http://assets.apprenaissance.com/tihc/accomodations.html", @"https://www.facebook.com/thisishardcorefest", @"https://twitter.com/#!/TIHCfest",
                          @"http://www.thisishardcorefest.com/",
                          @"http://assets.apprenaissance.com/mobile-about/", nil];
     

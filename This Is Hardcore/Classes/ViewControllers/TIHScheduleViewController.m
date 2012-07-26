@@ -15,7 +15,7 @@
 
 @implementation TIHScheduleViewController
 
-@synthesize thursButton, friButton, satButton, sunButton, dayDateLabel, venueLabel, flairView;
+@synthesize thursButton, friButton, satButton, sunButton, dayDateLabel, venueLabel;
 
 - (void)viewDidLoad
 {
@@ -95,43 +95,6 @@
     
     return [results sortedArrayUsingSelector:@selector(compare:)];
 }
-//
-//-(NSArray*) getAfterFestivalDates {
-//    if(_selectedDay == 4)
-//    {
-//        NSMutableArray *dates = [[NSMutableArray alloc] init];
-//        for(TIHEventDataModel *m  in [self getScheduleItemsBySelectedDay])
-//        {
-//            NSString *eventStartDateDisplay = [m startDateDisplay];
-//            if(!([dates containsObject: eventStartDateDisplay]))
-//            {
-//                [dates addObject: eventStartDateDisplay];
-//            }
-//        }
-//        return dates;
-//    }
-//    else {
-//        return nil;
-//    }
-//}
-//
-//-(NSArray*)getAfterFestivalEventsByDateDisplay: (NSString*) dateDisplay {
-//    if(_selectedDay == 4)
-//    {
-//        NSMutableArray *result = [[NSMutableArray alloc] init];
-//        for(TIHEventDataModel *item  in [self getScheduleItemsBySelectedDay])
-//        {
-//            if([[item startDateDisplay] isEqualToString:dateDisplay])
-//            {
-//                [result addObject:item];
-//            }
-//        }
-//        return result;
-//    }
-//    else {
-//        return nil;
-//    }
-//}
 
 -(NSArray*)getSelectedDateVenues {
     NSMutableArray *venues = [[NSMutableArray alloc] init];
@@ -180,48 +143,37 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSLog(@"Number of sections in table view: %i", [[self getSelectedDateVenues] count]);
     return [[self getSelectedDateVenues] count];
-//    if(_selectedDay == 4)
-//    {
-//        NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
-//        return [afterFestivalEventDates count];
-//    }
-//    else {
-//        return 1;
-//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0)
-        return 0;
-    return 14;
+    return 22;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if(section == 0)
-        return nil;
-    else {
+    {
+        // Main Event
+        TIHScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"MMMM d, YYYY"];  
+        view.titleLabel.text = [dateFormat stringFromDate:[self getSelectedDate]];
+        
+        view.venueLabel.text = [[self getMainVenueNames] objectAtIndex:_selectedDay];
+        return view;
+    }
+    else 
+    {
+        // After Party
         NSArray *afterPartyVenues = [self getAfterPartyVenues];
         NSString *afterPartyVenueForSection = [afterPartyVenues objectAtIndex:section - 1];
     
         TIHScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
+        view.titleLabel.text = @"After Party";
         view.venueLabel.text = afterPartyVenueForSection;
         return view;
     }
-//    NSArray *afterFestivalEventDates = [self getAfterFestivalDates];
-//    if([afterFestivalEventDates count] != 0  && _selectedDay == 4)
-//    {
-//        NSString *dateDisplayForSection = [afterFestivalEventDates objectAtIndex: section];
-//        TIHBookmarkScheduleHeaderView *view = [[[NSBundle mainBundle] loadNibNamed:@"TIHBookmarkScheduleHeaderView" owner:self options:nil] objectAtIndex:0];
-//        view.sectionLabel.text = dateDisplayForSection;
-//        return view;
-//    }
-//    else {
-//        UIView *blankView = [[UIView alloc] init];
-//        [blankView setHidden:YES];
-//        return blankView;
-//    }
 }
 
 - (NSString*)formatTypeToString:(NSComparisonResult)formatType {
@@ -309,7 +261,7 @@
 {
     NSLog(@"Content Offset %f", [super myTable].contentOffset.y);
      [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
-    [super myTable].contentOffset = CGPointMake(0, -18);
+    [super myTable].contentOffset = CGPointMake(0, 0);
     [self setDayDateLabelText];
     [self updateVenueNameLabel];
     [self resetButtonsSource:sender];

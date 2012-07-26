@@ -38,7 +38,15 @@
     [button setBackgroundImage: [UIImage imageNamed:@"TIHCofficialBluetab.png"] forState:UIControlStateNormal];
     
     [self.fanFeedButton setBackgroundImage:[UIImage imageNamed:@"FanFeedG1tab.png"] forState:UIControlStateNormal];
-    [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
+    if (_myTable.contentOffset.y < 0.0f)
+    {
+        [_scrollPositions setValue:[NSNumber numberWithFloat:0.0f] forKey:tag];
+    }
+    else 
+    {
+        [_scrollPositions setValue:[NSNumber numberWithFloat:_myTable.contentOffset.y] forKey:tag];
+    }
+    
     [_dataLoadedForTag setValue:[NSNumber numberWithBool:NO] forKey:tag];
 }
 - (IBAction) doFanFeedButtonAction: (id)sender
