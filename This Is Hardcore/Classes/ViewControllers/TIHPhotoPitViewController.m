@@ -59,6 +59,7 @@
         return cell;
     }
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *photoPitItems = [_itemDictionary objectForKey:tag];

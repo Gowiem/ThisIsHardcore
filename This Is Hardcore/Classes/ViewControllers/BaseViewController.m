@@ -17,7 +17,8 @@
     
     [self updateNavBarDisplay];
     
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];          
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];       
+    anotherButton.tintColor = [UIColor grayColor];
     self.navigationItem.rightBarButtonItem = anotherButton;    
 }
 
