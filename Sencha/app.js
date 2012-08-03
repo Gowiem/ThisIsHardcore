@@ -28,6 +28,7 @@ Ext.application({
         'MyNavigationView'
     ],
     name: 'MyApp',
+    phoneStartupScreen: 'assets/images/mobile_splash.png',
     controllers: [
         'MyController'
     ],
