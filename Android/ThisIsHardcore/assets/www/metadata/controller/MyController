@@ -1,0 +1,84 @@
+{
+    "id": "ExtBox1-ext-gen8675",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "MyFormPanel"
+        ],
+        "designer|userClassName": "MyController"
+    },
+    "customConfigs": [],
+    "designerId": "f473cb9f-5fae-4173-a4bd-a2a8ae21afe9",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen8786",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var artistName = record.get(\"artist_name\");",
+                    "",
+                    "var form = this.getFormPanel();",
+                    "if(!form ) ",
+                    "{",
+                    "    form = Ext.create('MyApp.view.MyFormPanel', {title: artistName});",
+                    "}",
+                    "form.loadEvent(record);",
+                    "//Ext.Viewport.setActiveItem(form);",
+                    "var navView = this.getNavView();",
+                    "navView.push(form);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list",
+                "designer|userClassName": "onListItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3398",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "navView",
+                "selector": "#NavigationView",
+                "designer|userClassName": "navView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5028",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "FormPanel",
+                "selector": "FormPanel",
+                "designer|userClassName": "FormPanel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

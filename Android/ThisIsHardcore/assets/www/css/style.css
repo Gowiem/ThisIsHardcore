@@ -1,0 +1,15 @@
+img.icon
+{
+	height: 25px;
+	width: 25px;
+}
+
+span.setTime
+{
+	float:right;
+}
+
+div.artistImage
+{
+	background-size: 100% 100%;
+}
