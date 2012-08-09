@@ -21,11 +21,11 @@
     "topInstanceFileMap": {
         "59fb3408-ccc9-4619-b300-9831678fcb1c": {
             "paths": [
-                "metadata/store/MyJsonStore",
-                "app/store/override/MyJsonStore.js",
-                "app/store/MyJsonStore.js"
+                "metadata/store/ScheduleStore",
+                "app/store/override/ScheduleStore.js",
+                "app/store/ScheduleStore.js"
             ],
-            "className": "MyJsonStore"
+            "className": "ScheduleStore"
         },
         "86e6aedb-31fb-44fa-9bfb-51e35088de7d": {
             "paths": [
@@ -57,14 +57,6 @@
             ],
             "className": "MyController"
         },
-        "78de7e70-559c-40ea-97b1-cc7e6df3c6b4": {
-            "paths": [
-                "metadata/view/MyNavigationView",
-                "app/view/override/MyNavigationView.js",
-                "app/view/MyNavigationView.js"
-            ],
-            "className": "MyNavigationView"
-        },
         "a2ca91f2-1f6a-4abe-8929-def2b60a721a": {
             "paths": [
                 "metadata/view/MyList1",
@@ -78,6 +70,92 @@
                 "metadata/resource/js"
             ],
             "className": "js"
+        },
+        "9eb63455-1ef6-4d0f-8ca4-1114c2b0a12f": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "50d25606-030c-4923-bb96-8826bd8ae65e": {
+            "paths": [
+                "metadata/view/NoConnectionPanel",
+                "app/view/override/NoConnectionPanel.js",
+                "app/view/NoConnectionPanel.js"
+            ],
+            "className": "NoConnectionPanel"
+        },
+        "e83f31da-1c59-4c8d-ac27-ac517cd097c9": {
+            "paths": [
+                "metadata/view/MyTabPanel",
+                "app/view/override/MyTabPanel.js",
+                "app/view/MyTabPanel.js"
+            ],
+            "className": "MyTabPanel"
+        },
+        "697816c2-a08e-4c6f-9697-3cf93c65bf6b": {
+            "paths": [
+                "metadata/store/OfficialNewsStore",
+                "app/store/override/OfficialNewsStore.js",
+                "app/store/OfficialNewsStore.js"
+            ],
+            "className": "OfficialNewsStore"
+        },
+        "8743ebf4-9388-4e0f-91b7-19f7af05d3d6": {
+            "paths": [
+                "metadata/model/NewsItem",
+                "app/model/override/NewsItem.js",
+                "app/model/NewsItem.js"
+            ],
+            "className": "NewsItem"
+        },
+        "8a1393b5-63a9-47eb-885d-2fd251d9230a": {
+            "paths": [
+                "metadata/store/FanNewsStore",
+                "app/store/override/FanNewsStore.js",
+                "app/store/FanNewsStore.js"
+            ],
+            "className": "FanNewsStore"
+        },
+        "abe9ec1c-59b5-47d0-9f42-d63e1aa64441": {
+            "paths": [
+                "metadata/store/OfficialPhotoPit",
+                "app/store/override/OfficialPhotoPit.js",
+                "app/store/OfficialPhotoPit.js"
+            ],
+            "className": "OfficialPhotoPit"
+        },
+        "a3e89683-39a8-450c-8180-fd2fbaa0aded": {
+            "paths": [
+                "metadata/model/PhotoPitItem",
+                "app/model/override/PhotoPitItem.js",
+                "app/model/PhotoPitItem.js"
+            ],
+            "className": "PhotoPitItem"
+        },
+        "c3742f70-c032-4d74-bdae-1395404c708c": {
+            "paths": [
+                "metadata/store/FanPhotoPit",
+                "app/store/override/FanPhotoPit.js",
+                "app/store/FanPhotoPit.js"
+            ],
+            "className": "FanPhotoPit"
+        },
+        "a63ad483-b8da-4ba2-8299-ecf5a7221095": {
+            "paths": [
+                "metadata/store/MoreStore",
+                "app/store/override/MoreStore.js",
+                "app/store/MoreStore.js"
+            ],
+            "className": "MoreStore"
+        },
+        "09e18a98-94ca-43b9-9776-759c3aef4ff5": {
+            "paths": [
+                "metadata/model/MoreItem",
+                "app/model/override/MoreItem.js",
+                "app/model/MoreItem.js"
+            ],
+            "className": "MoreItem"
         }
     },
     "expandedState": {

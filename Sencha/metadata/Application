@@ -8,13 +8,22 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "Event"
+            "Event",
+            "NewsItem",
+            "PhotoPitItem",
+            "MoreItem"
         ],
         "stores": [
-            "MyJsonStore"
+            "ScheduleStore",
+            "OfficialNewsStore",
+            "FanNewsStore",
+            "OfficialPhotoPit",
+            "FanPhotoPit",
+            "MoreStore"
         ],
         "views": [
-            "MyNavigationView"
+            "NoConnectionPanel",
+            "MyTabPanel"
         ],
         "name": "MyApp",
         "phoneStartupScreen": "assets/images/mobile_splash.png",

@@ -1,0 +1,51 @@
+{
+    "id": "ExtBox1-ext-gen19706",
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": "[\n  {\"iconFilename\": \"TIHC_Stuff.png\", \"text\": \"Stuff to do in Philly\", \"url\": \"http://assets.apprenaissance.com/tihc/stuff_to_do_in_philly.html\" },\n  {\"iconFilename\": \"TIHC_Accom.png\", \"text\": \"Accomodations\", \"url\": \"http://assets.apprenaissance.com/tihc/accomodations.html\"},\n  {\"iconFilename\": \"TIHC_FB.png\", \"text\": \"TIHC Facebook\", \"url\": \"https://www.facebook.com/thisishardcorefest\"},\n  {\"iconFilename\": \"TIHC_twit.png\", \"text\": \"TIHC Twitter\", \"url\": \"https://twitter.com/#!/TIHCfest\"},\n  {\"iconFilename\": \"TIHC_About.png\", \"text\": \"About TIHC\", \"url\": \"http://www.thisishardcorefest.com/\"},\n  {\"iconFilename\": \"TIHC_aboutApp.png\", \"text\": \"About appRenaissance\", \"url\": \"http://assets.apprenaissance.com/mobile-about/\" }\n]",
+        "model": "MoreItem",
+        "storeId": "MoreStore",
+        "designer|userClassName": "MoreStore"
+    },
+    "customConfigs": [],
+    "designerId": "a63ad483-b8da-4ba2-8299-ecf5a7221095",
+    "$viewOrder": 5,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen19713",
+            "type": "directproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDirectProxy"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen19720",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader5"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

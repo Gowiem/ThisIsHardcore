@@ -26,7 +26,7 @@ Ext.define('MyApp.view.MyFormPanel', {
                 ],
                 height: '200px',
                 id: 'artistImage',
-                width: '320px'
+                width: '280px'
             },
             {
                 xtype: 'fieldset',
@@ -35,19 +35,18 @@ Ext.define('MyApp.view.MyFormPanel', {
                     {
                         xtype: 'textareafield',
                         id: 'artistDescription',
-                        label: 'Description',
                         name: 'description',
                         readOnly: true
                     },
                     {
                         xtype: 'textfield',
-                        label: 'Start Time',
+                        label: 'Start',
                         name: 'start_time_display',
                         readOnly: true
                     },
                     {
                         xtype: 'textfield',
-                        label: 'End Time',
+                        label: 'End',
                         name: 'end_time_display',
                         readOnly: true
                     },
@@ -56,14 +55,14 @@ Ext.define('MyApp.view.MyFormPanel', {
                         label: 'Venue',
                         name: 'venue',
                         readOnly: true
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'artistWebsiteButton',
+                        itemId: 'artistWebsiteButton',
+                        text: 'View Artist Website'
                     }
                 ]
-            },
-            {
-                xtype: 'button',
-                id: 'artistWebsiteButton',
-                itemId: 'artistWebsiteButton',
-                text: 'View Artist Website'
             }
         ],
         listeners: [

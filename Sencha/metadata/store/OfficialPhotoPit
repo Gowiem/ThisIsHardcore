@@ -1,0 +1,57 @@
+{
+    "id": "ExtBox1-ext-gen8913",
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "PhotoPitItem",
+        "storeId": "OfficialPhotoPit",
+        "designer|userClassName": "OfficialPhotoPit"
+    },
+    "customConfigs": [],
+    "designerId": "abe9ec1c-59b5-47d0-9f42-d63e1aa64441",
+    "$viewOrder": 3,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen8917",
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "limitParam": "size",
+                "url": "http://unifeed.heroku.com/api-v2/this_is_hardcore/instagram/official.json ",
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen8921",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "id",
+                        "rootProperty": "rows",
+                        "totalProperty": "total_rows",
+                        "record": "value",
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

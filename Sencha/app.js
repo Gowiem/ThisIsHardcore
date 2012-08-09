@@ -19,13 +19,22 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Event'
+        'Event',
+        'NewsItem',
+        'PhotoPitItem',
+        'MoreItem'
     ],
     stores: [
-        'MyJsonStore'
+        'ScheduleStore',
+        'OfficialNewsStore',
+        'FanNewsStore',
+        'OfficialPhotoPit',
+        'FanPhotoPit',
+        'MoreStore'
     ],
     views: [
-        'MyNavigationView'
+        'NoConnectionPanel',
+        'MyTabPanel'
     ],
     name: 'MyApp',
     phoneStartupScreen: 'assets/images/mobile_splash.png',
@@ -35,7 +44,7 @@ Ext.application({
 
     launch: function() {
 
-        Ext.create('MyApp.view.MyNavigationView', {fullscreen: true});
+        Ext.create('MyApp.view.MyTabPanel', {fullscreen: true});
     }
 
 });

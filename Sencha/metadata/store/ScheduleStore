@@ -10,7 +10,7 @@
         "autoLoad": true,
         "model": "Event",
         "storeId": "MyJsonStore",
-        "designer|userClassName": "MyJsonStore"
+        "designer|userClassName": "ScheduleStore"
     },
     "customConfigs": [],
     "designerId": "59fb3408-ccc9-4619-b300-9831678fcb1c",
@@ -57,6 +57,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "sortProperty": "event_sort",
                 "designer|userClassName": "MyGrouper"
             },
             "customConfigs": [],
@@ -80,17 +81,17 @@
                             "switch(record.get('start_datetime').getDate())",
                             "{",
                             "    case 9:",
-                            "        dayDisplay = 'Day 1';",
-                            "        break;",
+                            "    dayDisplay = 'Day 1';",
+                            "    break;",
                             "    case 10:",
-                            "        dayDisplay = 'Day 2';",
-                            "        break;",
+                            "    dayDisplay = 'Day 2';",
+                            "    break;",
                             "    case 11:",
-                            "        dayDisplay = 'Day 3';",
-                            "        break;   ",
+                            "    dayDisplay = 'Day 3';",
+                            "    break;   ",
                             "    case 12:",
-                            "        dayDisplay = 'Day 4';",
-                            "        break;",
+                            "    dayDisplay = 'Day 4';",
+                            "    break;",
                             "}",
                             "return dayDisplay + ' : ' + record.get('venue') + ' (' + record.get('start_date_display') + ')';"
                         ],
