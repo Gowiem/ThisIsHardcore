@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "86e6aedb-31fb-44fa-9bfb-51e35088de7d",
     "$viewOrder": 0,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2386",
@@ -87,7 +87,7 @@
                 "designer|userClassName": "MyField2"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen14729",
@@ -120,7 +120,7 @@
                             "}",
                             "",
                             "if (minutes < 10)",
-                            "    minutes = \"0\" + minutes;",
+                            "minutes = \"0\" + minutes;",
                             "",
                             "return hours + \":\" + minutes + \" \" + suffix;"
                         ],
@@ -145,7 +145,7 @@
                 "designer|userClassName": "MyField2"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen5695",
@@ -187,7 +187,7 @@
                 "designer|userClassName": "MyField2"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen7862",
@@ -229,7 +229,7 @@
                 "designer|userClassName": "MyField2"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen3792",
@@ -271,7 +271,7 @@
                 "designer|userClassName": "MyField2"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen17482",
@@ -304,7 +304,7 @@
                             "}",
                             "",
                             "if (minutes < 10)",
-                            "minutes = \"0\" + minutes;",
+                            "    minutes = \"0\" + minutes;",
                             "",
                             "return hours + \":\" + minutes + \" \" + suffix;"
                         ],

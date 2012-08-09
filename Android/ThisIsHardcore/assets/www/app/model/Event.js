@@ -108,6 +108,36 @@ Ext.define('MyApp.model.Event', {
                 name: 'venue'
             },
             {
+                convert: function(v, rec) {
+                    var dayDisplay = '';
+
+                    var unixTime = parseInt(rec.get("start_time"));
+                    var date = new Date( (unixTime * 1000) + (4 * 60 * 60 * 1000));
+
+                    switch(date.getDate())
+                    {
+                        case 9:
+                        dayDisplay = 'Day 1';
+                        break;
+                        case 10:
+                        dayDisplay = 'Day 2';
+                        break;
+                        case 11:
+                        dayDisplay = 'Day 3';
+                        break;   
+                        case 12:
+                        dayDisplay = 'Day 4';
+                        break;
+                    }
+                    var venue = rec.get('venue');
+                    if(!( venue === 'Union Transfer' | venue === 'Electric Factory' ))
+                    return dayDisplay + ' Afterparty';
+                    else
+                    return dayDisplay;
+                },
+                name: 'event_sort'
+            },
+            {
                 name: 'image_url'
             },
             {

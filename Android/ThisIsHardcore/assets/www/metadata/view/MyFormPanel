@@ -7,7 +7,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "style": "'text-align:center;'",
         "designer|userClassName": "MyFormPanel",
         "designer|userAlias": "FormPanel"
     },
@@ -16,154 +15,6 @@
     "$viewOrder": 0,
     "expanded": true,
     "cn": [
-        {
-            "id": "ExtBox1-ext-gen10108",
-            "type": "image",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "artistImage"
-                ],
-                "height": "200px",
-                "id": "artistImage",
-                "maxWidth": null,
-                "minHeight": null,
-                "minWidth": null,
-                "width": "320px",
-                "src": null,
-                "designer|userClassName": "MyImage"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen9264",
-            "type": "fieldset",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "title": "",
-                "designer|userClassName": "MyFieldSet"
-            },
-            "customConfigs": [],
-            "expanded": false,
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen9273",
-                    "type": "textareafield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "artistDescription",
-                        "label": "Description",
-                        "name": "description",
-                        "readOnly": true,
-                        "designer|userClassName": "MyTextArea"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen14001",
-                    "type": "textfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Start Time",
-                        "name": "start_time_display",
-                        "readOnly": true,
-                        "designer|userClassName": "MyTextField"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen9280",
-                    "type": "textfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "End Time",
-                        "name": "end_time_display",
-                        "readOnly": true,
-                        "designer|userClassName": "MyTextField1"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen9870",
-                    "type": "textfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Venue",
-                        "name": "venue",
-                        "readOnly": true,
-                        "designer|userClassName": "MyTextField2"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                }
-            ]
-        },
-        {
-            "id": "ExtBox1-ext-gen15923",
-            "type": "button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "artistWebsiteButton",
-                "itemId": "artistWebsiteButton",
-                "text": "View Artist Website",
-                "designer|userClassName": "MyButton"
-            },
-            "customConfigs": [],
-            "expanded": true,
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen16617",
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onMybuttonTap",
-                        "implHandler": [
-                            "window.open(this.artistWebsiteUrl);"
-                        ],
-                        "name": "tap",
-                        "designer|userClassName": "onMybuttonTap"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                }
-            ]
-        },
         {
             "id": "ExtBox1-ext-gen11587",
             "type": "basicfunction",
@@ -196,6 +47,156 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10108",
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "artistImage"
+                ],
+                "docked": null,
+                "height": "200px",
+                "id": "artistImage",
+                "maxWidth": null,
+                "minHeight": null,
+                "minWidth": null,
+                "width": "280px",
+                "src": null,
+                "designer|userClassName": "MyImage"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9264",
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "title": "",
+                "designer|userClassName": "MyFieldSet"
+            },
+            "customConfigs": [],
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9273",
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "artistDescription",
+                        "label": null,
+                        "name": "description",
+                        "readOnly": true,
+                        "designer|userClassName": "MyTextArea"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen14001",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Start",
+                        "name": "start_time_display",
+                        "readOnly": true,
+                        "designer|userClassName": "MyTextField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen9280",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "End",
+                        "name": "end_time_display",
+                        "readOnly": true,
+                        "designer|userClassName": "MyTextField1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen9870",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Venue",
+                        "name": "venue",
+                        "readOnly": true,
+                        "designer|userClassName": "MyTextField2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen15923",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "artistWebsiteButton",
+                        "itemId": "artistWebsiteButton",
+                        "text": "View Artist Website",
+                        "designer|userClassName": "MyButton"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen16617",
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybuttonTap",
+                                "implHandler": [
+                                    "window.open(this.artistWebsiteUrl);"
+                                ],
+                                "name": "tap",
+                                "designer|userClassName": "onMybuttonTap"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
