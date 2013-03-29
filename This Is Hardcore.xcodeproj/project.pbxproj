@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0367787233E6483DB73F0B7D /* libPods.a */; };
 		0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDE5215B49D7C0043CE55 /* Default.png */; };
-		0A3BDE5515B49D7C0043CE55 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDE5315B49D7C0043CE55 /* Default@2x.png */; };
 		7414A02715A3A3AA002D1CC7 /* bookmarks_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */; };
 		7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */; };
 		7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */; };
@@ -213,12 +212,14 @@
 		C8CC7BF9158F8BF100905E98 /* TIHBookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */; };
 		C8CC7BFD158F98D500905E98 /* TIHNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */; };
 		C8CC7C00158FB78600905E98 /* NSDate+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */; };
+		DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876C17065DC500EC129F /* CFNetwork.framework */; };
+		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
+		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0367787233E6483DB73F0B7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3BDE5215B49D7C0043CE55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
-		0A3BDE5315B49D7C0043CE55 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 		7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_off.png; sourceTree = "<group>"; };
 		7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmarks_off@2x.png"; sourceTree = "<group>"; };
 		7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_on.png; sourceTree = "<group>"; };
@@ -489,6 +490,9 @@
 		C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNotificationManager.m; path = Classes/TIHNotificationManager.m; sourceTree = "<group>"; };
 		C8CC7BFE158FB78500905E98 /* NSDate+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Comparison.h"; sourceTree = "<group>"; };
 		C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Comparison.m"; sourceTree = "<group>"; };
+		DBAC876C17065DC500EC129F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +500,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */,
+				DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */,
+				DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */,
 				7477E912159119F500F3F2A8 /* MessageUI.framework in Frameworks */,
 				C860C932158FCD840012886A /* Twitter.framework in Frameworks */,
 				7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */,
@@ -581,7 +588,6 @@
 			isa = PBXGroup;
 			children = (
 				0A3BDE5215B49D7C0043CE55 /* Default.png */,
-				0A3BDE5315B49D7C0043CE55 /* Default@2x.png */,
 				742E896D158A925400BBCF84 /* icon.png */,
 				742E896E158A925400BBCF84 /* icon@2x.png */,
 			);
@@ -604,6 +610,9 @@
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
+				DBAC877017065E0600EC129F /* libsqlite3.dylib */,
+				DBAC876E17065DD900EC129F /* CoreText.framework */,
+				DBAC876C17065DC500EC129F /* CFNetwork.framework */,
 				7477E911159119F400F3F2A8 /* MessageUI.framework */,
 				C860C931158FCD840012886A /* Twitter.framework */,
 				7448428C15755F9E009D96D6 /* AudioToolbox.framework */,
@@ -1215,7 +1224,6 @@
 				7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */,
 				7414A02A15A3A3AA002D1CC7 /* bookmarks_on@2x.png in Resources */,
 				0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */,
-				0A3BDE5515B49D7C0043CE55 /* Default@2x.png in Resources */,
 				7474823D15B7190300352AFD /* FriTabBlue.png in Resources */,
 				7474823E15B7190300352AFD /* FriTabBlue@2x.png in Resources */,
 				7474823F15B7190300352AFD /* FriTabG1.png in Resources */,

@@ -1,6 +1,6 @@
-[submodule "submodules/ARiOSUtilities"]
+[submodule "ARiOSUtilities"]
 	path = submodules/ARiOSUtilities
-	url = git@github.com:appRenaissance/ARiOSUtilities.git
+	url = https://github.com/appRenaissance/ARiOSUtilities.git
 [submodule "submodules/MBProgressHUD"]
 	path = submodules/MBProgressHUD
 	url = https://github.com/appRenaissance/MBProgressHUD
