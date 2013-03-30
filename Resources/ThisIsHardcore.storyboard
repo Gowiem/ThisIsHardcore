@@ -7,13 +7,13 @@
         <!--Bookmark View Controller-->
         <scene sceneID="rLc-b7-OQ2">
             <objects>
-                <viewController id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ait-Rl-V1s">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="62" sectionHeaderHeight="14" sectionFooterHeight="14" id="y6J-vb-p3Q">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -78,18 +78,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogp-vH-mkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="477"/>
+            <point key="canvasLocation" x="1149" y="357"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="Ptl-jO-MUI">
             <objects>
-                <viewController id="5dm-nX-PXK" customClass="TIHMoreViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="5dm-nX-PXK" customClass="TIHMoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhe-Mq-aMm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="AWv-al-8tt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -161,18 +161,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJb-aW-J8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="2307"/>
+            <point key="canvasLocation" x="1144" y="2535"/>
         </scene>
         <!--Photo Pit View Controller - Photo Pit-->
         <scene sceneID="Fq3-VZ-ofU">
             <objects>
-                <viewController title="Photo Pit" id="pgz-oE-b2z" customClass="TIHPhotoPitViewController" sceneMemberID="viewController">
+                <viewController title="Photo Pit" wantsFullScreenLayout="YES" id="pgz-oE-b2z" customClass="TIHPhotoPitViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAo-sO-cww">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="N9t-wL-reT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ccv-Ig-sW8">
@@ -212,7 +212,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="27" sectionFooterHeight="22" id="sUk-ts-VPp">
-                                        <rect key="frame" x="0.0" y="38" width="320" height="329"/>
+                                        <rect key="frame" x="0.0" y="38" width="320" height="417"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -312,14 +312,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVb-F5-DjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="1700"/>
+            <point key="canvasLocation" x="1149" y="1820"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="cNv-Cb-apj">
             <objects>
-                <viewController storyboardIdentifier="TIHScheduleViewController" id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TIHScheduleViewController" wantsFullScreenLayout="YES" id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3O-Ng-3pl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QMC-Vm-hkK">
@@ -387,7 +387,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="17" sectionFooterHeight="22" id="uzZ-TK-dCZ">
-                                <rect key="frame" x="0.0" y="39" width="320" height="319"/>
+                                <rect key="frame" x="0.0" y="39" width="320" height="407"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -460,18 +460,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-i1-3sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="1088"/>
+            <point key="canvasLocation" x="1144" y="1148"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="HLz-NK-CFO">
             <objects>
-                <viewController id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzY-95-K9k">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NkT-yS-66t">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="Kec-t8-x6q">
@@ -665,7 +665,7 @@
             <objects>
                 <viewController title="News" wantsFullScreenLayout="YES" id="EJr-u7-cF9" customClass="TIHNewsTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hsw-0O-ybI">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHU-FK-WuX">
@@ -705,7 +705,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="22" id="YYi-fT-4Uf">
-                                <rect key="frame" x="0.0" y="38" width="320" height="329"/>
+                                <rect key="frame" x="0.0" y="38" width="320" height="417"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -815,14 +815,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbq-cp-nAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-88"/>
+            <point key="canvasLocation" x="1149" y="-384"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="qLR-Oy-NNP">
             <objects>
-                <viewController id="blI-dw-3rH" customClass="TIHWebViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="blI-dw-3rH" customClass="TIHWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1c-HQ-5Td">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -835,9 +835,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="WO4-dm-dva">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="vu3-Wa-axJ" customClass="TIHTabBarController" sceneMemberID="viewController">
+                <tabBarController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="vu3-Wa-axJ" customClass="TIHTabBarController" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Z2r-HP-n9k">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -858,7 +859,7 @@
         <!--Navigation Controller - News-->
         <scene sceneID="o9g-HJ-sZB">
             <objects>
-                <navigationController id="Koz-qW-pFe" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="Koz-qW-pFe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="News.png" id="uQj-TT-Oa6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NMY-7z-Bfn">
@@ -872,12 +873,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAd-07-uer" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="-88"/>
+            <point key="canvasLocation" x="623" y="-384"/>
         </scene>
         <!--Navigation Controller - Bookmarks-->
         <scene sceneID="ZUQ-xI-mPf">
             <objects>
-                <navigationController id="2sm-xs-8RV" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="2sm-xs-8RV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarkIcon.png" id="dOm-32-dUa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="w90-0L-rPk">
@@ -891,12 +892,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J15-gJ-sP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="477"/>
+            <point key="canvasLocation" x="623" y="351"/>
         </scene>
         <!--Navigation Controller - Schedule-->
         <scene sceneID="0Jl-mZ-Cgn">
             <objects>
-                <navigationController id="LEU-07-H7m" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="LEU-07-H7m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="HCBell.png" id="zfP-yQ-C8N"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="K4q-PM-d05">
@@ -910,12 +911,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xf-5H-xrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="1088"/>
+            <point key="canvasLocation" x="618" y="1148"/>
         </scene>
         <!--Navigation Controller - More-->
         <scene sceneID="msR-9F-7NK">
             <objects>
-                <navigationController id="OKG-pg-Tm9" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="OKG-pg-Tm9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="MoreArrow.png" id="ceo-4B-I7k"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9a9-YG-fAQ">
@@ -929,12 +930,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqm-hp-1wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="2307"/>
+            <point key="canvasLocation" x="618" y="2535"/>
         </scene>
         <!--Navigation Controller - Photo Pit-->
         <scene sceneID="Fvw-S2-ITq">
             <objects>
-                <navigationController id="elR-5e-MBc" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="elR-5e-MBc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Photo Pit" image="PhotoPit.png" id="3Q1-AY-JeR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UEc-ln-MzD">
@@ -991,7 +992,7 @@
                     </connections>
                 </tableViewCell>
             </objects>
-            <point key="canvasLocation" x="618" y="1700"/>
+            <point key="canvasLocation" x="623" y="1820"/>
         </scene>
     </scenes>
     <resources>
@@ -1151,7 +1152,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WYD-46-Fqw"/>
         <segue reference="MTt-hb-LGa"/>
+        <segue reference="WYD-46-Fqw"/>
     </inferredMetricsTieBreakers>
 </document>

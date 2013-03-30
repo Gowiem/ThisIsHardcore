@@ -215,6 +215,8 @@
 		DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876C17065DC500EC129F /* CFNetwork.framework */; };
 		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
 		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
+		DBAC8774170664E200EC129F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC8772170664E200EC129F /* Default-568h@2x.png */; };
+		DBAC8775170664E200EC129F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC8773170664E200EC129F /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -493,6 +495,8 @@
 		DBAC876C17065DC500EC129F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DBAC8772170664E200EC129F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBAC8773170664E200EC129F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +591,8 @@
 		742E8962158A90BD00BBCF84 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DBAC8772170664E200EC129F /* Default-568h@2x.png */,
+				DBAC8773170664E200EC129F /* Default@2x.png */,
 				0A3BDE5215B49D7C0043CE55 /* Default.png */,
 				742E896D158A925400BBCF84 /* icon.png */,
 				742E896E158A925400BBCF84 /* icon@2x.png */,
@@ -1255,6 +1261,8 @@
 				74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */,
 				A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */,
 				A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */,
+				DBAC8774170664E200EC129F /* Default-568h@2x.png in Resources */,
+				DBAC8775170664E200EC129F /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
