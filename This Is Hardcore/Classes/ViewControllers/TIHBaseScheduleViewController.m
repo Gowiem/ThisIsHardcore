@@ -38,6 +38,7 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         scheduleItems = [[NSMutableArray alloc] init];
+        NSLog(@"JSON: %@", JSON);
         for( id row in JSON){
             [scheduleItems addObject: [[TIHEventDataModel alloc] initWithProperties:row]];
         }
@@ -56,6 +57,7 @@
         [self hideHUD];
         _firstDataLoad = NO;
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"response: %@", JSON);
         NSLog(@"Fail!");
         [self hideHUD];
     }];

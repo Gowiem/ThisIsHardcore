@@ -17,3 +17,5 @@
     #import "NimbusWebController.h"
     #import "AFNetworking.h"
 #endif
+
+#define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)

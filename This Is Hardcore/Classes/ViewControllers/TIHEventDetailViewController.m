@@ -25,22 +25,6 @@
 
 @synthesize artistDescriptionLabel, artistImageView, textLabelsView, artistNameLabel, venueLabel, directionsButton, bookmarkButton, shareButton, setTimeLabel, actionButtonsView, facebookButton, websiteButton,twitterButton, reminderButton, dataModel, scrollView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -124,12 +108,6 @@
         [self.reminderButton setImage:[UIImage imageNamed:@"setreminderinactive.png"] forState:UIControlStateDisabled];
         [self.reminderButton setEnabled:NO];
     }
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -247,6 +225,8 @@
 
 - (IBAction) doRemindButtonAction:(id)sender
 {
+    
+    // TODO: Change to use Native iOS event reminders
      [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
     if([dataModel isEventReminderSet])
     {
@@ -267,6 +247,8 @@
 
 - (void)shareWithFacebook
 {
+    // TODO: Change to use Native iOS Facebook share
+    
      [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
     facebook.authDelegate = self;

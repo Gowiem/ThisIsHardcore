@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0367787233E6483DB73F0B7D /* libPods.a */; };
-		0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDE5215B49D7C0043CE55 /* Default.png */; };
 		7414A02715A3A3AA002D1CC7 /* bookmarks_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */; };
 		7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */; };
 		7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */; };
@@ -212,16 +211,18 @@
 		C8CC7BF9158F8BF100905E98 /* TIHBookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */; };
 		C8CC7BFD158F98D500905E98 /* TIHNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */; };
 		C8CC7C00158FB78600905E98 /* NSDate+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */; };
+		DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB70251E170BC32100281387 /* TIHCalendarEventManager.m */; };
+		DB702521170BC80F00281387 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB702520170BC80F00281387 /* EventKit.framework */; };
+		DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA38887171E46A0005BAD2E /* Default@2x.png */; };
+		DBA3888B171E46FF005BAD2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */; };
+		DBA3888F171E47D0005BAD2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888E171E47D0005BAD2E /* Default.png */; };
 		DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876C17065DC500EC129F /* CFNetwork.framework */; };
 		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
 		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
-		DBAC8774170664E200EC129F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC8772170664E200EC129F /* Default-568h@2x.png */; };
-		DBAC8775170664E200EC129F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC8773170664E200EC129F /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0367787233E6483DB73F0B7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A3BDE5215B49D7C0043CE55 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
 		7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_off.png; sourceTree = "<group>"; };
 		7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmarks_off@2x.png"; sourceTree = "<group>"; };
 		7414A02515A3A3AA002D1CC7 /* bookmarks_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_on.png; sourceTree = "<group>"; };
@@ -492,11 +493,15 @@
 		C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNotificationManager.m; path = Classes/TIHNotificationManager.m; sourceTree = "<group>"; };
 		C8CC7BFE158FB78500905E98 /* NSDate+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Comparison.h"; sourceTree = "<group>"; };
 		C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Comparison.m"; sourceTree = "<group>"; };
+		DB70251D170BC32100281387 /* TIHCalendarEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHCalendarEventManager.h; path = Classes/TIHCalendarEventManager.h; sourceTree = "<group>"; };
+		DB70251E170BC32100281387 /* TIHCalendarEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHCalendarEventManager.m; path = Classes/TIHCalendarEventManager.m; sourceTree = "<group>"; };
+		DB702520170BC80F00281387 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		DBA38887171E46A0005BAD2E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
+		DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBA3888E171E47D0005BAD2E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
 		DBAC876C17065DC500EC129F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		DBAC8772170664E200EC129F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
-		DBAC8773170664E200EC129F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +509,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB702521170BC80F00281387 /* EventKit.framework in Frameworks */,
 				DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */,
 				DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */,
 				DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */,
@@ -591,9 +597,9 @@
 		742E8962158A90BD00BBCF84 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				DBAC8772170664E200EC129F /* Default-568h@2x.png */,
-				DBAC8773170664E200EC129F /* Default@2x.png */,
-				0A3BDE5215B49D7C0043CE55 /* Default.png */,
+				DBA3888E171E47D0005BAD2E /* Default.png */,
+				DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */,
+				DBA38887171E46A0005BAD2E /* Default@2x.png */,
 				742E896D158A925400BBCF84 /* icon.png */,
 				742E896E158A925400BBCF84 /* icon@2x.png */,
 			);
@@ -616,13 +622,6 @@
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
-				DBAC877017065E0600EC129F /* libsqlite3.dylib */,
-				DBAC876E17065DD900EC129F /* CoreText.framework */,
-				DBAC876C17065DC500EC129F /* CFNetwork.framework */,
-				7477E911159119F400F3F2A8 /* MessageUI.framework */,
-				C860C931158FCD840012886A /* Twitter.framework */,
-				7448428C15755F9E009D96D6 /* AudioToolbox.framework */,
-				7448428815755EFF009D96D6 /* CoreAudio.framework */,
 				744841251575512C009D96D6 /* This Is Hardcore */,
 				7448422E15755D30009D96D6 /* Submodules */,
 				7448420815755730009D96D6 /* Resources */,
@@ -643,6 +642,14 @@
 		7448411E1575512C009D96D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB702520170BC80F00281387 /* EventKit.framework */,
+				DBAC877017065E0600EC129F /* libsqlite3.dylib */,
+				DBAC876E17065DD900EC129F /* CoreText.framework */,
+				DBAC876C17065DC500EC129F /* CFNetwork.framework */,
+				7477E911159119F400F3F2A8 /* MessageUI.framework */,
+				C860C931158FCD840012886A /* Twitter.framework */,
+				7448428C15755F9E009D96D6 /* AudioToolbox.framework */,
+				7448428815755EFF009D96D6 /* CoreAudio.framework */,
 				7448411F1575512C009D96D6 /* UIKit.framework */,
 				744841211575512C009D96D6 /* Foundation.framework */,
 				744841231575512C009D96D6 /* CoreGraphics.framework */,
@@ -685,6 +692,8 @@
 				7448428E15756085009D96D6 /* ViewControllers */,
 				C8CC7BF7158F8BF100905E98 /* TIHBookmarkManager.h */,
 				C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */,
+				DB70251D170BC32100281387 /* TIHCalendarEventManager.h */,
+				DB70251E170BC32100281387 /* TIHCalendarEventManager.m */,
 				74FC4ED515B89103009006BC /* TIHDirectionManager.h */,
 				74FC4ED615B89103009006BC /* TIHDirectionManager.m */,
 				C8CC7BFB158F98D500905E98 /* TIHNotificationManager.h */,
@@ -1229,7 +1238,6 @@
 				7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */,
 				7414A02915A3A3AA002D1CC7 /* bookmarks_on.png in Resources */,
 				7414A02A15A3A3AA002D1CC7 /* bookmarks_on@2x.png in Resources */,
-				0A3BDE5415B49D7C0043CE55 /* Default.png in Resources */,
 				7474823D15B7190300352AFD /* FriTabBlue.png in Resources */,
 				7474823E15B7190300352AFD /* FriTabBlue@2x.png in Resources */,
 				7474823F15B7190300352AFD /* FriTabG1.png in Resources */,
@@ -1261,8 +1269,9 @@
 				74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */,
 				A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */,
 				A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */,
-				DBAC8774170664E200EC129F /* Default-568h@2x.png in Resources */,
-				DBAC8775170664E200EC129F /* Default@2x.png in Resources */,
+				DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */,
+				DBA3888B171E46FF005BAD2E /* Default-568h@2x.png in Resources */,
+				DBA3888F171E47D0005BAD2E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1348,6 +1357,7 @@
 				74AA95C315B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m in Sources */,
 				74FC4ED715B89103009006BC /* TIHDirectionManager.m in Sources */,
 				A4ADFB8015BB7DA90031D374 /* UILabel+VerticalAlign.m in Sources */,
+				DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1421,6 +1431,7 @@
 				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "This Is Hardcore/This Is Hardcore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/lib/facebook-ios-sdk\"",
@@ -1447,6 +1458,7 @@
 				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "This Is Hardcore/This Is Hardcore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/lib/facebook-ios-sdk\"",

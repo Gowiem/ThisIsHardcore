@@ -81,11 +81,15 @@
     
    
     NSDate *eventStartDate = [self getSelectedDate];
-    NSDate *eventEndDate = [eventStartDate dateByAddingTimeInterval:24*60*60];    
+    NSDate *eventEndDate = [eventStartDate dateByAddingTimeInterval:24*60*60];
+    
+    NSLog(@"eventStartDate: %@", eventStartDate);
+    NSLog(@"eventEndDate: %@", eventEndDate);
     
     if(_selectedDay >= 0 && _selectedDay < 4)
     {
         for (TIHEventDataModel *e in super.scheduleItems) {
+            NSLog(@"event StartData: %@", e.startTime);
             if([NSDate date: e.startTime isBetweenDate:eventStartDate andDate: eventEndDate])
             {
                 [results addObject:e];
@@ -228,9 +232,9 @@
 {
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setHour:0];
-    [comps setDay: 9 + daysLater];
+    [comps setDay: 8 + daysLater];
     [comps setMonth:8];
-    [comps setYear:2012];
+    [comps setYear:2013];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     return [gregorian dateFromComponents:comps];

@@ -7,31 +7,18 @@
 //
 
 #import "TIHNotificationManager.h"
+#import "TIHCalendarEventManager.h"
 
 @implementation TIHNotificationManager
 
-+ (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event {
-    NSDate *itemDate = [event startTime];
-    NSString *message = [event artistName];
-    
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil)
-        return;
+#pragma mark - Base Methods
 
-    localNotif.fireDate = [itemDate dateByAddingTimeInterval:-(300)];
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
-    
-    localNotif.alertBody = [NSString stringWithFormat:NSLocalizedString(@"%@ in %i minutes.", nil),
-                            message, 5];
-    localNotif.alertAction = NSLocalizedString(@"Event Reminder", nil);
-    
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-    NSMutableDictionary *infoDict = [[ NSMutableDictionary alloc] init];
-    [infoDict setValue:[event startTime] forKey:@"EventDate"];
-    [infoDict setValue:[NSString stringWithFormat:@"%i", [event eventId]] forKey:@"ID"];
-    localNotif.userInfo = infoDict;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
++ (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event {
+    if (IS_IOS6_AND_UP) {
+        [[TIHCalendarEventManager instance] requestAccessForCalendar];
+    } else {
+        [self scheduleiOS5NotificationWithEvent:event];
+    }
 }
 
 + (void)cancelNotificationByEventId: (NSNumber*) eventId
@@ -58,4 +45,37 @@
     }
     return notifcation;
 }
+
+#pragma mark - iOS 6 Methods
+
++ (void)scheduleiOS6NotificationWithEvent:(TIHEventDataModel *)event {
+    NSLog(@"TODO: scheduleiOS6NotidcationWithEvent");
+}
+
+#pragma mark - iOS 5 Methods
+
++ (void)scheduleiOS5NotificationWithEvent:(TIHEventDataModel *)event {
+    NSDate *itemDate = [event startTime];
+    NSString *message = [event artistName];
+    
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    
+    localNotif.fireDate = [itemDate dateByAddingTimeInterval:-(300)];
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+    localNotif.alertBody = [NSString stringWithFormat:NSLocalizedString(@"%@ in %i minutes.", nil),
+                            message, 5];
+    localNotif.alertAction = NSLocalizedString(@"Event Reminder", nil);
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    NSMutableDictionary *infoDict = [[ NSMutableDictionary alloc] init];
+    [infoDict setValue:[event startTime] forKey:@"EventDate"];
+    [infoDict setValue:[NSString stringWithFormat:@"%i", [event eventId]] forKey:@"ID"];
+    localNotif.userInfo = infoDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+}
+
 @end
