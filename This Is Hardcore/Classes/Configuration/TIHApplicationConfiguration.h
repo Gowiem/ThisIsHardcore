@@ -40,18 +40,18 @@ extern NSString *const GOOGLE_ANALYTICS_ACCOUNT_ID;
     #define UNIFEED_API_PORT @"80"
     #define UNIFEED_API_ROOT @"api"
 #else
-    //#define UNIFEED_API_PROTOCOL @"http"
-    //#define UNIFEED_API_HOST @"unifeed-staging.heroku.com"
-    //#define UNIFEED_API_PORT @"80"
-    //#define UNIFEED_API_ROOT @"api-v2"
+    #define UNIFEED_API_PROTOCOL @"http"
+    #define UNIFEED_API_HOST @"unifeed-staging.heroku.com"
+    #define UNIFEED_API_PORT @"80"
+    #define UNIFEED_API_ROOT @"api-v2"
 //    #define UNIFEED_API_PROTOCOL @"http"
 //    #define UNIFEED_API_HOST @"unifeed.10.0.1.27.xip.io"
 //    #define UNIFEED_API_PORT @"80"
 //    #define UNIFEED_API_ROOT @"api-v2"
-    #define UNIFEED_API_PROTOCOL @"http"
-    #define UNIFEED_API_HOST @"localhost"
-    #define UNIFEED_API_PORT @"3000"
-    #define UNIFEED_API_ROOT @"api-v2"
+//    #define UNIFEED_API_PROTOCOL @"http"
+//    #define UNIFEED_API_HOST @"localhost"
+//    #define UNIFEED_API_PORT @"3000"
+//    #define UNIFEED_API_ROOT @"api-v2"
 
 #endif
 

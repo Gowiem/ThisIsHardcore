@@ -18,4 +18,7 @@
     #import "AFNetworking.h"
 #endif
 
+#define LOG_BOOL(messageString, booleanVal) NSLog(@"%@ : %@", messageString, booleanVal ? @"YES" : @"NO")
+#define LOG_OBJECT(messageString, object) NSLog(@"%@ : %@", messageString, object)
+
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)

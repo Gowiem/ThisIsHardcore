@@ -15,7 +15,7 @@
 
 + (void)scheduleNotificationWithEvent:(TIHEventDataModel *)event {
     if (IS_IOS6_AND_UP) {
-        [[TIHCalendarEventManager instance] requestAccessForCalendar];
+        [[TIHCalendarEventManager instance] requestAccessForCalendarAndAddEvent:event];
     } else {
         [self scheduleiOS5NotificationWithEvent:event];
     }

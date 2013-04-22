@@ -16,6 +16,7 @@
 #import "UIAlertView+ShowMessage.h"
 #import "GoogleAnalytics.h"
 #import <Twitter/Twitter.h>
+#import "TIHCalendarEventManager.h"
 
 @interface TIHEventDetailViewController ()
 
@@ -225,17 +226,23 @@
 
 - (IBAction) doRemindButtonAction:(id)sender
 {
-    
-    // TODO: Change to use Native iOS event reminders
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
+    NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
+    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
     if([dataModel isEventReminderSet])
     {
-        [TIHNotificationManager cancelNotificationByEventId:[dataModel eventId]];
+        [opQueue addOperation:[[NSInvocationOperation alloc]
+                               initWithTarget:[TIHCalendarEventManager instance]
+                               selector:@selector(removeEventFromCalendarForEvent:)
+                               object:dataModel]];
     }
     else {
-        [TIHNotificationManager scheduleNotificationWithEvent:dataModel];
+        [opQueue addOperation:[[NSInvocationOperation alloc]
+                               initWithTarget:[TIHCalendarEventManager instance]
+                               selector:@selector(requestAccessForCalendarAndAddEvent:)
+                               object:dataModel]];
 
     }
+    [opQueue waitUntilAllOperationsAreFinished];
     [self updateReminderDisplay];
 }
 

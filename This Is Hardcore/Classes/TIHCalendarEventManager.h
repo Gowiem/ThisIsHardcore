@@ -8,12 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <EventKit/EventKit.h>
+#import "TIHEventDataModel.h"
 
 @interface TIHCalendarEventManager : NSObject
 
 @property (strong, nonatomic) EKEventStore *eventStore;
 
 + (id)instance;
-- (void)requestAccessForCalendar;
+
+- (BOOL)isEventReminderSet:(TIHEventDataModel *)event;
+
+- (void)requestAccessForCalendarAndAddEvent:(TIHEventDataModel *)event;
+- (void)removeEventFromCalendarForEvent:(TIHEventDataModel *)event;
+
+- (EKEvent*)findEvent:(TIHEventDataModel*)event;
 
 @end
