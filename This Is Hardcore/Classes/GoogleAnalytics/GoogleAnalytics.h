@@ -13,8 +13,10 @@
 	
 }
 
++ (id)instance;
+
 + (void)startTracker;
 + (void)stopTracker;
-+ (void)trackEvent:(NSString*)actionName;
-+ (void)trackPageView:(NSString*)pageName;
+- (void)trackEvent:(NSString*)actionName;
+- (void)trackPageView:(NSString*)pageName;
 @end

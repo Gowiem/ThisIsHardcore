@@ -23,7 +23,7 @@
 {
     [super viewWillAppear:animated];
     [super loadData];
-    [GoogleAnalytics trackPageView:@"Bookmarks"];
+    [[GoogleAnalytics instance] trackPageView:@"Bookmarks"];
 }
 
 -(NSArray*) getBookmarkedDates {

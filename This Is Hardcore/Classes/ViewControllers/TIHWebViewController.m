@@ -25,7 +25,7 @@
     [self showHUDWithMessage:@"Loading..."];
     NSLog(@"Loading URL: %@", self.urlAddress);
     NSURL *url = [NSURL URLWithString:self.urlAddress]; 
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Loaded: %@",self.urlAddress]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Loaded: %@",self.urlAddress]];
     [super openURL:url];
 }
 

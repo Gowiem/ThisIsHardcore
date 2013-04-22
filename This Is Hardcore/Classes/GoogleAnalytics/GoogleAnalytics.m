@@ -7,44 +7,65 @@
 //
 
 #import "GoogleAnalytics.h"
-#import "GANTracker.h"
+#import "GAI.h"
 #import "TIHApplicationConfiguration.h"
 
 // Dispatch period in seconds
 static const NSInteger kGANDispatchPeriodSec = 10;
 
+@interface GoogleAnalytics () {
+    id<GAITracker> tracker;
+}
+
+
+@end
+
 @implementation GoogleAnalytics
 
++ (id)instance
+{
+    static dispatch_once_t once;
+    static GoogleAnalytics *sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        [GAI sharedInstance].trackUncaughtExceptions = YES;
+        [GAI sharedInstance].dispatchInterval = kGANDispatchPeriodSec;
+        tracker = [[GAI sharedInstance] trackerWithTrackingId:GOOGLE_ANALYTICS_ACCOUNT_ID];
+    }
+    return self;
+}
+
 + (void)startTracker {
-	[[GANTracker sharedTracker] startTrackerWithAccountID:GOOGLE_ANALYTICS_ACCOUNT_ID
-										   dispatchPeriod:kGANDispatchPeriodSec
-												 delegate:nil];
-	[GoogleAnalytics trackEvent:@"Started app"];
+	[[GoogleAnalytics instance] trackEvent:@"Started app"];
 }
 
 + (void)stopTracker {
-	[GoogleAnalytics trackEvent:@"Exited app"];
-	[[GANTracker sharedTracker] stopTracker];
+	[[GoogleAnalytics instance] trackEvent:@"Exited app"];
 }
 
-+ (void)trackEvent:(NSString*)actionName {
-	NSError *error;
-	if (![[GANTracker sharedTracker] trackEvent:[NSString stringWithFormat:@"%@ iphone", PERSONA_TITLE]
-										 action:actionName
-										  label:@""
-										  value:0
-									  withError:&error]) {
+- (void)trackEvent:(NSString*)actionName {
+	if (![tracker sendEventWithCategory:[NSString stringWithFormat:@"%@ iphone", PERSONA_TITLE]
+                             withAction:actionName
+                              withLabel:@""
+                              withValue:0]) {
 		// Handle error here
-		NSLog(@"Failed to track event %@ because %@",actionName,[error localizedFailureReason]);
+		NSLog(@"Failed to track event %@", actionName);
 	}
 }
 
-+ (void)trackPageView:(NSString*)pageName {
-	NSError *error;
-	if (![[GANTracker sharedTracker] trackPageview:[NSString stringWithFormat:@"/%@",pageName]
-										 withError:&error]) {
+- (void)trackPageView:(NSString*)pageName {
+	if (![tracker sendView:[NSString stringWithFormat:@"/%@",pageName]]) {
 		// Handle error here
-		NSLog(@"Failed to track event %@ because %@, localized failure reason %@",pageName, [error description], [error localizedFailureReason]);
+		NSLog(@"Failed to track event %@", pageName);
 	}
 }
 

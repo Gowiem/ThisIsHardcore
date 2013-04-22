@@ -206,11 +206,13 @@
 		C87CBCC9158919C2009BD187 /* TIHPhotoPitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */; };
 		C87CBCE415892FAA009BD187 /* TIHPhotoPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */; };
 		C8C82A7F15B756CF00983140 /* ARGoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A7D15B756CF00983140 /* ARGoogleAnalytics.m */; };
-		C8C82A8315B757D700983140 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C82A8215B757D700983140 /* libGoogleAnalytics.a */; };
 		C8C82A8615B75A3000983140 /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A8515B75A3000983140 /* GoogleAnalytics.m */; };
 		C8CC7BF9158F8BF100905E98 /* TIHBookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */; };
 		C8CC7BFD158F98D500905E98 /* TIHNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */; };
 		C8CC7C00158FB78600905E98 /* NSDate+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */; };
+		DB5673AF1724C883007B4CF2 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */; };
+		DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B21724C914007B4CF2 /* CoreData.framework */; };
 		DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB70251E170BC32100281387 /* TIHCalendarEventManager.m */; };
 		DB702521170BC80F00281387 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB702520170BC80F00281387 /* EventKit.framework */; };
 		DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA38887171E46A0005BAD2E /* Default@2x.png */; };
@@ -256,13 +258,13 @@
 		742E896D158A925400BBCF84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/Images/General/icon.png; sourceTree = "<group>"; };
 		742E896E158A925400BBCF84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/Images/General/icon@2x.png"; sourceTree = "<group>"; };
 		742E8973158A989A00BBCF84 /* TIHScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHScheduleViewController.h; path = Classes/ViewControllers/TIHScheduleViewController.h; sourceTree = "<group>"; };
-		742E8974158A989A00BBCF84 /* TIHScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHScheduleViewController.m; path = Classes/ViewControllers/TIHScheduleViewController.m; sourceTree = "<group>"; };
+		742E8974158A989A00BBCF84 /* TIHScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHScheduleViewController.m; path = Classes/ViewControllers/TIHScheduleViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		742E8979158AA42F00BBCF84 /* TIHEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventDetailViewController.h; path = Classes/ViewControllers/TIHEventDetailViewController.h; sourceTree = "<group>"; };
 		742E897A158AA42F00BBCF84 /* TIHEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHEventDetailViewController.m; path = Classes/ViewControllers/TIHEventDetailViewController.m; sourceTree = "<group>"; };
 		742E897C158B758000BBCF84 /* TIHEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventCell.h; path = Cells/TIHEventCell.h; sourceTree = "<group>"; };
 		742E897D158B758000BBCF84 /* TIHEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHEventCell.m; path = Cells/TIHEventCell.m; sourceTree = "<group>"; };
 		742E897F158B787300BBCF84 /* TIHNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsTableViewController.h; path = Classes/ViewControllers/TIHNewsTableViewController.h; sourceTree = "<group>"; };
-		742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsTableViewController.m; path = Classes/ViewControllers/TIHNewsTableViewController.m; sourceTree = "<group>"; };
+		742E8980158B787300BBCF84 /* TIHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHNewsTableViewController.m; path = Classes/ViewControllers/TIHNewsTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		742E8985158BBF3F00BBCF84 /* NSDate+Formatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatting.h"; sourceTree = "<group>"; };
 		742E8986158BBF3F00BBCF84 /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
 		742E8988158BC06C00BBCF84 /* TIHEventDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventDataModel.h; path = Classes/Models/TIHEventDataModel.h; sourceTree = "<group>"; };
@@ -343,7 +345,7 @@
 		7453FD9B1594EDF70036FC88 /* TIHMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHMoreCell.h; path = Cells/TIHMoreCell.h; sourceTree = "<group>"; };
 		7453FD9C1594EDF70036FC88 /* TIHMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHMoreCell.m; path = Cells/TIHMoreCell.m; sourceTree = "<group>"; };
 		7453FD9E1594F03A0036FC88 /* TIHMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHMoreViewController.h; path = Classes/ViewControllers/TIHMoreViewController.h; sourceTree = "<group>"; };
-		7453FD9F1594F03A0036FC88 /* TIHMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHMoreViewController.m; path = Classes/ViewControllers/TIHMoreViewController.m; sourceTree = "<group>"; };
+		7453FD9F1594F03A0036FC88 /* TIHMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHMoreViewController.m; path = Classes/ViewControllers/TIHMoreViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7453FDB11598FA9B0036FC88 /* TIHC_About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_About.png; path = Resources/Images/More/TIHC_About.png; sourceTree = "<group>"; };
 		7453FDB21598FA9B0036FC88 /* TIHC_About@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIHC_About@2x.png"; path = "Resources/Images/More/TIHC_About@2x.png"; sourceTree = "<group>"; };
 		7453FDB31598FA9B0036FC88 /* TIHC_Accom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_Accom.png; path = Resources/Images/More/TIHC_Accom.png; sourceTree = "<group>"; };
@@ -462,7 +464,7 @@
 		C84BDB85157EAB3A00E6D7AC /* TIHC_Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_Header.png; path = Resources/Images/TIHC_Header.png; sourceTree = "<group>"; };
 		C84BDB86157EAB3A00E6D7AC /* TIHC_HeaderCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIHC_HeaderCenter.png; path = Resources/Images/TIHC_HeaderCenter.png; sourceTree = "<group>"; };
 		C84BDBD1157EB07C00E6D7AC /* TIHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHWebViewController.h; path = Classes/ViewControllers/TIHWebViewController.h; sourceTree = "<group>"; };
-		C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHWebViewController.m; path = Classes/ViewControllers/TIHWebViewController.m; sourceTree = "<group>"; };
+		C84BDBD2157EB07C00E6D7AC /* TIHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHWebViewController.m; path = Classes/ViewControllers/TIHWebViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C85A3D8F157E8C0200EF699C /* bookmarkIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmarkIcon@2x.png"; sourceTree = "<group>"; };
 		C85A3D90157E8C0200EF699C /* BottomNavBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BottomNavBack@2x.png"; sourceTree = "<group>"; };
 		C85A3D91157E8C0200EF699C /* HCBell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCBell@2x.png"; sourceTree = "<group>"; };
@@ -479,20 +481,26 @@
 		C87CBCC7158919C2009BD187 /* TIHPhotoPitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitDataModel.h; path = Cells/TIHPhotoPitDataModel.h; sourceTree = "<group>"; };
 		C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPhotoPitDataModel.m; path = Cells/TIHPhotoPitDataModel.m; sourceTree = "<group>"; };
 		C87CBCE215892FA8009BD187 /* TIHPhotoPitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHPhotoPitViewController.h; path = Classes/ViewControllers/TIHPhotoPitViewController.h; sourceTree = "<group>"; };
-		C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHPhotoPitViewController.m; path = Classes/ViewControllers/TIHPhotoPitViewController.m; sourceTree = "<group>"; };
-		C8C82A7C15B756CF00983140 /* ARGoogleAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARGoogleAnalytics.h; path = submodules/ARiOSUtilities/ARGoogleAnaylitics/ARGoogleAnalytics.h; sourceTree = "<group>"; };
-		C8C82A7D15B756CF00983140 /* ARGoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARGoogleAnalytics.m; path = submodules/ARiOSUtilities/ARGoogleAnaylitics/ARGoogleAnalytics.m; sourceTree = "<group>"; };
+		C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHPhotoPitViewController.m; path = Classes/ViewControllers/TIHPhotoPitViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		C8C82A7C15B756CF00983140 /* ARGoogleAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = ARGoogleAnalytics.h; path = submodules/ARiOSUtilities/ARGoogleAnaylitics/ARGoogleAnalytics.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C8C82A7D15B756CF00983140 /* ARGoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = ARGoogleAnalytics.m; path = submodules/ARiOSUtilities/ARGoogleAnaylitics/ARGoogleAnalytics.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C8C82A7E15B756CF00983140 /* ARGoogleAnaylitics-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ARGoogleAnaylitics-Prefix.pch"; path = "submodules/ARiOSUtilities/ARGoogleAnaylitics/ARGoogleAnaylitics-Prefix.pch"; sourceTree = "<group>"; };
-		C8C82A8115B757D700983140 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GANTracker.h; path = Classes/GoogleAnalytics/GANTracker.h; sourceTree = "<group>"; };
-		C8C82A8215B757D700983140 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Classes/GoogleAnalytics/libGoogleAnalytics.a; sourceTree = "<group>"; };
 		C8C82A8415B75A3000983140 /* GoogleAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleAnalytics.h; path = Classes/GoogleAnalytics/GoogleAnalytics.h; sourceTree = "<group>"; };
-		C8C82A8515B75A3000983140 /* GoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleAnalytics.m; path = Classes/GoogleAnalytics/GoogleAnalytics.m; sourceTree = "<group>"; };
+		C8C82A8515B75A3000983140 /* GoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GoogleAnalytics.m; path = Classes/GoogleAnalytics/GoogleAnalytics.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C8CC7BF7158F8BF100905E98 /* TIHBookmarkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHBookmarkManager.h; path = Classes/TIHBookmarkManager.h; sourceTree = "<group>"; };
 		C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHBookmarkManager.m; path = Classes/TIHBookmarkManager.m; sourceTree = "<group>"; };
 		C8CC7BFB158F98D500905E98 /* TIHNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNotificationManager.h; path = Classes/TIHNotificationManager.h; sourceTree = "<group>"; };
 		C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNotificationManager.m; path = Classes/TIHNotificationManager.m; sourceTree = "<group>"; };
 		C8CC7BFE158FB78500905E98 /* NSDate+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Comparison.h"; sourceTree = "<group>"; };
 		C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Comparison.m"; sourceTree = "<group>"; };
+		DB5673A91724C882007B4CF2 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAI.h; sourceTree = "<group>"; };
+		DB5673AA1724C882007B4CF2 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITrackedViewController.h; sourceTree = "<group>"; };
+		DB5673AB1724C882007B4CF2 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GAITracker.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITracker.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		DB5673AC1724C882007B4CF2 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransaction.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITransaction.h; sourceTree = "<group>"; };
+		DB5673AD1724C883007B4CF2 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransactionItem.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITransactionItem.h; sourceTree = "<group>"; };
+		DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/libGoogleAnalytics.a; sourceTree = "<group>"; };
+		DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DB5673B21724C914007B4CF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DB70251D170BC32100281387 /* TIHCalendarEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHCalendarEventManager.h; path = Classes/TIHCalendarEventManager.h; sourceTree = "<group>"; };
 		DB70251E170BC32100281387 /* TIHCalendarEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHCalendarEventManager.m; path = Classes/TIHCalendarEventManager.m; sourceTree = "<group>"; };
 		DB702520170BC80F00281387 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -509,6 +517,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */,
+				DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */,
 				DB702521170BC80F00281387 /* EventKit.framework in Frameworks */,
 				DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */,
 				DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */,
@@ -521,7 +531,7 @@
 				744841221575512C009D96D6 /* Foundation.framework in Frameworks */,
 				744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */,
 				096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */,
-				C8C82A8315B757D700983140 /* libGoogleAnalytics.a in Frameworks */,
+				DB5673AF1724C883007B4CF2 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +652,8 @@
 		7448411E1575512C009D96D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB5673B21724C914007B4CF2 /* CoreData.framework */,
+				DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */,
 				DB702520170BC80F00281387 /* EventKit.framework */,
 				DBAC877017065E0600EC129F /* libsqlite3.dylib */,
 				DBAC876E17065DD900EC129F /* CoreText.framework */,
@@ -1073,8 +1085,12 @@
 			children = (
 				C8C82A8415B75A3000983140 /* GoogleAnalytics.h */,
 				C8C82A8515B75A3000983140 /* GoogleAnalytics.m */,
-				C8C82A8115B757D700983140 /* GANTracker.h */,
-				C8C82A8215B757D700983140 /* libGoogleAnalytics.a */,
+				DB5673A91724C882007B4CF2 /* GAI.h */,
+				DB5673AA1724C882007B4CF2 /* GAITrackedViewController.h */,
+				DB5673AB1724C882007B4CF2 /* GAITracker.h */,
+				DB5673AC1724C882007B4CF2 /* GAITransaction.h */,
+				DB5673AD1724C883007B4CF2 /* GAITransactionItem.h */,
+				DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */,
 			);
 			name = GoogleAnalytics;
 			sourceTree = "<group>";
@@ -1440,6 +1456,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 					"\"$(SRCROOT)/This Is Hardcore/Classes/GoogleAnalytics\"",
+					"\"$(SRCROOT)/../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1467,6 +1484,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphoneos\"",
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 					"\"$(SRCROOT)/This Is Hardcore/Classes/GoogleAnalytics\"",
+					"\"$(SRCROOT)/../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "90B9EA84-C430-46A6-8EF4-AD4BFC4AAE5B";
