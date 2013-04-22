@@ -90,6 +90,20 @@
     [self.bookmarkButton setImage:bookmarkImage forState:UIControlStateNormal];
 }
 
+#pragma mark - Update Reminder Display
+
+- (void)updateReminderDisplayToSet
+{
+    UIImage *reminderImage = [UIImage imageNamed:@"setreminder.png"];
+    [self.reminderButton setImage:reminderImage forState:UIControlStateNormal];
+}
+
+- (void)updateReminderDisplayToUnset
+{
+    UIImage *reminderImage = [UIImage imageNamed:@"unsetreminder.png"];
+    [self.reminderButton setImage:reminderImage forState:UIControlStateNormal];
+}
+
 - (void) updateReminderDisplay
 {
     if([[dataModel startTime] compare:[NSDate date]] == NSOrderedDescending)
@@ -110,6 +124,8 @@
         [self.reminderButton setEnabled:NO];
     }
 }
+
+#pragma mark -
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -226,24 +242,20 @@
 
 - (IBAction) doRemindButtonAction:(id)sender
 {
-    NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
     if([dataModel isEventReminderSet])
     {
-        [opQueue addOperation:[[NSInvocationOperation alloc]
-                               initWithTarget:[TIHCalendarEventManager instance]
-                               selector:@selector(removeEventFromCalendarForEvent:)
-                               object:dataModel]];
+        BOOL eventWasRemoved = [[TIHCalendarEventManager instance] removeEventFromCalendarForEvent:dataModel];
+        if (eventWasRemoved) {
+            [self updateReminderDisplayToSet];
+        }
     }
     else {
-        [opQueue addOperation:[[NSInvocationOperation alloc]
-                               initWithTarget:[TIHCalendarEventManager instance]
-                               selector:@selector(requestAccessForCalendarAndAddEvent:)
-                               object:dataModel]];
-
+        BOOL eventWasAdded = [[TIHCalendarEventManager instance] addEventToCalendarForEvent:dataModel];
+        if (eventWasAdded) {
+            [self updateReminderDisplayToUnset];
+        }
     }
-    [opQueue waitUntilAllOperationsAreFinished];
-    [self updateReminderDisplay];
 }
 
 -(void) openUrlFromString: (NSString *)s

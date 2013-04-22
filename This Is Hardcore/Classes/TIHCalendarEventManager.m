@@ -13,9 +13,8 @@
     UIAlertView *deniedAccessAlert;
     EKCalendar *calendar;
     NSDateFormatter *dateFormatter;
+    BOOL grantedAccess;
 }
-
-- (void)addEventToCalendarForArtisanEvent:(TIHEventDataModel *)artistEvent;
 
 @end
 
@@ -37,13 +36,12 @@
     if(self)
     {
         self.eventStore = [[EKEventStore alloc] init];
-        calendar = [self.eventStore defaultCalendarForNewEvents];
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZ"];
         [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
         deniedAccessAlert = [[UIAlertView alloc]
                              initWithTitle:@"Denied Access"
-                             message:@"You denied access to add a reminder earlier. If you would like to change this you can do so by adding calendar access permission for the This is Hardcore app via Privacy in your Settings."
+                             message:@"You denied access to use the calendar so you won't be able to set reminders for bands. If you would like to change this you can do so by adding calendar access permission for the This is Hardcore app via Privacy in your Settings."
                              delegate:nil
                              cancelButtonTitle:@"OK"
                              otherButtonTitles:nil];
@@ -57,44 +55,73 @@
     return self;
 }
 
-- (void)requestAccessForCalendarAndAddEvent:(TIHEventDataModel *)artistEvent
+- (void)requestAccessOnInit
 {
-    [self.eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-        LOG_BOOL(@"requestAccessToCalendar: ", granted);
-        if (granted) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self addEventToCalendarForArtisanEvent:artistEvent];
-            });
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [deniedAccessAlert show];
-            });
-        }
-    }];
+    // Handle iOS 6 permissions requesting
+    if([self.eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)]) {
+        [self.eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+            LOG_BOOL(@"requestAccessToCalendar: ", granted);
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    grantedAccess = YES;
+                    calendar = [self.eventStore defaultCalendarForNewEvents];
+                });
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    grantedAccess = NO;
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                    BOOL hasViewedInitDeniedAccessAlert = [defaults boolForKey:@"hasViewedDeniedAccess"];
+                    if(!hasViewedInitDeniedAccessAlert) {
+                        [deniedAccessAlert show];
+                        [defaults setBool:YES forKey:@"hasViewedDeniedAccess"];
+                        [defaults synchronize];
+                    }
+                });
+            }
+        }];
+    } else {
+        // User is on iOS 5; Aint no stinking permissions
+        grantedAccess = YES;
+        calendar = [self.eventStore defaultCalendarForNewEvents];
+    }
 }
 
-- (void)removeEventFromCalendarForEvent:(TIHEventDataModel *)event
+- (BOOL)removeEventFromCalendarForEvent:(TIHEventDataModel *)event
 {
+    // If the user denied us access earlier then show the denied access alert and
+    // return NO signaling the Set Reminder button to not update.
+    if(!grantedAccess) {
+        [deniedAccessAlert show];
+        return NO;
+    }
+    
     EKEvent *eventToRemove = [self findEvent:event];
     NSError *error = nil;
     [self.eventStore removeEvent:eventToRemove span:EKSpanThisEvent commit:YES error:&error];
     if(error == nil) {
         NSLog(@"Removed event");
+        return YES;
     } else {
         NSLog(@"Error with removing event: %@", error);
+        return NO;
     }
 }
 
-- (void)addEventToCalendarForArtisanEvent:(TIHEventDataModel *)artistEvent
+- (BOOL)addEventToCalendarForEvent:(TIHEventDataModel *)event
 {
-    NSLog(@"----------------- addEventToCalendarForArtisanEvent");
+    // If the user denied us access earlier then show the denied access alert and
+    // return NO signaling the Set Reminder button to not update.
+    if(!grantedAccess) {
+        [deniedAccessAlert show];
+        return NO;
+    }
     
     // Grab the info for the event we are adding
-    // Note explicitly adding the offset time interval, because no matter how many things I tried
-    // adding the date was always changed to be 4 hours behind.
-    NSDate *startDate = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[artistEvent startTime]];
-    NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[artistEvent endTime]];
-    NSString *message = [artistEvent artistName];
+    // Note explicitly adding the offset time interval, because no matter how many ways I tried
+    // adding the date, it was always changed to be 4 hours behind.
+    NSDate *startDate = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[event startTime]];
+    NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[event endTime]];
+    NSString *message = [event artistName];
     
     // Create the event
     EKEvent *newEvent = [EKEvent eventWithEventStore:self.eventStore];
@@ -103,10 +130,6 @@
     newEvent.endDate =  endDate;
     newEvent.allDay = NO;
     newEvent.calendar = calendar;
-
-    NSLog(@"event startDate: %@", newEvent.startDate);
-    NSLog(@"event endDate  : %@", newEvent.endDate);
-    NSLog(@"event timeZone : %@", newEvent.timeZone);
     
     // Add the alarm
     EKAlarm *eventAlarm = [EKAlarm alarmWithRelativeOffset:-900];
@@ -117,16 +140,21 @@
     [self.eventStore saveEvent:newEvent span:EKSpanThisEvent commit:YES error:&error];
     
     if (error == nil) {
-        [addedEvent show];
+        NSLog(@"Added event to calendar with Alarm");
+        return YES;
     } else {
         NSLog(@"there was an error saving and committing the event");
+        return NO;
     }
-
 }
 
 - (BOOL)isEventReminderSet:(TIHEventDataModel *)event
 {
-    return ([self findEvent:event] != nil);
+    if(!grantedAccess) {        
+        return NO;
+    } else {
+        return ([self findEvent:event] != nil);
+    }
 }
 
 - (EKEvent*)findEvent:(TIHEventDataModel*)event

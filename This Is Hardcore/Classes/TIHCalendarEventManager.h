@@ -16,10 +16,12 @@
 
 + (id)instance;
 
+- (void)requestAccessOnInit;
+
 - (BOOL)isEventReminderSet:(TIHEventDataModel *)event;
 
-- (void)requestAccessForCalendarAndAddEvent:(TIHEventDataModel *)event;
-- (void)removeEventFromCalendarForEvent:(TIHEventDataModel *)event;
+- (BOOL)addEventToCalendarForEvent:(TIHEventDataModel *)event;
+- (BOOL)removeEventFromCalendarForEvent:(TIHEventDataModel *)event;
 
 - (EKEvent*)findEvent:(TIHEventDataModel*)event;
 

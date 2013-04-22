@@ -11,6 +11,7 @@
 #import "SDURLCache.h"
 #import "TIHScheduleViewController.h"
 #import "GoogleAnalytics.h"
+#import "TIHCalendarEventManager.h"
 
 @implementation TIHAppDelegate
 
@@ -21,6 +22,8 @@
 {
     // Start analytics
     [GoogleAnalytics startTracker];
+    
+    [[TIHCalendarEventManager instance] requestAccessOnInit];
     
     // Handle launching from a notification
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
