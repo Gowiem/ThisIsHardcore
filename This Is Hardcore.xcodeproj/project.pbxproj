@@ -205,7 +205,6 @@
 		C87CBCC3158915AE009BD187 /* TIHPhotoPitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC2158915AE009BD187 /* TIHPhotoPitCell.m */; };
 		C87CBCC9158919C2009BD187 /* TIHPhotoPitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCC8158919C2009BD187 /* TIHPhotoPitDataModel.m */; };
 		C87CBCE415892FAA009BD187 /* TIHPhotoPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87CBCE315892FA9009BD187 /* TIHPhotoPitViewController.m */; };
-		C8C82A7F15B756CF00983140 /* ARGoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A7D15B756CF00983140 /* ARGoogleAnalytics.m */; };
 		C8C82A8615B75A3000983140 /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A8515B75A3000983140 /* GoogleAnalytics.m */; };
 		C8CC7BF9158F8BF100905E98 /* TIHBookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */; };
 		C8CC7BFD158F98D500905E98 /* TIHNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */; };
@@ -1368,7 +1367,6 @@
 				748ADBC4159F664900A6746F /* Facebook_SSOExtension.m in Sources */,
 				74ED037915A34DA1007A3C70 /* TIHTabBarController.m in Sources */,
 				7474825B15B733F500352AFD /* TIHScheduleHeaderView.m in Sources */,
-				C8C82A7F15B756CF00983140 /* ARGoogleAnalytics.m in Sources */,
 				C8C82A8615B75A3000983140 /* GoogleAnalytics.m in Sources */,
 				74AA95C315B84D2500D4553C /* TIHPullToRefreshDefaultContentView.m in Sources */,
 				74FC4ED715B89103009006BC /* TIHDirectionManager.m in Sources */,
