@@ -148,7 +148,7 @@
     {
         case 0:
         {
-            [self showHUDWithMessage:@"Sharing via facebook..."];
+            //[self showHUDWithMessage:@"Sharing via facebook..."];
             [self shareWithFacebook];
             break;
         }
@@ -267,28 +267,63 @@
 - (void)shareWithFacebook
 {
     // TODO: Change to use Native iOS Facebook share
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
     
-     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
-    ARFacebook *facebook = [ARFacebook sharedARFacebook];
-    facebook.authDelegate = self;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"] 
-       && [defaults objectForKey:@"FBExpirationDateKey"]) {
-       facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-       facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    // If the Phone is running iOS 6 and up then use the Social Framework
+    if(IS_IOS6_AND_UP) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *fbComposer = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            NSString *postDescription =
+            [NSString stringWithFormat:@"%@ is playing %@ at %@. This is Hardcore 2013", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+            
+            //set the initial text message
+            [fbComposer setInitialText:postDescription];
+            
+            NSURL *imageURL = [NSURL URLWithString:[dataModel imageUrl]];
+            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *eventImage = [UIImage imageWithData:imageData];
+            
+             //add image to post
+             if ([fbComposer addImage:eventImage]) {
+                 NSLog(@"image added to the post");
+             }
+            
+            //present the composer to the user
+            [self presentViewController:fbComposer animated:YES completion:nil];
+            
+        }else {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Facebook Error"
+                                      message:@"You may not have set up facebook service on your device or\n                                  You may not connected to internet.\n If you are connected, go to the Settings application to add your Facebook account to this device."
+                                      delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+    } else {
+        ARFacebook *facebook = [ARFacebook sharedARFacebook];
+        facebook.authDelegate = self;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if ([defaults objectForKey:@"FBAccessTokenKey"]
+            && [defaults objectForKey:@"FBExpirationDateKey"]) {
+            facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+            facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+        }
+        
+        if(![facebook isSessionValid])
+        {
+            [facebook authorizeWithStandardPermissions];
+            return;
+        }
+        
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
+        NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+        [params setObject:message forKey:@"message"];
+        [params setObject:[dataModel imageUrl] forKey:@"picture"];
+        [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
     }
-
-    if(![facebook isSessionValid])
-    {
-        [facebook authorizeWithStandardPermissions];
-        return;
-    }
-
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
-    NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
-    [params setObject:message forKey:@"message"];
-    [params setObject:[dataModel imageUrl] forKey:@"picture"];
-    [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
 }
 
 - (void)didAuthorizeFacebook:(Facebook *)facebook

@@ -211,6 +211,7 @@
 		DB5673AF1724C883007B4CF2 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */; };
 		DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B21724C914007B4CF2 /* CoreData.framework */; };
+		DB5673D71724E9D2007B4CF2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673D61724E9D2007B4CF2 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB70251E170BC32100281387 /* TIHCalendarEventManager.m */; };
 		DB702521170BC80F00281387 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB702520170BC80F00281387 /* EventKit.framework */; };
 		DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA38887171E46A0005BAD2E /* Default@2x.png */; };
@@ -500,6 +501,7 @@
 		DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/libGoogleAnalytics.a; sourceTree = "<group>"; };
 		DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DB5673B21724C914007B4CF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DB5673D61724E9D2007B4CF2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DB70251D170BC32100281387 /* TIHCalendarEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHCalendarEventManager.h; path = Classes/TIHCalendarEventManager.h; sourceTree = "<group>"; };
 		DB70251E170BC32100281387 /* TIHCalendarEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHCalendarEventManager.m; path = Classes/TIHCalendarEventManager.m; sourceTree = "<group>"; };
 		DB702520170BC80F00281387 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -516,6 +518,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5673D71724E9D2007B4CF2 /* Social.framework in Frameworks */,
 				DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */,
 				DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */,
 				DB702521170BC80F00281387 /* EventKit.framework in Frameworks */,
@@ -631,6 +634,7 @@
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
+				DB5673D61724E9D2007B4CF2 /* Social.framework */,
 				744841251575512C009D96D6 /* This Is Hardcore */,
 				7448422E15755D30009D96D6 /* Submodules */,
 				7448420815755730009D96D6 /* Resources */,
