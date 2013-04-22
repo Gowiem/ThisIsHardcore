@@ -23,7 +23,7 @@
     [super loadData];
     _selectedDay = 0;
     [self setDayDateLabelText];
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -264,7 +264,7 @@
 -(void) updateDisplayForSelectedDayForSender:(id)sender
 {
     NSLog(@"Content Offset %f", [super myTable].contentOffset.y);
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
+     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
     [super myTable].contentOffset = CGPointMake(0, 0);
     [self setDayDateLabelText];
     [self updateVenueNameLabel];

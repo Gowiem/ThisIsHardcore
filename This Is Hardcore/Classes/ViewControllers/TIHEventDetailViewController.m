@@ -34,7 +34,7 @@
     NSString *setTime = [dataModel setTimeDisplay];
     NSString *artistDescription = [dataModel artistDescription];
     
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail - %@",artistName]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail - %@",artistName]];
     
     self.artistNameLabel.text = artistName;
     self.venueLabel.text = [NSString stringWithFormat:@"@%@", venueName];
@@ -151,7 +151,7 @@
 
 - (void)shareViaTweet
 {  
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Twitter Share - %@",[dataModel artistName]]];
+    [[GoogleAnalytics instance]trackPageView:[NSString stringWithFormat:@"Event Detail Twitter Share - %@",[dataModel artistName]]];
     
     // Create the view controller
     TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
@@ -185,22 +185,22 @@
 
 - (IBAction) doWebsiteButtonAction:(id)sender
 {
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Artist Website - %@",[dataModel artistName]]];
+     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Artist Website - %@",[dataModel artistName]]];
     [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistWebsite]];
 }
 - (IBAction) doFacebookButtonAction:(id)sender
 {
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Artist Facebook - %@",[dataModel artistName]]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Artist Facebook - %@",[dataModel artistName]]];
     [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistFBUrl]];
 }
 - (IBAction) doTwitterButtonAction:(id)sender
 {
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Artist Twitter - %@",[dataModel artistName]]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Artist Twitter - %@",[dataModel artistName]]];
     [self performSegueWithIdentifier:@"EventDetailWebView" sender:[dataModel artistTwitterUrl]];
 }
 -(void) shareViaEmail
 {
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Email Share - %@",[dataModel artistName]]];
+     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Email Share - %@",[dataModel artistName]]];
     
     MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
     mailController.mailComposeDelegate = self;
@@ -212,7 +212,7 @@
 }
 - (IBAction) doBookmarkButtonAction:(id)sender
 {
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Bookmark - %@",[dataModel artistName]]];
+     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Bookmark - %@",[dataModel artistName]]];
     TIHBookmarkManager *b = [[TIHBookmarkManager alloc] init];
     if([dataModel isEventBookmarked])
     {
@@ -227,7 +227,7 @@
 - (IBAction) doRemindButtonAction:(id)sender
 {
     NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
-    [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
     if([dataModel isEventReminderSet])
     {
         [opQueue addOperation:[[NSInvocationOperation alloc]
@@ -256,7 +256,7 @@
 {
     // TODO: Change to use Native iOS Facebook share
     
-     [GoogleAnalytics trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
+     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
     ARFacebook *facebook = [ARFacebook sharedARFacebook];
     facebook.authDelegate = self;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

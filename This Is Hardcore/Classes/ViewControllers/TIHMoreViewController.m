@@ -33,7 +33,7 @@
     NSIndexPath *tableSelection = [self.myTable indexPathForSelectedRow];
     [self.myTable deselectRowAtIndexPath:tableSelection animated:NO];
     [super viewWillAppear:animated];
-    [GoogleAnalytics trackPageView:@"More"];
+    [[GoogleAnalytics instance] trackPageView:@"More"];
 }
 
 - (void)viewDidLoad
