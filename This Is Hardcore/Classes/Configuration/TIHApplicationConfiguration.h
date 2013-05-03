@@ -34,11 +34,11 @@ extern NSString *const TWITTER_CONSUMER_SECRET;
 extern NSString *const GOOGLE_ANALYTICS_ACCOUNT_ID;
 
 /* UNIFEED API configuration */
-#if 0
+#if 1
     #define UNIFEED_API_PROTOCOL @"http"
     #define UNIFEED_API_HOST @"unifeed.heroku.com"
     #define UNIFEED_API_PORT @"80"
-    #define UNIFEED_API_ROOT @"api"
+    #define UNIFEED_API_ROOT @"api-v2"
 #else
     #define UNIFEED_API_PROTOCOL @"http"
     #define UNIFEED_API_HOST @"unifeed-staging.heroku.com"

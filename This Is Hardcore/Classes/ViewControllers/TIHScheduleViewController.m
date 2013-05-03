@@ -72,7 +72,7 @@
 
 - (NSArray *) getMainVenueNames
 {
-    return [NSArray arrayWithObjects:@"Union Transfer", @"Electric Factory", @"Electric Factory", @"Electric Factory" ,nil];
+    return [NSArray arrayWithObjects:@"Electric Factory", @"Electric Factory", @"Electric Factory", @"Electric Factory" ,nil];
 }
 
 - (NSArray *) getScheduleItemsBySelectedDay
@@ -81,15 +81,13 @@
     
    
     NSDate *eventStartDate = [self getSelectedDate];
+    // Time is 4 hours ahead. Adding -4 hours to get the correct time
+    eventStartDate = [eventStartDate dateByAddingTimeInterval:-4*60*60];
     NSDate *eventEndDate = [eventStartDate dateByAddingTimeInterval:24*60*60];
-    
-    NSLog(@"eventStartDate: %@", eventStartDate);
-    NSLog(@"eventEndDate: %@", eventEndDate);
     
     if(_selectedDay >= 0 && _selectedDay < 4)
     {
         for (TIHEventDataModel *e in super.scheduleItems) {
-            NSLog(@"event StartData: %@", e.startTime);
             if([NSDate date: e.startTime isBetweenDate:eventStartDate andDate: eventEndDate])
             {
                 [results addObject:e];
@@ -145,7 +143,6 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"Number of sections in table view: %i", [[self getSelectedDateVenues] count]);
     return [[self getSelectedDateVenues] count];
 }
 
@@ -263,8 +260,7 @@
 
 -(void) updateDisplayForSelectedDayForSender:(id)sender
 {
-    NSLog(@"Content Offset %f", [super myTable].contentOffset.y);
-     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
+    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Schedule - %i",_selectedDay]];
     [super myTable].contentOffset = CGPointMake(0, 0);
     [self setDayDateLabelText];
     [self updateVenueNameLabel];

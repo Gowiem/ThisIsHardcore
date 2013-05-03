@@ -73,9 +73,17 @@
     [self.facebookButton setEnabled:[[dataModel artistFBUrl] length] != 0];
     [self.twitterButton setEnabled:[[dataModel artistTwitterUrl] length] != 0];
     
+    if (![self.websiteButton isEnabled]) {
+        [self.websiteButton setImage:[UIImage imageNamed:@"artistsiteinactive.png"] forState:UIControlStateDisabled];
+    } else {
+        [self.websiteButton setImage:[UIImage imageNamed:@"artistsiteactive.png"] forState:UIControlStateNormal];
+    }
+    
     [self updateBookmarkDisplay];
     [self updateReminderDisplay];
 }
+
+#pragma mark - Update Bookmark Display
 
 - (void) updateBookmarkDisplay
 {
@@ -106,7 +114,7 @@
 
 - (void) updateReminderDisplay
 {
-    if([[dataModel startTime] compare:[NSDate date]] == NSOrderedDescending)
+    if([[dataModel startTime] compare:[NSDate date]] == NSOrderedDescending && ![[dataModel startTime] isEqualToDate:[dataModel endTime]])
     {
         UIImage *reminderImage;
         if([dataModel isEventReminderSet])
@@ -131,6 +139,9 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+#pragma mark - Share Button Actions
 
 - (IBAction) doShareButtonAction:(id)sender
 {
@@ -173,7 +184,10 @@
     TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
     
     // Optional: set an image, url and initial text
-    [twitter addURL:[NSURL URLWithString:[dataModel imageUrl]]];
+    if ([dataModel imageUrl] && !([[dataModel imageUrl] isEqualToString:@"/images/original/missing.png"])) {
+        [twitter addURL:[NSURL URLWithString:[dataModel imageUrl]]];
+    }
+    
     [twitter setInitialText: [NSString stringWithFormat:@"%@ , %@, %@ #TIHCFest ", [dataModel artistName], [dataModel setTimeDisplay], [dataModel venueName]] ];
     
     // Show the controller
@@ -198,6 +212,8 @@
         [self dismissModalViewControllerAnimated:YES];
     };
 }
+
+#pragma mark - Website && Facebook && Twitter Button Actions
 
 - (IBAction) doWebsiteButtonAction:(id)sender
 {
@@ -226,6 +242,9 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark - Bookmark && Reminder Actions
+
 - (IBAction) doBookmarkButtonAction:(id)sender
 {
      [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Bookmark - %@",[dataModel artistName]]];
@@ -258,6 +277,8 @@
     }
 }
 
+#pragma mark -
+
 -(void) openUrlFromString: (NSString *)s
 {
     NSURL *url = [ [ NSURL alloc ] initWithString: s ];
@@ -266,7 +287,6 @@
 
 - (void)shareWithFacebook
 {
-    // TODO: Change to use Native iOS Facebook share
     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
     
     // If the Phone is running iOS 6 and up then use the Social Framework
@@ -326,6 +346,8 @@
     }
 }
 
+#pragma mark - Facebook Authorization
+
 - (void)didAuthorizeFacebook:(Facebook *)facebook
 {
     [self shareWithFacebook];
@@ -335,6 +357,9 @@
     [self hideHUD];
     [UIAlertView showAlertWithMessage:@"You must log in to Facebook and install the TIHC App to share."];
 }
+
+#pragma mark -
+
 - (void)fbSessionInvalidated
 {
     [self hideHUD];

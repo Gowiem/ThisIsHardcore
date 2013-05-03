@@ -19,4 +19,5 @@
 + (void)stopTracker;
 - (void)trackEvent:(NSString*)actionName;
 - (void)trackPageView:(NSString*)pageName;
+
 @end

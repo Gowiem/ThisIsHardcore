@@ -1471,7 +1471,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4901ABF80AC4F53A6348638 /* Pods.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joel Murphy";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "This Is Hardcore/This Is Hardcore-Prefix.pch";
@@ -1489,7 +1489,7 @@
 					"\"$(SRCROOT)/../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "90B9EA84-C430-46A6-8EF4-AD4BFC4AAE5B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};

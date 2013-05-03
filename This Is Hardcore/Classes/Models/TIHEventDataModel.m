@@ -65,6 +65,10 @@
 
 - (NSString *) setTimeDisplay
 {
+    if ([[self startTime] isEqualToDate:[self endTime]]) {
+        return @"??? - ???";
+    }
+    
     NSDateFormatter *startDateFormat = [[NSDateFormatter alloc] init];
     [startDateFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     [startDateFormat setDateFormat:@"h:mm"];
@@ -95,8 +99,12 @@
 - (NSString *) startDateDisplay 
 {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MMMM d, YYYY"];        
-    return [dateFormat stringFromDate:[self startTime]];
+    [dateFormat setDateFormat:@"MMMM d, YYYY"];
+    
+    // Adding 4 hours to startDateDisplay to fix issue with event which start at 12 am
+    NSDate *startDate = [[self startTime] dateByAddingTimeInterval:4*60*60];
+    
+    return [dateFormat stringFromDate:startDate];
 }
 
 - (bool)isEventBookmarked

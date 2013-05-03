@@ -119,8 +119,8 @@
     // Grab the info for the event we are adding
     // Note explicitly adding the offset time interval, because no matter how many ways I tried
     // adding the date, it was always changed to be 4 hours behind.
-    NSDate *startDate = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[event startTime]];
-    NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:14400 sinceDate:[event endTime]];
+    NSDate *startDate = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event startTime]];
+    NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event endTime]];
     NSString *message = [event artistName];
     
     // Create the event
