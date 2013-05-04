@@ -177,40 +177,125 @@
 }
 
 - (void)shareViaTweet
-{  
-    [[GoogleAnalytics instance]trackPageView:[NSString stringWithFormat:@"Event Detail Twitter Share - %@",[dataModel artistName]]];
-    
-    // Create the view controller
-    TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
-    
-    // Optional: set an image, url and initial text
-    if ([dataModel imageUrl] && !([[dataModel imageUrl] isEqualToString:@"/images/original/missing.png"])) {
-        [twitter addURL:[NSURL URLWithString:[dataModel imageUrl]]];
+{
+    if (IS_IOS6_AND_UP) {
+        [[GoogleAnalytics instance]trackPageView:[NSString stringWithFormat:@"Event Detail iOS6 Twitter Share - %@",[dataModel artistName]]];
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            SLComposeViewController *twitterCompose = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            
+            NSString *postDescription =
+            [NSString stringWithFormat:@"%@ is playing %@ at %@. #THICFest 2013", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+            
+            //set the initial text message
+            [twitterCompose setInitialText:postDescription];
+            
+            //present the composer to the user
+            [self presentViewController:twitterCompose animated:YES completion:nil];   
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Twitter Error"
+                                      message:@"You may not have set up twitter service on your device or you may not be connected to the internet.\n If you are connected, go to the Settings application to add your Twitter account to this device."
+                                      delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+    } else {
+        [[GoogleAnalytics instance]trackPageView:[NSString stringWithFormat:@"Event Detail iOS5 Twitter Share - %@",[dataModel artistName]]];
+        
+        // Create the view controller
+        TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
+        
+        // Optional: set an image, url and initial text
+        if ([dataModel imageUrl] && !([[dataModel imageUrl] isEqualToString:@"/images/original/missing.png"])) {
+            [twitter addURL:[NSURL URLWithString:[dataModel imageUrl]]];
+        }
+        
+        [twitter setInitialText: [NSString stringWithFormat:@"%@ , %@, %@ #TIHCFest ", [dataModel artistName], [dataModel setTimeDisplay], [dataModel venueName]] ];
+        
+        // Show the controller
+        [self presentModalViewController:twitter animated:YES];
+        
+        // Called when the tweet dialog has been closed
+        twitter.completionHandler = ^(TWTweetComposeViewControllerResult result)
+        {
+            NSString *title = @"Share";
+            NSString *msg;
+            
+            if (result == TWTweetComposeViewControllerResultCancelled)
+                msg = @"Tweet was canceled.";
+            else if (result == TWTweetComposeViewControllerResultDone)
+                msg = @"Tweeted!";
+            
+            // Show alert to see how things went...
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            [alertView show];
+            
+            // Dismiss the controller
+            [self dismissModalViewControllerAnimated:YES];
+        };
     }
-    
-    [twitter setInitialText: [NSString stringWithFormat:@"%@ , %@, %@ #TIHCFest ", [dataModel artistName], [dataModel setTimeDisplay], [dataModel venueName]] ];
-    
-    // Show the controller
-    [self presentModalViewController:twitter animated:YES];
-    
-    // Called when the tweet dialog has been closed
-    twitter.completionHandler = ^(TWTweetComposeViewControllerResult result) 
-    {
-        NSString *title = @"Share";
-        NSString *msg; 
+}
+
+- (void)shareWithFacebook
+{
+    // If the Phone is running iOS 6 and up then use the Social Framework
+    if(IS_IOS6_AND_UP) {
+        [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail iOS6 Facebook Share - %@",[dataModel artistName]]];
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *fbComposer = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            NSString *postDescription =
+            [NSString stringWithFormat:@"This is Hardcore 2013! %@ is playing %@ at %@.", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+            
+            //set the initial text message
+            [fbComposer setInitialText:postDescription];
+            
+            NSURL *imageURL = [NSURL URLWithString:[dataModel imageUrl]];
+            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+            UIImage *eventImage = [UIImage imageWithData:imageData];
+            
+            //add image to post
+            if ([fbComposer addImage:eventImage]) {
+                NSLog(@"image added to the post");
+            }
+            
+            //present the composer to the user
+            [self presentViewController:fbComposer animated:YES completion:nil];
+            
+        }else {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Facebook Error"
+                                      message:@"You may not have set up facebook service on your device or you may not be connected to the internet.\n If you are connected, go to the Settings application to add your Facebook account to this device."
+                                      delegate:self
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+    } else {
+        [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail iOS5 Facebook Share - %@",[dataModel artistName]]];
+        ARFacebook *facebook = [ARFacebook sharedARFacebook];
+        facebook.authDelegate = self;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if ([defaults objectForKey:@"FBAccessTokenKey"]
+            && [defaults objectForKey:@"FBExpirationDateKey"]) {
+            facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+            facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+        }
         
-        if (result == TWTweetComposeViewControllerResultCancelled)
-            msg = @"Tweet was canceled.";
-        else if (result == TWTweetComposeViewControllerResultDone)
-            msg = @"Tweeted!";
+        if(![facebook isSessionValid])
+        {
+            [facebook authorizeWithStandardPermissions];
+            return;
+        }
         
-        // Show alert to see how things went...
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-        [alertView show];
-        
-        // Dismiss the controller
-        [self dismissModalViewControllerAnimated:YES];
-    };
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
+        NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
+        [params setObject:message forKey:@"message"];
+        [params setObject:[dataModel imageUrl] forKey:@"picture"];
+        [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
+    }
 }
 
 #pragma mark - Website && Facebook && Twitter Button Actions
@@ -283,67 +368,6 @@
 {
     NSURL *url = [ [ NSURL alloc ] initWithString: s ];
     [[UIApplication sharedApplication] openURL:url];
-}
-
-- (void)shareWithFacebook
-{
-    [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Facebook Share - %@",[dataModel artistName]]];
-    
-    // If the Phone is running iOS 6 and up then use the Social Framework
-    if(IS_IOS6_AND_UP) {
-        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-            SLComposeViewController *fbComposer = [SLComposeViewController
-                                                   composeViewControllerForServiceType:SLServiceTypeFacebook];
-            
-            NSString *postDescription =
-            [NSString stringWithFormat:@"%@ is playing %@ at %@. This is Hardcore 2013", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
-            
-            //set the initial text message
-            [fbComposer setInitialText:postDescription];
-            
-            NSURL *imageURL = [NSURL URLWithString:[dataModel imageUrl]];
-            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-            UIImage *eventImage = [UIImage imageWithData:imageData];
-            
-             //add image to post
-             if ([fbComposer addImage:eventImage]) {
-                 NSLog(@"image added to the post");
-             }
-            
-            //present the composer to the user
-            [self presentViewController:fbComposer animated:YES completion:nil];
-            
-        }else {
-            UIAlertView *alertView = [[UIAlertView alloc]
-                                      initWithTitle:@"Facebook Error"
-                                      message:@"You may not have set up facebook service on your device or\n                                  You may not connected to internet.\n If you are connected, go to the Settings application to add your Facebook account to this device."
-                                      delegate:self
-                                      cancelButtonTitle:@"OK"
-                                      otherButtonTitles: nil];
-            [alertView show];
-        }
-    } else {
-        ARFacebook *facebook = [ARFacebook sharedARFacebook];
-        facebook.authDelegate = self;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        if ([defaults objectForKey:@"FBAccessTokenKey"]
-            && [defaults objectForKey:@"FBExpirationDateKey"]) {
-            facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-            facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-        }
-        
-        if(![facebook isSessionValid])
-        {
-            [facebook authorizeWithStandardPermissions];
-            return;
-        }
-        
-        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:1];
-        NSString *message = [NSString stringWithFormat:@"This is Hardcore! %@ is playing %@ at %@. ", [dataModel artistName], [dataModel venueName], [dataModel setTimeDisplay]];
-        [params setObject:message forKey:@"message"];
-        [params setObject:[dataModel imageUrl] forKey:@"picture"];
-        [facebook requestWithGraphPath:@"me/feed" andParams:params andHttpMethod:@"POST" andDelegate:self];
-    }
 }
 
 #pragma mark - Facebook Authorization
