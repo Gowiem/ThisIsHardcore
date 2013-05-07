@@ -9,6 +9,9 @@
 #import "TIHNotificationManager.h"
 #import "TIHCalendarEventManager.h"
 
+// This class was used prior to version 1.4
+// It is no longer used now that we the app is using the EventKit Reminder API.
+
 @implementation TIHNotificationManager
 
 #pragma mark - Base Methods
@@ -44,12 +47,6 @@
         }
     }
     return notifcation;
-}
-
-#pragma mark - iOS 6 Methods
-
-+ (void)scheduleiOS6NotificationWithEvent:(TIHEventDataModel *)event {
-    NSLog(@"TODO: scheduleiOS6NotidcationWithEvent");
 }
 
 #pragma mark - iOS 5 Methods

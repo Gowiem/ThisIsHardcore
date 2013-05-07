@@ -60,7 +60,6 @@
     // Handle iOS 6 permissions requesting
     if([self.eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)]) {
         [self.eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-            LOG_BOOL(@"requestAccessToCalendar: ", granted);
             if (granted) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     grantedAccess = YES;

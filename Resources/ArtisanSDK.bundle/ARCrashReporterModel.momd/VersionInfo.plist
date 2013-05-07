@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSManagedObjectModel_VersionHashes</key>
+	<dict>
+		<key>ARCrashReporterModel</key>
+		<dict>
+			<key>ARLoggedError</key>
+			<data>
+			QsOOEOBjZsJXIiT+gboX3CPV/kRvZMzsD6oPoA5z9pM=
+			</data>
+			<key>ARPendingCrash</key>
+			<data>
+			DUtNerBxIAOuoVIO2ztb+GkUJJYSdJrKJ8u9IPilbF4=
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSManagedObjectModel_CurrentVersionName</key>
+	<string>ARAnalyticsTracker</string>
+	<key>NSManagedObjectModel_VersionHashes</key>
+	<dict>
+		<key>ARAnalyticsTracker</key>
+		<dict>
+			<key>ARAnalyticsContextVariable</key>
+			<data>
+			Zd788rpXmV5iyWLe9lN5MxRT6qYPASxYPYXU5EYXiHU=
+			</data>
+			<key>ARAnalyticsEvent</key>
+			<data>
+			tPRhUXq0nAGbUQZAMEzQ3G++ciSu0Ztk2mzrs/Oyqik=
+			</data>
+			<key>ARAppInstall</key>
+			<data>
+			GNJIXdHUyn9NAg1evad74gct8ajxi36zYe8QZb4ZQzA=
+			</data>
+			<key>ARAppSession</key>
+			<data>
+			VJD8Z6HNjAoofsEIQHKMLVRAIFoQS55Y8JAV7d08lJ8=
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>

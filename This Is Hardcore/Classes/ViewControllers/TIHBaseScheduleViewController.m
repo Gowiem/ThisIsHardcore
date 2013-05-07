@@ -33,13 +33,7 @@
 	// Do any additional setup after loading the view.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/events.json", UNIFEED_API_URL]];
     
-    // TODO: REMOVE THE NO CACHE POLICY WHEN PUSHING TO PRODUCTION!
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:30];
-    
-    [request addValue:@"no-cache" forHTTPHeaderField:@"Pragma"];
-    
-    request = [request copy];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     NSLog(@"Requesting url : %@", url); 
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {

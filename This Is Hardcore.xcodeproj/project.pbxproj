@@ -176,6 +176,15 @@
 		A4ADFB8015BB7DA90031D374 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */; };
 		A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0A15B8B7120098384B /* HCBellSolid.png */; };
 		A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */; };
+		AA017EB7592FF1E46C75C091 /* ArtisanSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */; };
+		AA018EA05D4FCDC743E2F5F1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */; };
+		AA047DEF7BDB3E5646B556F1 /* ArtisanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */; };
+		AA0486F2074951BACE8263B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0486F2074951BACE8263B0 /* libz.dylib */; };
+		AA0893DF2727520CD052E4A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */; };
+		AA0A0DA5DD7807C327989A11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0A0DA5DD7807C327989A10 /* CoreData.framework */; };
+		AA0AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
+		AA0E65D8A0E0EAF1589B1771 /* ArtisanAnalytics.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */; };
+		AA0EA00BD08D0C5C19D80C91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0EA00BD08D0C5C19D80C90 /* Security.framework */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
@@ -208,17 +217,14 @@
 		C8CC7BF9158F8BF100905E98 /* TIHBookmarkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BF8158F8BF100905E98 /* TIHBookmarkManager.m */; };
 		C8CC7BFD158F98D500905E98 /* TIHNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */; };
 		C8CC7C00158FB78600905E98 /* NSDate+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */; };
-		DB5673AF1724C883007B4CF2 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */; };
-		DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673B21724C914007B4CF2 /* CoreData.framework */; };
 		DB5673D71724E9D2007B4CF2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5673D61724E9D2007B4CF2 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DB68F7431738A12200FBE6C4 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB68F7421738A12200FBE6C4 /* libGoogleAnalytics.a */; };
 		DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB70251E170BC32100281387 /* TIHCalendarEventManager.m */; };
 		DB702521170BC80F00281387 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB702520170BC80F00281387 /* EventKit.framework */; };
 		DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA38887171E46A0005BAD2E /* Default@2x.png */; };
 		DBA3888B171E46FF005BAD2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */; };
 		DBA3888F171E47D0005BAD2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888E171E47D0005BAD2E /* Default.png */; };
 		DBA388DD171F6F52005BAD2E /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A8515B75A3000983140 /* GoogleAnalytics.m */; };
-		DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876C17065DC500EC129F /* CFNetwork.framework */; };
 		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
 		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
@@ -447,6 +453,15 @@
 		A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 		A4BC7E0A15B8B7120098384B /* HCBellSolid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCBellSolid.png; sourceTree = "<group>"; };
 		A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCBellSolid@2x.png"; sourceTree = "<group>"; };
+		AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArtisanSDK.bundle; path = Resources/ArtisanSDK.bundle; sourceTree = "<group>"; };
+		AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = /System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArtisanSDK.framework; path = Resources/ArtisanSDK.framework; sourceTree = "<group>"; };
+		AA0486F2074951BACE8263B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AA0A0DA5DD7807C327989A10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArtisanAnalytics.bundle; path = Resources/ArtisanAnalytics.bundle; sourceTree = "<group>"; };
+		AA0EA00BD08D0C5C19D80C90 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
 		C81CBB44157806DE00584F64 /* grey-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey-arrow.png"; path = "Resources/Images/grey-arrow.png"; sourceTree = "<group>"; };
@@ -493,22 +508,19 @@
 		C8CC7BFC158F98D500905E98 /* TIHNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNotificationManager.m; path = Classes/TIHNotificationManager.m; sourceTree = "<group>"; };
 		C8CC7BFE158FB78500905E98 /* NSDate+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Comparison.h"; sourceTree = "<group>"; };
 		C8CC7BFF158FB78600905E98 /* NSDate+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Comparison.m"; sourceTree = "<group>"; };
-		DB5673A91724C882007B4CF2 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAI.h; sourceTree = "<group>"; };
-		DB5673AA1724C882007B4CF2 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITrackedViewController.h; sourceTree = "<group>"; };
-		DB5673AB1724C882007B4CF2 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = GAITracker.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITracker.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		DB5673AC1724C882007B4CF2 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransaction.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITransaction.h; sourceTree = "<group>"; };
-		DB5673AD1724C883007B4CF2 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransactionItem.h; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/GAITransactionItem.h; sourceTree = "<group>"; };
-		DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = ../../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library/libGoogleAnalytics.a; sourceTree = "<group>"; };
-		DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DB5673B21724C914007B4CF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DB5673D61724E9D2007B4CF2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DB68F73D1738A12200FBE6C4 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Resources/GoogleAnalytics/GAI.h; sourceTree = SOURCE_ROOT; };
+		DB68F73E1738A12200FBE6C4 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Resources/GoogleAnalytics/GAITrackedViewController.h; sourceTree = SOURCE_ROOT; };
+		DB68F73F1738A12200FBE6C4 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Resources/GoogleAnalytics/GAITracker.h; sourceTree = SOURCE_ROOT; };
+		DB68F7401738A12200FBE6C4 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransaction.h; path = Resources/GoogleAnalytics/GAITransaction.h; sourceTree = SOURCE_ROOT; };
+		DB68F7411738A12200FBE6C4 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITransactionItem.h; path = Resources/GoogleAnalytics/GAITransactionItem.h; sourceTree = SOURCE_ROOT; };
+		DB68F7421738A12200FBE6C4 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Resources/GoogleAnalytics/libGoogleAnalytics.a; sourceTree = SOURCE_ROOT; };
 		DB70251D170BC32100281387 /* TIHCalendarEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHCalendarEventManager.h; path = Classes/TIHCalendarEventManager.h; sourceTree = "<group>"; };
 		DB70251E170BC32100281387 /* TIHCalendarEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHCalendarEventManager.m; path = Classes/TIHCalendarEventManager.m; sourceTree = "<group>"; };
 		DB702520170BC80F00281387 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		DBA38887171E46A0005BAD2E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 		DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
 		DBA3888E171E47D0005BAD2E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
-		DBAC876C17065DC500EC129F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -518,13 +530,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA047DEF7BDB3E5646B556F1 /* ArtisanSDK.framework in Frameworks */,
+				AA0486F2074951BACE8263B1 /* libz.dylib in Frameworks */,
+				AA0893DF2727520CD052E4A1 /* SystemConfiguration.framework in Frameworks */,
+				AA0AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */,
+				AA0EA00BD08D0C5C19D80C91 /* Security.framework in Frameworks */,
+				AA018EA05D4FCDC743E2F5F1 /* CFNetwork.framework in Frameworks */,
+				AA0A0DA5DD7807C327989A11 /* CoreData.framework in Frameworks */,
 				DB5673D71724E9D2007B4CF2 /* Social.framework in Frameworks */,
-				DB5673B31724C914007B4CF2 /* CoreData.framework in Frameworks */,
-				DB5673B11724C8B8007B4CF2 /* SystemConfiguration.framework in Frameworks */,
 				DB702521170BC80F00281387 /* EventKit.framework in Frameworks */,
 				DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */,
 				DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */,
-				DBAC876D17065DC500EC129F /* CFNetwork.framework in Frameworks */,
 				7477E912159119F500F3F2A8 /* MessageUI.framework in Frameworks */,
 				C860C932158FCD840012886A /* Twitter.framework in Frameworks */,
 				7448428D15755F9E009D96D6 /* AudioToolbox.framework in Frameworks */,
@@ -533,7 +549,7 @@
 				744841221575512C009D96D6 /* Foundation.framework in Frameworks */,
 				744841241575512C009D96D6 /* CoreGraphics.framework in Frameworks */,
 				096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */,
-				DB5673AF1724C883007B4CF2 /* libGoogleAnalytics.a in Frameworks */,
+				DB68F7431738A12200FBE6C4 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +650,7 @@
 		744841101575512B009D96D6 = {
 			isa = PBXGroup;
 			children = (
+				AA09ABF3CCD59286C802E7B0 /* Artisan */,
 				DB5673D61724E9D2007B4CF2 /* Social.framework */,
 				744841251575512C009D96D6 /* This Is Hardcore */,
 				7448422E15755D30009D96D6 /* Submodules */,
@@ -655,12 +672,15 @@
 		7448411E1575512C009D96D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB5673B21724C914007B4CF2 /* CoreData.framework */,
-				DB5673B01724C8B8007B4CF2 /* SystemConfiguration.framework */,
+				AA0486F2074951BACE8263B0 /* libz.dylib */,
+				AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */,
+				AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */,
+				AA0EA00BD08D0C5C19D80C90 /* Security.framework */,
+				AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */,
+				AA0A0DA5DD7807C327989A10 /* CoreData.framework */,
 				DB702520170BC80F00281387 /* EventKit.framework */,
 				DBAC877017065E0600EC129F /* libsqlite3.dylib */,
 				DBAC876E17065DD900EC129F /* CoreText.framework */,
-				DBAC876C17065DC500EC129F /* CFNetwork.framework */,
 				7477E911159119F400F3F2A8 /* MessageUI.framework */,
 				C860C931158FCD840012886A /* Twitter.framework */,
 				7448428C15755F9E009D96D6 /* AudioToolbox.framework */,
@@ -1037,6 +1057,16 @@
 			path = Classes/Categories;
 			sourceTree = "<group>";
 		};
+		AA09ABF3CCD59286C802E7B0 /* Artisan */ = {
+			isa = PBXGroup;
+			children = (
+				AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */,
+				AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */,
+				AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */,
+			);
+			name = Artisan;
+			sourceTree = "<group>";
+		};
 		C81CBADA1577F95000584F64 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,12 +1118,12 @@
 			children = (
 				C8C82A8415B75A3000983140 /* GoogleAnalytics.h */,
 				C8C82A8515B75A3000983140 /* GoogleAnalytics.m */,
-				DB5673A91724C882007B4CF2 /* GAI.h */,
-				DB5673AA1724C882007B4CF2 /* GAITrackedViewController.h */,
-				DB5673AB1724C882007B4CF2 /* GAITracker.h */,
-				DB5673AC1724C882007B4CF2 /* GAITransaction.h */,
-				DB5673AD1724C883007B4CF2 /* GAITransactionItem.h */,
-				DB5673AE1724C883007B4CF2 /* libGoogleAnalytics.a */,
+				DB68F73D1738A12200FBE6C4 /* GAI.h */,
+				DB68F73E1738A12200FBE6C4 /* GAITrackedViewController.h */,
+				DB68F73F1738A12200FBE6C4 /* GAITracker.h */,
+				DB68F7401738A12200FBE6C4 /* GAITransaction.h */,
+				DB68F7411738A12200FBE6C4 /* GAITransactionItem.h */,
+				DB68F7421738A12200FBE6C4 /* libGoogleAnalytics.a */,
 			);
 			name = GoogleAnalytics;
 			sourceTree = "<group>";
@@ -1151,6 +1181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0E65D8A0E0EAF1589B1771 /* ArtisanAnalytics.bundle in Resources */,
+				AA017EB7592FF1E46C75C091 /* ArtisanSDK.bundle in Resources */,
 				7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */,
 				C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */,
 				C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */,
@@ -1459,6 +1491,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 					"\"$(SRCROOT)/This Is Hardcore/Classes/GoogleAnalytics\"",
 					"\"$(SRCROOT)/../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/Resources/GoogleAnalytics\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1487,6 +1520,7 @@
 					"\"$(SRCROOT)/submodules/facebook-ios-sdk/build/Release-iphonesimulator\"",
 					"\"$(SRCROOT)/This Is Hardcore/Classes/GoogleAnalytics\"",
 					"\"$(SRCROOT)/../../../Downloads/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/Resources/GoogleAnalytics\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

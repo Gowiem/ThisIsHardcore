@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
+#import <ArtisanSDK/ArtisanSDK.h>
 #import "TIHAppDelegate.h"
 #import "ARFacebook.h"
 #import "SDURLCache.h"
@@ -39,7 +40,9 @@
                                                              diskPath:[SDURLCache defaultCachePath]];
     [NSURLCache setSharedURLCache:urlCache];
 
-    return YES;
+	/* Artisan Manager start-up code; please note, if you have multiple exit points in this method
+	 * you will need to copy and paste the ARManager call before each occurrence of return YES */
+	{ [ARManager startWithAppId:@"51886333369b05380e000033" version:@"1.0" options:nil]; return YES; }
 }
 
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {
@@ -53,9 +56,9 @@
 {
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setHour:0];
-    [comps setDay: 9 + daysLater];
+    [comps setDay: 8 + daysLater];
     [comps setMonth:8];
-    [comps setYear:2012];
+    [comps setYear:2013];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     return [gregorian dateFromComponents:comps];
