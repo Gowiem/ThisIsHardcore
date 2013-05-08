@@ -472,7 +472,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NkT-yS-66t">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="Kec-t8-x6q">
                                         <rect key="frame" x="9" y="20" width="302" height="60"/>
@@ -1100,6 +1100,9 @@
         </class>
         <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doFanFeedButtonAction:"/>
+            </relationships>
         </class>
         <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
