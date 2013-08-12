@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA017EB7592FF1E46C75C091 /* ArtisanSDK.bundle in Artisan */ = {isa = PBXBuildFile; fileRef = AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */; };
+		AA047DEF7BDB3E5646B556F1 /* ArtisanSDK.framework in Artisan */ = {isa = PBXBuildFile; fileRef = AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */; };
+		AA0486F2074951BACE8263B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0486F2074951BACE8263B0 /* libz.dylib */; };
+		AA0389695147FB4F6C09A6A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0389695147FB4F6C09A6A0 /* CoreLocation.framework */; };
+		AA0893DF2727520CD052E4A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */; };
+		AA0AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
+		AA0EA00BD08D0C5C19D80C91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0EA00BD08D0C5C19D80C90 /* Security.framework */; };
+		AA018EA05D4FCDC743E2F5F1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */; };
+		AA0A0DA5DD7807C327989A11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0A0DA5DD7807C327989A10 /* CoreData.framework */; };
 		096FBBDD8F1642B0B7F05B7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0367787233E6483DB73F0B7D /* libPods.a */; };
 		7414A02715A3A3AA002D1CC7 /* bookmarks_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */; };
 		7414A02815A3A3AA002D1CC7 /* bookmarks_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */; };
@@ -176,15 +185,6 @@
 		A4ADFB8015BB7DA90031D374 /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */; };
 		A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0A15B8B7120098384B /* HCBellSolid.png */; };
 		A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */; };
-		AA017EB7592FF1E46C75C091 /* ArtisanSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */; };
-		AA018EA05D4FCDC743E2F5F1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */; };
-		AA047DEF7BDB3E5646B556F1 /* ArtisanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */; };
-		AA0486F2074951BACE8263B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0486F2074951BACE8263B0 /* libz.dylib */; };
-		AA0893DF2727520CD052E4A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */; };
-		AA0A0DA5DD7807C327989A11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0A0DA5DD7807C327989A10 /* CoreData.framework */; };
-		AA0AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
-		AA0E65D8A0E0EAF1589B1771 /* ArtisanAnalytics.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */; };
-		AA0EA00BD08D0C5C19D80C91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0EA00BD08D0C5C19D80C90 /* Security.framework */; };
 		C81CBAE01577FCE100584F64 /* TIHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CBADF1577FCE100584F64 /* TIHNewsCell.m */; };
 		C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB44157806DE00584F64 /* grey-arrow.png */; };
 		C81CBB47157806DE00584F64 /* grey-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81CBB45157806DE00584F64 /* grey-arrow@2x.png */; };
@@ -230,6 +230,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArtisanSDK.bundle; path = Resources/ArtisanSDK.bundle; sourceTree = "<group>"; };
+		AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = ArtisanSDK.framework; path = Resources/ArtisanSDK.framework; sourceTree = "<group>"; };
+		AA0486F2074951BACE8263B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AA0389695147FB4F6C09A6A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = CoreLocation.framework; path = /System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AA0EA00BD08D0C5C19D80C90 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = CFNetwork.framework; path = /System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AA0A0DA5DD7807C327989A10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.framework"; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA04A25BF414BC6F48F37530 /* Artisan.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = "text.xcconfig"; name = Artisan.xcconfig; path = /Users/gowie/Workspace/TIHxC/ThisIsHardcore/Resources/Artisan.xcconfig/Artisan.xcconfig; sourceTree = "<group>"; };
 		0367787233E6483DB73F0B7D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7414A02315A3A3AA002D1CC7 /* bookmarks_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarks_off.png; sourceTree = "<group>"; };
 		7414A02415A3A3AA002D1CC7 /* bookmarks_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmarks_off@2x.png"; sourceTree = "<group>"; };
@@ -453,15 +463,6 @@
 		A4ADFB7F15BB7DA90031D374 /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 		A4BC7E0A15B8B7120098384B /* HCBellSolid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCBellSolid.png; sourceTree = "<group>"; };
 		A4BC7E0B15B8B7120098384B /* HCBellSolid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCBellSolid@2x.png"; sourceTree = "<group>"; };
-		AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArtisanSDK.bundle; path = Resources/ArtisanSDK.bundle; sourceTree = "<group>"; };
-		AA018EA05D4FCDC743E2F5F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = /System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArtisanSDK.framework; path = Resources/ArtisanSDK.framework; sourceTree = "<group>"; };
-		AA0486F2074951BACE8263B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AA0A0DA5DD7807C327989A10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArtisanAnalytics.bundle; path = Resources/ArtisanAnalytics.bundle; sourceTree = "<group>"; };
-		AA0EA00BD08D0C5C19D80C90 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C81CBADE1577FCE100584F64 /* TIHNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHNewsCell.h; path = Cells/TIHNewsCell.h; sourceTree = "<group>"; };
 		C81CBADF1577FCE100584F64 /* TIHNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHNewsCell.m; path = Cells/TIHNewsCell.m; sourceTree = "<group>"; };
 		C81CBB44157806DE00584F64 /* grey-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey-arrow.png"; path = "Resources/Images/grey-arrow.png"; sourceTree = "<group>"; };
@@ -530,6 +531,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0389695147FB4F6C09A6A1 /* CoreLocation.framework in Frameworks */,
 				AA047DEF7BDB3E5646B556F1 /* ArtisanSDK.framework in Frameworks */,
 				AA0486F2074951BACE8263B1 /* libz.dylib in Frameworks */,
 				AA0893DF2727520CD052E4A1 /* SystemConfiguration.framework in Frameworks */,
@@ -556,6 +558,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA09ABF3CCD59286C802E7B0 /* Artisan */ = {
+			isa = PBXGroup;
+			children = (
+				AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */,
+				AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */,
+			);
+			name = Artisan;
+			sourceTree = "<group>";
+		};
 		742E88F8158A8A4400BBCF84 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +683,7 @@
 		7448411E1575512C009D96D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA0389695147FB4F6C09A6A0 /* CoreLocation.framework */,
 				AA0486F2074951BACE8263B0 /* libz.dylib */,
 				AA0893DF2727520CD052E4A0 /* SystemConfiguration.framework */,
 				AA0AF8492C47A4D819F7C450 /* QuartzCore.framework */,
@@ -1057,16 +1069,6 @@
 			path = Classes/Categories;
 			sourceTree = "<group>";
 		};
-		AA09ABF3CCD59286C802E7B0 /* Artisan */ = {
-			isa = PBXGroup;
-			children = (
-				AA0E65D8A0E0EAF1589B1770 /* ArtisanAnalytics.bundle */,
-				AA017EB7592FF1E46C75C090 /* ArtisanSDK.bundle */,
-				AA047DEF7BDB3E5646B556F0 /* ArtisanSDK.framework */,
-			);
-			name = Artisan;
-			sourceTree = "<group>";
-		};
 		C81CBADA1577F95000584F64 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1181,7 +1183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0E65D8A0E0EAF1589B1771 /* ArtisanAnalytics.bundle in Resources */,
+
 				AA017EB7592FF1E46C75C091 /* ArtisanSDK.bundle in Resources */,
 				7448412A1575512C009D96D6 /* InfoPlist.strings in Resources */,
 				C81CBB46157806DE00584F64 /* grey-arrow.png in Resources */,

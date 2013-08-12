@@ -7,9 +7,9 @@
 #import <Foundation/Foundation.h>
 
 /*
- * This string constant can be used to set an boolean value @YES or @NO in the options dictionary which is an optional argument to startWithAppId:version:options:. Setting this to @NO will allow no one to perform the gesture on a device. The gesture recognizer is not added. @YES is the default.
+ * This string constant can be used to set an boolean value @YES or @NO in the options dictionary which is an optional argument to startWithAppId:version:options:. Setting this to @YES will allow no one to perform the gesture on a device. The gesture recognizer is not added. @NO is the default.
  */
-extern NSString *const ARManagerShouldAllowArtisanGesture;
+extern NSString *const ARManagerNeverEnableArtisanGesture;
 
 /**
 * Initializes Artisan and manages its lifecycle.
@@ -42,5 +42,15 @@ extern NSString *const ARManagerShouldAllowArtisanGesture;
 * @param options Dictionary of configuration options. These options will override the Artisan defaults.
 */
 +(void)startWithAppId:(NSString *)appId version:(NSString *)version options:(NSDictionary *)options;
+
+/** Manually fetch Artisan updates.
+ *
+ * Use this method to manually fetch Artisan updates for your app. Updates are fetched asynchronously, and this method returns immediately.
+ * 
+ * @param completionBlock An optional block to be called when the playlist download is complete. The block receives a single argument, a BOOL error parameter. If you don't need a completion block, just pass nil. The block will be called on the main thread.
+ *
+ * @warning In normal usage, it is *not* necessary to call this method, as it is automatically called by Artisan internally. This should only be used when implementing custom segmenting and targeting.
+ */
++ (void)fetchArtisanUpdates:(void (^)(BOOL error))completionBlock;
 
 @end
