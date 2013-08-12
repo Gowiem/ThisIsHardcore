@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-artisan_key, artisan_version, resource_download_url = '51886333369b05380e000033', '1.0', 'https://s3.amazonaws.com/artisan-releases/artisan-sdk-1.0.5.tar.gz'
+artisan_key, artisan_version, resource_download_url = '51886333369b05380e000033', '1.0', 'https://s3.amazonaws.com/artisan-releases/artisan-sdk-1.1.3.tar.gz'
+
 xcode_project_path = ''
 app_delegate_path = ''
 xcode_version = ''
-installer_version = '1.0.5'
+installer_version = '1.1.3'
 application_target = ''
 
 """
@@ -736,6 +737,7 @@ def remove_old_resources(root, project_data):
 
 	project_data = remove_old_resource("ARUXFLIP.bundle", project_data)
 	project_data = remove_old_resource("ARUXFLIP.framework", project_data)
+	project_data = remove_old_resource("ArtisanAnalytics.bundle", project_data)
 	return project_data
 
 ## file downloading ############################
@@ -1122,7 +1124,7 @@ def add_resources(resources, resource_path, resource_type, project_data, project
 
 def add_required_frameworks(project_data, settings):
 
-	frameworks_to_add = ["CoreData.framework", "CFNetwork.framework", "Security.framework", "QuartzCore.framework","SystemConfiguration.framework"]
+	frameworks_to_add = ["CoreData.framework", "CFNetwork.framework", "Security.framework", "QuartzCore.framework","SystemConfiguration.framework", "CoreLocation.framework"]
 	ui_kit_path = "/System/Library/Frameworks"
 
 	print "\n  Required Frameworks:"
@@ -1148,7 +1150,7 @@ def add_artisan_framework(project_data, settings):
 
 def add_artisan_bundles(project_data, settings):
 
-	bundles_to_add = ["ArtisanSDK.bundle", "ArtisanAnalytics.bundle"]
+	bundles_to_add = ["ArtisanSDK.bundle"]
 	print "\n  Artisan Bundle Resources:"
 	project_data = add_resources(bundles_to_add, settings["artisan_resources_relative_to_xcodeproj"], "wrapper.plug-in", project_data, settings["xcode_project_path"], "Resources", "Artisan", "\"<group>\"", settings)
 	return project_data
