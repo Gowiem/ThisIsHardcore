@@ -40,20 +40,26 @@
 }
 
 -(void) updateNavBarDisplay {
-    NSString *backgroundImageName = @"";
-    if([[[self navigationController] viewControllers] count] == 1) {
-        backgroundImageName = @"TIHC_Header.png";
-    }
-    else {
-        backgroundImageName = @"TIHC_HeaderCenter.png";
-    }
     
-    UIImage *image = [UIImage imageNamed:backgroundImageName];
-    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
-    UILabel *label = [[UILabel alloc] init];
-    self.navigationItem.titleView = label;
-    label.text = @"";
+    ///////
+    // TODO: Update to display name of whatever content user tapped on.
+    ///////
+    
+//    NSString *backgroundImageName = @"";
+//    if([[[self navigationController] viewControllers] count] == 1) {
+//        backgroundImageName = @"TIHC_Header.png";
+//    }
+//    else {
+//        backgroundImageName = @"TIHC_HeaderCenter.png";
+//    }
+//    
+//    UIImage *image = [UIImage imageNamed:backgroundImageName];
+//    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = @"TIHC";
+//    self.navigationItem.titleView = label;
 }
 
 - (void)handleTicket:(id)sender

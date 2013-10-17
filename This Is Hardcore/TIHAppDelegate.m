@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 appRenaissance. All rights reserved.
 //
 
-#import <ArtisanSDK/ArtisanSDK.h>
 #import "TIHAppDelegate.h"
 #import "ARFacebook.h"
 #import "SDURLCache.h"
@@ -42,7 +41,8 @@
 
 	/* Artisan Manager start-up code; please note, if you have multiple exit points in this method
 	 * you will need to copy and paste the ARManager call before each occurrence of return YES */
-	{ [ARManager startWithAppId:@"51886333369b05380e000033" version:@"1.0" options:nil]; return YES; }
+//	{ [ARManager startWithAppId:@"51886333369b05380e000033" version:@"1.0" options:nil]; return YES; }
+    return YES;
 }
 
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {

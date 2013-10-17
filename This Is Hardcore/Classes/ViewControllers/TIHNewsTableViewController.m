@@ -26,6 +26,7 @@
     unifeedEntity = @"news_feed";
     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"%@ - %@",unifeedEntity,tag]];
     [self loadData];
+//    [self.view automaticallyAdjustsScrollViewInsets:NO];
 }
 
 - (void) viewWillAppear:(BOOL)animated

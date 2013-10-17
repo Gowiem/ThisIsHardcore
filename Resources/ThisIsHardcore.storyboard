@@ -1,78 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Bookmark View Controller-->
+        <!--Bookmark View Controller - TIHC-->
         <scene sceneID="rLc-b7-OQ2">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ait-Rl-V1s">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <view key="view" contentMode="scaleToFill" id="veF-ax-2SF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="62" sectionHeaderHeight="14" sectionFooterHeight="14" id="y6J-vb-p3Q">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="qcm-Td-icG">
+                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="62" id="k52-ri-ICY" customClass="TIHEventCell">
-                                        <rect key="frame" x="0.0" y="14" width="320" height="62"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="70" id="2NN-Ac-TUe" customClass="TIHEventCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2NN-Ac-TUe" id="Hcg-Ty-5zt">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="Y37-ZZ-yol">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="2sy-cV-Sm2">
                                                     <rect key="frame" x="65" y="38" width="9" height="9"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QbQ-Im-jLk">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2Zn-yh-n7M">
                                                     <rect key="frame" x="83" y="32" width="93" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgO-lZ-mXh">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zoo-Bn-zjD">
                                                     <rect key="frame" x="65" y="9" width="129" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="P3V-se-6Wf">
+                                                <view contentMode="scaleToFill" id="3NX-Yy-8qw">
                                                     <rect key="frame" x="5" y="5" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="qf0-8J-mdn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="9kU-cc-nM9">
                                                     <rect key="frame" x="11" y="5" width="11" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistIconView" destination="P3V-se-6Wf" id="QcY-fA-9SI"/>
-                                            <outlet property="artistNameLabel" destination="BgO-lZ-mXh" id="eFu-SV-RRB"/>
-                                            <outlet property="bookmarkImage" destination="qf0-8J-mdn" id="XVr-CB-02R"/>
-                                            <outlet property="setTimeLabel" destination="QbQ-Im-jLk" id="RQV-dx-eQB"/>
+                                            <outlet property="artistIconView" destination="3NX-Yy-8qw" id="VAO-8f-HFQ"/>
+                                            <outlet property="artistNameLabel" destination="zoo-Bn-zjD" id="8CV-s6-LY9"/>
+                                            <outlet property="bookmarkImage" destination="9kU-cc-nM9" id="inc-gd-2U7"/>
+                                            <outlet property="setTimeLabel" destination="2Zn-yh-n7M" id="Pb7-Xx-dF9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="5Tj-WR-tKS" id="Egz-th-GHa"/>
-                                    <outlet property="delegate" destination="5Tj-WR-tKS" id="83L-KX-lfN"/>
+                                    <outlet property="dataSource" destination="5Tj-WR-tKS" id="g2H-O5-qQr"/>
+                                    <outlet property="delegate" destination="5Tj-WR-tKS" id="9IU-Zn-f8z"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="od6-QP-wLk"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="od6-QP-wLk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="myTable" destination="y6J-vb-p3Q" id="W2c-3O-Xig"/>
                         <segue destination="LTt-iW-ahq" kind="push" identifier="segueToEventDetail" id="sTI-9i-Uf2"/>
                     </connections>
                 </viewController>
@@ -85,18 +86,18 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="5dm-nX-PXK" customClass="TIHMoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhe-Mq-aMm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="AWv-al-8tt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="AWv-al-8tt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="LoadMoreCell" rowHeight="40" id="SqR-cg-dDY">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SqR-cg-dDY" id="ZBp-YQ-03k">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -112,17 +113,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorLabel" destination="Eho-ga-Bgg" id="woE-cG-vrJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHMoreCell" rowHeight="55" id="tfP-hx-aAY" customClass="TIHMoreCell">
-                                        <rect key="frame" x="0.0" y="62" width="320" height="55"/>
+                                        <rect key="frame" x="0.0" y="126" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tfP-hx-aAY" id="hqo-AZ-0cl">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="RVO-Wm-vtB">
@@ -137,8 +137,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="moreImage" destination="RVO-Wm-vtB" id="Lsr-yP-vYj"/>
                                             <outlet property="moreLabel" destination="nCs-KS-b84" id="55e-Ew-rlV"/>
@@ -168,24 +167,19 @@
             <objects>
                 <viewController title="Photo Pit" wantsFullScreenLayout="YES" id="pgz-oE-b2z" customClass="TIHPhotoPitViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAo-sO-cww">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="N9t-wL-reT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ccv-Ig-sW8">
                                         <rect key="frame" x="2" y="3" width="156" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="TIHCofficialBluetab.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="doOfficialButtonAction:" destination="pgz-oE-b2z" eventType="touchDown" id="ChF-wQ-fLl"/>
@@ -195,13 +189,8 @@
                                         <rect key="frame" x="161" y="3" width="156" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" hint="This is Hardcore Official tab" label="TIHC Official"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="FanFeedG1tab.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="doFanFeedButtonAction:" destination="pgz-oE-b2z" eventType="touchDown" id="SoU-td-od3"/>
@@ -211,15 +200,15 @@
                                         <rect key="frame" x="0.0" y="36" width="320" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="27" sectionFooterHeight="22" id="sUk-ts-VPp">
-                                        <rect key="frame" x="0.0" y="38" width="320" height="417"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="27" sectionFooterHeight="22" id="sUk-ts-VPp">
+                                        <rect key="frame" x="0.0" y="38" width="320" height="442"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhotoPitCell" rowHeight="385" id="i3T-p2-bGJ" customClass="TIHPhotoPitCell">
                                                 <rect key="frame" x="0.0" y="27" width="320" height="385"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i3T-p2-bGJ" id="j7I-vr-wQf">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -259,8 +248,7 @@
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
+                                                </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="authorImageView" destination="NOm-Qv-aZ2" id="Kbs-4r-HHH"/>
                                                     <outlet property="authorNameLabel" destination="B4q-nI-g7B" id="rsd-e2-yr1"/>
@@ -272,7 +260,7 @@
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoadMorePhotoPitCell" rowHeight="40" id="dzn-S1-scs" customClass="TIHPhotoPitCell">
                                                 <rect key="frame" x="0.0" y="412" width="320" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dzn-S1-scs" id="Qai-w7-4hK">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -288,8 +276,7 @@
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
+                                                </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -319,83 +306,63 @@
             <objects>
                 <viewController storyboardIdentifier="TIHScheduleViewController" wantsFullScreenLayout="YES" id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3O-Ng-3pl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QMC-Vm-hkK">
-                                <rect key="frame" x="4" y="3" width="75" height="34"/>
+                                <rect key="frame" x="4" y="67" width="75" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="ThursTabBlue.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doThursButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="CTE-yJ-tcX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6ol-fg-iOv">
-                                <rect key="frame" x="83" y="3" width="75" height="34"/>
+                                <rect key="frame" x="83" y="67" width="75" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="FriTabG1.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doFriButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="L1v-pB-lP3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TPQ-2e-ABV">
-                                <rect key="frame" x="162" y="3" width="75" height="34"/>
+                                <rect key="frame" x="162" y="67" width="75" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="SatTabG2.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doSatButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="tcU-8k-HSK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="COz-0E-u79">
-                                <rect key="frame" x="241" y="3" width="75" height="34"/>
+                                <rect key="frame" x="241" y="67" width="75" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="SunTabG3.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doSunButtonAction:" destination="7ue-m1-koG" eventType="touchDown" id="Irf-da-swA"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="17" sectionFooterHeight="22" id="uzZ-TK-dCZ">
-                                <rect key="frame" x="0.0" y="39" width="320" height="407"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="17" sectionFooterHeight="22" id="uzZ-TK-dCZ">
+                                <rect key="frame" x="0.0" y="100" width="320" height="371"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="62" id="Su6-GI-DQ6" customClass="TIHEventCell">
                                         <rect key="frame" x="0.0" y="17" width="320" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Su6-GI-DQ6" id="hMC-uF-XnW">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="ldP-bg-bsd">
@@ -426,8 +393,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artistIconView" destination="ZOJ-37-IXS" id="qr0-cI-S4E"/>
                                             <outlet property="artistNameLabel" destination="zgn-sI-XHE" id="RR9-Na-Uaq"/>
@@ -460,18 +426,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-i1-3sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="1148"/>
+            <point key="canvasLocation" x="1144" y="1186"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="HLz-NK-CFO">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzY-95-K9k">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NkT-yS-66t">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="Kec-t8-x6q">
@@ -500,13 +466,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mmE-5t-au2">
                                                 <rect key="frame" x="170" y="10" width="130" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="getdirections.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="doDirectionsButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="uWN-Tm-JVF"/>
@@ -537,15 +498,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OmS-Hx-odp">
                                                 <rect key="frame" x="0.0" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="artistsiteactive.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="disabled" image="artistsiteactive.png"/>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
                                                 <connections>
                                                     <action selector="doWebsiteButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="j9c-RE-GxJ"/>
                                                 </connections>
@@ -553,15 +509,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upk-6a-ktv">
                                                 <rect key="frame" x="100" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="artistsitefbactive.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="disabled" image="artistfbinactive.png"/>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
                                                 <connections>
                                                     <action selector="doFacebookButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="duk-JC-hTM"/>
                                                 </connections>
@@ -569,15 +520,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jr-by-TUu">
                                                 <rect key="frame" x="202" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="artisttwitteractive.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="disabled" image="artisttwitterinactive.png"/>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
                                                 <connections>
                                                     <action selector="doTwitterButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="S2v-KB-DEG"/>
                                                 </connections>
@@ -585,15 +531,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vYC-JB-UlT">
                                                 <rect key="frame" x="0.0" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="setreminder.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="disabled" image="setreminderinactive.png"/>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
                                                 <connections>
                                                     <action selector="doRemindButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="rl3-7S-dPD"/>
                                                 </connections>
@@ -601,13 +542,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
                                                 <rect key="frame" x="100" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="bookmarkbutton.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="doBookmarkButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="GKz-Tr-h3X"/>
@@ -616,13 +552,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AmI-i8-bX2">
                                                 <rect key="frame" x="202" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="share.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="doShareButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="TaS-fo-jNS"/>
@@ -665,54 +596,44 @@
             <objects>
                 <viewController title="News" wantsFullScreenLayout="YES" id="EJr-u7-cF9" customClass="TIHNewsTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hsw-0O-ybI">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHU-FK-WuX">
-                                <rect key="frame" x="2" y="3" width="156" height="33"/>
+                                <rect key="frame" x="2" y="68" width="156" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Fan Feed"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="TIHCofficialBluetab.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doOfficialButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="9d8-4F-iYX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WDE-9q-gBO">
-                                <rect key="frame" x="161" y="3" width="156" height="33"/>
+                                <rect key="frame" x="161" y="68" width="156" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="This is Hardcore Official tab" label="TIHC Official"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="FanFeedG1tab.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doFanFeedButtonAction:" destination="EJr-u7-cF9" eventType="touchDown" id="14B-rS-OaT"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bluetabheadercap.png" id="zcg-gL-FOR">
-                                <rect key="frame" x="0.0" y="36" width="320" height="2"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="22" id="YYi-fT-4Uf">
-                                <rect key="frame" x="0.0" y="38" width="320" height="417"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="22" id="YYi-fT-4Uf">
+                                <rect key="frame" x="0.0" y="102" width="320" height="371"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="yrk-Zz-mXg" customClass="TIHNewsCell">
                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yrk-Zz-mXg" id="qpb-Yu-JzO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -752,13 +673,12 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="grey-arrow@2x.png" id="7dh-nj-aWZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="grey-arrow.png" id="7dh-nj-aWZ">
                                                     <rect key="frame" x="295" y="39" width="15" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorLabel" destination="eiF-qt-1VV" id="WHg-sQ-cqT"/>
                                             <outlet property="bodyLabel" destination="Ace-uH-n8w" id="iyL-AM-zyK"/>
@@ -772,7 +692,7 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoadMoreNewsCell" rowHeight="40" id="hTb-pq-kTV" customClass="TIHNewsCell">
                                         <rect key="frame" x="0.0" y="108" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hTb-pq-kTV" id="IiG-ZU-Rjg">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -788,8 +708,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorLabel" destination="9sV-FE-WFv" id="ZAM-4r-0NW"/>
                                         </connections>
@@ -822,7 +741,7 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="blI-dw-3rH" customClass="TIHWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1c-HQ-5Td">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -838,7 +757,6 @@
                 <tabBarController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="vu3-Wa-axJ" customClass="TIHTabBarController" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Z2r-HP-n9k">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -875,10 +793,10 @@
             </objects>
             <point key="canvasLocation" x="623" y="-384"/>
         </scene>
-        <!--Navigation Controller - Bookmarks-->
+        <!--Navigation Controller - TIHC-->
         <scene sceneID="ZUQ-xI-mPf">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" id="2sm-xs-8RV" sceneMemberID="viewController">
+                <navigationController title="TIHC" wantsFullScreenLayout="YES" id="2sm-xs-8RV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarkIcon.png" id="dOm-32-dUa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="w90-0L-rPk">
@@ -951,7 +869,7 @@
                 <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="62" id="2yp-HO-Lp4" customClass="TIHEventCell">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yp-HO-Lp4" id="VqL-Tt-nxa">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -983,8 +901,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
+                    </tableViewCellContentView>
                     <connections>
                         <outlet property="artistNameLabel" destination="K5q-d8-lh7" id="MGh-nR-4QR"/>
                         <outlet property="bookmarkImage" destination="wZL-1B-GZt" id="m4W-Uq-gbi"/>
@@ -997,6 +914,7 @@
     </scenes>
     <resources>
         <image name="FanFeedG1tab.png" width="156" height="33"/>
+        <image name="FanFeedG1tab.png" width="156" height="33"/>
         <image name="FriTabG1.png" width="75" height="34"/>
         <image name="HCBell.png" width="29" height="30"/>
         <image name="MoreArrow.png" width="19" height="16"/>
@@ -1005,157 +923,39 @@
         <image name="SatTabG2.png" width="75" height="34"/>
         <image name="SunTabG3.png" width="75" height="34"/>
         <image name="TIHCofficialBluetab.png" width="156" height="33"/>
+        <image name="TIHCofficialBluetab.png" width="156" height="33"/>
         <image name="ThursTabBlue.png" width="75" height="34"/>
         <image name="artistfbinactive.png" width="94" height="93"/>
+        <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsitefbactive.png" width="93" height="92"/>
         <image name="artisttwitteractive.png" width="93" height="92"/>
         <image name="artisttwitterinactive.png" width="94" height="93"/>
         <image name="bluetabheadercap.png" width="320" height="2"/>
+        <image name="bluetabheadercap.png" width="320" height="2"/>
+        <image name="bluetabheadercap.png" width="320" height="2"/>
+        <image name="bookmark.png" width="11" height="29"/>
+        <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmarkIcon.png" width="10" height="26"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
         <image name="getdirections.png" width="130" height="36"/>
-        <image name="grey-arrow@2x.png" width="29" height="44"/>
+        <image name="grey-arrow.png" width="15" height="22"/>
         <image name="setreminder.png" width="93" height="93"/>
         <image name="setreminderinactive.png" width="94" height="93"/>
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
+        <image name="tinyclock.png" width="9" height="9"/>
+        <image name="tinyclock.png" width="9" height="9"/>
+        <image name="tinyclock.png" width="9" height="9"/>
     </resources>
-    <classes>
-        <class className="BaseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-        </class>
-        <class className="NIWebController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NIWebController.h"/>
-        </class>
-        <class className="TIHBaseScheduleViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBaseScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="TIHBookmarkViewController" superclassName="TIHBaseScheduleViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHBookmarkViewController.h"/>
-        </class>
-        <class className="TIHEventCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="artistIconView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bookmarkImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHEventDetailViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHEventDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doBookmarkButtonAction:"/>
-                <relationship kind="action" name="doDirectionsButtonAction:"/>
-                <relationship kind="action" name="doFacebookButtonAction:"/>
-                <relationship kind="action" name="doRemindButtonAction:"/>
-                <relationship kind="action" name="doShareButtonAction:"/>
-                <relationship kind="action" name="doTwitterButtonAction:"/>
-                <relationship kind="action" name="doWebsiteButtonAction:"/>
-                <relationship kind="outlet" name="actionButtonsView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="artistDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="artistImageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bookmarkButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="directionsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="facebookButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="reminderButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="setTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textLabelsView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="venueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="websiteButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TIHMoreCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHMoreCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="moreImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="moreLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHMoreViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHMoreViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="TIHNewsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bodyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="customDisclosureView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="newsImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sourceIcon" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="TIHNewsTableViewController" superclassName="TIHTabBarTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHNewsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doFanFeedButtonAction:"/>
-            </relationships>
-        </class>
-        <class className="TIHPhotoPitCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorImageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="photoImageView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHPhotoPitViewController" superclassName="TIHTabBarTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHPhotoPitViewController.h"/>
-        </class>
-        <class className="TIHScheduleViewController" superclassName="TIHBaseScheduleViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doFriButtonAction:"/>
-                <relationship kind="action" name="doSatButtonAction:"/>
-                <relationship kind="action" name="doSunButtonAction:"/>
-                <relationship kind="action" name="doThursButtonAction:"/>
-                <relationship kind="outlet" name="dayDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="friButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="satButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sunButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="thursButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="venueLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TIHTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHTabBarController.h"/>
-        </class>
-        <class className="TIHTabBarTableViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHTabBarTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doFanFeedButtonAction:"/>
-                <relationship kind="action" name="doOfficialButtonAction:"/>
-                <relationship kind="outlet" name="fanFeedButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="officialButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TIHWebViewController" superclassName="NIWebController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TIHWebViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <nil key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WYD-46-Fqw"/>
-        <segue reference="Pzp-e5-bIn"/>
+        <segue reference="sTI-9i-Uf2"/>
+        <segue reference="MTt-hb-LGa"/>
     </inferredMetricsTieBreakers>
 </document>
