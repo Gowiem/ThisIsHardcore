@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Bookmark View Controller - TIHC-->
@@ -463,7 +463,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mmE-5t-au2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mmE-5t-au2">
                                                 <rect key="frame" x="170" y="10" width="130" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="getdirections.png">
@@ -495,7 +495,7 @@
                                         <rect key="frame" x="9" y="255" width="302" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OmS-Hx-odp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OmS-Hx-odp">
                                                 <rect key="frame" x="0.0" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artistsiteactive.png">
@@ -506,7 +506,7 @@
                                                     <action selector="doWebsiteButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="j9c-RE-GxJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upk-6a-ktv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="upk-6a-ktv">
                                                 <rect key="frame" x="100" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artistsitefbactive.png">
@@ -517,7 +517,7 @@
                                                     <action selector="doFacebookButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="duk-JC-hTM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jr-by-TUu">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8jr-by-TUu">
                                                 <rect key="frame" x="202" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artisttwitteractive.png">
@@ -528,7 +528,7 @@
                                                     <action selector="doTwitterButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="S2v-KB-DEG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vYC-JB-UlT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vYC-JB-UlT">
                                                 <rect key="frame" x="0.0" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="setreminder.png">
@@ -539,7 +539,7 @@
                                                     <action selector="doRemindButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="rl3-7S-dPD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
                                                 <rect key="frame" x="100" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="bookmarkbutton.png">
@@ -549,7 +549,7 @@
                                                     <action selector="doBookmarkButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="GKz-Tr-h3X"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AmI-i8-bX2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AmI-i8-bX2">
                                                 <rect key="frame" x="202" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="share.png">
@@ -914,7 +914,6 @@
     </scenes>
     <resources>
         <image name="FanFeedG1tab.png" width="156" height="33"/>
-        <image name="FanFeedG1tab.png" width="156" height="33"/>
         <image name="FriTabG1.png" width="75" height="34"/>
         <image name="HCBell.png" width="29" height="30"/>
         <image name="MoreArrow.png" width="19" height="16"/>
@@ -923,19 +922,13 @@
         <image name="SatTabG2.png" width="75" height="34"/>
         <image name="SunTabG3.png" width="75" height="34"/>
         <image name="TIHCofficialBluetab.png" width="156" height="33"/>
-        <image name="TIHCofficialBluetab.png" width="156" height="33"/>
         <image name="ThursTabBlue.png" width="75" height="34"/>
         <image name="artistfbinactive.png" width="94" height="93"/>
-        <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsitefbactive.png" width="93" height="92"/>
         <image name="artisttwitteractive.png" width="93" height="92"/>
         <image name="artisttwitterinactive.png" width="94" height="93"/>
         <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bookmark.png" width="11" height="29"/>
-        <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmarkIcon.png" width="10" height="26"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
@@ -945,9 +938,6 @@
         <image name="setreminderinactive.png" width="94" height="93"/>
         <image name="share.png" width="93" height="92"/>
         <image name="tinyclock.png" width="9" height="9"/>
-        <image name="tinyclock.png" width="9" height="9"/>
-        <image name="tinyclock.png" width="9" height="9"/>
-        <image name="tinyclock.png" width="9" height="9"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -956,6 +946,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="sTI-9i-Uf2"/>
-        <segue reference="MTt-hb-LGa"/>
+        <segue reference="Pzp-e5-bIn"/>
     </inferredMetricsTieBreakers>
 </document>
