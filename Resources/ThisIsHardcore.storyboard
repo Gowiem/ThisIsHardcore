@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vu3-Wa-axJ">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Bookmark View Controller - TIHC-->
@@ -914,7 +914,6 @@
     </scenes>
     <resources>
         <image name="FanFeedG1tab.png" width="156" height="33"/>
-        <image name="FanFeedG1tab.png" width="156" height="33"/>
         <image name="FriTabG1.png" width="75" height="34"/>
         <image name="HCBell.png" width="29" height="30"/>
         <image name="MoreArrow.png" width="19" height="16"/>
@@ -923,19 +922,13 @@
         <image name="SatTabG2.png" width="75" height="34"/>
         <image name="SunTabG3.png" width="75" height="34"/>
         <image name="TIHCofficialBluetab.png" width="156" height="33"/>
-        <image name="TIHCofficialBluetab.png" width="156" height="33"/>
         <image name="ThursTabBlue.png" width="75" height="34"/>
         <image name="artistfbinactive.png" width="94" height="93"/>
-        <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsiteactive.png" width="93" height="92"/>
         <image name="artistsitefbactive.png" width="93" height="92"/>
         <image name="artisttwitteractive.png" width="93" height="92"/>
         <image name="artisttwitterinactive.png" width="94" height="93"/>
         <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bluetabheadercap.png" width="320" height="2"/>
-        <image name="bookmark.png" width="11" height="29"/>
-        <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmark.png" width="11" height="29"/>
         <image name="bookmarkIcon.png" width="10" height="26"/>
         <image name="bookmarkbutton.png" width="93" height="92"/>
@@ -944,9 +937,6 @@
         <image name="setreminder.png" width="93" height="93"/>
         <image name="setreminderinactive.png" width="94" height="93"/>
         <image name="share.png" width="93" height="92"/>
-        <image name="tinyclock.png" width="9" height="9"/>
-        <image name="tinyclock.png" width="9" height="9"/>
-        <image name="tinyclock.png" width="9" height="9"/>
         <image name="tinyclock.png" width="9" height="9"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
