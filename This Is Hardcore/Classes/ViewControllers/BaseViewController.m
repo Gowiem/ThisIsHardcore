@@ -15,29 +15,29 @@
 {
     [super viewWillAppear:animated];
     
-    [self updateNavBarDisplay];
+//    [self updateNavBarDisplay];
     
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Tickets" style:UIBarButtonItemStylePlain target:self action:@selector(handleTicket:)];       
-    anotherButton.tintColor = [UIColor grayColor];
-    self.navigationItem.rightBarButtonItem = anotherButton;    
+//    anotherButton.tintColor = [UIColor grayColor];
+    self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
--(void) updateNavBarDisplay {
-    NSString *backgroundImageName = @"";
-    if([[[self navigationController] viewControllers] count] == 1) {
-        backgroundImageName = @"TIHC_Header.png";
-    }
-    else {
-        backgroundImageName = @"TIHC_HeaderCenter.png";
-    }
-    
-    UIImage *image = [UIImage imageNamed:backgroundImageName];
-    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-    
-    UILabel *label = [[UILabel alloc] init];
-    self.navigationItem.titleView = label;
-    label.text = @"";
-}
+//-(void) updateNavBarDisplay {
+////    NSString *backgroundImageName = @"";
+////    if([[[self navigationController] viewControllers] count] == 1) {
+////        backgroundImageName = @"TIHC_Header.png";
+////    }
+////    else {
+////        backgroundImageName = @"TIHC_HeaderCenter.png";
+////    }
+////    
+////    UIImage *image = [UIImage imageNamed:backgroundImageName];
+////    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+//    
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = @"TIHC";
+//    self.navigationItem.titleView = label;
+//}
 
 - (void)handleTicket:(id)sender
 {
