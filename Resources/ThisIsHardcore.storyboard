@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="1149" y="357"/>
         </scene>
-        <!--More View Controller-->
+        <!--More View Controller - TIHC-->
         <scene sceneID="Ptl-jO-MUI">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="5dm-nX-PXK" customClass="TIHMoreViewController" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dWo-G4-8tB"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="dWo-G4-8tB"/>
                     <connections>
                         <outlet property="myTable" destination="AWv-al-8tt" id="UHi-6P-hea"/>
                         <segue destination="blI-dw-3rH" kind="push" identifier="MoreDetailWebView" id="Y1n-qj-59O"/>
@@ -290,7 +290,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yId-9o-hY8"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="yId-9o-hY8"/>
                     <connections>
                         <outlet property="fanFeedButton" destination="ulW-pT-ZyW" id="EdZ-ta-KsQ"/>
                         <outlet property="myTable" destination="sUk-ts-VPp" id="H6p-f6-FuQ"/>
@@ -301,7 +301,7 @@
             </objects>
             <point key="canvasLocation" x="1149" y="1820"/>
         </scene>
-        <!--Schedule View Controller-->
+        <!--Schedule View Controller - TIHC-->
         <scene sceneID="cNv-Cb-apj">
             <objects>
                 <viewController storyboardIdentifier="TIHScheduleViewController" wantsFullScreenLayout="YES" id="7ue-m1-koG" customClass="TIHScheduleViewController" sceneMemberID="viewController">
@@ -414,7 +414,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XW3-zF-C2V"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="XW3-zF-C2V"/>
                     <connections>
                         <outlet property="friButton" destination="6ol-fg-iOv" id="t8g-d7-zeh"/>
                         <outlet property="myTable" destination="uzZ-TK-dCZ" id="Sxc-wX-56I"/>
@@ -723,7 +723,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="w6d-z8-QrV"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="w6d-z8-QrV"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -736,7 +736,7 @@
             </objects>
             <point key="canvasLocation" x="1149" y="-384"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Web View Controller - TIHC-->
         <scene sceneID="qLR-Oy-NNP">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="blI-dw-3rH" customClass="TIHWebViewController" sceneMemberID="viewController">
@@ -745,7 +745,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qI9-Nl-mzm"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="qI9-Nl-mzm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7a-yU-e7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
