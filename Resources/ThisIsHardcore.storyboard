@@ -428,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="1144" y="1186"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--Event Detail View Controller - TIHC-->
         <scene sceneID="HLz-NK-CFO">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
+                <viewController title="TIHC" wantsFullScreenLayout="YES" id="LTt-iW-ahq" customClass="TIHEventDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzY-95-K9k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -463,7 +463,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mmE-5t-au2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mmE-5t-au2">
                                                 <rect key="frame" x="170" y="10" width="130" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="getdirections.png">
@@ -495,7 +495,7 @@
                                         <rect key="frame" x="9" y="255" width="302" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OmS-Hx-odp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OmS-Hx-odp">
                                                 <rect key="frame" x="0.0" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artistsiteactive.png">
@@ -506,7 +506,7 @@
                                                     <action selector="doWebsiteButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="j9c-RE-GxJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upk-6a-ktv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="upk-6a-ktv">
                                                 <rect key="frame" x="100" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artistsitefbactive.png">
@@ -517,10 +517,11 @@
                                                     <action selector="doFacebookButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="duk-JC-hTM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jr-by-TUu">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8jr-by-TUu">
                                                 <rect key="frame" x="202" y="2" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="artisttwitteractive.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="disabled" image="artisttwitterinactive.png"/>
@@ -528,7 +529,7 @@
                                                     <action selector="doTwitterButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="S2v-KB-DEG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vYC-JB-UlT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vYC-JB-UlT">
                                                 <rect key="frame" x="0.0" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="setreminder.png">
@@ -539,7 +540,7 @@
                                                     <action selector="doRemindButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="rl3-7S-dPD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nbd-m8-bCi">
                                                 <rect key="frame" x="100" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="bookmarkbutton.png">
@@ -549,7 +550,7 @@
                                                     <action selector="doBookmarkButtonAction:" destination="LTt-iW-ahq" eventType="touchDown" id="GKz-Tr-h3X"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AmI-i8-bX2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AmI-i8-bX2">
                                                 <rect key="frame" x="202" y="99" width="93" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" image="share.png">
@@ -567,7 +568,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SLw-4K-64c"/>
+                    <navigationItem key="navigationItem" title="TIHC" id="SLw-4K-64c"/>
                     <connections>
                         <outlet property="actionButtonsView" destination="oWd-FW-mbV" id="sN1-Lk-HQF"/>
                         <outlet property="artistDescriptionLabel" destination="Beb-5q-RZL" id="tFq-eC-0Cr"/>
@@ -945,7 +946,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sTI-9i-Uf2"/>
-        <segue reference="MTt-hb-LGa"/>
+        <segue reference="Pzp-e5-bIn"/>
+        <segue reference="WYD-46-Fqw"/>
     </inferredMetricsTieBreakers>
 </document>
