@@ -57,8 +57,8 @@
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setHour:0];
     [comps setDay: 8 + daysLater];
-    [comps setMonth:8];
-    [comps setYear:2013];
+    [comps setMonth:7];
+    [comps setYear:2014];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     return [gregorian dateFromComponents:comps];

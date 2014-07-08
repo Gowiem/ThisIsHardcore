@@ -225,13 +225,15 @@
 {
     return [self getFestivalStartDatePlus:_selectedDay];
 }
+
+// TODO: This shit needs to be configurable from the server.
 - (NSDate*)getFestivalStartDatePlus:(int)daysLater
 {
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setHour:0];
-    [comps setDay: 8 + daysLater];
-    [comps setMonth:8];
-    [comps setYear:2013];
+    [comps setDay: 24 + daysLater];
+    [comps setMonth:7];
+    [comps setYear:2014];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     return [gregorian dateFromComponents:comps];
