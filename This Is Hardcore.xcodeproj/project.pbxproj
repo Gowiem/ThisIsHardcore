@@ -219,9 +219,9 @@
 		DB68F7431738A12200FBE6C4 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB68F7421738A12200FBE6C4 /* libGoogleAnalytics.a */; };
 		DB70251F170BC32100281387 /* TIHCalendarEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB70251E170BC32100281387 /* TIHCalendarEventManager.m */; };
 		DB702521170BC80F00281387 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB702520170BC80F00281387 /* EventKit.framework */; };
-		DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA38887171E46A0005BAD2E /* Default@2x.png */; };
-		DBA3888B171E46FF005BAD2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */; };
-		DBA3888F171E47D0005BAD2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA3888E171E47D0005BAD2E /* Default.png */; };
+		DB975AB1196CC2CB005D66B9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB0196CC2CB005D66B9 /* Default.png */; };
+		DB975AB3196CC59E005D66B9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */; };
+		DB975AB5196CC5B9005D66B9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB4196CC5B9005D66B9 /* Default@2x.png */; };
 		DBA388DD171F6F52005BAD2E /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A8515B75A3000983140 /* GoogleAnalytics.m */; };
 		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
 		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
@@ -514,9 +514,9 @@
 		DB70251D170BC32100281387 /* TIHCalendarEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHCalendarEventManager.h; path = Classes/TIHCalendarEventManager.h; sourceTree = "<group>"; };
 		DB70251E170BC32100281387 /* TIHCalendarEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TIHCalendarEventManager.m; path = Classes/TIHCalendarEventManager.m; sourceTree = "<group>"; };
 		DB702520170BC80F00281387 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		DBA38887171E46A0005BAD2E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
-		DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
-		DBA3888E171E47D0005BAD2E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
+		DB975AB0196CC2CB005D66B9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
+		DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
+		DB975AB4196CC5B9005D66B9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
 		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -621,9 +621,9 @@
 		742E8962158A90BD00BBCF84 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				DBA3888E171E47D0005BAD2E /* Default.png */,
-				DBA3888A171E46FF005BAD2E /* Default-568h@2x.png */,
-				DBA38887171E46A0005BAD2E /* Default@2x.png */,
+				DB975AB4196CC5B9005D66B9 /* Default@2x.png */,
+				DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */,
+				DB975AB0196CC2CB005D66B9 /* Default.png */,
 				742E896D158A925400BBCF84 /* icon.png */,
 				742E896E158A925400BBCF84 /* icon@2x.png */,
 			);
@@ -1173,8 +1173,10 @@
 				C81CBB4A1578154200584F64 /* fbicon@2x.png in Resources */,
 				C81CBB4B1578154200584F64 /* twittericon@2x.png in Resources */,
 				C81CBB501578187D00584F64 /* TIHC_Header@2x.png in Resources */,
+				DB975AB1196CC2CB005D66B9 /* Default.png in Resources */,
 				C81CBB511578187D00584F64 /* TIHC_HeaderCenter@2x.png in Resources */,
 				C85A3D99157E8C0200EF699C /* bookmarkIcon@2x.png in Resources */,
+				DB975AB3196CC59E005D66B9 /* Default-568h@2x.png in Resources */,
 				C85A3D9A157E8C0200EF699C /* BottomNavBack@2x.png in Resources */,
 				C85A3D9B157E8C0200EF699C /* HCBell@2x.png in Resources */,
 				C85A3D9C157E8C0200EF699C /* MoreArrow@2x.png in Resources */,
@@ -1247,6 +1249,7 @@
 				745C5956159BB81400917069 /* TIHCofficialBluetab@2x.png in Resources */,
 				745C5957159BB81400917069 /* TIHCofficialG1tab.png in Resources */,
 				745C5958159BB81400917069 /* TIHCofficialG1tab@2x.png in Resources */,
+				DB975AB5196CC5B9005D66B9 /* Default@2x.png in Resources */,
 				741F031A15A23E0C00CCA2D0 /* TIHC_Tabheader.png in Resources */,
 				741F031B15A23E0C00CCA2D0 /* TIHC_Tabheader@2x.png in Resources */,
 				74ED036E15A332E2007A3C70 /* photopit_off.png in Resources */,
@@ -1304,9 +1307,6 @@
 				74FC4F2715B8A68E009006BC /* getdirections@2x.png in Resources */,
 				A4BC7E0C15B8B7120098384B /* HCBellSolid.png in Resources */,
 				A4BC7E0D15B8B7120098384B /* HCBellSolid@2x.png in Resources */,
-				DBA38889171E46A1005BAD2E /* Default@2x.png in Resources */,
-				DBA3888B171E46FF005BAD2E /* Default-568h@2x.png in Resources */,
-				DBA3888F171E47D0005BAD2E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
