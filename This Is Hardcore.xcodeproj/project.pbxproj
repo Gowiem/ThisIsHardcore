@@ -38,8 +38,6 @@
 		742E8926158A8C7800BBCF84 /* bookmarkbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8922158A8C7800BBCF84 /* bookmarkbutton@2x.png */; };
 		742E8927158A8C7800BBCF84 /* bookmarkbuttonremove.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8923158A8C7800BBCF84 /* bookmarkbuttonremove.png */; };
 		742E8928158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E8924158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png */; };
-		742E8971158A925400BBCF84 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896D158A925400BBCF84 /* icon.png */; };
-		742E8972158A925400BBCF84 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 742E896E158A925400BBCF84 /* icon@2x.png */; };
 		742E8975158A989B00BBCF84 /* TIHScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E8974158A989A00BBCF84 /* TIHScheduleViewController.m */; };
 		742E897B158AA42F00BBCF84 /* TIHEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E897A158AA42F00BBCF84 /* TIHEventDetailViewController.m */; };
 		742E897E158B758000BBCF84 /* TIHEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 742E897D158B758000BBCF84 /* TIHEventCell.m */; };
@@ -222,6 +220,16 @@
 		DB975AB1196CC2CB005D66B9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB0196CC2CB005D66B9 /* Default.png */; };
 		DB975AB3196CC59E005D66B9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */; };
 		DB975AB5196CC5B9005D66B9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB4196CC5B9005D66B9 /* Default@2x.png */; };
+		DB975AC0196CCE5B005D66B9 /* appicon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB6196CCE5B005D66B9 /* appicon-60.png */; };
+		DB975AC1196CCE5B005D66B9 /* appicon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB7196CCE5B005D66B9 /* appicon-60@2x.png */; };
+		DB975AC2196CCE5B005D66B9 /* appicon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB8196CCE5B005D66B9 /* appicon-Small-40.png */; };
+		DB975AC3196CCE5B005D66B9 /* appicon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975AB9196CCE5B005D66B9 /* appicon-Small-40@2x.png */; };
+		DB975AC4196CCE5B005D66B9 /* appicon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABA196CCE5B005D66B9 /* appicon-Small.png */; };
+		DB975AC5196CCE5B005D66B9 /* appicon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABB196CCE5B005D66B9 /* appicon-Small@2x.png */; };
+		DB975AC6196CCE5B005D66B9 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABC196CCE5B005D66B9 /* appicon.png */; };
+		DB975AC7196CCE5B005D66B9 /* appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABD196CCE5B005D66B9 /* appicon@2x.png */; };
+		DB975AC8196CCE5B005D66B9 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABE196CCE5B005D66B9 /* iTunesArtwork */; };
+		DB975AC9196CCE5B005D66B9 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = DB975ABF196CCE5B005D66B9 /* iTunesArtwork@2x */; };
 		DBA388DD171F6F52005BAD2E /* GoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C82A8515B75A3000983140 /* GoogleAnalytics.m */; };
 		DBAC876F17065DD900EC129F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC876E17065DD900EC129F /* CoreText.framework */; };
 		DBAC877117065E0600EC129F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC877017065E0600EC129F /* libsqlite3.dylib */; };
@@ -259,8 +267,6 @@
 		742E8922158A8C7800BBCF84 /* bookmarkbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmarkbutton@2x.png"; path = "Resources/Images/Buttons/bookmarkbutton@2x.png"; sourceTree = "<group>"; };
 		742E8923158A8C7800BBCF84 /* bookmarkbuttonremove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmarkbuttonremove.png; path = Resources/Images/Buttons/bookmarkbuttonremove.png; sourceTree = "<group>"; };
 		742E8924158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookmarkbuttonremove@2x.png"; path = "Resources/Images/Buttons/bookmarkbuttonremove@2x.png"; sourceTree = "<group>"; };
-		742E896D158A925400BBCF84 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/Images/General/icon.png; sourceTree = "<group>"; };
-		742E896E158A925400BBCF84 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/Images/General/icon@2x.png"; sourceTree = "<group>"; };
 		742E8973158A989A00BBCF84 /* TIHScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHScheduleViewController.h; path = Classes/ViewControllers/TIHScheduleViewController.h; sourceTree = "<group>"; };
 		742E8974158A989A00BBCF84 /* TIHScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TIHScheduleViewController.m; path = Classes/ViewControllers/TIHScheduleViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		742E8979158AA42F00BBCF84 /* TIHEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TIHEventDetailViewController.h; path = Classes/ViewControllers/TIHEventDetailViewController.h; sourceTree = "<group>"; };
@@ -517,6 +523,16 @@
 		DB975AB0196CC2CB005D66B9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/General/Default.png; sourceTree = "<group>"; };
 		DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/General/Default-568h@2x.png"; sourceTree = "<group>"; };
 		DB975AB4196CC5B9005D66B9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/General/Default@2x.png"; sourceTree = "<group>"; };
+		DB975AB6196CCE5B005D66B9 /* appicon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-60.png"; path = "Resources/Images/General/appicon-60.png"; sourceTree = "<group>"; };
+		DB975AB7196CCE5B005D66B9 /* appicon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-60@2x.png"; path = "Resources/Images/General/appicon-60@2x.png"; sourceTree = "<group>"; };
+		DB975AB8196CCE5B005D66B9 /* appicon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-Small-40.png"; path = "Resources/Images/General/appicon-Small-40.png"; sourceTree = "<group>"; };
+		DB975AB9196CCE5B005D66B9 /* appicon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-Small-40@2x.png"; path = "Resources/Images/General/appicon-Small-40@2x.png"; sourceTree = "<group>"; };
+		DB975ABA196CCE5B005D66B9 /* appicon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-Small.png"; path = "Resources/Images/General/appicon-Small.png"; sourceTree = "<group>"; };
+		DB975ABB196CCE5B005D66B9 /* appicon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon-Small@2x.png"; path = "Resources/Images/General/appicon-Small@2x.png"; sourceTree = "<group>"; };
+		DB975ABC196CCE5B005D66B9 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = Resources/Images/General/appicon.png; sourceTree = "<group>"; };
+		DB975ABD196CCE5B005D66B9 /* appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "appicon@2x.png"; path = "Resources/Images/General/appicon@2x.png"; sourceTree = "<group>"; };
+		DB975ABE196CCE5B005D66B9 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/Images/General/iTunesArtwork; sourceTree = "<group>"; };
+		DB975ABF196CCE5B005D66B9 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Resources/Images/General/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		DBAC876E17065DD900EC129F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DBAC877017065E0600EC129F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -621,11 +637,19 @@
 		742E8962158A90BD00BBCF84 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DB975AB6196CCE5B005D66B9 /* appicon-60.png */,
+				DB975AB7196CCE5B005D66B9 /* appicon-60@2x.png */,
+				DB975AB8196CCE5B005D66B9 /* appicon-Small-40.png */,
+				DB975AB9196CCE5B005D66B9 /* appicon-Small-40@2x.png */,
+				DB975ABA196CCE5B005D66B9 /* appicon-Small.png */,
+				DB975ABB196CCE5B005D66B9 /* appicon-Small@2x.png */,
+				DB975ABC196CCE5B005D66B9 /* appicon.png */,
+				DB975ABD196CCE5B005D66B9 /* appicon@2x.png */,
+				DB975ABE196CCE5B005D66B9 /* iTunesArtwork */,
+				DB975ABF196CCE5B005D66B9 /* iTunesArtwork@2x */,
 				DB975AB4196CC5B9005D66B9 /* Default@2x.png */,
 				DB975AB2196CC59E005D66B9 /* Default-568h@2x.png */,
 				DB975AB0196CC2CB005D66B9 /* Default.png */,
-				742E896D158A925400BBCF84 /* icon.png */,
-				742E896E158A925400BBCF84 /* icon@2x.png */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -1216,25 +1240,27 @@
 				742E8926158A8C7800BBCF84 /* bookmarkbutton@2x.png in Resources */,
 				742E8927158A8C7800BBCF84 /* bookmarkbuttonremove.png in Resources */,
 				742E8928158A8C7800BBCF84 /* bookmarkbuttonremove@2x.png in Resources */,
-				742E8971158A925400BBCF84 /* icon.png in Resources */,
-				742E8972158A925400BBCF84 /* icon@2x.png in Resources */,
+				DB975AC7196CCE5B005D66B9 /* appicon@2x.png in Resources */,
 				7455F7811590C10B007FDD18 /* TIHC_BandLoad.png in Resources */,
 				7455F7821590C10B007FDD18 /* TIHC_BandLoad@2x.png in Resources */,
 				7455F7831590C10B007FDD18 /* TIHC_PhotoPitLoad.png in Resources */,
 				7455F7841590C10B007FDD18 /* TIHC_PhotoPitLoad@2x.png in Resources */,
 				7455F7851590C10B007FDD18 /* TIHC_thumbnailload.png in Resources */,
+				DB975AC8196CCE5B005D66B9 /* iTunesArtwork in Resources */,
 				7455F7861590C10B007FDD18 /* TIHC_thumbnailload@2x.png in Resources */,
 				7453FDBF1598FA9B0036FC88 /* TIHC_About.png in Resources */,
 				7453FDC01598FA9B0036FC88 /* TIHC_About@2x.png in Resources */,
 				7453FDC11598FA9B0036FC88 /* TIHC_Accom.png in Resources */,
 				7453FDC21598FA9B0036FC88 /* TIHC_Accom@2x.png in Resources */,
 				7453FDC31598FA9B0036FC88 /* TIHC_FB.png in Resources */,
+				DB975AC0196CCE5B005D66B9 /* appicon-60.png in Resources */,
 				7453FDC41598FA9B0036FC88 /* TIHC_FB@2x.png in Resources */,
 				7453FDC51598FA9B0036FC88 /* TIHC_Food.png in Resources */,
 				7453FDC61598FA9B0036FC88 /* TIHC_Food@2x.png in Resources */,
 				7453FDC71598FA9B0036FC88 /* TIHC_Store.png in Resources */,
 				7453FDC81598FA9B0036FC88 /* TIHC_Store@2x.png in Resources */,
 				7453FDC91598FA9B0036FC88 /* TIHC_Stuff.png in Resources */,
+				DB975AC5196CCE5B005D66B9 /* appicon-Small@2x.png in Resources */,
 				7453FDCA1598FA9B0036FC88 /* TIHC_Stuff@2x.png in Resources */,
 				7453FDCB1598FA9B0036FC88 /* TIHC_twit.png in Resources */,
 				7453FDCC1598FA9B0036FC88 /* TIHC_twit@2x.png in Resources */,
@@ -1250,11 +1276,14 @@
 				745C5957159BB81400917069 /* TIHCofficialG1tab.png in Resources */,
 				745C5958159BB81400917069 /* TIHCofficialG1tab@2x.png in Resources */,
 				DB975AB5196CC5B9005D66B9 /* Default@2x.png in Resources */,
+				DB975AC2196CCE5B005D66B9 /* appicon-Small-40.png in Resources */,
 				741F031A15A23E0C00CCA2D0 /* TIHC_Tabheader.png in Resources */,
 				741F031B15A23E0C00CCA2D0 /* TIHC_Tabheader@2x.png in Resources */,
+				DB975AC9196CCE5B005D66B9 /* iTunesArtwork@2x in Resources */,
 				74ED036E15A332E2007A3C70 /* photopit_off.png in Resources */,
 				74ED036F15A332E2007A3C70 /* photopit_off@2x.png in Resources */,
 				74ED037015A332E2007A3C70 /* photopit_on.png in Resources */,
+				DB975AC1196CCE5B005D66B9 /* appicon-60@2x.png in Resources */,
 				74ED037115A332E2007A3C70 /* photopit_on@2x.png in Resources */,
 				74ED037215A332E2007A3C70 /* schedule_off.png in Resources */,
 				74ED037315A332E2007A3C70 /* schedule_off@2x.png in Resources */,
@@ -1281,6 +1310,7 @@
 				7474823F15B7190300352AFD /* FriTabG1.png in Resources */,
 				7474824015B7190300352AFD /* FriTabG1@2x.png in Resources */,
 				7474824115B7190300352AFD /* FriTabG2.png in Resources */,
+				DB975AC3196CCE5B005D66B9 /* appicon-Small-40@2x.png in Resources */,
 				7474824215B7190300352AFD /* FriTabG2@2x.png in Resources */,
 				7474824315B7190300352AFD /* SatTabBlue.png in Resources */,
 				7474824415B7190300352AFD /* SatTabBlue@2x.png in Resources */,
@@ -1295,11 +1325,13 @@
 				7474824D15B7190300352AFD /* SunTabG4.png in Resources */,
 				7474824E15B7190300352AFD /* SunTabG4@2x.png in Resources */,
 				7474824F15B7190300352AFD /* ThursTabBlue.png in Resources */,
+				DB975AC4196CCE5B005D66B9 /* appicon-Small.png in Resources */,
 				7474825015B7190300352AFD /* ThursTabBlue@2x.png in Resources */,
 				7474825115B7190300352AFD /* ThursTabG1.png in Resources */,
 				7474825215B7190300352AFD /* ThursTabG1@2x.png in Resources */,
 				7474825515B7314100352AFD /* schedule_on.png in Resources */,
 				7474825615B7314100352AFD /* schedule_on@2x.png in Resources */,
+				DB975AC6196CCE5B005D66B9 /* appicon.png in Resources */,
 				7474825815B7335100352AFD /* TIHScheduleHeaderView.xib in Resources */,
 				74FC4ED215B88EFA009006BC /* TIHC_aboutApp.png in Resources */,
 				74FC4ED315B88EFA009006BC /* TIHC_aboutApp@2x.png in Resources */,
@@ -1488,6 +1520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1519,6 +1552,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
