@@ -55,18 +55,21 @@
     return self;
 }
 
-- (void)requestAccessOnInit
+- (void)requestAccessWithCompletionBlock:(void (^) ())completionBlock
 {
     // Handle iOS 6 permissions requesting
     if([self.eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)]) {
         [self.eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
             if (granted) {
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"Access was granted");
                     grantedAccess = YES;
                     calendar = [self.eventStore defaultCalendarForNewEvents];
+                    completionBlock();
                 });
             } else {
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"Access was denied");
                     grantedAccess = NO;
                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                     BOOL hasViewedInitDeniedAccessAlert = [defaults boolForKey:@"hasViewedDeniedAccess"];
@@ -82,69 +85,62 @@
         // User is on iOS 5; Aint no stinking permissions
         grantedAccess = YES;
         calendar = [self.eventStore defaultCalendarForNewEvents];
+        completionBlock();
     }
 }
 
-- (BOOL)removeEventFromCalendarForEvent:(TIHEventDataModel *)event
+- (void)removeEventFromCalendarForEvent:(TIHEventDataModel *)event withController:(TIHEventDetailViewController *)controller
 {
-    // If the user denied us access earlier then show the denied access alert and
-    // return NO signaling the Set Reminder button to not update.
-    if(!grantedAccess) {
-        [deniedAccessAlert show];
-        return NO;
-    }
-    
-    EKEvent *eventToRemove = [self findEvent:event];
-    NSError *error = nil;
-    [self.eventStore removeEvent:eventToRemove span:EKSpanThisEvent commit:YES error:&error];
-    if(error == nil) {
-        NSLog(@"Removed event");
-        return YES;
-    } else {
-        NSLog(@"Error with removing event: %@", error);
-        return NO;
-    }
+    [self requestAccessWithCompletionBlock: ^void () {
+        NSLog(@"Removing event");
+        
+        EKEvent *eventToRemove = [self findEvent:event];
+        NSError *error = nil;
+        [self.eventStore removeEvent:eventToRemove span:EKSpanThisEvent commit:YES error:&error];
+        if(error == nil) {
+            NSLog(@"Removed event");
+            [controller updateReminderDisplayToSet];
+        } else {
+            NSLog(@"Error with removing event: %@", error);
+        }
+    }];
 }
 
-- (BOOL)addEventToCalendarForEvent:(TIHEventDataModel *)event
+- (void)addEventToCalendarForEvent:(TIHEventDataModel *)event withController:(TIHEventDetailViewController *)controller
 {
-    // If the user denied us access earlier then show the denied access alert and
-    // return NO signaling the Set Reminder button to not update.
-    if(!grantedAccess) {
-        [deniedAccessAlert show];
-        return NO;
-    }
-    
-    // Grab the info for the event we are adding
-    // Note explicitly adding the offset time interval, because no matter how many ways I tried
-    // adding the date, it was always changed to be 4 hours behind.
-    NSDate *startDate = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event startTime]];
-    NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event endTime]];
-    NSString *message = [event artistName];
-    
-    // Create the event
-    EKEvent *newEvent = [EKEvent eventWithEventStore:self.eventStore];
-    newEvent.title = message;
-    newEvent.startDate = startDate;
-    newEvent.endDate =  endDate;
-    newEvent.allDay = NO;
-    newEvent.calendar = calendar;
-    
-    // Add the alarm
-    EKAlarm *eventAlarm = [EKAlarm alarmWithRelativeOffset:-900];
-    [newEvent addAlarm:eventAlarm];
-    
-    // Add the event/alarm to the users calendar
-    NSError *error = nil;
-    [self.eventStore saveEvent:newEvent span:EKSpanThisEvent commit:YES error:&error];
-    
-    if (error == nil) {
-        NSLog(@"Added event to calendar with Alarm");
-        return YES;
-    } else {
-        NSLog(@"there was an error saving and committing the event");
-        return NO;
-    }
+    [self requestAccessWithCompletionBlock: ^void () {
+        NSLog(@"Adding event");
+        
+        // Grab the info for the event we are adding
+        // Note explicitly adding the offset time interval, because no matter how many ways I tried
+        // adding the date, it was always changed to be 4 hours behind.
+        NSDate *startDate = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event startTime]];
+        NSDate *endDate   = [[NSDate alloc] initWithTimeInterval:4*60*60 sinceDate:[event endTime]];
+        NSString *message = [event artistName];
+        
+        // Create the event
+        EKEvent *newEvent = [EKEvent eventWithEventStore:self.eventStore];
+        newEvent.title = message;
+        newEvent.startDate = startDate;
+        newEvent.endDate =  endDate;
+        newEvent.allDay = NO;
+        newEvent.calendar = calendar;
+        
+        // Add the alarm
+        EKAlarm *eventAlarm = [EKAlarm alarmWithRelativeOffset:-900];
+        [newEvent addAlarm:eventAlarm];
+        
+        // Add the event/alarm to the users calendar
+        NSError *error = nil;
+        [self.eventStore saveEvent:newEvent span:EKSpanThisEvent commit:YES error:&error];
+        
+        if (error == nil) {
+            NSLog(@"Added event to calendar with Alarm");
+            [controller updateReminderDisplayToUnset];
+        } else {
+            NSLog(@"there was an error saving and committing the event");
+        }
+    }];
 }
 
 - (BOOL)isEventReminderSet:(TIHEventDataModel *)event

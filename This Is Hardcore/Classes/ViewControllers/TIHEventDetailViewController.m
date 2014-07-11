@@ -349,16 +349,10 @@
     [[GoogleAnalytics instance] trackPageView:[NSString stringWithFormat:@"Event Detail Reminder - %@",[dataModel artistName]]];
     if([dataModel isEventReminderSet])
     {
-        BOOL eventWasRemoved = [[TIHCalendarEventManager instance] removeEventFromCalendarForEvent:dataModel];
-        if (eventWasRemoved) {
-            [self updateReminderDisplayToSet];
-        }
+        [[TIHCalendarEventManager instance] removeEventFromCalendarForEvent:dataModel withController:self];
     }
     else {
-        BOOL eventWasAdded = [[TIHCalendarEventManager instance] addEventToCalendarForEvent:dataModel];
-        if (eventWasAdded) {
-            [self updateReminderDisplayToUnset];
-        }
+        [[TIHCalendarEventManager instance] addEventToCalendarForEvent:dataModel withController:self];
     }
 }
 

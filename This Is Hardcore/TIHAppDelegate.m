@@ -23,8 +23,6 @@
     // Start analytics
     [GoogleAnalytics startTracker];
     
-    [[TIHCalendarEventManager instance] requestAccessOnInit];
-    
     // Handle launching from a notification
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];

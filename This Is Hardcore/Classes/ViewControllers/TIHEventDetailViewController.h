@@ -38,4 +38,7 @@
 - (IBAction) doBookmarkButtonAction:(id)sender;
 - (IBAction) doShareButtonAction:(id)sender;
 
+- (void)updateReminderDisplayToUnset;
+- (void)updateReminderDisplayToSet;
+
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <EventKit/EventKit.h>
 #import "TIHEventDataModel.h"
+#import "TIHEventDetailViewController.h"
 
 @interface TIHCalendarEventManager : NSObject
 
@@ -16,12 +17,12 @@
 
 + (id)instance;
 
-- (void)requestAccessOnInit;
+- (void)requestAccessWithCompletionBlock:(void (^) ())completionBlock;
 
 - (BOOL)isEventReminderSet:(TIHEventDataModel *)event;
 
-- (BOOL)addEventToCalendarForEvent:(TIHEventDataModel *)event;
-- (BOOL)removeEventFromCalendarForEvent:(TIHEventDataModel *)event;
+- (void)addEventToCalendarForEvent:(TIHEventDataModel *)event withController:(TIHEventDetailViewController *)controller;
+- (void)removeEventFromCalendarForEvent:(TIHEventDataModel *)event withController:(TIHEventDetailViewController *)controller;
 
 - (EKEvent*)findEvent:(TIHEventDataModel*)event;
 
