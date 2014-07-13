@@ -71,13 +71,13 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     NSLog(@"Access was denied");
                     grantedAccess = NO;
-                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                    BOOL hasViewedInitDeniedAccessAlert = [defaults boolForKey:@"hasViewedDeniedAccess"];
-                    if(!hasViewedInitDeniedAccessAlert) {
+//                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//                    BOOL hasViewedInitDeniedAccessAlert = [defaults boolForKey:@"hasViewedDeniedAccess"];
+//                    if(!hasViewedInitDeniedAccessAlert) {
                         [deniedAccessAlert show];
-                        [defaults setBool:YES forKey:@"hasViewedDeniedAccess"];
-                        [defaults synchronize];
-                    }
+//                        [defaults setBool:YES forKey:@"hasViewedDeniedAccess"];
+//                        [defaults synchronize];
+//                    }
                 });
             }
         }];
