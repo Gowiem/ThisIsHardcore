@@ -8,63 +8,65 @@
         <!--Bookmark View Controller - Bookmarks-->
         <scene sceneID="rLc-b7-OQ2">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogp-vH-mkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="5Tj-WR-tKS" customClass="TIHBookmarkViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veF-ax-2SF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="qcm-Td-icG">
-                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="4td-QI-D9Y">
+                                <rect key="frame" x="0.0" y="65" width="320" height="366"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="70" id="2NN-Ac-TUe" customClass="TIHEventCell">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TIHEventCell" rowHeight="70" id="KSF-4r-qer" customClass="TIHEventCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2NN-Ac-TUe" id="Hcg-Ty-5zt">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KSF-4r-qer" id="5Kd-A3-vUu">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="2sy-cV-Sm2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="tinyclock.png" id="QSM-x5-BgS">
                                                     <rect key="frame" x="65" y="38" width="9" height="9"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2Zn-yh-n7M">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2:50 - 3:15 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BKE-gW-3tq">
                                                     <rect key="frame" x="83" y="32" width="93" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zoo-Bn-zjD">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horror Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="F2Y-jQ-rqd">
                                                     <rect key="frame" x="65" y="9" width="129" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" red="0.31372549020000001" green="0.61176470589999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="3NX-Yy-8qw">
+                                                <view contentMode="scaleToFill" id="Pyu-Ld-Rzc">
                                                     <rect key="frame" x="5" y="5" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="9kU-cc-nM9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bookmark.png" id="0gO-Kc-dYo">
                                                     <rect key="frame" x="11" y="5" width="11" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistIconView" destination="3NX-Yy-8qw" id="VAO-8f-HFQ"/>
-                                            <outlet property="artistNameLabel" destination="zoo-Bn-zjD" id="8CV-s6-LY9"/>
-                                            <outlet property="bookmarkImage" destination="9kU-cc-nM9" id="inc-gd-2U7"/>
-                                            <outlet property="setTimeLabel" destination="2Zn-yh-n7M" id="Pb7-Xx-dF9"/>
+                                            <outlet property="artistIconView" destination="Pyu-Ld-Rzc" id="ykx-gw-8NS"/>
+                                            <outlet property="artistNameLabel" destination="F2Y-jQ-rqd" id="5Pb-Xy-0uO"/>
+                                            <outlet property="bookmarkImage" destination="0gO-Kc-dYo" id="QHM-he-u4a"/>
+                                            <outlet property="setTimeLabel" destination="BKE-gW-3tq" id="aMo-Qt-ZnC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="5Tj-WR-tKS" id="g2H-O5-qQr"/>
-                                    <outlet property="delegate" destination="5Tj-WR-tKS" id="9IU-Zn-f8z"/>
+                                    <outlet property="dataSource" destination="5Tj-WR-tKS" id="DtF-QD-FSh"/>
+                                    <outlet property="delegate" destination="5Tj-WR-tKS" id="cGQ-OE-Vw1"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -73,13 +75,15 @@
                     <navigationItem key="navigationItem" title="Bookmarks" id="od6-QP-wLk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
                     <connections>
+                        <outlet property="myTable" destination="4td-QI-D9Y" id="bAa-hH-WPd"/>
                         <segue destination="LTt-iW-ahq" kind="push" identifier="segueToEventDetail" id="sTI-9i-Uf2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogp-vH-mkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="357"/>
+            <point key="canvasLocation" x="1155" y="323"/>
         </scene>
         <!--More View Controller - More-->
         <scene sceneID="Ptl-jO-MUI">
@@ -946,7 +950,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WYD-46-Fqw"/>
+        <segue reference="sTI-9i-Uf2"/>
         <segue reference="MTt-hb-LGa"/>
     </inferredMetricsTieBreakers>
 </document>
