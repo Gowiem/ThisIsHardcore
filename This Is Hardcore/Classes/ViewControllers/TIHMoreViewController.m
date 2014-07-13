@@ -59,7 +59,7 @@
     
     NSArray *linkUrls = [NSArray arrayWithObjects:@"https://s3.amazonaws.com/appren-tihc/stuff_to_do_in_philly.html",
                                                   @"https://s3.amazonaws.com/appren-tihc/accomodations.html",
-                                                  @"https://s3.amazonaws.com/appren-tihc/vendors.html",
+                                                  @"http://www.thisishardcorefest.com/vendors",
                                                   @"https://www.facebook.com/thisishardcorefest",
                                                   @"https://twitter.com/#!/TIHCfest",
                                                   @"http://www.thisishardcorefest.com/",
