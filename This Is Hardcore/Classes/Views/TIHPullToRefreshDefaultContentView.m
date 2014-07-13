@@ -30,7 +30,6 @@
 
 - (void)setLastUpdatedAt:(NSDate *)date
    withPullToRefreshView:(SSPullToRefreshView *)view {
-    NSLog(@"Set last updated at : %@", date);
     static NSDateFormatter *dateFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
